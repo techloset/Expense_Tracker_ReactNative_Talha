@@ -208,6 +208,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '600',
     color: '#ffffff',
+    marginTop:6,
   },
   income_dollar: {
     marginLeft: 20,
