@@ -18,24 +18,28 @@ const Butoon = () => {
 
 const styles = StyleSheet.create({
   button: {
-    marginTop:5,
+    marginTop:26,
     width: 358,
     height: 64,
-    backgroundColor:'red',
+    
     borderRadius: 40,
     overflow: 'hidden',
+   
   },
   gradient: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  buttonText: {
+    
+},
+buttonText: {
+      // backgroundColor:'red',
     color: 'white',
     fontSize: 18,
     fontWeight: '600',
     textAlign: 'center',
     lineHeight: 38,
+    
   },
 });
 
