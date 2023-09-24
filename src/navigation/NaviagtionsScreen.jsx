@@ -11,8 +11,8 @@ const NaviagtionsScreen = () => {
   
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="OnBoarding" component={OnBoardingScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="OnBoarding" component={OnBoardingScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
