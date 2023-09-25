@@ -14,6 +14,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-commerce_app-commerce_appTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-commerce_app-commerce_appTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		070D176FC90042518EA3D5B6 /* InterBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47567F21ACDB4887A170873E /* InterBold.ttf */; };
+		D316DCAE45F741BF920E0E16 /* InterMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E35BA039A2B42D583684C66 /* InterMedium.ttf */; };
+		FD7BC5C9AE294611B773D113 /* InterRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76CAD3D6396443BAAB72875E /* InterRegular.ttf */; };
+		A2DE0DACA66E449A8E3F83C4 /* InterSemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DBCEE0858F24B4BBC39E640 /* InterSemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = commerce_app/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-commerce_app-commerce_appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commerce_app-commerce_appTests.release.xcconfig"; path = "Target Support Files/Pods-commerce_app-commerce_appTests/Pods-commerce_app-commerce_appTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		47567F21ACDB4887A170873E /* InterBold.ttf */ = {isa = PBXFileReference; name = "InterBold.ttf"; path = "../src/assets/fonts/InterBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5E35BA039A2B42D583684C66 /* InterMedium.ttf */ = {isa = PBXFileReference; name = "InterMedium.ttf"; path = "../src/assets/fonts/InterMedium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		76CAD3D6396443BAAB72875E /* InterRegular.ttf */ = {isa = PBXFileReference; name = "InterRegular.ttf"; path = "../src/assets/fonts/InterRegular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2DBCEE0858F24B4BBC39E640 /* InterSemiBold.ttf */ = {isa = PBXFileReference; name = "InterSemiBold.ttf"; path = "../src/assets/fonts/InterSemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				5215BB2EEC8249DC9775FAED /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -147,6 +156,18 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		5215BB2EEC8249DC9775FAED /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				47567F21ACDB4887A170873E /* InterBold.ttf */,
+				5E35BA039A2B42D583684C66 /* InterMedium.ttf */,
+				76CAD3D6396443BAAB72875E /* InterRegular.ttf */,
+				2DBCEE0858F24B4BBC39E640 /* InterSemiBold.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -244,6 +265,10 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				070D176FC90042518EA3D5B6 /* InterBold.ttf in Resources */,
+				D316DCAE45F741BF920E0E16 /* InterMedium.ttf in Resources */,
+				FD7BC5C9AE294611B773D113 /* InterRegular.ttf in Resources */,
+				A2DE0DACA66E449A8E3F83C4 /* InterSemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

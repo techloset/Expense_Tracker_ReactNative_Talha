@@ -6,31 +6,32 @@ import {
   Button,
   ImageBackground,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
 } from 'react-native';
 import imageBackround from '../../assets/OnBoardingBackground.png';
-import Butoon from '../../component/button/Butoon';
+import Butoon from '../../component/button/Butoon.jsx';
 
 const OnBoardingScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
-     <View style={styles.stretchFather} >
-     <ImageBackground style={styles.stretch} source={imageBackround}>
-        <Image
-          style={styles.stretchImage}
-          source={require('../../assets/specular_1.png')}
-        />
-      </ImageBackground>
-     </View>
+      <View style={styles.stretchFather}>
+        <ImageBackground style={styles.stretch} source={imageBackround}>
+          <Image
+            style={styles.stretchImage}
+            source={require('../../assets/specular_1.png')}
+          />
+        </ImageBackground>
+      </View>
 
       <View style={styles.container2}>
-      <Text style={styles.heading}>spend smarter save more</Text>
-      <Butoon />
-      <TouchableOpacity style={styles.text}>
-        <Text>Already have an account?</Text>
-        <Text style={styles.logInText}>Log In</Text>
-      </TouchableOpacity>
-    </View>
+        <Text style={styles.heading}>spend smarter save more</Text>
+        <Butoon navigation={navigation}/>
+        
+        <TouchableOpacity style={styles.text}>
+          <Text>Already have an account?</Text>
+          <Text style={styles.logInText}>Log In</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -42,47 +43,42 @@ const styles = StyleSheet.create({
     flex: 1,
     // backgroundColor: 'red',
   },
-  stretchFather:{
-    marginTop:-90,
+  stretchFather: {
+    marginTop: -90,
   },
   stretch: {
-    
     height: 'auto',
     // backgroundColor:'orange',
   },
   stretchImage: {
-    marginTop:147,
-    width:277,
-    height:462,
-    marginLeft:61,
-    marginRight:75,
+    marginTop: 147,
+    width: 277,
+    height: 462,
+    marginLeft: 61,
+    marginRight: 75,
   },
   container2: {
     flex: 3,
     alignItems: 'center',
-    
   },
   heading: {
-   
-    width:301,
-    
+    width: 301,
+
     textAlign: 'center',
     color: '#438883',
     fontSize: 36,
     fontWeight: '700',
-    marginTop:30,
+    marginTop: 30,
   },
   text: {
     flexDirection: 'row',
     alignItems: 'center',
-    fontSize:14,
-    marginTop:20,
-    fontWeight:'400',
+    fontSize: 14,
+    marginTop: 20,
+    fontWeight: '400',
   },
   logInText: {
-    color: '#438883', 
-    fontWeight:'500',
+    color: '#438883',
+    fontWeight: '500',
   },
- 
- 
 });

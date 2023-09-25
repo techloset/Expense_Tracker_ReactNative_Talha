@@ -22,21 +22,7 @@ const HomeScreen = ({navigation}) => {
 
         </ImageBackground> */}
       <ImageBackground style={styles.imageBackground} source={imgae}>
-        {/* <View style={styles.Ellipse_container}>
-          <Image
-            style={[styles.stretch,styles.circle_one]}
-            source={require('../../assets/Ellipse_1.svg')}
-          />
-          <Image
-            style={[styles.stretch,styles.circle_two]}
-            source={require('../../assets/Ellipse_2.svg')}
-          />
-          <Image
-            style={[styles.stretch,styles.circle_three]}
-            source={require('../../assets/Ellipse_3.svg')}
-          />
-        </View> */}
-
+        
         <View style={styles.top_images}>
           <Image source={require('../../assets/Group_ellipse.png')} />
 
@@ -150,17 +136,20 @@ const styles = StyleSheet.create({
   },
   balnce_text: {
     fontSize: 16,
-    fontWeight: '600',
+    // fontWeight: '600',
     color: '#ffffff',
     marginTop: 25,
     marginLeft: 20,
     marginBottom: 8,
+    fontFamily:'InterSemiBold',
   },
   rupee: {
     marginLeft: 20,
     fontSize: 30,
-    fontWeight: '700',
+    // fontWeight: '700',
     color: '#ffffff',
+    fontFamily:'InterBold',
+
   },
   dot: {
     marginTop: 35,
@@ -196,19 +185,22 @@ const styles = StyleSheet.create({
   },
   incomeText: {
     fontSize: 16,
-    fontWeight: '500',
+    // fontWeight: '500',
+    fontFamily:'InterMedium',
     color: '#d0e5e3',
   },
   expenseText: {
     fontSize: 18,
-    fontWeight: '500',
+    // fontWeight: '500',
     color: '#d0e5e3',
+    fontFamily:'InterMedium',
   },
   dollar: {
     fontSize: 20,
-    fontWeight: '600',
+    // fontWeight: '600',
     color: '#ffffff',
     marginTop:6,
+    fontFamily:'InterSemiBold',
   },
   income_dollar: {
     marginLeft: 20,
