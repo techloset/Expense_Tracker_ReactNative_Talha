@@ -5,6 +5,7 @@ import {
   Button,
   Image,
   ImageBackground,
+  ScrollView,
 } from 'react-native';
 import React from 'react';
 import imgae from '../../assets/Images/Home_background.png';
@@ -97,66 +98,110 @@ const HomeScreen = ({navigation}) => {
         <Text style={styles.seeAll}> See all</Text>
       </View>
 
-      <View style={styles.up_Maincontainer}>
-        <View style={styles.up_Innercontainer}>
-          <View style={styles.imge_container}>
-            <Image style={styles.upwork_image} source={UpWork} />
+      <ScrollView style={{height: 264}}>
+        <View style={styles.up_Maincontainer}>
+          <View style={styles.up_Innercontainer}>
+            <View style={styles.imge_container}>
+              <Image style={styles.upwork_image} source={UpWork} />
+            </View>
+            <View>
+              <Text style={styles.UpWorkText}>Upwork</Text>
+              <Text style={styles.todayText}>Today</Text>
+            </View>
           </View>
           <View>
-            <Text style={styles.UpWorkText}>Upwork</Text>
-            <Text style={styles.todayText}>Today</Text>
+            <Text style={styles.upwork_income}>+ $ 850.00</Text>
           </View>
         </View>
-        <View>
-          <Text style={styles.upwork_income}>+ $ 850.00</Text>
-        </View>
-      </View>
 
-      <View style={styles.girl_Maincontainer}>
-        <View style={styles.up_Innercontainer}>
-          <View style={styles.imge_container}>
-            <Image style={styles.girl_image} source={girlsImage} />
+        <View style={styles.girl_Maincontainer}>
+          <View style={styles.up_Innercontainer}>
+            <View style={styles.imge_container}>
+              <Image style={styles.girl_image} source={girlsImage} />
+            </View>
+            <View>
+              <Text style={styles.UpWorkText}>Transfer</Text>
+              <Text style={styles.todayText}>Yesterday</Text>
+            </View>
           </View>
           <View>
-            <Text style={styles.UpWorkText}>Transfer</Text>
-            <Text style={styles.todayText}>Yesterday</Text>
+            <Text style={styles.upwork_income}>- $ 85.00</Text>
           </View>
         </View>
-        <View>
-          <Text style={styles.upwork_income}>- $ 85.00</Text>
-        </View>
-      </View>
 
-      <View style={styles.paypal_Maincontainer}>
-        <View style={styles.up_Innercontainer}>
-          <View style={styles.imge_container}>
-            <Image style={styles.paypal_image} source={PaypalIcon} />
+        <View style={styles.paypal_Maincontainer}>
+          <View style={styles.up_Innercontainer}>
+            <View style={styles.imge_container}>
+              <Image style={styles.paypal_image} source={PaypalIcon} />
+            </View>
+            <View>
+              <Text style={styles.UpWorkText}>paypal</Text>
+              <Text style={styles.todayText}>Jan 30, 2022</Text>
+            </View>
           </View>
           <View>
-            <Text style={styles.UpWorkText}>paypal</Text>
-            <Text style={styles.todayText}>Jan 30, 2022</Text>
+            <Text style={styles.upwork_income}>+ $ 1,406.00</Text>
           </View>
         </View>
-        <View>
-          <Text style={styles.upwork_income}>+ $ 1,406.00</Text>
-        </View>
-      </View>
 
-      <View style={styles.youtube_Maincontainer}>
-        <View style={styles.up_Innercontainer}>
-          <View style={styles.imge_container}>
-            <Image style={styles.youtube_image} source={YoutubeIcon} />
+        <View style={styles.youtube_Maincontainer}>
+          <View style={styles.up_Innercontainer}>
+            <View style={styles.imge_container}>
+              <Image style={styles.youtube_image} source={YoutubeIcon} />
+            </View>
+            <View>
+              <Text style={styles.UpWorkText}>Youtube</Text>
+              <Text style={styles.todayText}>Jan 16, 2022</Text>
+            </View>
           </View>
           <View>
-            <Text style={styles.UpWorkText}>Youtube</Text>
-            <Text style={styles.todayText}>Jan 16, 2022</Text>
+            <Text style={styles.upwork_income}>-$11.99</Text>
           </View>
         </View>
-        <View>
-          <Text style={styles.upwork_income}>-$11.99</Text>
-        </View>
-      </View>
 
+        <View style={styles.up_Maincontainer}>
+          <View style={styles.up_Innercontainer}>
+            <View style={styles.imge_container}>
+              <Image style={styles.upwork_image} source={UpWork} />
+            </View>
+            <View>
+              <Text style={styles.UpWorkText}>Upwork</Text>
+              <Text style={styles.todayText}>Today</Text>
+            </View>
+          </View>
+          <View>
+            <Text style={styles.upwork_income}>+ $ 850.00</Text>
+          </View>
+        </View>
+        <View style={styles.up_Maincontainer}>
+          <View style={styles.up_Innercontainer}>
+            <View style={styles.imge_container}>
+              <Image style={styles.upwork_image} source={UpWork} />
+            </View>
+            <View>
+              <Text style={styles.UpWorkText}>Upwork</Text>
+              <Text style={styles.todayText}>Today</Text>
+            </View>
+          </View>
+          <View>
+            <Text style={styles.upwork_income}>+ $ 850.00</Text>
+          </View>
+        </View>
+        <View style={styles.up_Maincontainer}>
+          <View style={styles.up_Innercontainer}>
+            <View style={styles.imge_container}>
+              <Image style={styles.upwork_image} source={UpWork} />
+            </View>
+            <View>
+              <Text style={styles.UpWorkText}>Upwork</Text>
+              <Text style={styles.todayText}>Today</Text>
+            </View>
+          </View>
+          <View>
+            <Text style={styles.upwork_income}>+ $ 850.00</Text>
+          </View>
+        </View>
+      </ScrollView>
 
       <View style={styles.SendAgain_Container}>
         <Text style={styles.transactionHistroy}>Send Again</Text>
@@ -164,24 +209,22 @@ const HomeScreen = ({navigation}) => {
       </View>
 
       <View style={styles.fiveImages}>
-      <View>
-      <Image style={styles.imageFle_image} source={Image_71} />
+        <View>
+          <Image style={styles.imageFle_image} source={Image_71} />
+        </View>
+        <View>
+          <Image style={styles.imageFle_image} source={Image_72} />
+        </View>
+        <View>
+          <Image style={styles.imageFle_image} source={Image_73} />
+        </View>
+        <View>
+          <Image style={styles.imageFle_image} source={Image_74} />
+        </View>
+        <View>
+          <Image style={styles.imageFle_image} source={Image_75} />
+        </View>
       </View>
-      <View>
-      <Image style={styles.imageFle_image} source={Image_72} />
-      </View>
-      <View>
-      <Image style={styles.imageFle_image} source={Image_73} />
-      </View>
-      <View>
-      <Image style={styles.imageFle_image} source={Image_74} />
-      </View>
-      <View>
-      <Image style={styles.imageFle_image} source={Image_75} />
-      </View>
-   
-      </View>
-      
     </View>
   );
 };
@@ -190,18 +233,17 @@ export default HomeScreen;
 
 const styles = StyleSheet.create({
   fiveImages: {
-    marginTop:13,
-   flexDirection:'row',
-   marginLeft:22,
-   marginRight:18,
-   justifyContent:'space-between'
+    marginTop: 13,
+    flexDirection: 'row',
+    marginLeft: 22,
+    marginRight: 18,
+    justifyContent: 'space-between',
   },
   imageFle_image: {
-   height:62,
-   width:62,
-   borderRadius:50,
-  //  margin:5.94,
-  
+    height: 62,
+    width: 62,
+    borderRadius: 50,
+    //  margin:5.94,
   },
   youtube_Maincontainer: {
     flexDirection: 'row',
@@ -254,7 +296,7 @@ const styles = StyleSheet.create({
   girl_image: {
     width: 30,
     height: 30,
-    borderRadius:50,
+    borderRadius: 50,
   },
   paypal_image: {
     width: 26,
@@ -286,18 +328,17 @@ const styles = StyleSheet.create({
     // flex:1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginHorizontal:22,
-    marginTop:30,
+    marginHorizontal: 22,
+    marginTop: 30,
   },
   transactionHistroy_Container: {
     // flex:1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginHorizontal:22,
+    marginHorizontal: 22,
     marginTop: 101,
   },
   transactionHistroy: {
-    
     fontSize: 18,
     fontFamily: 'InterSemiBold',
     color: '#000000',
