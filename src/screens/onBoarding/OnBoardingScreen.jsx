@@ -8,7 +8,7 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import imageBackround from '../../assets/OnBoardingBackground.png';
+import imageBackround from '../../assets/Images/OnBoardingBackground.png';
 import Butoon from '../../component/button/Butoon.jsx';
 
 const OnBoardingScreen = ({navigation}) => {
@@ -18,7 +18,7 @@ const OnBoardingScreen = ({navigation}) => {
         <ImageBackground style={styles.stretch} source={imageBackround}>
           <Image
             style={styles.stretchImage}
-            source={require('../../assets/specular_1.png')}
+            source={require('../../assets/Images/specular_1.png')}
           />
         </ImageBackground>
       </View>
