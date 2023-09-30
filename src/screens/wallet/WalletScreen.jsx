@@ -1,121 +1,14 @@
 import {StyleSheet, Text, View, SafeAreaView, ScrollView} from 'react-native';
 import React from 'react';
 import WalletComponentScreen from '../../component/button/WalletComponentScreen';
+import TransactionScreen from '../../component/button/TransactionScreen';
 
 const WalletScreen = () => {
   return (
     <SafeAreaView>
-      <View>
-        <WalletComponentScreen />
-        <View style={styles.container}>
-          <ScrollView>
-            <Text>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-              quisquam temporibus ipsam mollitia doloribus inventore? Eum fugit
-              voluptatibus minus aspernatur facilis esse officiis delectus,
-              alias velit voluptates odio dolore ullam. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Sed quisquam temporibus ipsam
-              mollitia doloribus inventore? Eum fugit voluptatibus minus
-              aspernatur facilis esse officiis delectus, alias velit voluptates
-              odio dolore ullam. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Sed quisquam temporibus ipsam mollitia doloribus
-              inventore? Eum fugit voluptatibus minus aspernatur facilis esse
-              officiis delectus, alias velit voluptates odio dolore ullam. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Sed quisquam
-              temporibus ipsam mollitia doloribus inventore? Eum fugit
-              voluptatibus minus aspernatur facilis esse officiis delectus,
-              alias velit voluptates odio dolore ullam. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Sed quisquam temporibus ipsam
-              mollitia doloribus inventore? Eum fugit voluptatibus minus
-              aspernatur facilis esse officiis delectus, alias velit voluptates
-              odio dolore ullam. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Sed quisquam temporibus ipsam mollitia doloribus
-              inventore? Eum fugit voluptatibus minus aspernatur facilis esse
-              officiis delectus, alias velit voluptates odio dolore ullam. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Sed quisquam
-              temporibus ipsam mollitia doloribus inventore? Eum fugit
-              voluptatibus minus aspernatur facilis esse officiis delectus,
-              alias velit voluptates odio dolore ullam. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Sed quisquam temporibus ipsam
-              mollitia doloribus inventore? Eum fugit voluptatibus minus
-              aspernatur facilis esse officiis delectus, alias velit voluptates
-              odio dolore ullam. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Sed quisquam temporibus ipsam mollitia doloribus
-              inventore? Eum fugit voluptatibus minus aspernatur facilis esse
-              officiis delectus, alias velit voluptates odio dolore ullam. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Sed quisquam
-              temporibus ipsam mollitia doloribus inventore? Eum fugit
-              voluptatibus minus aspernatur facilis esse officiis delectus,
-              alias velit voluptates odio dolore ullam. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Sed quisquam temporibus ipsam
-              mollitia doloribus inventore? Eum fugit voluptatibus minus
-              aspernatur facilis esse officiis delectus, alias velit voluptates
-              odio dolore ullam. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Sed quisquam temporibus ipsam mollitia doloribus
-              inventore? Eum fugit voluptatibus minus aspernatur facilis esse
-              officiis delectus, alias velit voluptates odio dolore ullam. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Sed quisquam
-              temporibus ipsam mollitia doloribus inventore? Eum fugit
-              voluptatibus minus aspernatur facilis esse officiis delectus,
-              alias velit voluptates odio dolore ullam. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Sed quisquam temporibus ipsam
-              mollitia doloribus inventore? Eum fugit voluptatibus minus
-              aspernatur facilis esse officiis delectus, alias velit voluptates
-              odio dolore ullam. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Sed quisquam temporibus ipsam mollitia doloribus
-              inventore? Eum fugit voluptatibus minus aspernatur facilis esse
-              officiis delectus, alias velit voluptates odio dolore ullam. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Sed quisquam
-              temporibus ipsam mollitia doloribus inventore? Eum fugit
-              voluptatibus minus aspernatur facilis esse officiis delectus,
-              alias velit voluptates odio dolore ullam. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Sed quisquam temporibus ipsam
-              mollitia doloribus inventore? Eum fugit voluptatibus minus
-              aspernatur facilis esse officiis delectus, alias velit voluptates
-              odio dolore ullam. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Sed quisquam temporibus ipsam mollitia doloribus
-              inventore? Eum fugit voluptatibus minus aspernatur facilis esse
-              officiis delectus, alias velit voluptates odio dolore ullam. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Sed quisquam
-              temporibus ipsam mollitia doloribus inventore? Eum fugit
-              voluptatibus minus aspernatur facilis esse officiis delectus,
-              alias velit voluptates odio dolore ullam. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Sed quisquam temporibus ipsam
-              mollitia doloribus inventore? Eum fugit voluptatibus minus
-              aspernatur facilis esse officiis delectus, alias velit voluptates
-              odio dolore ullam. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Sed quisquam temporibus ipsam mollitia doloribus
-              inventore? Eum fugit voluptatibus minus aspernatur facilis esse
-              officiis delectus, alias velit voluptates odio dolore ullam. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Sed quisquam
-              temporibus ipsam mollitia doloribus inventore? Eum fugit
-              voluptatibus minus aspernatur facilis esse officiis delectus,
-              alias velit voluptates odio dolore ullam. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Sed quisquam temporibus ipsam
-              mollitia doloribus inventore? Eum fugit voluptatibus minus
-              aspernatur facilis esse officiis delectus, alias velit voluptates
-              odio dolore ullam. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Sed quisquam temporibus ipsam mollitia doloribus
-              inventore? Eum fugit voluptatibus minus aspernatur facilis esse
-              officiis delectus, alias velit voluptates odio dolore ullam. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Sed quisquam
-              temporibus ipsam mollitia doloribus inventore? Eum fugit
-              voluptatibus minus aspernatur facilis esse officiis delectus,
-              alias velit voluptates odio dolore ullam. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Sed quisquam temporibus ipsam
-              mollitia doloribus inventore? Eum fugit voluptatibus minus
-              aspernatur facilis esse officiis delectus, alias velit voluptates
-              odio dolore ullam. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Sed quisquam temporibus ipsam mollitia doloribus
-              inventore? Eum fugit voluptatibus minus aspernatur facilis esse
-              officiis delectus, alias velit voluptates odio dolore ullam. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Sed quisquam
-              temporibus ipsam mollitia doloribus inventore? Eum fugit
-              voluptatibus minus aspernatur facilis esse officiis delectus,
-              alias velit voluptates odio dolore ullam.
-            </Text>
-          </ScrollView>
-        </View>
+      <WalletComponentScreen />
+      <View style={styles.container}>
+       <TransactionScreen/>
       </View>
     </SafeAreaView>
   );
@@ -128,8 +21,8 @@ const styles = StyleSheet.create({
     // flex:1,
     position: 'absolute',
     backgroundColor: 'red',
-    // width:'100%',
-    // height:'100%',
+    width:'100%',
+    height:'100%',
     marginTop: 165,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
