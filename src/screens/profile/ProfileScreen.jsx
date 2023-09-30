@@ -14,7 +14,7 @@ import accountInfo from '../../assets/Images/accountInfo.png';
 
 const ProfileScreen = () => {
   return (
-    <View>
+    <View style={{width: 414, height: 896, backgroundColor: '#ffffff'}}>
       <ImageBackground style={styles.imageBackgrounds} source={HomeBackground}>
         <Image style={styles.CircleBackgrounds} source={circleGroup} />
         <View style={styles.profile_images_container}>
@@ -36,32 +36,45 @@ const ProfileScreen = () => {
         </View>
       </ImageBackground>
 
-      <View>
-        <View>
-          <View>
-            <Image source={invite}/>
+      <View style={styles.mainContainer}>
+        <View style={styles.parentContainer}>
+          <View style={[styles.allImage, styles.inviteImage]}>
+            <Image source={invite} />
           </View>
-          <Text>Invite friends</Text>
+          <Text style={styles.alltext}>Invite Friends</Text>
         </View>
-        <View>
-          <Image source={accountInfo}/>
-          <Text>Account Info</Text>
+        <View style={styles.bordrcontainer}>
+          <View style={styles.borderView}></View>
         </View>
-        <View>
-          <Image source={userProfile}/>
-          <Text>Personal Profile</Text>
+        <View style={styles.parentContainer}>
+          <View style={styles.allImage}>
+            <Image source={accountInfo} />
+          </View>
+          <Text style={styles.alltext}>Account Info</Text>
         </View>
-        <View>
-          <Image source={messageCenter}/>
-          <Text>Message Center</Text>
+        <View style={[styles.parentContainer,styles.otherInfo]}>
+          <View style={styles.allImage}>
+            <Image source={userProfile} />
+          </View>
+          <Text style={styles.alltext}>Personal Profile</Text>
         </View>
-        <View>
-          <Image source={login}/>
-          <Text>Login and Security</Text>
+        <View style={[styles.parentContainer,styles.otherInfo]}>
+          <View style={styles.allImage}>
+            <Image source={messageCenter} />
+          </View>
+          <Text style={styles.alltext}>Message Center</Text>
         </View>
-        <View>
-          <Image source={dataPrivacy}/>
-          <Text>Data and Privacy</Text>
+        <View style={[styles.parentContainer,styles.otherInfo]}>
+          <View style={styles.allImage}>
+            <Image source={login} />
+          </View>
+          <Text style={styles.alltext}>Login and Security</Text>
+        </View>
+        <View style={[styles.parentContainer,styles.otherInfo]}>
+          <View style={styles.allImage}>
+            <Image source={dataPrivacy} />
+          </View>
+          <Text style={styles.alltext}>Data and Privacy</Text>
         </View>
       </View>
     </View>
@@ -140,4 +153,49 @@ const styles = StyleSheet.create({
     color: '#438883',
     marginTop: 5,
   },
+  parentContainer: {
+    flexDirection: 'row',
+    // justifyContent:'center',
+    alignItems: 'center',
+    marginLeft: 25,
+    // marginRight:20,
+  },
+  allImage: {
+    width: 50,
+    // height: 50,
+    marginRight: 20,
+    justifyContent: 'center',
+    // backgroundColor: '#f0f6f5',
+    alignItems: 'center',
+  },
+  inviteImage: {
+    width: 50,
+    height: 50,
+    backgroundColor: '#f0f6f5',
+    borderRadius: 50,
+  },
+  alltext: {
+    color: '#000000',
+    fontSize: 16,
+    fontFamily: 'InterMedium',
+    fontWeight: '600',
+  },
+  mainContainer: {
+    // backgroundColor: 'red',
+    marginTop: 144,
+  },
+  bordrcontainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginVertical:15,
+  },
+  borderView: {
+    borderBottomWidth: 2,
+    width: '88%',
+    borderColor:'#EEEEEE'
+  },
+  otherInfo:{
+    marginTop:30,
+  }
 });
