@@ -18,10 +18,10 @@ const NaviagtionsScreen = () => {
   
     <NavigationContainer >
       <Tab.Navigator  screenOptions={{headerShown:false ,headerStyle: { backgroundColor: 'blue' }}}>
+        <Tab.Screen name="WalletScreen" component={WalletScreen} />
         <Tab.Screen  name="Home" component={HomeScreen} />
         <Tab.Screen name="ProfileScreen" component={ProfileScreen} />
         <Tab.Screen name="OnBoarding" component={OnBoardingScreen} />
-        <Tab.Screen name="WalletScreen" component={WalletScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
