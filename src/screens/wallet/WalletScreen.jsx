@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View, SafeAreaView, ScrollView} from 'react-native';
 import React from 'react';
-import WalletComponentScreen from '../../component/button/WalletComponentScreen';
-import TransactionScreen from '../../component/button/TransactionScreen';
+import WalletComponentScreen from '../../component/transcationComponent/WalletComponentScreen';
+import TransactionScreen from '../../component/transcationComponent/TransactionScreen';
 
 const WalletScreen = () => {
   return (
@@ -20,9 +20,9 @@ const styles = StyleSheet.create({
   container: {
     // flex:1,
     position: 'absolute',
-    backgroundColor: 'red',
+    backgroundColor: 'white',
     width:'100%',
-    height:'100%',
+    // height:'290%',
     marginTop: 165,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
