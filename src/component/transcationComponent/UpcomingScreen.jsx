@@ -3,8 +3,8 @@ import React from 'react';
 import Frame21 from '../../assets/Images/Frame21.svg';
 import Frame22 from '../../assets/Images/Frame22.svg';
 import Frame23 from '../../assets/Images/Frame23.svg';
-import SocialComponent from './SocialComponent';
-import { useNavigation } from '@react-navigation/native';
+import SocialComponentTwo from './SocialComponenttwo';
+import {useNavigation} from '@react-navigation/native';
 
 const TransactionScreen = () => {
   const navigation = useNavigation();
@@ -34,21 +34,19 @@ const TransactionScreen = () => {
         </View>
       </View>
       <View style={styles.butn_type_container}>
-
-        <TouchableOpacity >
-          <View style={[styles.both_btn, styles.transition_btn]} >
+        <TouchableOpacity>
+          <View style={[styles.both_btn, styles.transition_btn]}>
             <Text style={styles.textt}>Transactions</Text>
           </View>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={handleUpcomingBillsPress}>
-        <View style={[styles.both_btn, styles.upcoming_bill_btn]}>
-          <Text style={styles.textt}>Upcoming Bills</Text>
-        </View>
-      </TouchableOpacity>
-      
+          <View style={[styles.both_btn, styles.upcoming_bill_btn]}>
+            <Text style={styles.textt}>Upcoming Bills</Text>
+          </View>
+        </TouchableOpacity>
       </View>
-      <SocialComponent />
+      <SocialComponentTwo />
     </View>
   );
 };
@@ -120,11 +118,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   transition_btn: {
-    backgroundColor: '#ffffff',
+    backgroundColor: 'transparent',
     borderRadius: 40,
   },
   upcoming_bill_btn: {
-    backgroundColor: 'transparent',
+    backgroundColor: '#ffffff',
     borderRadius: 40,
   },
   textt: {
