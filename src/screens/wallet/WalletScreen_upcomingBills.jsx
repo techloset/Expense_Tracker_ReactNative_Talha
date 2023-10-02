@@ -4,18 +4,18 @@ import WalletComponentScreen from '../../component/transcationComponent/WalletCo
 import UpcommingBills from '../../component/transcationComponent/UpcomingScreen';
 
 
-const WalletScreen_upcomingBills = () => {
+const WalletScreen_upcomingBills = ({navigation}) => {
   return (
     <View>
       <WalletComponentScreen/>
       <View style={styles.container}>
-       <UpcommingBills/>
+       <UpcommingBills navigation={navigation}/>
       </View>
     </View>
   )
 }
 
-export default WalletScreen_upcomingBills
+export default WalletScreen_upcomingBills;
 
 const styles = StyleSheet.create({
   container: {

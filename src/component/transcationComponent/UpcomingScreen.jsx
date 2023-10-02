@@ -4,15 +4,10 @@ import Frame21 from '../../assets/Images/Frame21.svg';
 import Frame22 from '../../assets/Images/Frame22.svg';
 import Frame23 from '../../assets/Images/Frame23.svg';
 import SocialComponentTwo from './SocialComponenttwo';
-import {useNavigation} from '@react-navigation/native';
+// import {useNavigation} from '@react-navigation/native';
 
-const TransactionScreen = () => {
-  const navigation = useNavigation();
-
-  const handleUpcomingBillsPress = () => {
-    // Navigate to the "UpcomingBills" screen
-    navigation.navigate('walletScreen_upcomingBills'); // Replace 'UpcomingBills' with your screen name
-  };
+const TransactionScreen = ({navigation}) => {
+  
   return (
     <View style={styles.container}>
       <View style={styles.Heading_Container}>
@@ -34,19 +29,19 @@ const TransactionScreen = () => {
         </View>
       </View>
       <View style={styles.butn_type_container}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=> navigation.navigate("WalletScreen")}>
           <View style={[styles.both_btn, styles.transition_btn]}>
             <Text style={styles.textt}>Transactions</Text>
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={handleUpcomingBillsPress}>
+        <TouchableOpacity >
           <View style={[styles.both_btn, styles.upcoming_bill_btn]}>
             <Text style={styles.textt}>Upcoming Bills</Text>
           </View>
         </TouchableOpacity>
       </View>
-      <SocialComponentTwo />
+      <SocialComponentTwo navigation={navigation}/>
     </View>
   );
 };

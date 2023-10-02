@@ -1,14 +1,14 @@
-import {StyleSheet, Text, View, SafeAreaView, ScrollView} from 'react-native';
+import {StyleSheet, Text, View, SafeAreaView} from 'react-native';
 import React from 'react';
 import WalletComponentScreen from '../../component/transcationComponent/WalletComponentScreen';
 import TransactionScreen from '../../component/transcationComponent/TransactionScreen';
 
-const WalletScreen = () => {
+const WalletScreen = ({navigation}) => {
   return (
     <SafeAreaView>
       <WalletComponentScreen />
       <View style={styles.container}>
-       <TransactionScreen/>
+       <TransactionScreen navigation={navigation}/>
       </View>
     </SafeAreaView>
   );

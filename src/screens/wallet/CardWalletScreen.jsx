@@ -25,6 +25,7 @@ const CardWalletScreen = () => {
             </View>
           </TouchableOpacity>
         </View>
+
         <View style={styles.Cards}>
             
           <View style={styles.visaCard}>
@@ -42,6 +43,10 @@ const CardWalletScreen = () => {
         <Text>
         This card must be connected to a bank account under your name        </Text>
       </View>
+      
+
+
+      
     </View>
   );
 };
@@ -98,12 +103,13 @@ const styles = StyleSheet.create({
     // alignContent:'center',
     alignItems: 'center',
     backgroundColor: 'red',
-    // position:'relative'
+    position:'relative',
+    height:'64%'
   },
   DebitCard:{
     
-    // position:'absolute',
-    // marginTop:16,
+    position:'absolute',
+    marginTop:16,
 // backgroundColor:""  
 },
 visaCard:{

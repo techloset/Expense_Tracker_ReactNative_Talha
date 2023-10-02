@@ -185,9 +185,10 @@ const styles = StyleSheet.create({
   Next_btn:{
     
         height:100,
-        width:375,
+        width:350,
         borderWidth: 1,
-        borderColor: 'green',
+        borderColor: '#438883',
+        borderRadius:40,
     
   }
 });
