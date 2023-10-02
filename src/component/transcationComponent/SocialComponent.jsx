@@ -69,49 +69,8 @@ const SocialComponent = () => {
               <Text style={styles.upwork_income}>-$11.99</Text>
             </View>
           </View>
-
-          <View style={styles.up_Maincontainer}>
-            <View style={styles.up_Innercontainer}>
-              <View style={styles.imge_container}>
-                <Image style={styles.upwork_image} source={UpWork} />
-              </View>
-              <View>
-                <Text style={styles.UpWorkText}>Upwork</Text>
-                <Text style={styles.todayText}>Today</Text>
-              </View>
-            </View>
-            <View>
-              <Text style={styles.upwork_income}>+ $ 850.00</Text>
-            </View>
-          </View>
-          <View style={styles.up_Maincontainer}>
-            <View style={styles.up_Innercontainer}>
-              <View style={styles.imge_container}>
-                <Image style={styles.upwork_image} source={UpWork} />
-              </View>
-              <View>
-                <Text style={styles.UpWorkText}>Upwork</Text>
-                <Text style={styles.todayText}>Today</Text>
-              </View>
-            </View>
-            <View>
-              <Text style={styles.upwork_income}>+ $ 850.00</Text>
-            </View>
-          </View>
-          <View style={styles.up_Maincontainer}>
-            <View style={styles.up_Innercontainer}>
-              <View style={styles.imge_container}>
-                <Image style={styles.upwork_image} source={UpWork} />
-              </View>
-              <View>
-                <Text style={styles.UpWorkText}>Upwork</Text>
-                <Text style={styles.todayText}>Today</Text>
-              </View>
-            </View>
-            <View>
-              <Text style={styles.upwork_income}>+ $ 850.00</Text>
-            </View>
-          </View>
+         
+         
         </ScrollView>
       
     </View>
@@ -128,6 +87,7 @@ const styles = StyleSheet.create({
     marginTop: 16,
     marginHorizontal: 22,
     alignItems: 'center',
+    // marginBottom:16,
   },
   paypal_Maincontainer: {
     flexDirection: 'row',
@@ -149,7 +109,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     // backgroundColor:'yellow',
-    marginTop: 19,
+    // marginTop: 19,
     marginHorizontal: 22,
     alignItems: 'center',
   },
