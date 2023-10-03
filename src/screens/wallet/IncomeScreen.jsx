@@ -101,7 +101,9 @@ const IncomeScreen = () => {
           </View>
         </View>
 
-        <View style={styles.Next_btn}></View>
+        <View style={styles.Next_btn}>
+            <Text style={styles.download}>Download Receipt</Text>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -198,8 +200,9 @@ const styles = StyleSheet.create({
   line1: {
     borderTopWidth: 1,
     borderTopColor: '#DDDDDD',
-    marginVertical: 20,
+    marginTop: 20,
     marginHorizontal: 30,
+    marginBottom:8
   },
   Next_btn: {
     // height: 100,
@@ -209,6 +212,16 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     paddingHorizontal:10,
     paddingVertical:20,
-    marginTop:40
+    marginTop:40,
+    // marginBottom:31
+    justifyContent:'center',
+    alignItems:'center',
+    marginLeft:32
   },
+  download:{
+    color:'#438883',
+    fontFamily:"InterSemiBold",
+    fontSize:18,
+    
+  }
 });
