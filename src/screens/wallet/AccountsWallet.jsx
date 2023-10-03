@@ -8,7 +8,7 @@ import Bank from '../../assets/Images/bank-fill.svg';
 import PaypaLogo from '../../assets/Images/paypalogo.svg';
 import CheckCircle from '../../assets/Images/CheckCircle.svg';
 
-const CardWalletScreen = () => {
+const AccountsWallet = () => {
   return (
     <View>
       {/* <Text>CardWalletScreen</Text> */}
@@ -96,7 +96,7 @@ const CardWalletScreen = () => {
   );
 };
 
-export default CardWalletScreen;
+export default AccountsWallet;
 
 const styles = StyleSheet.create({
   container: {

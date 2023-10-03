@@ -4,7 +4,7 @@ import WalletComponentScreen from '../../component/transcationComponent/WalletCo
 import VisaCard from '../../assets/Images/visaCard.svg';
 import DebitCard from '../../assets/Images/DebitCard.svg';
 
-const CardWalletScreen = () => {
+const CardWalletScreen = ({navigation}) => {
   return (
     <View>
       {/* <Text>CardWalletScreen</Text> */}
@@ -19,7 +19,7 @@ const CardWalletScreen = () => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=> navigation.navigate("AccountsWallet")}>
             <View style={[styles.both_btn, styles.upcoming_bill_btn]}>
               <Text style={styles.textt}>Accounts</Text>
             </View>

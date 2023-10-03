@@ -7,6 +7,7 @@ const WalletScreen = ({navigation}) => {
   return (
     <SafeAreaView>
       <WalletComponentScreen />
+      
       <View style={styles.container}>
        <TransactionScreen navigation={navigation}/>
       </View>
