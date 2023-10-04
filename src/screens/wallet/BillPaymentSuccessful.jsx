@@ -2,14 +2,16 @@ import {StyleSheet, Text, View, SafeAreaView, Image} from 'react-native';
 import React from 'react';
 import WalletComponentScreen from '../../component/transcationComponent/WalletComponentScreen';
 // import { SafeAreaView } from 'react-native-safe-area-context'
-import UpSvg from '../../assets/Images/upSvg.svg';
+// import UpSvg from '../../assets/Images/upSvg.svg';
 import UpIcon from '../../assets/Images/upIcon.svg';
+import PaymentTick from '../../assets/Images/paymentTick.svg';
 
 import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/lessThan.png';
-const IncomeScreen = () => {
+
+const BillPaymentSuccessful = () => {
   return (
     <SafeAreaView>
       <View>
@@ -26,21 +28,20 @@ const IncomeScreen = () => {
           </View>
         </View>
       </View>
-      {/* <WalletComponentScreen /> */}
       {/* <Text>IncomeScreen</Text> */}
 
       <View style={styles.container}>
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
           <View style={styles.up_container}>
-            <UpSvg style={styles.up} />
+            <PaymentTick style={styles.up} />
           </View>
           <View style={styles.income_container}>
-            <Text>Income</Text>
+            <Text style={styles.textt}>Payment Successfully</Text>
           </View>
-          <Text style={styles.value}>$ 850.00</Text>
+          <Text style={styles.value}>Youtube Premium</Text>
         </View>
-
-        <View style={{marginTop: 37}}>
+        {/* style={{marginTop:42}} */}
+        <View style={{marginTop: 32}}>
           <View style={styles.indivdial_contianer}>
             <View>
               <Text
@@ -59,19 +60,19 @@ const IncomeScreen = () => {
 
           <View style={[styles.indivdial_contianer, styles.from_container]}>
             <View>
-              <Text style={styles.container_text}>Status</Text>
+              <Text style={styles.container_text}>Payment method</Text>
             </View>
             <View>
-              <Text style={styles.container_text_other_income}>Income</Text>
+              <Text style={styles.container_text_other}>Debit Card</Text>
             </View>
           </View>
 
           <View style={[styles.indivdial_contianer, styles.other_container]}>
             <View>
-              <Text style={styles.container_text}>From</Text>
+              <Text style={styles.container_text}>Status</Text>
             </View>
             <View>
-              <Text style={styles.container_text_other}>Upwork Escrow</Text>
+              <Text style={styles.container_text_other_income}>438883</Text>
             </View>
           </View>
           <View style={[styles.indivdial_contianer, styles.other_container]}>
@@ -79,7 +80,7 @@ const IncomeScreen = () => {
               <Text style={styles.container_text}>Time</Text>
             </View>
             <View>
-              <Text style={styles.container_text_other}>10:00 AM</Text>
+              <Text style={styles.container_text_other}>08:15 AM</Text>
             </View>
           </View>
 
@@ -88,16 +89,25 @@ const IncomeScreen = () => {
               <Text style={styles.container_text}>Date</Text>
             </View>
             <View>
-              <Text style={styles.container_text_other}>Feb 30, 2022</Text>
+              <Text style={styles.container_text_other}>Feb 28, 2022</Text>
+            </View>
+          </View>
+
+          <View style={[styles.indivdial_contianer, styles.other_container]}>
+            <View>
+              <Text style={styles.container_text}>Transcation ID</Text>
+            </View>
+            <View>
+              <Text style={styles.container_text_other}>2092913832472..</Text>
             </View>
           </View>
           <View style={styles.line1}></View>
-          <View style={[styles.indivdial_contianer, styles.other_container]}>
+          <View style={styles.indivdial_contianer}>
             <View>
-              <Text style={styles.container_text}>Earnings</Text>
+              <Text style={styles.container_text}>Price</Text>
             </View>
             <View>
-              <Text style={styles.container_text_other}>$ 870.00</Text>
+              <Text style={styles.container_text_other}>$ 11.99</Text>
             </View>
           </View>
           <View style={[styles.indivdial_contianer, styles.other_container]}>
@@ -105,39 +115,38 @@ const IncomeScreen = () => {
               <Text style={styles.container_text}>Fee</Text>
             </View>
             <View>
-              <Text style={styles.container_text_other}>- $ 20.00</Text>
+              <Text style={styles.container_text_other}>- $ 1.99</Text>
             </View>
           </View>
           <View style={styles.line1}></View>
-          <View style={[styles.indivdial_contianer, styles.other_container]}>
+          <View style={[styles.indivdial_contianer]}>
             <View>
               <Text style={styles.container_text_total}>Total</Text>
             </View>
             <View>
-              <Text style={styles.container_text_other_total}>- $ 85.00</Text>
+              <Text style={styles.container_text_other_total}>$ 13.98</Text>
             </View>
           </View>
         </View>
 
         <View style={styles.Next_btn}>
-          <Text style={styles.download}>Download Receipt</Text>
+          <Text style={styles.download}>Share receipt</Text>
         </View>
       </View>
     </SafeAreaView>
   );
 };
 
-export default IncomeScreen;
+export default BillPaymentSuccessful;
 
 const styles = StyleSheet.create({
   container: {
-    // flex:1,
     position: 'absolute',
     backgroundColor: 'white',
-    // backgroundColor: 'red',
+
     width: '100%',
-    // height:'290%',
-    marginTop: 155,
+
+    marginTop: 156,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
   },
@@ -150,32 +159,20 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    // marginLeft:167
-    // alignContent:'center'
   },
-  up: {
-    // justifyContent:'center',
-    // alignItems:'center'
-  },
+  up: {},
   income_container: {
-    backgroundColor: '#4388831a',
-    width: 80,
-    borderRadius: 40,
-    padding: 4,
-    justifyContent: 'center',
-    alignItems: 'center',
     marginTop: 10,
   },
   textt: {
     color: '#438883',
-    fontFamily: 'InterMedium',
-    fontSize: 14,
+    fontFamily: 'InterSemiBold',
+    fontSize: 22,
   },
   value: {
-    color: '#000000',
-    fontFamily: 'InterSemiBold',
-    fontSize: 24,
-    // marginTop: 8,
+    color: '#666666',
+    fontFamily: 'InterMedium',
+    fontSize: 16,
   },
   indivdial_contianer: {
     flexDirection: 'row',
@@ -189,10 +186,10 @@ const styles = StyleSheet.create({
     fontFamily: 'InterMedium',
   },
   from_container: {
-    marginTop: 18,
+    marginTop: 21,
   },
   other_container: {
-    marginTop: 10,
+    marginTop: 12,
   },
   container_text_other: {
     color: '#000000',
@@ -218,23 +215,21 @@ const styles = StyleSheet.create({
   line1: {
     borderTopWidth: 1,
     borderTopColor: '#DDDDDD',
-    marginTop: 20,
+    marginVertical: 15,
     marginHorizontal: 30,
-    marginBottom: 8,
   },
   Next_btn: {
-    // height: 100,
     width: 350,
     borderWidth: 1,
     borderColor: '#438883',
     borderRadius: 40,
     paddingHorizontal: 10,
     paddingVertical: 20,
-    marginTop: 40,
-    // marginBottom:31
+
     justifyContent: 'center',
     alignItems: 'center',
     marginLeft: 32,
+    marginTop: 20,
     marginBottom: 20,
   },
   download: {
@@ -242,7 +237,6 @@ const styles = StyleSheet.create({
     fontFamily: 'InterSemiBold',
     fontSize: 18,
   },
-
   eelispse: {
     position: 'absolute',
   },

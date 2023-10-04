@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity,Image} from 'react-native';
 import React from 'react';
 import WalletComponentScreen from '../../component/transcationComponent/WalletComponentScreen';
 // import VisaCard from '../../assets/Images/visaCard.svg';
@@ -8,12 +8,36 @@ import Bank from '../../assets/Images/bank-fill.svg';
 import PaypaLogo from '../../assets/Images/paypalogo.svg';
 import CheckCircle from '../../assets/Images/CheckCircle.svg';
 
+
+
+import Rectangular from '../../assets/Images/Rectangle.svg';
+import Ellipse from '../../assets/Images/Ellipse.svg';
+import Notification from '../../assets/Images/notification.svg';
+import LessThan from '../../assets/Images/lessThan.png';
 const AccountsWallet = () => {
   return (
     <View>
       {/* <Text>CardWalletScreen</Text> */}
 
-      <WalletComponentScreen />
+
+      <View>
+      <View style={styles.container_inner}>
+        <Rectangular />
+        <Ellipse style={styles.eelispse} />
+      </View>
+      <View style={styles.images_conatiner}>
+        <View style={styles.lessthen}>
+          <Image style={{width:23,height:23}} source={LessThan} />
+        </View>
+        <View style={styles.notification}>
+          <Notification />
+        </View>
+      </View>
+    </View>
+
+
+      {/* <WalletComponentScreen /> */}
+
       <View style={styles.container}>
         {/* <UpcommingBills/> */}
         <View style={styles.butn_type_container}>
@@ -190,5 +214,33 @@ const styles = StyleSheet.create({
         borderColor: '#438883',
         borderRadius:40,
     
-  }
+  },
+
+
+  eelispse: {
+    position: 'absolute',
+   
+  },
+  images_conatiner: {
+    flex:1,
+    position:'absolute',
+    width:'100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between', 
+    alignItems:'center',
+    marginTop:78,
+  },
+
+  notification: {
+    width: 40,
+    height: 40,
+    borderRadius: 6.67,
+    padding: 8.33,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight:24,
+  },
+  lessthen:{
+    marginLeft:24,
+  },
 });

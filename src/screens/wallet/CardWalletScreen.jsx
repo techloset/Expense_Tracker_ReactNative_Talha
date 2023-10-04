@@ -1,15 +1,33 @@
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
 import WalletComponentScreen from '../../component/transcationComponent/WalletComponentScreen';
 import VisaCard from '../../assets/Images/visaCard.svg';
 import DebitCard from '../../assets/Images/DebitCard.svg';
 
+import Rectangular from '../../assets/Images/Rectangle.svg';
+import Ellipse from '../../assets/Images/Ellipse.svg';
+import Notification from '../../assets/Images/notification.svg';
+import LessThan from '../../assets/Images/lessThan.png';
 const CardWalletScreen = ({navigation}) => {
   return (
     <View>
       {/* <Text>CardWalletScreen</Text> */}
 
-      <WalletComponentScreen />
+      <View>
+        <View style={styles.container_inner}>
+          <Rectangular />
+          <Ellipse style={styles.eelispse} />
+        </View>
+        <View style={styles.images_conatiner}>
+          <View style={styles.lessthen}>
+            <Image style={{width: 23, height: 23}} source={LessThan} />
+          </View>
+          <View style={styles.notification}>
+            <Notification />
+          </View>
+        </View>
+      </View>
+      {/* <WalletComponentScreen /> */}
       <View style={styles.container}>
         {/* <UpcommingBills/> */}
         <View style={styles.butn_type_container}>
@@ -19,7 +37,8 @@ const CardWalletScreen = ({navigation}) => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={()=> navigation.navigate("AccountsWallet")}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('AccountsWallet')}>
             <View style={[styles.both_btn, styles.upcoming_bill_btn]}>
               <Text style={styles.textt}>Accounts</Text>
             </View>
@@ -27,7 +46,6 @@ const CardWalletScreen = ({navigation}) => {
         </View>
 
         <View style={styles.Cards}>
-            
           <View style={styles.visaCard}>
             <VisaCard />
           </View>
@@ -35,18 +53,12 @@ const CardWalletScreen = ({navigation}) => {
           <View style={styles.DebitCard}>
             <DebitCard />
           </View>
-
         </View>
+        <Text>Add your debit Card</Text>
         <Text>
-        Add your debit Card
+          This card must be connected to a bank account under your name{' '}
         </Text>
-        <Text>
-        This card must be connected to a bank account under your name        </Text>
       </View>
-      
-
-
-      
     </View>
   );
 };
@@ -103,16 +115,41 @@ const styles = StyleSheet.create({
     // alignContent:'center',
     alignItems: 'center',
     backgroundColor: 'red',
-    position:'relative',
-    height:'64%'
+    position: 'relative',
+    height: '64%',
   },
-  DebitCard:{
-    
-    position:'absolute',
-    marginTop:16,
-// backgroundColor:""  
-},
-visaCard:{
+  DebitCard: {
+    position: 'absolute',
+    marginTop: 16,
+    // backgroundColor:""
+  },
+  visaCard: {
     // position:'absolute',
-}
+  },
+
+  eelispse: {
+    position: 'absolute',
+  },
+  images_conatiner: {
+    flex: 1,
+    position: 'absolute',
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: 78,
+  },
+
+  notification: {
+    width: 40,
+    height: 40,
+    borderRadius: 6.67,
+    padding: 8.33,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 24,
+  },
+  lessthen: {
+    marginLeft: 24,
+  },
 });

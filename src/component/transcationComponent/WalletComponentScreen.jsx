@@ -20,9 +20,6 @@ const WalletComponentScreen = () => {
           <Notification />
         </View>
       </View>
-      {/* <View style={styles.second_continer}> */}
-      {/* Add your content for the second_continer here */}
-      {/* </View> */}
     </View>
   );
 };
