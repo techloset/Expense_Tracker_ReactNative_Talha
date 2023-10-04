@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image,TouchableOpacity} from 'react-native';
 import React from 'react';
 import WalletComponentScreen from '../../component/transcationComponent/WalletComponentScreen';
 import UpcommingBills from '../../component/transcationComponent/UpcomingScreen';
@@ -16,9 +16,11 @@ const WalletScreen_upcomingBills = ({navigation}) => {
           <Ellipse style={styles.eelispse} />
         </View>
         <View style={styles.images_conatiner}>
+          <TouchableOpacity onPress={() => navigation.push('WalletScreen')}>
           <View style={styles.lessthen}>
             <Image style={{width: 23, height: 23}} source={LessThan} />
           </View>
+          </TouchableOpacity>
           <View style={styles.notification}>
             <Notification />
           </View>

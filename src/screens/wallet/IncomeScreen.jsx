@@ -1,6 +1,6 @@
-import {StyleSheet, Text, View, SafeAreaView, Image} from 'react-native';
+import {StyleSheet, Text, View, SafeAreaView, Image,TouchableOpacity} from 'react-native';
 import React from 'react';
-import WalletComponentScreen from '../../component/transcationComponent/WalletComponentScreen';
+// import WalletComponentScreen from '../../component/transcationComponent/WalletComponentScreen';
 // import { SafeAreaView } from 'react-native-safe-area-context'
 import UpSvg from '../../assets/Images/upSvg.svg';
 import UpIcon from '../../assets/Images/upIcon.svg';
@@ -9,7 +9,7 @@ import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/lessThan.png';
-const IncomeScreen = () => {
+const IncomeScreen = ({navigation}) => {
   return (
     <SafeAreaView>
       <View>
@@ -119,9 +119,11 @@ const IncomeScreen = () => {
           </View>
         </View>
 
+        <TouchableOpacity onPress={() => navigation.navigate('BillDetails')}>
         <View style={styles.Next_btn}>
           <Text style={styles.download}>Download Receipt</Text>
         </View>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );

@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, SafeAreaView, Image} from 'react-native';
+import {StyleSheet, Text, View, SafeAreaView, Image,TouchableOpacity} from 'react-native';
 import React from 'react';
 import WalletComponentScreen from '../../component/transcationComponent/WalletComponentScreen';
 // import { SafeAreaView } from 'react-native-safe-area-context'
@@ -11,7 +11,7 @@ import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/lessThan.png';
 
-const BillPaymentSuccessful = () => {
+const BillPaymentSuccessful = ({navigation}) => {
   return (
     <SafeAreaView>
       <View>
@@ -129,9 +129,11 @@ const BillPaymentSuccessful = () => {
           </View>
         </View>
 
-        <View style={styles.Next_btn}>
-          <Text style={styles.download}>Share receipt</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+        <View style={styles.bttn}>
+          <Text style={styles.bttnText}>Share Reciept</Text>
         </View>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
@@ -218,19 +220,24 @@ const styles = StyleSheet.create({
     marginVertical: 15,
     marginHorizontal: 30,
   },
-  Next_btn: {
-    width: 350,
-    borderWidth: 1,
-    borderColor: '#438883',
-    borderRadius: 40,
-    paddingHorizontal: 10,
-    paddingVertical: 20,
-
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginLeft: 32,
-    marginTop: 20,
-    marginBottom: 20,
+  bttn:{
+    while:358,
+    height:60,
+    backgroundColor:'#69AEA9',
+    borderRadius:40,
+    paddingHorizontal:20,
+    paddingVertical:10,
+    justifyContent:'center',
+  alignItems:'center',
+  marginHorizontal:28,
+  marginTop:30,
+  marginBottom:20
+  },
+  bttnText:{
+   color:'#ffffff',
+   fontSize:18,
+   fontFamily:'InterSemiBold',
+  
   },
   download: {
     color: '#438883',

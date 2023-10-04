@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image,TouchableOpacity} from 'react-native';
 import React from 'react';
 import WalletComponentScreen from '../../component/transcationComponent/WalletComponentScreen';
 import youtubeCardBills from '../../assets/Images/youtubeCardBills.png';
@@ -13,7 +13,7 @@ import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/lessThan.png';
 
-const BillPayment = () => {
+const BillPayment = ({navigation}) => {
   return (
     <View style={{width: 414, height: 896}}>
       
@@ -69,9 +69,11 @@ const BillPayment = () => {
 
        
 
+        <TouchableOpacity onPress={() => navigation.navigate('BillPaymentSuccessful')}>
         <View style={styles.bttn}>
-          <Text style={styles.bttnText}>Pay Now</Text>
+          <Text style={styles.bttnText}>Confirm and Pay Now</Text>
         </View>
+        </TouchableOpacity>
       </View>
     </View>
   );

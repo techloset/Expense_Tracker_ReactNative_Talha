@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, TouchableOpacity,Image} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
 import WalletComponentScreen from '../../component/transcationComponent/WalletComponentScreen';
 // import VisaCard from '../../assets/Images/visaCard.svg';
@@ -8,33 +8,29 @@ import Bank from '../../assets/Images/bank-fill.svg';
 import PaypaLogo from '../../assets/Images/paypalogo.svg';
 import CheckCircle from '../../assets/Images/CheckCircle.svg';
 
-
-
 import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/lessThan.png';
-const AccountsWallet = () => {
+const AccountsWallet = ({navigation}) => {
   return (
     <View>
       {/* <Text>CardWalletScreen</Text> */}
 
-
       <View>
-      <View style={styles.container_inner}>
-        <Rectangular />
-        <Ellipse style={styles.eelispse} />
-      </View>
-      <View style={styles.images_conatiner}>
-        <View style={styles.lessthen}>
-          <Image style={{width:23,height:23}} source={LessThan} />
+        <View style={styles.container_inner}>
+          <Rectangular />
+          <Ellipse style={styles.eelispse} />
         </View>
-        <View style={styles.notification}>
-          <Notification />
+        <View style={styles.images_conatiner}>
+          <View style={styles.lessthen}>
+            <Image style={{width: 23, height: 23}} source={LessThan} />
+          </View>
+          <View style={styles.notification}>
+            <Notification />
+          </View>
         </View>
       </View>
-    </View>
-
 
       {/* <WalletComponentScreen /> */}
 
@@ -74,7 +70,7 @@ const AccountsWallet = () => {
               <CheckCircle />
             </View>
           </View>
-          
+
           <View style={styles.card_container}>
             <View style={styles.circle_bank}>
               <Dollar />
@@ -83,9 +79,8 @@ const AccountsWallet = () => {
               <Text style={styles.bankLink}> Microdeposits</Text>
               <View style={styles.othertext_content}>
                 <Text style={styles.othertext_contents}>
-                Connect bank in 5-7 days{' '}
+                  Connect bank in 5-7 days{' '}
                 </Text>
-                
               </View>
             </View>
             <View style={styles.circletck}>
@@ -101,9 +96,8 @@ const AccountsWallet = () => {
               <Text style={styles.bankLink}>Paypal</Text>
               <View style={styles.othertext_content}>
                 <Text style={styles.othertext_contents}>
-                Connect you paypal account{' '}
+                  Connect you paypal account{' '}
                 </Text>
-                
               </View>
             </View>
             <View style={styles.circletck}>
@@ -111,9 +105,13 @@ const AccountsWallet = () => {
             </View>
           </View>
 
-         <View style={styles.Next_btn}>
 
-         </View>
+          <TouchableOpacity onPress={() => navigation.navigate('IncomeScreen')}>
+          <View style={styles.Next_btn}>
+          <Text style={styles.download}>Next</Text>
+        </View>
+          </TouchableOpacity>
+         
         </View>
       </View>
     </View>
@@ -176,7 +174,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 30,
-    marginBottom:15,
+    marginBottom: 15,
   },
   circle_bank: {
     marginTop: 20,
@@ -200,35 +198,42 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontFamily: 'InterMedium',
     marginRight: 50,
-    marginTop:4
+    marginTop: 4,
   },
   circletck: {
     marginRight: 20,
-    
   },
-  Next_btn:{
-    
-        height:100,
-        width:350,
-        borderWidth: 1,
-        borderColor: '#438883',
-        borderRadius:40,
-    
-  },
+  Next_btn: {
+    width: 350,
+    borderWidth: 1,
+    borderColor: '#438883',
+    borderRadius: 40,
+    paddingHorizontal: 10,
+    paddingVertical: 20,
 
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: 32,
+    marginTop: 20,
+    marginBottom: 20,
+  },
+  download: {
+    color: '#438883',
+    fontFamily: 'InterSemiBold',
+    fontSize: 18,
+  },
 
   eelispse: {
     position: 'absolute',
-   
   },
   images_conatiner: {
-    flex:1,
-    position:'absolute',
-    width:'100%',
+    flex: 1,
+    position: 'absolute',
+    width: '100%',
     flexDirection: 'row',
-    justifyContent: 'space-between', 
-    alignItems:'center',
-    marginTop:78,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: 78,
   },
 
   notification: {
@@ -238,9 +243,9 @@ const styles = StyleSheet.create({
     padding: 8.33,
     justifyContent: 'center',
     alignItems: 'center',
-    marginRight:24,
+    marginRight: 24,
   },
-  lessthen:{
-    marginLeft:24,
+  lessthen: {
+    marginLeft: 24,
   },
 });

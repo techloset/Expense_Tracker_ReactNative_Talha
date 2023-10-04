@@ -1,6 +1,6 @@
-import {StyleSheet, Text, View, SafeAreaView, Image} from 'react-native';
+import {StyleSheet, Text, View, SafeAreaView, Image,TouchableOpacity} from 'react-native';
 import React from 'react';
-import WalletComponentScreen from '../../component/transcationComponent/WalletComponentScreen';
+// import WalletComponentScreen from '../../component/transcationComponent/WalletComponentScreen';
 import TransactionScreen from '../../component/transcationComponent/TransactionScreen';
 
 import Rectangular from '../../assets/Images/Rectangle.svg';
@@ -16,9 +16,11 @@ const WalletScreen = ({navigation}) => {
           <Ellipse style={styles.eelispse} />
         </View>
         <View style={styles.images_conatiner}>
+          <TouchableOpacity >
           <View style={styles.lessthen}>
             <Image style={{width: 23, height: 23}} source={LessThan} />
           </View>
+          </TouchableOpacity>
           <View style={styles.notification}>
             <Notification />
           </View>
