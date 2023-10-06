@@ -30,7 +30,7 @@ const NaviagtionsScreen = () => {
   return (
   
     <NavigationContainer >
-       <Stack.Navigator screenOptions={{ headerShown: false }}> 
+       <Stack.Navigator screenOptions={{ headerShown: false,ShowLabel:false }}> 
         {/* <Stack.Screen name='WalletScreen' component={WalletScreen}/> */}
         <Stack.Screen name='TabNavigation' component={TabNavigation}/>
         <Stack.Screen name='WalletScreen_upcomingBills' component={WalletScreen_upcomingBills}/>

@@ -24,7 +24,7 @@ import Image_75 from '../../assets/Images/image75.png';
 
 const HomeScreen = ({navigation}) => {
   return (
-    <View>
+    <View style={{backgroundColor:'white'}}>
       {/* <Text>HomeScreen</Text> */}
       {/* <ImageBackground
         style={styles.stretch}

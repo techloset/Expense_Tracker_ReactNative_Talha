@@ -1,18 +1,204 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import {Dimensions, StyleSheet, Text, View, Image,useWindowDimensions} from 'react-native';
+import Download from '../../assets/Images/download.svg';
+import LessThanBlack from '../../assets/Images/Lessthanblack.svg';
+import Sort from '../../assets/Images/sort.svg'
+import Starbucks from '../../assets/Images/starbucks.svg'
 
-const StaticsScreen = () => {
-  return (
-    <View>
-      <Text>StaticsScreen</Text>
-      {/* <Button
-        title="Go to statics"
-        onPress={() => navigation.navigate('Statics')}
-      /> */}
-    </View>
-  )
+import React from 'react';
+import {
+  LineChart,
+  BarChart,
+  PieChart,
+  ProgressChart,
+  ContributionGraph,
+  StackedBarChart,
+} from 'react-native-chart-kit';
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
+console.log(windowWidth)
+console.log(windowHeight + " heelo")
+
+
+function useStyles(){
+  const {width,height} = useWindowDimensions();
+  // console.log()
+  return StyleSheet.create({
+
+    text1: {
+      color: '#222222',
+      fontFamily: 'InterSemiBold',
+      fontSize: 18,
+    },
+    staticContainer: {
+      // flex:1,
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginTop: 84,
+      marginHorizontal: 24,
+      backgroundColor:'red',
+      
+    },
+    topspenddContainer:{
+      // flex:1
+      flexDirection:'row',
+      justifyContent:'space-between',
+      marginHorizontal:22,
+      marginTop:60
+    },
+    card_container: {
+      
+      backgroundColor: '#fafafa',
+      flexDirection: 'row',
+      
+      
+      // padding:10,
+      width: (width > 400) ? 374 :"90%",
+      padding: (width > 400) ? 10 :"1%",
+      borderRadius: (width > 400) ? 12 :12,
+      marginHorizontal: (width > 400) ? 20 :"5%",
+      justifyContent: (width > 400) ? 'space-between' :"space-between",
+      alignItems: (width > 400) ? 'center' :"center",
+      backgroundColor:'blue'
+    },
+    circle_bank: {
+      
+      
+      width: (width > 400) ? 50 :50,
+    
+      backgroundColor: 'red',
+      borderRadius: 8,
+      
+      padding:10
+    },
+    bankLink: {
+    
+      color: '#000000',
+      fontFamily: 'InterMedium',
+      fontSize: (width > 400) ? 16 :14,
+    },
+    othertext_contents: {
+      color: '#666666',
+      fontSize: 13,
+      fontFamily: 'InterRegular',
+      // marginRight: 50,
+      marginTop: 4,
+      fontSize: (width > 400) ? 13 :8,
+      marginRight: (width > 400) ? 50 :1,
+    },
+    circletck: {
+      
+      marginRight: (width > 400) ? 20 :10,
+      
+    },
+    circletcktext:{
+      fontSize: (width > 400) ? 18 :12,
+      
+      fontFamily:"InterSemiBold",
+      color:'#f95b51'
+    }
+
+  })
 }
 
-export default StaticsScreen
 
-const styles = StyleSheet.create({})
+
+
+export const StaticsScreen = ({navigation}) => {
+  const styles=useStyles();
+  return (
+    <View style={{backgroundColor:"#ffffff"}}>
+
+      <View style={styles.staticContainer}>
+        <View style={{height:28,width:28}}>
+        <LessThanBlack />
+        </View>
+        <Text style={styles.text1}>Statistics</Text>
+        <View style={{height:28,width:28}}>
+        <Download />
+        </View>
+      </View>
+
+      {/* <View style={{marginTop:50}}>
+      <LineChart
+        data={{
+          labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+          datasets: [
+            {
+              data: [
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+              ],
+            },
+          ],
+        }}
+        width={Dimensions.get('window').width} // from react-native
+        height={220}
+        yAxisLabel="$"
+        yAxisSuffix="k"
+        yAxisInterval={1} // optional, defaults to 1
+        chartConfig={{
+          backgroundColor: '#e26a00',
+          backgroundGradientFrom: '#fb8c00',
+          backgroundGradientTo: '#ffa726',
+          decimalPlaces: 2, // optional, defaults to 2dp
+          color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+          labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+          style: {
+            borderRadius: 16,
+          },
+          propsForDots: {
+            r: '6',
+            strokeWidth: '2',
+            stroke: '#ffa726',
+          },
+        }}
+        bezier
+        style={{
+          marginVertical: 8,
+          borderRadius: 16,
+        }}
+      />
+      </View> */}
+
+      <View >
+        <View style={styles.topspenddContainer}>
+        <View>
+          <Text style={styles.text1}>Top Spending</Text>
+        </View>
+        <View style={{height:28,width:28}}>
+          <Sort/>
+        </View>
+        </View>
+
+        <View style={styles.card_container}>
+            <View style={styles.circle_bank}>
+              <Starbucks />
+            </View>
+            <View>
+              <Text style={styles.bankLink}>Bank Link</Text>
+              <View style={styles.othertext_content}>
+                <Text style={styles.othertext_contents}>
+                Jan 12, 2022
+                </Text>
+                
+              </View>
+            </View>
+            <View style={styles.circletck}>
+              {/* <CheckCircle /> */}
+              <Text style={styles.circletcktext}>- $ 150.00</Text>
+            </View>
+          </View>
+      </View>
+    </View>
+  );
+};
+
+export default StaticsScreen;
+
+
