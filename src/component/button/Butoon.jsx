@@ -5,7 +5,7 @@ import LinearGradient from 'react-native-linear-gradient';
 
 const Butoon = ({navigation}) => {
   return (
-    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
+    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('TabNavigation')}>
       <LinearGradient
         colors={['#68aea9', '#3e8681']}
         start={{x: 0, y: 0.5}}

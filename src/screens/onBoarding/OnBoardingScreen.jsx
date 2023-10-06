@@ -7,11 +7,20 @@ import {
   ImageBackground,
   Image,
   TouchableOpacity,
+  useWindowDimensions,
+  Dimensions
 } from 'react-native';
 import imageBackround from '../../assets/Images/OnBoardingBackground.png';
 import Butoon from '../../component/button/Butoon.jsx';
 
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
+
 const OnBoardingScreen = ({navigation}) => {
+
+  const styles = useStyles();
   return (
     <View style={styles.container}>
       <View style={styles.stretchFather}>
@@ -38,47 +47,57 @@ const OnBoardingScreen = ({navigation}) => {
 
 export default OnBoardingScreen;
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    // backgroundColor: 'red',
-  },
-  stretchFather: {
-    marginTop: -90,
-  },
-  stretch: {
-    height: 'auto',
-    // backgroundColor:'orange',
-  },
-  stretchImage: {
-    marginTop: 147,
-    width: 277,
-    height: 462,
-    marginLeft: 61,
-    marginRight: 75,
-  },
-  container2: {
-    flex: 3,
-    alignItems: 'center',
-  },
-  heading: {
-    width: 301,
 
-    textAlign: 'center',
-    color: '#438883',
-    fontSize: 36,
-    fontWeight: '700',
-    marginTop: 30,
-  },
-  text: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    fontSize: 14,
-    marginTop: 20,
-    fontWeight: '400',
-  },
-  logInText: {
-    color: '#438883',
-    fontWeight: '500',
-  },
-});
+
+function useStyles() {
+  const {width, height} = useWindowDimensions();
+  // console.log()
+  return StyleSheet.create({
+  
+    container: {
+      flex: 1,
+      // backgroundColor: 'red',
+    },
+    stretchFather: {
+      marginTop: -90,
+    },
+    stretch: {
+      height: 'auto',
+      // backgroundColor:'orange',
+    },
+    stretchImage: {
+      marginTop: 147,
+      width: 277,
+      height: 462,
+      marginLeft: 61,
+      marginRight: 75,
+    },
+    container2: {
+      flex: 3,
+      alignItems: 'center',
+    },
+    heading: {
+      width: 301,
+  
+      textAlign: 'center',
+      color: '#438883',
+      fontSize: 36,
+      fontWeight: '700',
+      marginTop: 30,
+    },
+    text: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      fontSize: 14,
+      marginTop: 20,
+      fontWeight: '400',
+    },
+    logInText: {
+      color: '#438883',
+      fontWeight: '500',
+    },
+ 
+      
+
+  });
+}

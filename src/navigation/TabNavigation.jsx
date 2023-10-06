@@ -23,18 +23,16 @@ const TabNavigation = () => {
         tabBarStyle: {backgroundColor: '#f2f2f2'},
         tabBarActiveTintColor: '#000000',
       }}>
-      {/* <Tab.Screen
+      <Tab.Screen
         name="Home"
         component={HomeScreen}
         options={({route}) => ({
           tabBarIcon: ({focused, color, size}) => {
             const iconColor = focused ? '#2e7e78' : '#AAAAAA';
-
-            // Return your tab icon component with the specified color
             return <IconHome name="home" size={30} color={iconColor} />;
           },
         })}
-      /> */}
+      />
       <Tab.Screen
         name="StaticsScreen"
         component={StaticsScreen}

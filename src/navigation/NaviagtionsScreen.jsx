@@ -17,6 +17,9 @@ import IncomeScreen from '../screens/wallet/IncomeScreen';
 import BillDetails from '../screens/wallet/BillDetails';
 import BillPayment from '../screens/wallet/BillPayment';
 import BillPaymentSuccessful from '../screens/wallet/BillPaymentSuccessful';
+import OnBoardingScreen from '../screens/onBoarding/OnBoardingScreen';
+import HomeScreen from '../screens/home/HomeScreen';
+
 
 
 
@@ -31,7 +34,8 @@ const NaviagtionsScreen = () => {
   
     <NavigationContainer >
        <Stack.Navigator screenOptions={{ headerShown: false,ShowLabel:false }}> 
-        {/* <Stack.Screen name='WalletScreen' component={WalletScreen}/> */}
+        <Stack.Screen name='OnBoardingScreen' component={OnBoardingScreen}/>
+        {/* <Stack.Screen name='Home' component={TabNavigation}/> */}
         <Stack.Screen name='TabNavigation' component={TabNavigation}/>
         <Stack.Screen name='WalletScreen_upcomingBills' component={WalletScreen_upcomingBills}/>
         <Stack.Screen name='CardWalletScreen' component={CardWalletScreen}/>

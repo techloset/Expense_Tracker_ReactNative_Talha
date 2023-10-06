@@ -16,7 +16,7 @@ const WalletScreen_upcomingBills = ({navigation}) => {
           <Ellipse style={styles.eelispse} />
         </View>
         <View style={styles.images_conatiner}>
-          <TouchableOpacity onPress={() => navigation.push('WalletScreen')}>
+          <TouchableOpacity onPress={() => navigation.navigate('WalletScreen')}>
           <View style={styles.lessthen}>
             <Image style={{width: 23, height: 23}} source={LessThan} />
           </View>
