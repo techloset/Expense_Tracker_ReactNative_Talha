@@ -8,34 +8,38 @@ import {
   Image,
   TouchableOpacity,
   useWindowDimensions,
-  Dimensions
+  Dimensions,
 } from 'react-native';
 import imageBackround from '../../assets/Images/OnBoardingBackground.png';
 import Butoon from '../../component/button/Butoon.jsx';
 
-
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-
 const OnBoardingScreen = ({navigation}) => {
-
   const styles = useStyles();
   return (
     <View style={styles.container}>
       <View style={styles.stretchFather}>
         <ImageBackground style={styles.stretch} source={imageBackround}>
-          <Image
+        <View style={{justifyContent:"center",alignItems:'center'}}>
+        <Image
             style={styles.stretchImage}
             source={require('../../assets/Images/specular_1.png')}
           />
+        </View>
         </ImageBackground>
       </View>
 
-      <View style={styles.container2}>
-        <Text style={styles.heading}>spend smarter save more</Text>
-        <Butoon navigation={navigation}/>
-        
+      <View>
+        <View style={styles.container2}>
+          <Text style={styles.heading}>spend smarter save more</Text>
+        </View>
+        <View style={{marginHorizontal: 20}}>
+          <Butoon navigation={navigation} />
+        </View>
+      </View>
+      <View style={{alignItems: 'center'}}>
         <TouchableOpacity style={styles.text}>
           <Text>Already have an account?</Text>
           <Text style={styles.logInText}>Log In</Text>
@@ -47,57 +51,46 @@ const OnBoardingScreen = ({navigation}) => {
 
 export default OnBoardingScreen;
 
-
-
 function useStyles() {
   const {width, height} = useWindowDimensions();
   // console.log()
   return StyleSheet.create({
-  
     container: {
-      flex: 1,
-      // backgroundColor: 'red',
+     
     },
     stretchFather: {
-      marginTop: -90,
+     
     },
     stretch: {
-      height: 'auto',
-      // backgroundColor:'orange',
+      
     },
     stretchImage: {
-      marginTop: 147,
-      width: 277,
-      height: 462,
-      marginLeft: 61,
-      marginRight: 75,
+      marginTop: width > 400 ? 127 : 50,
+      
     },
     container2: {
-      flex: 3,
+      // flex: 3,
       alignItems: 'center',
+      marginHorizontal: 56,
+      marginHorizontal: width > 400 ? 56 : 88,
     },
     heading: {
-      width: 301,
-  
-      textAlign: 'center',
+      fontSize: width > 400 ? 36 : 22,
       color: '#438883',
-      fontSize: 36,
-      fontWeight: '700',
-      marginTop: 30,
+      
+      fontFamily: 'InterBold',
+      textAlign: 'center',
     },
     text: {
       flexDirection: 'row',
-      alignItems: 'center',
       fontSize: 14,
-      marginTop: 20,
       fontWeight: '400',
+      marginTop: width > 400 ? 20 : 10,
+      fontFamily: 'InterRegular',
     },
     logInText: {
       color: '#438883',
       fontWeight: '500',
     },
- 
-      
-
   });
 }
