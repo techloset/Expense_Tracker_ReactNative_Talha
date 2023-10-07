@@ -6,6 +6,8 @@ import {
   Image,
   ImageBackground,
   ScrollView,
+  useWindowDimensions,
+  Dimensions,
 } from 'react-native';
 import React from 'react';
 import imgae from '../../assets/Images/Home_background.png';
@@ -22,83 +24,83 @@ import Image_73 from '../../assets/Images/image73.png';
 import Image_74 from '../../assets/Images/image74.png';
 import Image_75 from '../../assets/Images/image75.png';
 
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 const HomeScreen = ({navigation}) => {
+  const styles = useStyles();
   return (
-    <View style={{backgroundColor:'white'}}>
+    <View style={{backgroundColor: 'white', height: '100%'}}>
       {/* <Text>HomeScreen</Text> */}
       {/* <ImageBackground
         style={styles.stretch}
         source={require('../../assets/Home_background.png')}>
 
         </ImageBackground> */}
-      <ImageBackground style={styles.imageBackground} source={imgae}>
-        <View style={styles.top_images}>
-          <Image source={require('../../assets/Images/Group_ellipse.png')} />
+      <View style={styles.parrent}>
+        <ImageBackground style={styles.imageBackground} source={imgae}>
+          <View style={styles.top_images}>
+            <Image source={require('../../assets/Images/Group_ellipse.png')} />
 
-          <View style={styles.bell_container}>
-            <Image style={styles.bell_icon} source={bell} />
-          </View>
-
-          <View style={styles.balnce_container}>
-            <View style={styles.balance_inner1}>
-              <View>
-                <Text style={styles.balnce_text}>Total Balance ^</Text>
-                <Text style={styles.rupee}>$2548.00</Text>
-              </View>
-
-              <View>
-                <Text style={styles.dot}>...</Text>
-              </View>
+            <View style={styles.bell_container}>
+              <Image style={styles.bell_icon} source={bell} />
             </View>
 
-            <View style={styles.balance_inner2}>
-              <View style={styles.income_main_container}>
-                <View
-                  style={[
-                    styles.income_expense_container,
-                    styles.income_second_container,
-                  ]}>
-                  <View style={styles.arrow_container}>
-                    <Image style={styles.arrow_icon} source={arrowup} />
-                  </View>
-                  <Text style={styles.incomeText}>Income</Text>
+            <View style={styles.balnce_container}>
+              <View style={styles.balance_inner1}>
+                <View>
+                  <Text style={styles.balnce_text}>Total Balance ^</Text>
+                  <Text style={styles.rupee}>$2548.00</Text>
                 </View>
-                <Text style={[styles.dollar, styles.income_dollar]}>
-                  $1840.00
-                </Text>
+
+                <View>
+                  <Text style={styles.dot}>...</Text>
+                </View>
               </View>
 
-              <View style={styles.expense_main_container}>
-                <View
-                  style={[
-                    styles.income_expense_container,
-                    styles.expense_second_container,
-                  ]}>
-                  <View style={styles.arrow_container}>
-                    <Image style={styles.arrow_icon} source={arrowdown} />
+              <View style={styles.balance_inner2}>
+                <View style={styles.income_main_container}>
+                  <View
+                    style={[
+                      styles.income_expense_container,
+                      styles.income_second_container,
+                    ]}>
+                    <View style={styles.arrow_container}>
+                      <Image style={styles.arrow_icon} source={arrowup} />
+                    </View>
+                    <Text style={styles.incomeText}>Income</Text>
                   </View>
-                  <Text style={styles.expenseText}>Expense</Text>
+                  <Text style={[styles.dollar, styles.income_dollar]}>
+                    $1840.00
+                  </Text>
                 </View>
-                <Text style={[styles.dollar, styles.expense_dollar]}>
-                  $240.00
-                </Text>
+
+                <View style={styles.expense_main_container}>
+                  <View
+                    style={[
+                      styles.income_expense_container,
+                      styles.expense_second_container,
+                    ]}>
+                    <View style={styles.arrow_container}>
+                      <Image style={styles.arrow_icon} source={arrowdown} />
+                    </View>
+                    <Text style={styles.expenseText}>Expense</Text>
+                  </View>
+                  <Text style={[styles.dollar, styles.expense_dollar]}>
+                    $240.00
+                  </Text>
+                </View>
               </View>
             </View>
           </View>
-        </View>
-      </ImageBackground>
-
-      {/* <Button
-        title="Go to Onboarding"
-        onPress={() => navigation.navigate('OnBoarding')}
-      /> */}
+        </ImageBackground>
+      </View>
 
       <View style={styles.transactionHistroy_Container}>
         <Text style={styles.transactionHistroy}>Transactions history</Text>
         <Text style={styles.seeAll}> See all</Text>
       </View>
 
-      <ScrollView style={{height: 264}}>
+      <ScrollView style={styles.scrollConatianer}>
         <View style={styles.up_Maincontainer}>
           <View style={styles.up_Innercontainer}>
             <View style={styles.imge_container}>
@@ -231,250 +233,264 @@ const HomeScreen = ({navigation}) => {
 
 export default HomeScreen;
 
-const styles = StyleSheet.create({
-  fiveImages: {
-    marginTop: 13,
-    flexDirection: 'row',
-    marginLeft: 22,
-    marginRight: 18,
-    justifyContent: 'space-between',
-  },
-  imageFle_image: {
-    height: 62,
-    width: 62,
-    borderRadius: 50,
-    //  margin:5.94,
-  },
-  youtube_Maincontainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    // backgroundColor:'yellow',
-    marginTop: 16,
-    marginHorizontal: 22,
-    alignItems: 'center',
-  },
-  paypal_Maincontainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    // backgroundColor:'yellow',
-    marginTop: 16,
-    marginHorizontal: 22,
-    alignItems: 'center',
-  },
-  girl_Maincontainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    // backgroundColor:'yellow',
-    marginTop: 16,
-    marginHorizontal: 22,
-    alignItems: 'center',
-  },
-  up_Maincontainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    // backgroundColor:'yellow',
-    marginTop: 19,
-    marginHorizontal: 22,
-    alignItems: 'center',
-  },
-  up_Innercontainer: {
-    flexDirection: 'row',
-    gap: 10,
-  },
-  imge_container: {
-    backgroundColor: '#f0f6f5',
-    width: 50,
-    height: 50,
-    padding: 10,
-    alignItems: 'center',
-    borderRadius: 8,
-  },
-  upwork_image: {
-    width: 34,
-    height: 30,
-  },
-  girl_image: {
-    width: 30,
-    height: 30,
-    borderRadius: 50,
-  },
-  paypal_image: {
-    width: 26,
-    height: 31,
-  },
-  youtube_image: {
-    width: 35,
-    height: 35,
-  },
-  UpWorkText: {
-    fontSize: 16,
-    fontFamily: 'InterMedium',
-    fontWeight: '500',
-    color: '#000000',
-  },
-  todayText: {
-    marginTop: 6,
-    fontSize: 13,
-    fontFamily: 'InterRegular',
-    fontWeight: '400',
-  },
-  upwork_income: {
-    fontSize: 18,
-    fontFamily: 'InterSemiBold',
-    fontWeight: '600',
-    color: '#24a869',
-  },
-  SendAgain_Container: {
-    // flex:1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginHorizontal: 22,
-    marginTop: 30,
-  },
-  transactionHistroy_Container: {
-    // flex:1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginHorizontal: 22,
-    marginTop: 101,
-  },
-  transactionHistroy: {
-    fontSize: 18,
-    fontFamily: 'InterSemiBold',
-    color: '#000000',
-    fontWeight: '600',
-  },
-  seeAll: {
-    fontSize: 16,
-    fontWeight: '400',
-    fontFamily: 'InterRegular',
-    color: '#666666',
-  },
-
-  imageBackground: {
-    width: 414,
-    height: 287,
-  },
-  top_images: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  bell_container: {
-    marginTop: 78,
-    marginRight: 24,
-    backgroundColor: '#ffffff0f',
-    width: 40,
-    height: 40,
-    justifyContent: 'center',
-    // alignContent:'center',
-    alignItems: 'center',
-    // padding:8.33,
-    borderRadius: 4.17,
-  },
-  bell_icon: {
-    width: 23,
-    height: 23,
-    padding: 8.33,
-  },
-  balnce_container: {
-    width: 374,
-    height: 201,
-    backgroundColor: '#2e7e78',
-    borderRadius: 20,
-    position: 'absolute',
-    top: 155,
-    left: 20,
-  },
-  balance_inner1: {
-    flex: 1,
-    flexDirection: 'row',
-    // justifyContent: 'space-around',
-    justifyContent: 'space-between',
-    // alignItems:'center',
-    // alignContent:'center'
-    // backgroundColor: 'red',
-  },
-  balnce_text: {
-    fontSize: 16,
-    // fontWeight: '600',
-    color: '#ffffff',
-    marginTop: 25,
-    marginLeft: 20,
-    marginBottom: 8,
-    fontFamily: 'InterSemiBold',
-  },
-  rupee: {
-    marginLeft: 20,
-    fontSize: 30,
-    // fontWeight: '700',
-    color: '#ffffff',
-    fontFamily: 'InterBold',
-  },
-  dot: {
-    marginTop: 35,
-    marginRight: 20,
-    color: '#eeeeee',
-    fontSize: 20,
-  },
-  balance_inner2: {
-    // backgroundColor: 'orange',
-    flex: 1,
-    flexDirection: 'row',
-    // justifyContent: 'space-around',
-    justifyContent: 'space-between',
-    // alignItems:'center',
-    // alignContent:'center'
-    marginTop: 30,
-  },
-  arrow_container: {
-    width: 24,
-    height: 24,
-    marginRight: 9,
-    borderRadius: 40,
-    backgroundColor: '#ffffff26',
-    justifyContent: 'center',
-    // alignContent:'center',
-    alignItems: 'center',
-  },
-  arrow_icon: {
-    width: 18,
-    height: 18,
-    // justifyContent: 'center',
-    // alignItems: 'center',
-  },
-  incomeText: {
-    fontSize: 16,
-    // fontWeight: '500',
-    fontFamily: 'InterMedium',
-    color: '#d0e5e3',
-  },
-  expenseText: {
-    fontSize: 18,
-    // fontWeight: '500',
-    color: '#d0e5e3',
-    fontFamily: 'InterMedium',
-  },
-  dollar: {
-    fontSize: 20,
-    // fontWeight: '600',
-    color: '#ffffff',
-    marginTop: 6,
-    fontFamily: 'InterSemiBold',
-  },
-  income_dollar: {
-    marginLeft: 20,
-  },
-  expense_dollar: {
-    marginRight: 20,
-  },
-  income_expense_container: {
-    flexDirection: 'row',
-  },
-  income_second_container: {
-    marginLeft: 18,
-  },
-  expense_second_container: {
-    marginRight: 20,
-  },
-});
+function useStyles() {
+  const {width, height} = useWindowDimensions();
+  // console.log()
+  return StyleSheet.create({
+    fiveImages: {
+      marginTop: 13,
+      flexDirection: 'row',
+      marginLeft: 22,
+      marginRight: 18,
+      justifyContent: 'space-between',
+      // marginHorizontal: width > 400 ? 22 : 18,
+    },
+    imageFle_image: {
+      height: width > 400 ? 62 : 50,
+      width: width > 400 ? 62 : 50,
+      borderRadius: 50,
+      //  margin:5.94,
+    },
+    youtube_Maincontainer: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      // backgroundColor:'yellow',
+      marginTop: 16,
+      marginHorizontal: 22,
+      alignItems: 'center',
+    },
+    paypal_Maincontainer: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      // backgroundColor:'yellow',
+      marginTop: 16,
+      marginHorizontal: 22,
+      alignItems: 'center',
+    },
+    girl_Maincontainer: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      // backgroundColor:'yellow',
+      marginTop: 16,
+      marginHorizontal: 22,
+      alignItems: 'center',
+    },
+    up_Maincontainer: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      // backgroundColor:'yellow',
+      marginTop: 19,
+      marginHorizontal: 22,
+      alignItems: 'center',
+    },
+    up_Innercontainer: {
+      flexDirection: 'row',
+      gap: 10,
+    },
+    imge_container: {
+      backgroundColor: '#f0f6f5',
+      width: 50,
+      height: 50,
+      padding: 10,
+      alignItems: 'center',
+      borderRadius: 8,
+      
+    },
+    upwork_image: {
+      width: 34,
+      height: 30,
+    },
+    girl_image: {
+      width: 30,
+      height: 30,
+      borderRadius: 50,
+    },
+    paypal_image: {
+      width: 26,
+      height: 31,
+    },
+    youtube_image: {
+      width: 35,
+      height: 35,
+    },
+    UpWorkText: {
+      fontSize: 16,
+      fontFamily: 'InterMedium',
+      fontWeight: '500',
+      color: '#000000',
+    },
+    todayText: {
+      marginTop: 6,
+      fontSize: 13,
+      fontFamily: 'InterRegular',
+      fontWeight: '400',
+    },
+    upwork_income: {
+      fontSize: 18,
+      fontFamily: 'InterSemiBold',
+      fontWeight: '600',
+      color: '#24a869',
+    },
+    SendAgain_Container: {
+      // flex:1,
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginHorizontal: 22,
+      marginTop: 30,
+    },
+    transactionHistroy_Container: {
+      // flex:1,
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginHorizontal: 22,
+      marginTop: 101,
+    },
+    transactionHistroy: {
+      fontSize: 18,
+      fontFamily: 'InterSemiBold',
+      color: '#000000',
+      fontWeight: '600',
+    },
+    seeAll: {
+      fontSize: 16,
+      fontWeight: '400',
+      fontFamily: 'InterRegular',
+      color: '#666666',
+    },
+    parrent: {
+      height: width > 400 ? 287 : 247,
+    },
+    expense_main_container: {
+      marginBottom: width > 400 ? 29 : 10,
+    },
+    imageBackground: {
+      // width: 414,
+      // height: 287,
+      height: width > 400 ? 287 : 287,
+      backgroundColor: 'yellow',
+    },
+    top_images: {
+      flex: 1,
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+    },
+    bell_container: {
+      marginTop: 78,
+      marginRight: 24,
+      backgroundColor: '#ffffff0f',
+      width: 40,
+      height: 40,
+      justifyContent: 'center',
+      // alignContent:'center',
+      alignItems: 'center',
+      // padding:8.33,
+      borderRadius: 4.17,
+    },
+    bell_icon: {
+      width: 23,
+      height: 23,
+      padding: 8.33,
+    },
+    scrollConatianer:{
+      height: width > 400 ? 264 : 170,
+      backgroundColor:"red"
+    },
+    balnce_container: {
+      width: width > 400 ? 374 : '88%',
+      backgroundColor: '#2e7e78',
+      borderRadius: 20,
+      position: 'absolute',
+      top: width > 400 ? 155 : 170,
+      left: 20,
+    },
+    balance_inner1: {
+      flex: 1,
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+    },
+    balnce_text: {
+      fontSize: width > 400 ? 16 : 12,
+      color: '#ffffff',
+      marginTop: 25,
+      marginLeft: 20,
+      marginBottom: 8,
+      fontFamily: 'InterSemiBold',
+    },
+    rupee: {
+      marginLeft: 20,
+      // fontSize: 30,
+      fontSize: width > 400 ? 30 : 15,
+      // fontWeight: '700',
+      color: '#ffffff',
+      fontFamily: 'InterBold',
+    },
+    dot: {
+      marginTop: 35,
+      marginRight: 20,
+      color: '#eeeeee',
+      // fontSize: 20,
+      fontSize: width > 400 ? 20 : 15,
+    },
+    balance_inner2: {
+      // backgroundColor: 'orange',
+      flex: 1,
+      flexDirection: 'row',
+      // justifyContent: 'space-around',
+      justifyContent: 'space-between',
+      // alignItems:'center',
+      // alignContent:'center'
+      marginTop: width > 400 ? 30 : 30,
+    },
+    arrow_container: {
+      width: width > 400 ? 24 : 20,
+      height: width > 400 ? 24 : 20,
+      marginRight: 9,
+      borderRadius: 40,
+      backgroundColor: '#ffffff26',
+      justifyContent: 'center',
+      // alignContent:'center',
+      alignItems: 'center',
+    },
+    arrow_icon: {
+      width: width > 400 ? 18 : 10,
+      height: width > 400 ? 18 : 14,
+      // justifyContent: 'center',
+      // alignItems: 'center',
+    },
+    incomeText: {
+      fontSize: width > 400 ? 16 : 13,
+      // fontWeight: '500',
+      fontFamily: 'InterMedium',
+      color: '#d0e5e3',
+    },
+    expenseText: {
+      fontSize: width > 400 ? 18 : 14,
+      // fontWeight: '500',
+      color: '#d0e5e3',
+      fontFamily: 'InterMedium',
+    },
+    dollar: {
+      fontSize: width > 400 ? 20 : 14,
+      // fontWeight: '600',
+      color: '#ffffff',
+      marginTop: 6,
+      fontFamily: 'InterSemiBold',
+      // backgroundColor:"blue",
+    },
+    income_dollar: {
+      marginLeft: 20,
+    },
+    expense_dollar: {
+      marginLeft: 30,
+    },
+    income_expense_container: {
+      flexDirection: 'row',
+    },
+    income_second_container: {
+      marginLeft: 18,
+    },
+    expense_second_container: {
+      marginRight: 20,
+    },
+  });
+}

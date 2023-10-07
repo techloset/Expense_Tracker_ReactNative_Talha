@@ -56,7 +56,8 @@ function useStyles() {
   // console.log()
   return StyleSheet.create({
     container: {
-     
+      height:"100%",
+     backgroundColor:"#ffffff"
     },
     stretchFather: {
      
@@ -77,7 +78,6 @@ function useStyles() {
     heading: {
       fontSize: width > 400 ? 36 : 22,
       color: '#438883',
-      
       fontFamily: 'InterBold',
       textAlign: 'center',
     },
