@@ -32,7 +32,8 @@ const AccountsWallet = ({navigation}) => {
           <Ellipse style={styles.eelispse} />
         </View>
         <View style={styles.images_conatiner}>
-          <TouchableOpacity onPress={() => navigation.push('CardWalletScreen')}>
+          <TouchableOpacity
+            onPress={() => navigation.push('WalletScreen_upcomingBills')}>
             <View style={styles.lessthen}>
               <Image style={{width: 23, height: 23}} source={LessThan} />
             </View>
@@ -45,8 +46,7 @@ const AccountsWallet = ({navigation}) => {
 
       <View style={styles.container}>
         <View style={styles.butn_type_container}>
-          <TouchableOpacity
-            onPress={() => navigation.navigate('CardWalletScreen')}>
+          <TouchableOpacity onPress={() => navigation.navigate('CardWalletScreen')}>
             <View style={[styles.both_btn, styles.transition_btn]}>
               <Text style={styles.textt}>Cards</Text>
             </View>

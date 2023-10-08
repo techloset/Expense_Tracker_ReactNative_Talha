@@ -155,48 +155,54 @@ const HomeScreen = ({navigation}) => {
           </View>
         </View>
 
-        <View style={styles.up_Maincontainer}>
+        <View style={styles.paypal_Maincontainer}>
           <View style={styles.up_Innercontainer}>
             <View style={styles.imge_container}>
-              <Image style={styles.upwork_image} source={UpWork} />
+              <Image style={styles.paypal_image} source={PaypalIcon} />
             </View>
             <View>
-              <Text style={styles.UpWorkText}>Upwork</Text>
-              <Text style={styles.todayText}>Today</Text>
+              <Text style={styles.UpWorkText}>paypal</Text>
+              <Text style={styles.todayText}>Jan 30, 2022</Text>
             </View>
           </View>
           <View>
-            <Text style={styles.upwork_income}>+ $ 850.00</Text>
+            <Text style={styles.upwork_income}>+ $ 1,406.00</Text>
           </View>
         </View>
-        <View style={styles.up_Maincontainer}>
+        
+        <View style={styles.youtube_Maincontainer}>
           <View style={styles.up_Innercontainer}>
             <View style={styles.imge_container}>
-              <Image style={styles.upwork_image} source={UpWork} />
+              <Image style={styles.youtube_image} source={YoutubeIcon} />
             </View>
             <View>
-              <Text style={styles.UpWorkText}>Upwork</Text>
-              <Text style={styles.todayText}>Today</Text>
+              <Text style={styles.UpWorkText}>Youtube</Text>
+              <Text style={styles.todayText}>Jan 16, 2022</Text>
             </View>
           </View>
           <View>
-            <Text style={styles.upwork_income}>+ $ 850.00</Text>
+            <Text style={styles.upwork_income}>-$11.99</Text>
           </View>
         </View>
-        <View style={styles.up_Maincontainer}>
+        <View style={styles.youtube_Maincontainer}>
           <View style={styles.up_Innercontainer}>
             <View style={styles.imge_container}>
-              <Image style={styles.upwork_image} source={UpWork} />
+              <Image style={styles.youtube_image} source={YoutubeIcon} />
             </View>
             <View>
-              <Text style={styles.UpWorkText}>Upwork</Text>
-              <Text style={styles.todayText}>Today</Text>
+              <Text style={styles.UpWorkText}>Youtube</Text>
+              <Text style={styles.todayText}>Jan 16, 2022</Text>
             </View>
           </View>
           <View>
-            <Text style={styles.upwork_income}>+ $ 850.00</Text>
+            <Text style={styles.upwork_income}>-$11.99</Text>
           </View>
         </View>
+        
+
+       
+       
+       
       </ScrollView>
 
       <View style={styles.SendAgain_Container}>
@@ -347,7 +353,6 @@ function useStyles() {
     },
     imageBackground: {
       height: width > 400 ? 287 : 287,
-      backgroundColor: 'yellow',
     },
     top_images: {
       flex: 1,

@@ -6,6 +6,7 @@ import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/lessThan.png';
+import TabNavigation from '../../navigation/TabNavigation';
 const WalletScreen_upcomingBills = ({navigation}) => {
   return (
     <View>
@@ -29,6 +30,9 @@ const WalletScreen_upcomingBills = ({navigation}) => {
       <View style={styles.container}>
         <UpcommingBills navigation={navigation} />
       </View>
+      <View>
+      </View>
+      
     </View>
   );
 };

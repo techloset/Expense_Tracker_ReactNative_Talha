@@ -29,9 +29,12 @@ const BillDetails = ({navigation}) => {
           <Ellipse style={styles.eelispse} />
         </View>
         <View style={styles.images_conatiner}>
-          <View style={styles.lessthen}>
-            <Image style={{width: 23, height: 23}} source={LessThan} />
-          </View>
+        <TouchableOpacity
+            onPress={() => navigation.push('IncomeScreen')}>
+            <View style={styles.lessthen}>
+              <Image style={{width: 23, height: 23}} source={LessThan} />
+            </View>
+          </TouchableOpacity>
           <View>
             <Text style={styles.billText}>Bill Details</Text>
           </View>

@@ -9,14 +9,10 @@ import {
   Dimensions,
 } from 'react-native';
 import React from 'react';
-// import UpWork from '../../assets/Images/upIcon.png';
-// import girlsImage from '../../assets/Images/image7.png';
-// import PaypalIcon from '../../assets/Images/paypalIcon.png';
 import YoutubeIcon from '../../assets/Images/youtubeIcon.png';
 import Vector from '../../assets/Images/Vector.svg';
 import House from '../../assets/Images/house.svg';
 import Spotify from '../../assets/Images/spotify.svg';
-// import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -55,9 +51,12 @@ const SocialComponent = ({navigation}) => {
               <Text style={styles.todayText}>Yesterday</Text>
             </View>
           </View>
-          <View style={styles.pay_container}>
-            <Text style={styles.upwork_income}>Pay</Text>
-          </View>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('CardWalletScreen')}>
+            <View style={styles.pay_container}>
+              <Text style={styles.upwork_income}>Pay</Text>
+            </View>
+          </TouchableOpacity>
         </View>
 
         <View style={styles.paypal_Maincontainer}>

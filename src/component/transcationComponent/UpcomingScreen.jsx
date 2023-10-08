@@ -11,7 +11,7 @@ import Frame21 from '../../assets/Images/Frame21.svg';
 import Frame22 from '../../assets/Images/Frame22.svg';
 import Frame23 from '../../assets/Images/Frame23.svg';
 import SocialComponentTwo from './SocialComponenttwo';
-// import {useNavigation} from '@react-navigation/native';
+
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -53,6 +53,7 @@ const TransactionScreen = ({navigation}) => {
         </TouchableOpacity>
       </View>
       <SocialComponentTwo navigation={navigation} />
+      {/* <TabNavigation/> */}
     </View>
   );
 };

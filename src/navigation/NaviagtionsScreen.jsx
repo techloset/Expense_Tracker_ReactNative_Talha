@@ -33,10 +33,11 @@ const NaviagtionsScreen = () => {
   return (
   
     <NavigationContainer >
-       <Stack.Navigator screenOptions={{ headerShown: false,ShowLabel:false }}> 
+       <Stack.Navigator screenOptions={{ headerShown: false }}> 
         {/* <Stack.Screen name='OnBoardingScreen' component={OnBoardingScreen}/> */}
         
         <Stack.Screen name='TabNavigation' component={TabNavigation}/>
+        
         <Stack.Screen name='WalletScreen_upcomingBills' component={WalletScreen_upcomingBills}/>
         <Stack.Screen name='CardWalletScreen' component={CardWalletScreen}/>
         <Stack.Screen name='AccountsWallet' component={AccountsWallet}/>
