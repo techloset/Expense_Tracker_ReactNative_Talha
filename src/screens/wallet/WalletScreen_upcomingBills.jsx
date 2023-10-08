@@ -1,6 +1,5 @@
-import {StyleSheet, Text, View, Image,TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
-import WalletComponentScreen from '../../component/transcationComponent/WalletComponentScreen';
 import UpcommingBills from '../../component/transcationComponent/UpcomingScreen';
 
 import Rectangular from '../../assets/Images/Rectangle.svg';
@@ -17,9 +16,9 @@ const WalletScreen_upcomingBills = ({navigation}) => {
         </View>
         <View style={styles.images_conatiner}>
           <TouchableOpacity onPress={() => navigation.navigate('WalletScreen')}>
-          <View style={styles.lessthen}>
-            <Image style={{width: 23, height: 23}} source={LessThan} />
-          </View>
+            <View style={styles.lessthen}>
+              <Image style={{width: 23, height: 23}} source={LessThan} />
+            </View>
           </TouchableOpacity>
           <View style={styles.notification}>
             <Notification />
@@ -38,11 +37,9 @@ export default WalletScreen_upcomingBills;
 
 const styles = StyleSheet.create({
   container: {
-    // flex:1,
     position: 'absolute',
     backgroundColor: 'white',
     width: '100%',
-    // height:'290%',
     marginTop: 165,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,

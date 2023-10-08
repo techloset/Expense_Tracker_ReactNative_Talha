@@ -30,12 +30,6 @@ const HomeScreen = ({navigation}) => {
   const styles = useStyles();
   return (
     <View style={{backgroundColor: 'white', height: '100%'}}>
-      {/* <Text>HomeScreen</Text> */}
-      {/* <ImageBackground
-        style={styles.stretch}
-        source={require('../../assets/Home_background.png')}>
-
-        </ImageBackground> */}
       <View style={styles.parrent}>
         <ImageBackground style={styles.imageBackground} source={imgae}>
           <View style={styles.top_images}>
@@ -243,18 +237,15 @@ function useStyles() {
       marginLeft: 22,
       marginRight: 18,
       justifyContent: 'space-between',
-      // marginHorizontal: width > 400 ? 22 : 18,
     },
     imageFle_image: {
       height: width > 400 ? 62 : 50,
       width: width > 400 ? 62 : 50,
       borderRadius: 50,
-      //  margin:5.94,
     },
     youtube_Maincontainer: {
       flexDirection: 'row',
       justifyContent: 'space-between',
-      // backgroundColor:'yellow',
       marginTop: 16,
       marginHorizontal: 22,
       alignItems: 'center',
@@ -262,7 +253,6 @@ function useStyles() {
     paypal_Maincontainer: {
       flexDirection: 'row',
       justifyContent: 'space-between',
-      // backgroundColor:'yellow',
       marginTop: 16,
       marginHorizontal: 22,
       alignItems: 'center',
@@ -270,7 +260,6 @@ function useStyles() {
     girl_Maincontainer: {
       flexDirection: 'row',
       justifyContent: 'space-between',
-      // backgroundColor:'yellow',
       marginTop: 16,
       marginHorizontal: 22,
       alignItems: 'center',
@@ -278,8 +267,7 @@ function useStyles() {
     up_Maincontainer: {
       flexDirection: 'row',
       justifyContent: 'space-between',
-      // backgroundColor:'yellow',
-      marginTop: 19,
+      marginTop: width > 400 ? 19 : 5,
       marginHorizontal: 22,
       alignItems: 'center',
     },
@@ -289,70 +277,64 @@ function useStyles() {
     },
     imge_container: {
       backgroundColor: '#f0f6f5',
-      width: 50,
-      height: 50,
-      padding: 10,
+      width: width > 400 ? 50 : 35,
+      height: width > 400 ? 50 : 35,
+      padding: width > 400 ? 10 : 8,
       alignItems: 'center',
       borderRadius: 8,
-      
     },
     upwork_image: {
-      width: 34,
-      height: 30,
+      width: width > 400 ? 34 : 24,
+      height: width > 400 ? 30 : 20,
     },
     girl_image: {
-      width: 30,
-      height: 30,
+      width: width > 400 ? 30 : 24,
+      height: width > 400 ? 30 : 20,
       borderRadius: 50,
     },
     paypal_image: {
-      width: 26,
-      height: 31,
+      width: width > 400 ? 26 : 24,
+      height: width > 400 ? 31 : 20,
     },
     youtube_image: {
-      width: 35,
-      height: 35,
+      width: width > 400 ? 35 : 24,
+      height: width > 400 ? 35 : 20,
     },
     UpWorkText: {
-      fontSize: 16,
+      fontSize: width > 400 ? 16 : 12,
       fontFamily: 'InterMedium',
-      fontWeight: '500',
       color: '#000000',
     },
     todayText: {
-      marginTop: 6,
-      fontSize: 13,
+      marginTop: width > 400 ? 6 : 0,
+      fontSize: width > 400 ? 13 : 10,
       fontFamily: 'InterRegular',
-      fontWeight: '400',
+      
     },
     upwork_income: {
-      fontSize: 18,
+      fontSize: width > 400 ? 18 : 14,
       fontFamily: 'InterSemiBold',
-      fontWeight: '600',
       color: '#24a869',
     },
     SendAgain_Container: {
-      // flex:1,
       flexDirection: 'row',
       justifyContent: 'space-between',
       marginHorizontal: 22,
-      marginTop: 30,
+      marginTop: width > 400 ? 30 : 0,
     },
     transactionHistroy_Container: {
-      // flex:1,
       flexDirection: 'row',
       justifyContent: 'space-between',
       marginHorizontal: 22,
       marginTop: 101,
     },
     transactionHistroy: {
-      fontSize: 18,
+      fontSize: width > 400 ? 18 : 14,
       fontFamily: 'InterSemiBold',
       color: '#000000',
-      fontWeight: '600',
     },
     seeAll: {
-      fontSize: 16,
+      fontSize: width > 400 ? 16 : 13,
       fontWeight: '400',
       fontFamily: 'InterRegular',
       color: '#666666',
@@ -364,8 +346,6 @@ function useStyles() {
       marginBottom: width > 400 ? 29 : 10,
     },
     imageBackground: {
-      // width: 414,
-      // height: 287,
       height: width > 400 ? 287 : 287,
       backgroundColor: 'yellow',
     },
@@ -381,9 +361,7 @@ function useStyles() {
       width: 40,
       height: 40,
       justifyContent: 'center',
-      // alignContent:'center',
       alignItems: 'center',
-      // padding:8.33,
       borderRadius: 4.17,
     },
     bell_icon: {
@@ -391,9 +369,7 @@ function useStyles() {
       height: 23,
       padding: 8.33,
     },
-    scrollConatianer:{
-      height: width > 400 ? 264 : 170,
-      backgroundColor:"red"
+    scrollConatianer: {
     },
     balnce_container: {
       width: width > 400 ? 374 : '88%',
@@ -418,9 +394,7 @@ function useStyles() {
     },
     rupee: {
       marginLeft: 20,
-      // fontSize: 30,
       fontSize: width > 400 ? 30 : 15,
-      // fontWeight: '700',
       color: '#ffffff',
       fontFamily: 'InterBold',
     },
@@ -428,17 +402,12 @@ function useStyles() {
       marginTop: 35,
       marginRight: 20,
       color: '#eeeeee',
-      // fontSize: 20,
       fontSize: width > 400 ? 20 : 15,
     },
     balance_inner2: {
-      // backgroundColor: 'orange',
       flex: 1,
       flexDirection: 'row',
-      // justifyContent: 'space-around',
       justifyContent: 'space-between',
-      // alignItems:'center',
-      // alignContent:'center'
       marginTop: width > 400 ? 30 : 30,
     },
     arrow_container: {
@@ -448,34 +417,27 @@ function useStyles() {
       borderRadius: 40,
       backgroundColor: '#ffffff26',
       justifyContent: 'center',
-      // alignContent:'center',
       alignItems: 'center',
     },
     arrow_icon: {
       width: width > 400 ? 18 : 10,
       height: width > 400 ? 18 : 14,
-      // justifyContent: 'center',
-      // alignItems: 'center',
     },
     incomeText: {
       fontSize: width > 400 ? 16 : 13,
-      // fontWeight: '500',
       fontFamily: 'InterMedium',
       color: '#d0e5e3',
     },
     expenseText: {
       fontSize: width > 400 ? 18 : 14,
-      // fontWeight: '500',
       color: '#d0e5e3',
       fontFamily: 'InterMedium',
     },
     dollar: {
       fontSize: width > 400 ? 20 : 14,
-      // fontWeight: '600',
       color: '#ffffff',
       marginTop: 6,
       fontFamily: 'InterSemiBold',
-      // backgroundColor:"blue",
     },
     income_dollar: {
       marginLeft: 20,

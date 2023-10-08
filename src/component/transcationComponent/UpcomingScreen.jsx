@@ -1,4 +1,11 @@
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  useWindowDimensions,
+  Dimensions,
+} from 'react-native';
 import React from 'react';
 import Frame21 from '../../assets/Images/Frame21.svg';
 import Frame22 from '../../assets/Images/Frame22.svg';
@@ -6,8 +13,12 @@ import Frame23 from '../../assets/Images/Frame23.svg';
 import SocialComponentTwo from './SocialComponenttwo';
 // import {useNavigation} from '@react-navigation/native';
 
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
 const TransactionScreen = ({navigation}) => {
-  
+  const styles = useStyles();
+
   return (
     <View style={styles.container}>
       <View style={styles.Heading_Container}>
@@ -29,101 +40,94 @@ const TransactionScreen = ({navigation}) => {
         </View>
       </View>
       <View style={styles.butn_type_container}>
-        <TouchableOpacity onPress={()=> navigation.navigate("WalletScreen")}>
+        <TouchableOpacity onPress={() => navigation.navigate('WalletScreen')}>
           <View style={[styles.both_btn, styles.transition_btn]}>
             <Text style={styles.textt}>Transactions</Text>
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity >
+        <TouchableOpacity>
           <View style={[styles.both_btn, styles.upcoming_bill_btn]}>
             <Text style={styles.textt}>Upcoming Bills</Text>
           </View>
         </TouchableOpacity>
       </View>
-      <SocialComponentTwo navigation={navigation}/>
+      <SocialComponentTwo navigation={navigation} />
     </View>
   );
 };
 
 export default TransactionScreen;
 
-const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
-    flex: 1,
-  },
+function useStyles() {
+  const {width, height} = useWindowDimensions();
+  // console.log()
+  return StyleSheet.create({
+    container: {
+      justifyContent: 'center',
+      flex: 1,
+    },
 
-  Heading_Container: {
-    // flex:4,
-    marginTop: 50,
-    // backgroundColor: 'blue',
-    // flexDirection:'row',
-    // justifyContent:'center',
-    alignItems: 'center',
-    // marginHorizontal:'auto'
-  },
-  Heading: {
-    fontSize: 16,
-    fontFamily: 'InterRegular',
-    color: '#666666',
-  },
-  valuee: {
-    fontFamily: 'InterBold',
-    fontSize: 30,
-    color: '#222222',
-    marginTop: 12,
-  },
-  frame_container: {
-    // flex:1,
-    // backgroundColor: 'red',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    marginTop: 40,
-  },
-  fram: {
-    // justifyContent:'center',
-    alignItems: 'center',
-  },
-  fram_text: {
-    marginTop: 10,
-    color: '#222222',
-    fontFamily: 'InterRegular',
-    fontSize: 16,
-  },
-  butn_type_container: {
-    flexDirection: 'row',
-    backgroundColor: '#f4f6f6',
-    // backgroundColor:"brown",
-    marginTop: 60,
-    marginHorizontal: 20,
-    color: '#f4f6f6',
-    borderRadius: 40,
-    height: 48,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 25,
-  },
-  both_btn: {
-    backgroundColor: '#ffffff',
-    height: 40,
-    width: 180,
-
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  transition_btn: {
-    backgroundColor: 'transparent',
-    borderRadius: 40,
-  },
-  upcoming_bill_btn: {
-    backgroundColor: '#ffffff',
-    borderRadius: 40,
-  },
-  textt: {
-    fontFamily: 'InterSemiBold',
-    color: '#666666',
-    fontSize: 14,
-    fontWeight: '600',
-  },
-});
+    Heading_Container: {
+      marginTop: width > 400 ? 50 : 20,
+      alignItems: 'center',
+    },
+    Heading: {
+      fontSize: width > 400 ? 16 : 12,
+      fontFamily: 'InterRegular',
+      color: '#666666',
+    },
+    valuee: {
+      fontFamily: 'InterBold',
+      fontSize: width > 400 ? 30 : 18,
+      color: '#222222',
+      marginTop: width > 400 ? 12 : 12,
+    },
+    frame_container: {
+      flexDirection: 'row',
+      justifyContent: 'center',
+      marginTop: width > 400 ? 40 : 40,
+    },
+    fram: {
+      alignItems: 'center',
+    },
+    fram_text: {
+      marginTop: width > 400 ? 10 : 10,
+      color: '#222222',
+      fontFamily: 'InterRegular',
+      fontSize: width > 400 ? 16 : 12,
+    },
+    butn_type_container: {
+      flexDirection: 'row',
+      backgroundColor: '#f4f6f6',
+      marginTop: width > 400 ? 60 : 40,
+      marginHorizontal: 20,
+      color: '#f4f6f6',
+      borderRadius: 40,
+      height: width > 400 ? 48 : 38,
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginBottom: 25,
+    },
+    both_btn: {
+      backgroundColor: '#ffffff',
+      height: width > 400 ? 40 : 30,
+      width: 180,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    transition_btn: {
+      backgroundColor: 'transparent',
+      borderRadius: 40,
+    },
+    upcoming_bill_btn: {
+      backgroundColor: '#ffffff',
+      borderRadius: 40,
+    },
+    textt: {
+      fontFamily: 'InterSemiBold',
+      color: '#666666',
+      fontSize: width > 400 ? 14 : 10,
+    },
+  });
+}
