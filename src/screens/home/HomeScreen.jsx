@@ -340,7 +340,7 @@ function useStyles() {
       color: '#666666',
     },
     parrent: {
-      height: width > 400 ? 287 : 247,
+      height: width > 400 ? 287 : 267,
     },
     expense_main_container: {
       marginBottom: width > 400 ? 29 : 10,
