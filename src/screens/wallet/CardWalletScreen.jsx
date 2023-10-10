@@ -1,6 +1,14 @@
-import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Image,
+  TextInput,
+  KeyboardAvoidingView,
+  
+} from 'react-native';
 import React from 'react';
-import WalletComponentScreen from '../../component/transcationComponent/WalletComponentScreen';
 import VisaCard from '../../assets/Images/visaCard.svg';
 import DebitCard from '../../assets/Images/DebitCard.svg';
 
@@ -8,8 +16,11 @@ import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/lessThan.png';
+
 const CardWalletScreen = ({navigation}) => {
   return (
+
+    <KeyboardAvoidingView>
     <View>
       {/* <Text>CardWalletScreen</Text> */}
 
@@ -25,6 +36,9 @@ const CardWalletScreen = ({navigation}) => {
               <Image style={{width: 23, height: 23}} source={LessThan} />
             </View>
           </TouchableOpacity>
+          <View>
+            <Text style={styles.billText}>Connect Wallet</Text>
+          </View>
           <View style={styles.notification}>
             <Notification />
           </View>
@@ -57,12 +71,58 @@ const CardWalletScreen = ({navigation}) => {
             <DebitCard />
           </View>
         </View>
-        <Text>Add your debit Card</Text>
-        <Text>
-          This card must be connected to a bank account under your name{' '}
-        </Text>
+
+        <View style={styles.containertText}>
+          <Text style={styles.textx1}>Add your debit Card</Text>
+          <Text style={styles.textx2}>
+            This card must be connected to a bank account under your name{' '}
+          </Text>
+        </View>
+
+        <View>
+          <View style={styles.inpputcontainer}>
+            <TextInput
+              style={[styles.input2, styles.input20]}
+              placeholder="DEBIT CARD NUMBER"
+              keyboardType="numeric"
+            />
+          </View>
+          <View style={styles.inputContiner1}>
+            <View>
+              <TextInput
+                style={[styles.input2, styles.input22]}
+                placeholder="DEBIT CARD NUMBER"
+                keyboardType="numeric"
+              />
+            </View>
+            <View>
+              <TextInput
+                style={[styles.input2, styles.input32]}
+                placeholder="CVC"
+                keyboardType="numeric"
+              />
+            </View>
+          </View>
+          <View style={styles.inputContiner1}>
+            <View>
+              <TextInput
+                style={[styles.input2, styles.input22]}
+                placeholder="EXPIRATION MM/YY"
+                keyboardType="numeric"
+              />
+            </View>
+            <View>
+              <TextInput
+                style={[styles.input2, styles.input32]}
+                placeholder="ZIP"
+                keyboardType="numeric"
+              />
+            </View>
+          </View>
+        </View>
       </View>
     </View>
+    </KeyboardAvoidingView>
   );
 };
 
@@ -115,16 +175,14 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   Cards: {
-    // alignContent:'center',
     alignItems: 'center',
-    backgroundColor: 'red',
-    position: 'relative',
-    height: '64%',
+    // position: 'relative',
+    height: 225,
+    // backgroundColor: 'red',
   },
   DebitCard: {
     position: 'absolute',
     marginTop: 16,
-    // backgroundColor:""
   },
   visaCard: {
     // position:'absolute',
@@ -154,5 +212,68 @@ const styles = StyleSheet.create({
   },
   lessthen: {
     marginLeft: 24,
+  },
+  billText: {
+    color: '#ffffff',
+    fontSize: 18,
+    fontFamily: 'InterSemiBold',
+  },
+
+  containertText: {
+    marginLeft: 25,
+    // marginTop: 28,
+  },
+
+  textx1: {
+    color: '#000000',
+    fontSize: 16,
+    fontFamily: 'InterMedium',
+    marginTop: 28,
+  },
+  textx2: {
+    color: '#666666',
+    fontSize: 13,
+    fontFamily: 'InterRegular',
+    width: '80%',
+  },
+  input2: {
+    height: 40,
+    // margin: 11,
+    borderWidth: 1,
+    padding: 10,
+    color: '#dddddd',
+    borderRadius: 8,
+    height: 54,
+    gap: 11,
+  },
+  input22: {
+    // width:"100%",
+    width: 220,
+    // backgroundColor: 'red',
+  },
+  input32: {
+    // width:"100%",
+    width: 133,
+    // backgroundColor: 'red',
+  },
+  placeholder: {
+    color: '#888888',
+    fontSize: 12,
+  },
+  inputContiner1: {
+    flexDirection: 'row',
+    marginHorizontal: 25,
+    marginTop: 12,
+    gap: 11,
+  },
+  inpputcontainer: {
+    // width:123,
+    // width:"100%",
+    marginHorizontal: 25,
+    // backgroundColor:"red",
+    marginTop: 30,
+  },
+  input20: {
+    // width:"100%"
   },
 });

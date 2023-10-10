@@ -31,7 +31,7 @@ const BillPayment = ({navigation}) => {
             </View>
           </TouchableOpacity>
           <View>
-            <Text>Bill Payment</Text>
+            <Text style={styles.billText}>Bill Payment</Text>
           </View>
           <View style={styles.notification}>
             <Notification />
@@ -204,6 +204,11 @@ function useStyles() {
     },
     lessthen: {
       marginLeft: 24,
+    },
+    billText: {
+      color: '#ffffff',
+      fontSize: width > 400 ? 18 : 14,
+      fontFamily: 'InterSemiBold',
     },
   });
 }

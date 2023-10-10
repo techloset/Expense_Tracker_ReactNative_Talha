@@ -24,7 +24,6 @@ import HomeScreen from '../screens/home/HomeScreen';
 
 
 
-
 const NaviagtionsScreen = () => {
   // const Stack = createNativeStackNavigator();
   // const Tab = createBottomTabNavigator();
@@ -48,7 +47,7 @@ const NaviagtionsScreen = () => {
         
       </Stack.Navigator>
       
-     
+      
     </NavigationContainer>
   );
 };
