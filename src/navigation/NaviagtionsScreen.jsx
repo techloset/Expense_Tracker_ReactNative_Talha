@@ -19,6 +19,8 @@ import BillPayment from '../screens/wallet/BillPayment';
 import BillPaymentSuccessful from '../screens/wallet/BillPaymentSuccessful';
 import OnBoardingScreen from '../screens/onBoarding/OnBoardingScreen';
 import HomeScreen from '../screens/home/HomeScreen';
+import StaticScreentwo from '../screens/statics/StaticScreentwo';
+import StaticsScreen from '../screens/statics/StaticsScreen';
 
 
 
@@ -44,6 +46,7 @@ const NaviagtionsScreen = () => {
         <Stack.Screen name='BillDetails' component={BillDetails}/>
         <Stack.Screen name='BillPayment' component={BillPayment}/>
         <Stack.Screen name='BillPaymentSuccessful' component={BillPaymentSuccessful}/>
+        <Stack.Screen name='StaticScreentwo' component={StaticScreentwo}/>
         
       </Stack.Navigator>
       

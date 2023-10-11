@@ -11,7 +11,9 @@ import Icon from 'react-native-vector-icons/Entypo';
 import IconHome from 'react-native-vector-icons/Foundation';
 import Wallet from 'react-native-vector-icons/Ionicons';
 import User from 'react-native-vector-icons/AntDesign';
+// import StaticScreentwo from '../screens/statics/StaticScreentwo';
 import StaticsScreen from '../screens/statics/StaticsScreen';
+
 
 const TabNavigation = () => {
   const Tab = createBottomTabNavigator();
@@ -35,6 +37,7 @@ const TabNavigation = () => {
       />
       <Tab.Screen
         name="StaticsScreen"
+        // component={StaticScreentwo}
         component={StaticsScreen}
         options={({route}) => ({
           tabBarIcon: ({focused, color, size}) => {
