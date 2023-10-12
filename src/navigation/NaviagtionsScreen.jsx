@@ -35,7 +35,7 @@ const NaviagtionsScreen = () => {
   
     <NavigationContainer >
        <Stack.Navigator screenOptions={{ headerShown: false }}> 
-        {/* <Stack.Screen name='OnBoardingScreen' component={OnBoardingScreen}/> */}
+        <Stack.Screen name='OnBoardingScreen' component={OnBoardingScreen}/>
         
         <Stack.Screen name='TabNavigation' component={TabNavigation}/>
         

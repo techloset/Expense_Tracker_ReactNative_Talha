@@ -210,8 +210,8 @@ function useStyles() {
       marginTop: 165,
       borderTopLeftRadius: 30,
       borderTopRightRadius: 30,
-      marginLeft:28,
-      height:"245%", 
+      marginLeft: 28,
+      height: '245%',
     },
 
     billText: {
@@ -247,11 +247,10 @@ function useStyles() {
     },
 
     dropdown: {
-      // height: 50,
       borderColor: 'gray',
       borderWidth: 0.5,
       borderRadius: 8,
-      // paddingHorizontal: 8,
+
       padding: 15,
     },
     icon: {

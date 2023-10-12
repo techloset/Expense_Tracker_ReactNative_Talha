@@ -17,7 +17,7 @@ import LessThan from '../../assets/Images/lessThan.png';
 const BillPayment = ({navigation}) => {
   const styles = useStyles();
   return (
-    <View>
+    <View style={{height: '100%',backgroundColor:'white'}}>
       <View>
         <View style={styles.container_inner}>
           <Rectangular />
@@ -130,7 +130,7 @@ function useStyles() {
     line1: {
       borderTopWidth: 1,
       borderTopColor: '#DDDDDD',
-      marginVertical: width > 400 ? 20 : 20,
+      marginVertical: 20,
       // marginHorizontal: 30,
     },
     priceFeeConatiner: {

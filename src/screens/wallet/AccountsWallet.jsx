@@ -25,7 +25,7 @@ const windowHeight = Dimensions.get('window').height;
 const AccountsWallet = ({navigation}) => {
   const styles = useStyles();
   return (
-    <View style={{height: '100%'}}>
+    <View style={{height: '100%',backgroundColor:'white'}}>
       <View>
         <View style={styles.container_inner}>
           <Rectangular />

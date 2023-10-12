@@ -19,7 +19,7 @@ const windowHeight = Dimensions.get('window').height;
 const SocialComponent = ({navigation}) => {
   const styles = useStyles();
   return (
-    <View>
+    <View style={{marginBottom:100}}>
       <ScrollView style={{height: 264}}>
         <View style={styles.up_Maincontainer}>
           <View style={styles.up_Innercontainer}>
@@ -170,6 +170,8 @@ function useStyles() {
       marginTop: 16,
       marginHorizontal: 22,
       alignItems: 'center',
+      // backgroundColor:'red',
+      // marginBottom:110
     },
     youtube_image: {
       width: width > 400 ? 35 : 24,

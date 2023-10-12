@@ -6,7 +6,7 @@ import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/lessThan.png';
-// import TabNavigation from '../../navigation/TabNavigation';
+
 const WalletScreen_upcomingBills = ({navigation}) => {
   return (
     <View>
@@ -42,11 +42,12 @@ export default WalletScreen_upcomingBills;
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    backgroundColor: 'white',
+    backgroundColor: '#FFFFFF',
     width: '100%',
     marginTop: 165,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
+    // height:600
   },
 
   eelispse: {

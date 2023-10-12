@@ -22,7 +22,7 @@ const windowHeight = Dimensions.get('window').height;
 const IncomeScreen = ({navigation}) => {
   const styles = useStyles();
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{height: '100%',backgroundColor:'white'}}>
       <View>
         <View style={styles.container_inner}>
           <Rectangular />

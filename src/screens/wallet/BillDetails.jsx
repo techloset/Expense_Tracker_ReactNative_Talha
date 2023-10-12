@@ -22,7 +22,7 @@ import LessThan from '../../assets/Images/lessThan.png';
 const BillDetails = ({navigation}) => {
   const styles = useStyles();
   return (
-    <View>
+    <View style={{height: '100%',backgroundColor:'white'}}>
       <View>
         <View style={styles.container_inner}>
           <Rectangular />

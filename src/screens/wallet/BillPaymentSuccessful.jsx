@@ -21,7 +21,7 @@ import LessThan from '../../assets/Images/lessThan.png';
 const BillPaymentSuccessful = ({navigation}) => {
   const styles = useStyles();
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{height: '100%',backgroundColor:'white'}}>
       <View>
         <View style={styles.container_inner}>
           <Rectangular />

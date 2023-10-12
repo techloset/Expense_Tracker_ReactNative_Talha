@@ -67,6 +67,8 @@ function useStyles() {
     container: {
       justifyContent: 'center',
       flex: 1,
+      // backgroundColor:'red',
+      // height:'110%'
     },
 
     Heading_Container: {

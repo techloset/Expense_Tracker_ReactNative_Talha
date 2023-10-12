@@ -6,7 +6,6 @@ import {
   Image,
   TextInput,
   KeyboardAvoidingView,
-  
 } from 'react-native';
 import React from 'react';
 import VisaCard from '../../assets/Images/visaCard.svg';
@@ -19,109 +18,108 @@ import LessThan from '../../assets/Images/lessThan.png';
 
 const CardWalletScreen = ({navigation}) => {
   return (
-
     <KeyboardAvoidingView>
-    <View>
-      {/* <Text>CardWalletScreen</Text> */}
-
       <View>
-        <View style={styles.container_inner}>
-          <Rectangular />
-          <Ellipse style={styles.eelispse} />
-        </View>
-        <View style={styles.images_conatiner}>
-          <TouchableOpacity
-            onPress={() => navigation.push('WalletScreen_upcomingBills')}>
-            <View style={styles.lessthen}>
-              <Image style={{width: 23, height: 23}} source={LessThan} />
-            </View>
-          </TouchableOpacity>
-          <View>
-            <Text style={styles.billText}>Connect Wallet</Text>
-          </View>
-          <View style={styles.notification}>
-            <Notification />
-          </View>
-        </View>
-      </View>
-      {/* <WalletComponentScreen /> */}
-      <View style={styles.container}>
-        {/* <UpcommingBills/> */}
-        <View style={styles.butn_type_container}>
-          <TouchableOpacity>
-            <View style={[styles.both_btn, styles.transition_btn]}>
-              <Text style={styles.textt}>Cards</Text>
-            </View>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            onPress={() => navigation.navigate('AccountsWallet')}>
-            <View style={[styles.both_btn, styles.upcoming_bill_btn]}>
-              <Text style={styles.textt}>Accounts</Text>
-            </View>
-          </TouchableOpacity>
-        </View>
-
-        <View style={styles.Cards}>
-          <View style={styles.visaCard}>
-            <VisaCard />
-          </View>
-
-          <View style={styles.DebitCard}>
-            <DebitCard />
-          </View>
-        </View>
-
-        <View style={styles.containertText}>
-          <Text style={styles.textx1}>Add your debit Card</Text>
-          <Text style={styles.textx2}>
-            This card must be connected to a bank account under your name{' '}
-          </Text>
-        </View>
+        {/* <Text>CardWalletScreen</Text> */}
 
         <View>
-          <View style={styles.inpputcontainer}>
-            <TextInput
-              style={[styles.input2, styles.input20]}
-              placeholder="DEBIT CARD NUMBER"
-              keyboardType="numeric"
-            />
+          <View style={styles.container_inner}>
+            <Rectangular />
+            <Ellipse style={styles.eelispse} />
           </View>
-          <View style={styles.inputContiner1}>
+          <View style={styles.images_conatiner}>
+            <TouchableOpacity
+              onPress={() => navigation.push('WalletScreen_upcomingBills')}>
+              <View style={styles.lessthen}>
+                <Image style={{width: 23, height: 23}} source={LessThan} />
+              </View>
+            </TouchableOpacity>
             <View>
+              <Text style={styles.billText}>Connect Wallet</Text>
+            </View>
+            <View style={styles.notification}>
+              <Notification />
+            </View>
+          </View>
+        </View>
+        {/* <WalletComponentScreen /> */}
+        <View style={styles.container}>
+          {/* <UpcommingBills/> */}
+          <View style={styles.butn_type_container}>
+            <TouchableOpacity>
+              <View style={[styles.both_btn, styles.transition_btn]}>
+                <Text style={styles.textt}>Cards</Text>
+              </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              onPress={() => navigation.navigate('AccountsWallet')}>
+              <View style={[styles.both_btn, styles.upcoming_bill_btn]}>
+                <Text style={styles.textt}>Accounts</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+
+          <View style={styles.Cards}>
+            <View style={styles.visaCard}>
+              <VisaCard />
+            </View>
+
+            <View style={styles.DebitCard}>
+              <DebitCard />
+            </View>
+          </View>
+
+          <View style={styles.containertText}>
+            <Text style={styles.textx1}>Add your debit Card</Text>
+            <Text style={styles.textx2}>
+              This card must be connected to a bank account under your name{' '}
+            </Text>
+          </View>
+
+          <View>
+            <View style={styles.inpputcontainer}>
               <TextInput
-                style={[styles.input2, styles.input22]}
+                style={[styles.input2, styles.input20]}
                 placeholder="DEBIT CARD NUMBER"
                 keyboardType="numeric"
               />
             </View>
-            <View>
-              <TextInput
-                style={[styles.input2, styles.input32]}
-                placeholder="CVC"
-                keyboardType="numeric"
-              />
+            <View style={styles.inputContiner1}>
+              <View>
+                <TextInput
+                  style={[styles.input2, styles.input22]}
+                  placeholder="DEBIT CARD NUMBER"
+                  keyboardType="numeric"
+                />
+              </View>
+              <View>
+                <TextInput
+                  style={[styles.input2, styles.input32]}
+                  placeholder="CVC"
+                  keyboardType="numeric"
+                />
+              </View>
             </View>
-          </View>
-          <View style={styles.inputContiner1}>
-            <View>
-              <TextInput
-                style={[styles.input2, styles.input22]}
-                placeholder="EXPIRATION MM/YY"
-                keyboardType="numeric"
-              />
-            </View>
-            <View>
-              <TextInput
-                style={[styles.input2, styles.input32]}
-                placeholder="ZIP"
-                keyboardType="numeric"
-              />
+            <View style={styles.inputContiner1}>
+              <View>
+                <TextInput
+                  style={[styles.input2, styles.input22]}
+                  placeholder="EXPIRATION MM/YY"
+                  keyboardType="numeric"
+                />
+              </View>
+              <View>
+                <TextInput
+                  style={[styles.input2, styles.input32]}
+                  placeholder="ZIP"
+                  keyboardType="numeric"
+                />
+              </View>
             </View>
           </View>
         </View>
       </View>
-    </View>
     </KeyboardAvoidingView>
   );
 };
@@ -176,16 +174,12 @@ const styles = StyleSheet.create({
   },
   Cards: {
     alignItems: 'center',
-    // position: 'relative',
+
     height: 225,
-    // backgroundColor: 'red',
   },
   DebitCard: {
     position: 'absolute',
     marginTop: 16,
-  },
-  visaCard: {
-    // position:'absolute',
   },
 
   eelispse: {
@@ -221,7 +215,6 @@ const styles = StyleSheet.create({
 
   containertText: {
     marginLeft: 25,
-    // marginTop: 28,
   },
 
   textx1: {
@@ -238,7 +231,7 @@ const styles = StyleSheet.create({
   },
   input2: {
     height: 40,
-    // margin: 11,
+
     borderWidth: 1,
     padding: 10,
     color: '#dddddd',
@@ -247,14 +240,10 @@ const styles = StyleSheet.create({
     gap: 11,
   },
   input22: {
-    // width:"100%",
     width: 220,
-    // backgroundColor: 'red',
   },
   input32: {
-    // width:"100%",
     width: 133,
-    // backgroundColor: 'red',
   },
   placeholder: {
     color: '#888888',
@@ -267,13 +256,8 @@ const styles = StyleSheet.create({
     gap: 11,
   },
   inpputcontainer: {
-    // width:123,
-    // width:"100%",
     marginHorizontal: 25,
-    // backgroundColor:"red",
     marginTop: 30,
   },
-  input20: {
-    // width:"100%"
-  },
+  
 });
