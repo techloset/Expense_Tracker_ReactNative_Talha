@@ -2,7 +2,6 @@ import {
   StyleSheet,
   Text,
   View,
-  Button,
   Image,
   ImageBackground,
   ScrollView,
@@ -11,13 +10,15 @@ import {
 } from 'react-native';
 import React from 'react';
 import imgae from '../../assets/Images/Home_background.png';
-import bell from '../../assets/Images/bell-icon.png';
-import arrowup from '../../assets/Images/arrow-up-balance.png';
-import arrowdown from '../../assets/Images/arrow-down-balance.png';
-import UpWork from '../../assets/Images/upIcon.png';
+import Notification from '../../assets/Images/notification.svg'
+import ArrowUp from '../../assets/Images/ArrowUp.svg'
+import Arrowdown from '../../assets/Images/Arrowdown.svg'
+import Upicons from '../../assets/Images/Upicons.svg'
 import girlsImage from '../../assets/Images/image7.png';
-import PaypalIcon from '../../assets/Images/paypalIcon.png';
-import YoutubeIcon from '../../assets/Images/youtubeIcon.png';
+
+import Paypals from '../../assets/Images/Paypals.svg'
+
+import YoutubeIcon from '../../assets/Images/youtubeIcon.svg';
 import Image_71 from '../../assets/Images/image71.png';
 import Image_72 from '../../assets/Images/image72.png';
 import Image_73 from '../../assets/Images/image73.png';
@@ -36,7 +37,7 @@ const HomeScreen = ({navigation}) => {
             <Image source={require('../../assets/Images/Group_ellipse.png')} />
 
             <View style={styles.bell_container}>
-              <Image style={styles.bell_icon} source={bell} />
+              <Notification/>
             </View>
 
             <View style={styles.balnce_container}>
@@ -59,7 +60,7 @@ const HomeScreen = ({navigation}) => {
                       styles.income_second_container,
                     ]}>
                     <View style={styles.arrow_container}>
-                      <Image style={styles.arrow_icon} source={arrowup} />
+                      <Arrowdown/>
                     </View>
                     <Text style={styles.incomeText}>Income</Text>
                   </View>
@@ -75,7 +76,8 @@ const HomeScreen = ({navigation}) => {
                       styles.expense_second_container,
                     ]}>
                     <View style={styles.arrow_container}>
-                      <Image style={styles.arrow_icon} source={arrowdown} />
+                     
+                      <ArrowUp/>
                     </View>
                     <Text style={styles.expenseText}>Expense</Text>
                   </View>
@@ -98,7 +100,8 @@ const HomeScreen = ({navigation}) => {
         <View style={styles.up_Maincontainer}>
           <View style={styles.up_Innercontainer}>
             <View style={styles.imge_container}>
-              <Image style={styles.upwork_image} source={UpWork} />
+              {/* <Image style={styles.upwork_image} source={UpWork} /> */}
+              <Upicons/>
             </View>
             <View>
               <Text style={styles.UpWorkText}>Upwork</Text>
@@ -121,14 +124,15 @@ const HomeScreen = ({navigation}) => {
             </View>
           </View>
           <View>
-            <Text style={styles.upwork_income}>- $ 85.00</Text>
+            <Text style={[styles.upwork_income,styles.upworkIncomeRed]}>- $ 85.00</Text>
           </View>
         </View>
 
         <View style={styles.paypal_Maincontainer}>
           <View style={styles.up_Innercontainer}>
             <View style={styles.imge_container}>
-              <Image style={styles.paypal_image} source={PaypalIcon} />
+              {/* <Image style={styles.paypal_image} source={PaypalIcon} /> */}
+              <Paypals/>
             </View>
             <View>
               <Text style={styles.UpWorkText}>paypal</Text>
@@ -143,7 +147,8 @@ const HomeScreen = ({navigation}) => {
         <View style={styles.youtube_Maincontainer}>
           <View style={styles.up_Innercontainer}>
             <View style={styles.imge_container}>
-              <Image style={styles.youtube_image} source={YoutubeIcon} />
+              {/* <Image style={styles.youtube_image} source={YoutubeIcon} /> */}
+              <YoutubeIcon/>
             </View>
             <View>
               <Text style={styles.UpWorkText}>Youtube</Text>
@@ -151,14 +156,15 @@ const HomeScreen = ({navigation}) => {
             </View>
           </View>
           <View>
-            <Text style={styles.upwork_income}>-$11.99</Text>
+            <Text style={[styles.upwork_income,styles.upworkIncomeRed]}>-$11.99</Text>
           </View>
         </View>
 
         <View style={styles.paypal_Maincontainer}>
           <View style={styles.up_Innercontainer}>
             <View style={styles.imge_container}>
-              <Image style={styles.paypal_image} source={PaypalIcon} />
+              {/* <Image style={styles.paypal_image} source={PaypalIcon} /> */}
+              <Paypals/>
             </View>
             <View>
               <Text style={styles.UpWorkText}>paypal</Text>
@@ -173,7 +179,7 @@ const HomeScreen = ({navigation}) => {
         <View style={styles.youtube_Maincontainer}>
           <View style={styles.up_Innercontainer}>
             <View style={styles.imge_container}>
-              <Image style={styles.youtube_image} source={YoutubeIcon} />
+              <YoutubeIcon/>
             </View>
             <View>
               <Text style={styles.UpWorkText}>Youtube</Text>
@@ -187,7 +193,8 @@ const HomeScreen = ({navigation}) => {
         <View style={styles.youtube_Maincontainer}>
           <View style={styles.up_Innercontainer}>
             <View style={styles.imge_container}>
-              <Image style={styles.youtube_image} source={YoutubeIcon} />
+              
+              <YoutubeIcon/>
             </View>
             <View>
               <Text style={styles.UpWorkText}>Youtube</Text>
@@ -298,14 +305,8 @@ function useStyles() {
       height: width > 400 ? 30 : 20,
       borderRadius: 50,
     },
-    paypal_image: {
-      width: width > 400 ? 26 : 24,
-      height: width > 400 ? 31 : 20,
-    },
-    youtube_image: {
-      width: width > 400 ? 35 : 24,
-      height: width > 400 ? 35 : 20,
-    },
+    
+    
     UpWorkText: {
       fontSize: width > 400 ? 16 : 12,
       fontFamily: 'InterMedium',
@@ -321,6 +322,10 @@ function useStyles() {
       fontSize: width > 400 ? 18 : 14,
       fontFamily: 'InterSemiBold',
       color: '#24a869',
+    },
+    upworkIncomeRed:{
+      
+      color:"red"
     },
     SendAgain_Container: {
       flexDirection: 'row',

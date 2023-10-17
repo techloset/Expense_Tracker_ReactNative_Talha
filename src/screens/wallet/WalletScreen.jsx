@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, SafeAreaView, Image,TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, SafeAreaView, Image,TouchableOpacity,useWindowDimensions,} from 'react-native';
 import React from 'react';
 // import WalletComponentScreen from '../../component/transcationComponent/WalletComponentScreen';
 import TransactionScreen from '../../component/transcationComponent/TransactionScreen';
@@ -8,6 +8,7 @@ import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/lessThan.png';
 const WalletScreen = ({navigation}) => {
+  const styles = useStyles();
   return (
     <SafeAreaView>
       <View>
@@ -21,6 +22,9 @@ const WalletScreen = ({navigation}) => {
             <Image style={{width: 23, height: 23}} source={LessThan} />
           </View>
           </TouchableOpacity>
+          <View>
+            <Text style={styles.billText}>Wallet</Text>
+          </View>
           <View style={styles.notification}>
             <Notification />
           </View>
@@ -37,13 +41,15 @@ const WalletScreen = ({navigation}) => {
 
 export default WalletScreen;
 
-const styles = StyleSheet.create({
+function useStyles() {
+  const {width, height} = useWindowDimensions();
+  // console.log()
+  return StyleSheet.create({
   container: {
-    // flex:1,
+    
     position: 'absolute',
     backgroundColor: 'white',
     width: '100%',
-    // height:'290%',
     marginTop: 165,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
@@ -62,6 +68,12 @@ const styles = StyleSheet.create({
     marginTop: 78,
   },
 
+  billText: {
+    color: '#ffffff',
+    fontSize: width > 400 ? 18 : 14,
+    fontFamily: 'InterSemiBold',
+  },
+
   notification: {
     width: 40,
     height: 40,
@@ -75,3 +87,4 @@ const styles = StyleSheet.create({
     marginLeft: 24,
   },
 });
+}

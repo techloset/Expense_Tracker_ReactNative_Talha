@@ -13,19 +13,15 @@ import Dollar from '../../assets/Images/dollar.svg';
 import Bank from '../../assets/Images/bank-fill.svg';
 import PaypaLogo from '../../assets/Images/paypalogo.svg';
 import CheckCircle from '../../assets/Images/CheckCircle.svg';
-
 import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/lessThan.png';
 
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
-
 const AccountsWallet = ({navigation}) => {
   const styles = useStyles();
   return (
-    <View style={{height: '100%',backgroundColor:'white'}}>
+    <View style={{height: '100%', backgroundColor: 'white'}}>
       <View>
         <View style={styles.container_inner}>
           <Rectangular />
@@ -38,6 +34,9 @@ const AccountsWallet = ({navigation}) => {
               <Image style={{width: 23, height: 23}} source={LessThan} />
             </View>
           </TouchableOpacity>
+          <View>
+            <Text style={styles.billText}>Connect Wallet</Text>
+          </View>
           <View style={styles.notification}>
             <Notification />
           </View>
@@ -46,7 +45,8 @@ const AccountsWallet = ({navigation}) => {
 
       <View style={styles.container}>
         <View style={styles.butn_type_container}>
-          <TouchableOpacity onPress={() => navigation.navigate('CardWalletScreen')}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('CardWalletScreen')}>
             <View style={[styles.both_btn, styles.transition_btn]}>
               <Text style={styles.textt}>Cards</Text>
             </View>
@@ -145,7 +145,6 @@ export default AccountsWallet;
 
 function useStyles() {
   const {width, height} = useWindowDimensions();
-  // console.log()
   return StyleSheet.create({
     container: {
       position: 'absolute',
@@ -275,6 +274,12 @@ function useStyles() {
       justifyContent: 'space-between',
       alignItems: 'center',
       marginTop: 78,
+    },
+
+    billText: {
+      color: '#ffffff',
+      fontSize: width > 400 ? 18 : 14,
+      fontFamily: 'InterSemiBold',
     },
 
     notification: {

@@ -17,7 +17,8 @@ import LessThanBlack from '../../assets/Images/Lessthanblack.svg';
 import Sort from '../../assets/Images/sort.svg';
 import Starbucks from '../../assets/Images/starbucks.svg';
 import Girl from '../../assets/Images/image7.png';
-import Youtube from '../../assets/Images/youtubeIcon.png';
+// import Youtube from '../../assets/Images/youtubeIcon.png';
+import YoutubeIcon from '../../assets/Images/youtubeIcon.svg';
 
 import React from 'react';
 import {LineChart} from 'react-native-chart-kit';
@@ -177,7 +178,8 @@ export const StaticsScreen = ({navigation}) => {
         <View style={styles.card_container}>
           <View style={{flexDirection: 'row'}}>
             <View style={styles.circle_bank}>
-              <Image source={Youtube} />
+              {/* <Image source={Youtube} /> */}
+              <YoutubeIcon/>
             </View>
             <View>
               <Text style={styles.bankLink}>Youtube</Text>

@@ -9,7 +9,7 @@ import {
   Dimensions,
 } from 'react-native';
 import React from 'react';
-import YoutubeIcon from '../../assets/Images/youtubeIcon.png';
+import YoutubeIcon from '../../assets/Images/youtubeIcon.svg';
 import Vector from '../../assets/Images/Vector.svg';
 import House from '../../assets/Images/house.svg';
 import Spotify from '../../assets/Images/spotify.svg';
@@ -24,7 +24,7 @@ const SocialComponent = ({navigation}) => {
         <View style={styles.up_Maincontainer}>
           <View style={styles.up_Innercontainer}>
             <View style={styles.imge_container}>
-              <Image style={styles.upwork_image} source={YoutubeIcon} />
+              <YoutubeIcon/>
             </View>
             <View>
               <Text style={styles.UpWorkText}>Upwork</Text>

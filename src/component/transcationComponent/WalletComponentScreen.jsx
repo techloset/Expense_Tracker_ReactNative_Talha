@@ -16,6 +16,7 @@ const WalletComponentScreen = () => {
         <View style={styles.lessthen}>
           <Image style={{width:23,height:23}} source={LessThan} />
         </View>
+      
         <View style={styles.notification}>
           <Notification />
         </View>

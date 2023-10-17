@@ -8,10 +8,10 @@ import {
   Dimensions,
 } from 'react-native';
 import React from 'react';
-import UpWork from '../../assets/Images/upIcon.png';
+import Upicons from '../../assets/Images/Upicons.svg'
 import girlsImage from '../../assets/Images/image7.png';
-import PaypalIcon from '../../assets/Images/paypalIcon.png';
-import YoutubeIcon from '../../assets/Images/youtubeIcon.png';
+import Paypals from '../../assets/Images/Paypals.svg'
+import YoutubeIcon from '../../assets/Images/youtubeIcon.svg';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -23,7 +23,7 @@ const SocialComponent = () => {
         <View style={styles.up_Maincontainer}>
           <View style={styles.up_Innercontainer}>
             <View style={styles.imge_container}>
-              <Image style={styles.upwork_image} source={UpWork} />
+              <Upicons/>
             </View>
             <View>
               <Text style={styles.UpWorkText}>Upwork</Text>
@@ -53,7 +53,7 @@ const SocialComponent = () => {
         <View style={styles.paypal_Maincontainer}>
           <View style={styles.up_Innercontainer}>
             <View style={styles.imge_container}>
-              <Image style={styles.paypal_image} source={PaypalIcon} />
+              <Paypals/>
             </View>
             <View>
               <Text style={styles.UpWorkText}>paypal</Text>
@@ -68,7 +68,7 @@ const SocialComponent = () => {
         <View style={styles.youtube_Maincontainer}>
           <View style={styles.up_Innercontainer}>
             <View style={styles.imge_container}>
-              <Image style={styles.youtube_image} source={YoutubeIcon} />
+              <YoutubeIcon/>
             </View>
             <View>
               <Text style={styles.UpWorkText}>Youtube</Text>

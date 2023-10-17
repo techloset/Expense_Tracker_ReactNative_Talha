@@ -15,7 +15,7 @@ import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/lessThan.png';
-import Calender from '../../assets/Images/calendar.png';
+// import Calender from '../../assets/Images/calendar.png';
 import {Dropdown} from 'react-native-element-dropdown';
 import Netflic from 'react-native-vector-icons/Fontisto';
 import Googlee from 'react-native-vector-icons/AntDesign';
