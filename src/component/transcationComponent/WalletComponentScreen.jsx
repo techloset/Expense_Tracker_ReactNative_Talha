@@ -29,7 +29,6 @@ export default WalletComponentScreen;
 
 const styles = StyleSheet.create({
  
- 
   eelispse: {
     position: 'absolute',
    

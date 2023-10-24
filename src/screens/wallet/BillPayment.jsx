@@ -16,17 +16,16 @@ import LessThan from '../../assets/Images/left.svg';
 const BillPayment = ({navigation}) => {
   const styles = useStyles();
   return (
-    <View style={{height: '100%',backgroundColor:'white'}}>
+    <View style={{height: '100%', backgroundColor: 'white'}}>
       <View>
         <View style={styles.container_inner}>
           <Rectangular />
           <Ellipse style={styles.eelispse} />
         </View>
         <View style={styles.images_conatiner}>
-        <TouchableOpacity
-            onPress={() => navigation.push('BillDetails')}>
+          <TouchableOpacity onPress={() => navigation.push('BillDetails')}>
             <View style={styles.lessthen}>
-              <LessThan/>
+              <LessThan />
             </View>
           </TouchableOpacity>
           <View>
@@ -37,8 +36,6 @@ const BillPayment = ({navigation}) => {
           </View>
         </View>
       </View>
-
-      
 
       <View style={styles.container}>
         <View style={styles.youtube_Container}>
@@ -168,7 +165,7 @@ function useStyles() {
       alignItems: 'center',
       marginHorizontal: 28,
       marginTop: width > 400 ? 30 : 15,
-      marginTop:width>400?218:160,
+      marginTop: width > 400 ? 218 : 160,
     },
     bttnText: {
       color: '#ffffff',

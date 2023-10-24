@@ -11,7 +11,6 @@ import imgae from '../../assets/Images/Home_background.png';
 import Notification from '../../assets/Images/notification.svg';
 import ArrowUp from '../../assets/Images/ArrowUp.svg';
 import Arrowdown from '../../assets/Images/Arrowdown.svg';
-
 import Image_71 from '../../assets/Images/image71.png';
 import Image_72 from '../../assets/Images/image72.png';
 import Image_73 from '../../assets/Images/image73.png';

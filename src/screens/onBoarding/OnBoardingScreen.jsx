@@ -3,18 +3,13 @@ import {
   StyleSheet,
   Text,
   View,
-  Button,
   ImageBackground,
   Image,
   TouchableOpacity,
   useWindowDimensions,
-  Dimensions,
 } from 'react-native';
 import imageBackround from '../../assets/Images/OnBoardingBackground.png';
 import Butoon from '../../component/button/Butoon.jsx';
-
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
 
 const OnBoardingScreen = ({navigation}) => {
   const styles = useStyles();
@@ -22,12 +17,12 @@ const OnBoardingScreen = ({navigation}) => {
     <View style={styles.container}>
       <View style={styles.stretchFather}>
         <ImageBackground style={styles.stretch} source={imageBackround}>
-        <View style={{justifyContent:"center",alignItems:'center'}}>
-        <Image
-            style={styles.stretchImage}
-            source={require('../../assets/Images/specular_1.png')}
-          />
-        </View>
+          <View style={{justifyContent: 'center', alignItems: 'center'}}>
+            <Image
+              style={styles.stretchImage}
+              source={require('../../assets/Images/specular_1.png')}
+            />
+          </View>
         </ImageBackground>
       </View>
 
@@ -53,21 +48,15 @@ export default OnBoardingScreen;
 
 function useStyles() {
   const {width, height} = useWindowDimensions();
-  // console.log()
   return StyleSheet.create({
     container: {
-      height:"100%",
-     backgroundColor:"#ffffff"
+      height: '100%',
+      backgroundColor: '#ffffff',
     },
-    stretchFather: {
-     
-    },
-    stretch: {
-      
-    },
+    stretchFather: {},
+    stretch: {},
     stretchImage: {
       marginTop: width > 400 ? 127 : 50,
-      
     },
     container2: {
       // flex: 3,

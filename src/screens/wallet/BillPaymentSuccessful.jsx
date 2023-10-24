@@ -19,7 +19,6 @@ import LessThan from '../../assets/Images/left.svg';
 import PaymentFile from './Payment.json';
 
 const BillPaymentSuccessful = ({navigation}) => {
-
   const styles = useStyles();
   return (
     <SafeAreaView style={{height: '100%', backgroundColor: 'white'}}>
@@ -198,7 +197,7 @@ function useStyles() {
       marginTop: width > 400 ? 30 : 15,
       borderWidth: 1,
       borderColor: '#438883',
-      borderStyle: 'solid'
+      borderStyle: 'solid',
     },
     bttnText: {
       color: '#438883',

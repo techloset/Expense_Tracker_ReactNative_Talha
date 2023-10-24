@@ -3,9 +3,7 @@ import {
   Text,
   View,
   TouchableOpacity,
-  Image,
   useWindowDimensions,
-  Dimensions,
 } from 'react-native';
 import React from 'react';
 

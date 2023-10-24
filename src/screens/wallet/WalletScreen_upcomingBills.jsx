@@ -2,7 +2,6 @@ import {
   StyleSheet,
   Text,
   View,
-  Image,
   TouchableOpacity,
   useWindowDimensions,
 } from 'react-native';
@@ -12,7 +11,6 @@ import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
-
 
 const WalletScreen_upcomingBills = ({navigation}) => {
   const styles = useStyles();
@@ -26,7 +24,7 @@ const WalletScreen_upcomingBills = ({navigation}) => {
         <View style={styles.images_conatiner}>
           <TouchableOpacity onPress={() => navigation.navigate('WalletScreen')}>
             <View style={styles.lessthen}>
-              <LessThan/>
+              <LessThan />
             </View>
           </TouchableOpacity>
           <View>
@@ -37,11 +35,10 @@ const WalletScreen_upcomingBills = ({navigation}) => {
           </View>
         </View>
       </View>
-      
+
       <View style={styles.container}>
         <UpcommingBills navigation={navigation} />
       </View>
-      
     </View>
   );
 };

@@ -2,7 +2,7 @@ import {StyleSheet, Text, View, ImageBackground, Image} from 'react-native';
 import React from 'react';
 import HomeBackground from '../../assets/Images/Home_background.png';
 import circleGroup from '../../assets/Images/circle_group.png';
-import Notification from '../../assets/Images/notification.svg'
+import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/lessThan.png';
 import women from '../../assets/Images/Woman_1.png';
 import invite from '../../assets/Images/invite.png';
@@ -24,7 +24,7 @@ const ProfileScreen = () => {
           />
           <Text style={styles.textProfile}>Profile</Text>
           <View style={styles.image_container}>
-            <Notification/>
+            <Notification />
           </View>
         </View>
         <View style={styles.avtar_container}>
@@ -48,31 +48,31 @@ const ProfileScreen = () => {
         </View>
         <View style={styles.parentContainer}>
           <View style={styles.allImage}>
-            <AccountInfo/>
+            <AccountInfo />
           </View>
           <Text style={styles.alltext}>Account Info</Text>
         </View>
-        <View style={[styles.parentContainer,styles.otherInfo]}>
+        <View style={[styles.parentContainer, styles.otherInfo]}>
           <View style={styles.allImage}>
-            <UserProfile/>
+            <UserProfile />
           </View>
           <Text style={styles.alltext}>Personal Profile</Text>
         </View>
-        <View style={[styles.parentContainer,styles.otherInfo]}>
+        <View style={[styles.parentContainer, styles.otherInfo]}>
           <View style={styles.allImage}>
-            <MessageCenter/>
+            <MessageCenter />
           </View>
           <Text style={styles.alltext}>Message Center</Text>
         </View>
-        <View style={[styles.parentContainer,styles.otherInfo]}>
+        <View style={[styles.parentContainer, styles.otherInfo]}>
           <View style={styles.allImage}>
-            <Login/>
+            <Login />
           </View>
           <Text style={styles.alltext}>Login and Security</Text>
         </View>
-        <View style={[styles.parentContainer,styles.otherInfo]}>
+        <View style={[styles.parentContainer, styles.otherInfo]}>
           <View style={styles.allImage}>
-            <DataPrivacy/>
+            <DataPrivacy />
           </View>
           <Text style={styles.alltext}>Data and Privacy</Text>
         </View>
@@ -87,7 +87,6 @@ const styles = StyleSheet.create({
   imageBackgrounds: {
     width: 414,
     height: 287,
-   
   },
   CircleBackgrounds: {
     position: 'absolute',
@@ -170,14 +169,14 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    marginVertical:15,
+    marginVertical: 15,
   },
   borderView: {
     borderBottomWidth: 2,
     width: '88%',
-    borderColor:'#EEEEEE'
+    borderColor: '#EEEEEE',
   },
-  otherInfo:{
-    marginTop:30,
-  }
+  otherInfo: {
+    marginTop: 30,
+  },
 });

@@ -107,7 +107,7 @@ const StaticScreentwo = ({navigation}) => {
           <TouchableOpacity
             onPress={() => navigation.navigate('StaticsScreen')}>
             <View style={styles.lessthen}>
-              <LessThan/>
+              <LessThan />
             </View>
           </TouchableOpacity>
           <View>
@@ -118,7 +118,7 @@ const StaticScreentwo = ({navigation}) => {
           </View>
         </View>
       </View>
-      
+
       <View style={styles.container}>
         <View style={styles.innermain}>
           <Text style={[styles.stylennamee, styles.maincc]}>NAME</Text>
@@ -164,14 +164,13 @@ const StaticScreentwo = ({navigation}) => {
               onPress={toggleDatePicker}
               style={styles.datePickerContainer}>
               <Text style={styles.dateText}>{date || 'Select date'}</Text>
-             
             </TouchableOpacity>
             {showDatePicker && (
               <DatePicker
                 style={styles.datePicker}
                 date={date}
                 mode="date"
-                format="MM/DD/YYYY" 
+                format="MM/DD/YYYY"
                 confirmBtnText="Confirm"
                 cancelBtnText="Cancel"
                 onDateChange={handleDateChange}

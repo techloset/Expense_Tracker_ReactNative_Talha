@@ -3,9 +3,8 @@ import {
   StyleSheet,
   Text,
   View,
-  Image,
   useWindowDimensions,
-  TouchableOpacity
+  TouchableOpacity,
 } from 'react-native';
 import {useState} from 'react';
 import {Dropdown} from 'react-native-element-dropdown';
@@ -47,9 +46,13 @@ export const StaticsScreen = ({navigation}) => {
         <Text>Year</Text>
       </View>
 
-      <View style={[styles.droppdown,styles.ddddd]}>
+      <View style={[styles.droppdown, styles.ddddd]}>
         <Dropdown
-          style={[styles.dropdown, isFocus && {borderColor: 'blue'},styles.width]}
+          style={[
+            styles.dropdown,
+            isFocus && {borderColor: 'blue'},
+            styles.width,
+          ]}
           placeholderStyle={styles.placeholderStyle}
           selectedTextStyle={styles.selectedTextStyle}
           iconStyle={styles.iconStyle}
@@ -79,7 +82,7 @@ export const StaticsScreen = ({navigation}) => {
               },
             ],
           }}
-          width={Dimensions.get('window').width} 
+          width={Dimensions.get('window').width}
           height={220}
           yAxisLabel=""
           yAxisSuffix=""
@@ -87,7 +90,7 @@ export const StaticsScreen = ({navigation}) => {
             backgroundColor: '#ffffff',
             backgroundGradientFrom: '#ffffff',
             backgroundGradientTo: '#ffffff',
-            decimalPlaces: 2, 
+            decimalPlaces: 2,
 
             color: (opacity = 1) => `rgba(67, 136, 131, ${opacity})`,
             labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
@@ -129,7 +132,6 @@ export const StaticsScreen = ({navigation}) => {
             </View>
           </View>
           <View style={styles.circletck}>
-            
             <Text style={styles.circletcktext}>- $ 150.00</Text>
           </View>
         </View>
@@ -138,13 +140,14 @@ export const StaticsScreen = ({navigation}) => {
           <View style={{flexDirection: 'row'}}>
             <View style={styles.circle_bank}>
               {/* <Image style={{borderRadius: 50}} source={Girl} /> */}
-              <Girl/>
+              <Girl />
             </View>
             <View>
-            <TouchableOpacity onPress={() => navigation.navigate('StaticScreentwo')}>
-              <Text style={[styles.bankLink, styles.circletcktext_white]}>
-                Transfer
-              </Text>
+              <TouchableOpacity
+                onPress={() => navigation.navigate('StaticScreentwo')}>
+                <Text style={[styles.bankLink, styles.circletcktext_white]}>
+                  Transfer
+                </Text>
               </TouchableOpacity>
               <View style={styles.othertext_content}>
                 <Text
@@ -158,7 +161,6 @@ export const StaticsScreen = ({navigation}) => {
             </View>
           </View>
           <View style={styles.circletck}>
-          
             <Text style={[styles.circletcktext, styles.circletcktext_white]}>
               - $ 85.00
             </Text>
@@ -168,8 +170,7 @@ export const StaticsScreen = ({navigation}) => {
         <View style={styles.card_container}>
           <View style={{flexDirection: 'row'}}>
             <View style={styles.circle_bank}>
-              
-              <YoutubeIcon/>
+              <YoutubeIcon />
             </View>
             <View>
               <Text style={styles.bankLink}>Youtube</Text>
@@ -191,7 +192,7 @@ export default StaticsScreen;
 
 function useStyles() {
   const {width, height} = useWindowDimensions();
-  
+
   return StyleSheet.create({
     text1: {
       color: '#222222',
@@ -208,7 +209,6 @@ function useStyles() {
       flexDirection: 'row',
       justifyContent: 'space-between',
       marginHorizontal: 22,
-      
     },
     card_container: {
       backgroundColor: '#fafafa',
@@ -229,11 +229,9 @@ function useStyles() {
       elevation: 24,
     },
     cahrtt: {
-      
       marginLeft: 10,
       marginRight: 10,
     },
-    
 
     car_container_bgGray: {
       backgroundColor: '#fafafa',
@@ -315,12 +313,11 @@ function useStyles() {
     droppdown: {
       padding: 16,
     },
-    ddddd:{
-      alignItems:"flex-end",
-      
+    ddddd: {
+      alignItems: 'flex-end',
     },
-    width:{
-      width:'35%'
-    }
+    width: {
+      width: '35%',
+    },
   });
 }

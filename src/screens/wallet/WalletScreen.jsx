@@ -1,4 +1,11 @@
-import {StyleSheet, Text, View, SafeAreaView, Image,TouchableOpacity,useWindowDimensions,} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  TouchableOpacity,
+  useWindowDimensions,
+} from 'react-native';
 import React from 'react';
 
 import TransactionScreen from '../../component/transcationComponent/TransactionScreen';
@@ -16,10 +23,10 @@ const WalletScreen = ({navigation}) => {
           <Ellipse style={styles.eelispse} />
         </View>
         <View style={styles.images_conatiner}>
-          <TouchableOpacity >
-          <View style={styles.lessthen}>
-           <LessThan/>
-          </View>
+          <TouchableOpacity>
+            <View style={styles.lessthen}>
+              <LessThan />
+            </View>
           </TouchableOpacity>
           <View>
             <Text style={styles.billText}>Wallet</Text>
@@ -41,46 +48,45 @@ export default WalletScreen;
 function useStyles() {
   const {width, height} = useWindowDimensions();
   return StyleSheet.create({
-  container: {
-    
-    position: 'absolute',
-    backgroundColor: 'white',
-    width: '100%',
-    marginTop: 165,
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
-  },
+    container: {
+      position: 'absolute',
+      backgroundColor: 'white',
+      width: '100%',
+      marginTop: 165,
+      borderTopLeftRadius: 30,
+      borderTopRightRadius: 30,
+    },
 
-  eelispse: {
-    position: 'absolute',
-  },
-  images_conatiner: {
-    flex: 1,
-    position: 'absolute',
-    width: '100%',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginTop: 78,
-  },
+    eelispse: {
+      position: 'absolute',
+    },
+    images_conatiner: {
+      flex: 1,
+      position: 'absolute',
+      width: '100%',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      marginTop: 78,
+    },
 
-  billText: {
-    color: '#ffffff',
-    fontSize: width > 400 ? 18 : 14,
-    fontFamily: 'InterSemiBold',
-  },
+    billText: {
+      color: '#ffffff',
+      fontSize: width > 400 ? 18 : 14,
+      fontFamily: 'InterSemiBold',
+    },
 
-  notification: {
-    width: 40,
-    height: 40,
-    borderRadius: 6.67,
-    padding: 8.33,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginRight: 24,
-  },
-  lessthen: {
-    marginLeft: 24,
-  },
-});
+    notification: {
+      width: 40,
+      height: 40,
+      borderRadius: 6.67,
+      padding: 8.33,
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginRight: 24,
+    },
+    lessthen: {
+      marginLeft: 24,
+    },
+  });
 }

@@ -3,7 +3,6 @@ import {
   Text,
   View,
   TouchableOpacity,
-  Image,
   TextInput,
   KeyboardAvoidingView,
 } from 'react-native';
@@ -28,7 +27,7 @@ const CardWalletScreen = ({navigation}) => {
             <TouchableOpacity
               onPress={() => navigation.push('WalletScreen_upcomingBills')}>
               <View style={styles.lessthen}>
-               <LessThan/>
+                <LessThan />
               </View>
             </TouchableOpacity>
             <View>
@@ -123,11 +122,9 @@ export default CardWalletScreen;
 
 const styles = StyleSheet.create({
   container: {
-    // flex:1,
     position: 'absolute',
     backgroundColor: 'white',
     width: '100%',
-    // height:'290%',
     marginTop: 165,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
@@ -253,5 +250,4 @@ const styles = StyleSheet.create({
     marginHorizontal: 25,
     marginTop: 30,
   },
-  
 });

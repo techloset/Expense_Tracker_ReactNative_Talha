@@ -18,25 +18,19 @@ import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
 
-
-
 const BillDetails = ({navigation}) => {
-
-  // console.log(PaymentFile);
-
   const styles = useStyles();
   return (
-    <View style={{height: '100%',backgroundColor:'white'}}>
+    <View style={{height: '100%', backgroundColor: 'white'}}>
       <View>
         <View style={styles.container_inner}>
           <Rectangular />
           <Ellipse style={styles.eelispse} />
         </View>
         <View style={styles.images_conatiner}>
-        <TouchableOpacity
-            onPress={() => navigation.push('IncomeScreen')}>
+          <TouchableOpacity onPress={() => navigation.push('IncomeScreen')}>
             <View style={styles.lessthen}>
-              <LessThan/>
+              <LessThan />
             </View>
           </TouchableOpacity>
           <View>

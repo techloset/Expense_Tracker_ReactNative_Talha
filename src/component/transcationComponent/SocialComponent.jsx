@@ -5,14 +5,12 @@ import {
   ScrollView,
   Image,
   useWindowDimensions,
-  
 } from 'react-native';
 import React from 'react';
-import Upicons from '../../assets/Images/Upicons.svg'
+import Upicons from '../../assets/Images/Upicons.svg';
 import girlsImage from '../../assets/Images/image7.png';
-import Paypals from '../../assets/Images/Paypals.svg'
+import Paypals from '../../assets/Images/Paypals.svg';
 import YoutubeIcon from '../../assets/Images/youtubeIcon.svg';
-
 
 const SocialComponent = () => {
   const styles = useStyles();
@@ -22,7 +20,7 @@ const SocialComponent = () => {
         <View style={styles.up_Maincontainer}>
           <View style={styles.up_Innercontainer}>
             <View style={styles.imge_container}>
-              <Upicons/>
+              <Upicons />
             </View>
             <View>
               <Text style={styles.UpWorkText}>Upwork</Text>
@@ -45,14 +43,16 @@ const SocialComponent = () => {
             </View>
           </View>
           <View>
-            <Text style={[styles.upwork_income,styles.morered]}>- $ 85.00</Text>
+            <Text style={[styles.upwork_income, styles.morered]}>
+              - $ 85.00
+            </Text>
           </View>
         </View>
 
         <View style={styles.paypal_Maincontainer}>
           <View style={styles.up_Innercontainer}>
             <View style={styles.imge_container}>
-              <Paypals/>
+              <Paypals />
             </View>
             <View>
               <Text style={styles.UpWorkText}>paypal</Text>
@@ -67,7 +67,7 @@ const SocialComponent = () => {
         <View style={styles.youtube_Maincontainer}>
           <View style={styles.up_Innercontainer}>
             <View style={styles.imge_container}>
-              <YoutubeIcon/>
+              <YoutubeIcon />
             </View>
             <View>
               <Text style={styles.UpWorkText}>Youtube</Text>
@@ -75,7 +75,7 @@ const SocialComponent = () => {
             </View>
           </View>
           <View>
-            <Text style={[styles.upwork_income,styles.morered]}>-$11.99</Text>
+            <Text style={[styles.upwork_income, styles.morered]}>-$11.99</Text>
           </View>
         </View>
       </ScrollView>
@@ -119,18 +119,17 @@ function useStyles() {
       color: '#000000',
     },
     todayText: {
-      marginTop: width > 400 ? 6 :0,
+      marginTop: width > 400 ? 6 : 0,
       fontSize: width > 400 ? 13 : 10,
       fontFamily: 'InterRegular',
-      
     },
     upwork_income: {
       fontSize: width > 400 ? 18 : 14,
       fontFamily: 'InterSemiBold',
       color: '#24a869',
     },
-    morered:{
-      color:"#f95b51"
+    morered: {
+      color: '#f95b51',
     },
 
     girl_Maincontainer: {
@@ -156,7 +155,7 @@ function useStyles() {
     },
 
     paypal_image: {
-       width: width > 400 ? 26 : 24,
+      width: width > 400 ? 26 : 24,
       height: width > 400 ? 31 : 20,
     },
 

@@ -20,7 +20,7 @@ import IncomeData from './Income.json';
 
 const IncomeScreen = ({navigation}) => {
   const styles = useStyles();
- 
+
   return (
     <SafeAreaView style={{height: '100%', backgroundColor: 'white'}}>
       <View>
@@ -64,28 +64,32 @@ const IncomeScreen = ({navigation}) => {
             </View>
           </View>
 
-          <View style={{marginTop:21}}>
-          {IncomeData.map((item, index) => {
-            return (
-              <View key={index}>
-                <View
-                  style={[styles.indivdial_contianer, styles.from_container]}>
-                  <View>
-                    <Text style={styles.container_text}>
-                      {item.currentStatus}
-                    </Text>
+          <View style={{marginTop: 21}}>
+            {IncomeData.map((item, index) => {
+              return (
+                <View key={index}>
+                  <View
+                    style={[styles.indivdial_contianer, styles.from_container]}>
+                    <View>
+                      <Text style={styles.container_text}>
+                        {item.currentStatus}
+                      </Text>
+                    </View>
+                    <View>
+                      <Text
+                        style={[
+                          styles.container_text_other_income,
+                          index === 0 ? {color: '#438883'} : {},
+                        ]}>
+                        {item.result}
+                      </Text>
+                    </View>
                   </View>
-                  <View>
-                  <Text style={[styles.container_text_other_income, index === 0 ? { color: '#438883' } : {}]}>
-                      {item.result}
-                    </Text>
-                  </View>
+                  {index === 3 && <View style={styles.line1} />}
+                  {index === 5 && <View style={styles.line1} />}
                 </View>
-                {index === 3 && <View style={styles.line1} />}
-                {index === 5 && <View style={styles.line1} />}
-              </View>
-            );
-          })}
+              );
+            })}
           </View>
         </View>
 
