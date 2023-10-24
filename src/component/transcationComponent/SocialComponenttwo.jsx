@@ -101,7 +101,6 @@ export default SocialComponent;
 
 function useStyles() {
   const {width, height} = useWindowDimensions();
-  // console.log()
   return StyleSheet.create({
     up_Maincontainer: {
       flexDirection: 'row',
@@ -170,8 +169,6 @@ function useStyles() {
       marginTop: 16,
       marginHorizontal: 22,
       alignItems: 'center',
-      // backgroundColor:'red',
-      // marginBottom:110
     },
     youtube_image: {
       width: width > 400 ? 35 : 24,

@@ -1,11 +1,18 @@
-import {StyleSheet, Text, View, Image, TouchableOpacity,useWindowDimensions} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  useWindowDimensions,
+} from 'react-native';
 import React from 'react';
 import UpcommingBills from '../../component/transcationComponent/UpcomingScreen';
-
 import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
-import LessThan from '../../assets/Images/lessThan.png';
+import LessThan from '../../assets/Images/left.svg';
+
 
 const WalletScreen_upcomingBills = ({navigation}) => {
   const styles = useStyles();
@@ -19,7 +26,7 @@ const WalletScreen_upcomingBills = ({navigation}) => {
         <View style={styles.images_conatiner}>
           <TouchableOpacity onPress={() => navigation.navigate('WalletScreen')}>
             <View style={styles.lessthen}>
-              <Image style={{width: 23, height: 23}} source={LessThan} />
+              <LessThan/>
             </View>
           </TouchableOpacity>
           <View>
@@ -30,11 +37,9 @@ const WalletScreen_upcomingBills = ({navigation}) => {
           </View>
         </View>
       </View>
-      {/* <WalletComponentScreen/> */}
+      
       <View style={styles.container}>
         <UpcommingBills navigation={navigation} />
-      </View>
-      <View>
       </View>
       
     </View>
@@ -45,48 +50,46 @@ export default WalletScreen_upcomingBills;
 
 function useStyles() {
   const {width, height} = useWindowDimensions();
-  // console.log()
+
   return StyleSheet.create({
-  container: {
-    position: 'absolute',
-    backgroundColor: '#FFFFFF',
-    width: '100%',
-    marginTop: 165,
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
-    // height:600
-  },
+    container: {
+      position: 'absolute',
+      backgroundColor: '#FFFFFF',
+      width: '100%',
+      marginTop: 165,
+      borderTopLeftRadius: 30,
+      borderTopRightRadius: 30,
+    },
 
-  eelispse: {
-    position: 'absolute',
-  },
-  images_conatiner: {
-    flex: 1,
-    position: 'absolute',
-    width: '100%',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginTop: 78,
-  },
-  billText: {
-    color: '#ffffff',
-    fontSize: width > 400 ? 18 : 14,
-    fontFamily: 'InterSemiBold',
-  },
+    eelispse: {
+      position: 'absolute',
+    },
+    images_conatiner: {
+      flex: 1,
+      position: 'absolute',
+      width: '100%',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      marginTop: 78,
+    },
+    billText: {
+      color: '#ffffff',
+      fontSize: width > 400 ? 18 : 14,
+      fontFamily: 'InterSemiBold',
+    },
 
-  notification: {
-    width: 40,
-    height: 40,
-    borderRadius: 6.67,
-    padding: 8.33,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginRight: 24,
-  },
-  lessthen: {
-    marginLeft: 24,
-  },
-});
+    notification: {
+      width: 40,
+      height: 40,
+      borderRadius: 6.67,
+      padding: 8.33,
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginRight: 24,
+    },
+    lessthen: {
+      marginLeft: 24,
+    },
+  });
 }
-

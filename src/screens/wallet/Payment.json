@@ -1,0 +1,10 @@
+[
+    {"name": "Payment Method" , "value":"Debit Card"},
+    {"name": "Status" , "value":"Completed"},
+    {"name": "Time" , "value":"08:15 AM"},
+    {"name": "Date" , "value":"Feb 28, 2022"},
+    {"name": "Transcation ID" , "value":"2092913832472.."},
+    {"name": "Price" , "value":"$ 11.99"},
+    {"name": "Fee" , "value":"- $ 1.99"},
+    {"name": "Total" , "value":"$ 13.98"}
+]

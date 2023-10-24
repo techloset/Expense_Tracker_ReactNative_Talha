@@ -53,7 +53,6 @@ const TransactionScreen = ({navigation}) => {
         </TouchableOpacity>
       </View>
       <SocialComponentTwo navigation={navigation} />
-      {/* <TabNavigation/> */}
     </View>
   );
 };
@@ -62,13 +61,10 @@ export default TransactionScreen;
 
 function useStyles() {
   const {width, height} = useWindowDimensions();
-  // console.log()
   return StyleSheet.create({
     container: {
       justifyContent: 'center',
       flex: 1,
-      // backgroundColor:'red',
-      // height:'110%'
     },
 
     Heading_Container: {

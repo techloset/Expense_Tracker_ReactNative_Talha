@@ -16,7 +16,7 @@ import CheckCircle from '../../assets/Images/CheckCircle.svg';
 import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
-import LessThan from '../../assets/Images/lessThan.png';
+import LessThan from '../../assets/Images/left.svg';
 
 const AccountsWallet = ({navigation}) => {
   const styles = useStyles();
@@ -31,7 +31,7 @@ const AccountsWallet = ({navigation}) => {
           <TouchableOpacity
             onPress={() => navigation.push('WalletScreen_upcomingBills')}>
             <View style={styles.lessthen}>
-              <Image style={{width: 23, height: 23}} source={LessThan} />
+              <LessThan/>
             </View>
           </TouchableOpacity>
           <View>

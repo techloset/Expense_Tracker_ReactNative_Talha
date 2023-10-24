@@ -60,7 +60,6 @@ export default TransactionScreen;
 
 function useStyles() {
   const {width, height} = useWindowDimensions();
-  // console.log()
   return StyleSheet.create({
     container: {
       justifyContent: 'center',

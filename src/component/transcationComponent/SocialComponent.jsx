@@ -5,7 +5,7 @@ import {
   ScrollView,
   Image,
   useWindowDimensions,
-  Dimensions,
+  
 } from 'react-native';
 import React from 'react';
 import Upicons from '../../assets/Images/Upicons.svg'
@@ -13,8 +13,7 @@ import girlsImage from '../../assets/Images/image7.png';
 import Paypals from '../../assets/Images/Paypals.svg'
 import YoutubeIcon from '../../assets/Images/youtubeIcon.svg';
 
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
+
 const SocialComponent = () => {
   const styles = useStyles();
   return (
@@ -46,7 +45,7 @@ const SocialComponent = () => {
             </View>
           </View>
           <View>
-            <Text style={styles.upwork_income}>- $ 85.00</Text>
+            <Text style={[styles.upwork_income,styles.morered]}>- $ 85.00</Text>
           </View>
         </View>
 
@@ -76,7 +75,7 @@ const SocialComponent = () => {
             </View>
           </View>
           <View>
-            <Text style={styles.upwork_income}>-$11.99</Text>
+            <Text style={[styles.upwork_income,styles.morered]}>-$11.99</Text>
           </View>
         </View>
       </ScrollView>
@@ -88,7 +87,6 @@ export default SocialComponent;
 
 function useStyles() {
   const {width, height} = useWindowDimensions();
-  // console.log()
   return StyleSheet.create({
     up_Maincontainer: {
       flexDirection: 'row',
@@ -130,6 +128,9 @@ function useStyles() {
       fontSize: width > 400 ? 18 : 14,
       fontFamily: 'InterSemiBold',
       color: '#24a869',
+    },
+    morered:{
+      color:"#f95b51"
     },
 
     girl_Maincontainer: {

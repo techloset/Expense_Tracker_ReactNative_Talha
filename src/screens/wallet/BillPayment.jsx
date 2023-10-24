@@ -5,14 +5,13 @@ import {
   Image,
   TouchableOpacity,
   useWindowDimensions,
-  Dimensions,
 } from 'react-native';
 import React from 'react';
 import youtubeCardBills from '../../assets/Images/youtubeCardBills.png';
 import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
-import LessThan from '../../assets/Images/lessThan.png';
+import LessThan from '../../assets/Images/left.svg';
 
 const BillPayment = ({navigation}) => {
   const styles = useStyles();
@@ -27,7 +26,7 @@ const BillPayment = ({navigation}) => {
         <TouchableOpacity
             onPress={() => navigation.push('BillDetails')}>
             <View style={styles.lessthen}>
-              <Image style={{width: 23, height: 23}} source={LessThan} />
+              <LessThan/>
             </View>
           </TouchableOpacity>
           <View>
@@ -39,7 +38,7 @@ const BillPayment = ({navigation}) => {
         </View>
       </View>
 
-      {/* <WalletComponentScreen /> */}
+      
 
       <View style={styles.container}>
         <View style={styles.youtube_Container}>
@@ -88,7 +87,6 @@ export default BillPayment;
 
 function useStyles() {
   const {width, height} = useWindowDimensions();
-  // console.log()
   return StyleSheet.create({
     container: {
       position: 'absolute',
@@ -131,10 +129,8 @@ function useStyles() {
       borderTopWidth: 1,
       borderTopColor: '#DDDDDD',
       marginVertical: 20,
-      // marginHorizontal: 30,
     },
     priceFeeConatiner: {
-      // backgroundColor:'brown',
       marginTop: 43,
       marginHorizontal: 30,
     },

@@ -8,26 +8,16 @@ import {
   TouchableOpacity
 } from 'react-native';
 import {useState} from 'react';
-
 import {Dropdown} from 'react-native-element-dropdown';
-// import AntDesign from '@expo/vector-icons/AntDesign';
-
 import Download from '../../assets/Images/download.svg';
 import LessThanBlack from '../../assets/Images/Lessthanblack.svg';
 import Sort from '../../assets/Images/sort.svg';
 import Starbucks from '../../assets/Images/starbucks.svg';
-import Girl from '../../assets/Images/image7.png';
-// import Youtube from '../../assets/Images/youtubeIcon.png';
+import Girl from '../../assets/Images/Girlsimages.svg';
 import YoutubeIcon from '../../assets/Images/youtubeIcon.svg';
 
 import React from 'react';
 import {LineChart} from 'react-native-chart-kit';
-
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
-
-// console.log(windowWidth);
-// console.log(windowHeight + ' heelo');
 
 const data = [
   {label: 'Expense', value: '1'},
@@ -65,7 +55,6 @@ export const StaticsScreen = ({navigation}) => {
           iconStyle={styles.iconStyle}
           data={data}
           maxHeight={300}
-          // Width={450}
           labelField="label"
           valueField="value"
           placeholder={!isFocus ? 'Expense' : 'Expense'}
@@ -140,7 +129,7 @@ export const StaticsScreen = ({navigation}) => {
             </View>
           </View>
           <View style={styles.circletck}>
-            {/* <CheckCircle /> */}
+            
             <Text style={styles.circletcktext}>- $ 150.00</Text>
           </View>
         </View>
@@ -148,7 +137,8 @@ export const StaticsScreen = ({navigation}) => {
         <View style={[styles.card_container, styles.car_container_bgGreen]}>
           <View style={{flexDirection: 'row'}}>
             <View style={styles.circle_bank}>
-              <Image style={{borderRadius: 50}} source={Girl} />
+              {/* <Image style={{borderRadius: 50}} source={Girl} /> */}
+              <Girl/>
             </View>
             <View>
             <TouchableOpacity onPress={() => navigation.navigate('StaticScreentwo')}>
@@ -168,7 +158,7 @@ export const StaticsScreen = ({navigation}) => {
             </View>
           </View>
           <View style={styles.circletck}>
-            {/* <CheckCircle /> */}
+          
             <Text style={[styles.circletcktext, styles.circletcktext_white]}>
               - $ 85.00
             </Text>
@@ -178,7 +168,7 @@ export const StaticsScreen = ({navigation}) => {
         <View style={styles.card_container}>
           <View style={{flexDirection: 'row'}}>
             <View style={styles.circle_bank}>
-              {/* <Image source={Youtube} /> */}
+              
               <YoutubeIcon/>
             </View>
             <View>
@@ -189,7 +179,6 @@ export const StaticsScreen = ({navigation}) => {
             </View>
           </View>
           <View style={styles.circletck}>
-            {/* <CheckCircle /> */}
             <Text style={styles.circletcktext}>- $ 11.99</Text>
           </View>
         </View>
@@ -202,7 +191,7 @@ export default StaticsScreen;
 
 function useStyles() {
   const {width, height} = useWindowDimensions();
-  // console.log()
+  
   return StyleSheet.create({
     text1: {
       color: '#222222',
@@ -219,7 +208,7 @@ function useStyles() {
       flexDirection: 'row',
       justifyContent: 'space-between',
       marginHorizontal: 22,
-      // marginTop: 60,
+      
     },
     card_container: {
       backgroundColor: '#fafafa',
@@ -240,13 +229,11 @@ function useStyles() {
       elevation: 24,
     },
     cahrtt: {
-      // marginHorizontal:10
+      
       marginLeft: 10,
       marginRight: 10,
     },
-    papacontainer: {
-      // backgroundColor: '#29756F',
-    },
+    
 
     car_container_bgGray: {
       backgroundColor: '#fafafa',
@@ -327,20 +314,10 @@ function useStyles() {
     },
     droppdown: {
       padding: 16,
-      // backgroundColor: 'red',
-      // width:'100%',
-      // flex:1
-      // alignContent:'flex-end',
-      // justifyContent:'center',
-      // alignItems:'center'
-      // position:'absolute',
-      // right:0
-      // marginRight:0
     },
     ddddd:{
-      // flex:1
       alignItems:"flex-end",
-      // width:'38%',
+      
     },
     width:{
       width:'35%'

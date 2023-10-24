@@ -5,7 +5,6 @@ import {
   Image,
   TouchableOpacity,
   useWindowDimensions,
-  Dimensions,
 } from 'react-native';
 import React from 'react';
 
@@ -17,9 +16,14 @@ import EmptyDot from '../../assets/Images/emptyDot.svg';
 import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
-import LessThan from '../../assets/Images/lessThan.png';
+import LessThan from '../../assets/Images/left.svg';
+
+
 
 const BillDetails = ({navigation}) => {
+
+  // console.log(PaymentFile);
+
   const styles = useStyles();
   return (
     <View style={{height: '100%',backgroundColor:'white'}}>
@@ -32,7 +36,7 @@ const BillDetails = ({navigation}) => {
         <TouchableOpacity
             onPress={() => navigation.push('IncomeScreen')}>
             <View style={styles.lessthen}>
-              <Image style={{width: 23, height: 23}} source={LessThan} />
+              <LessThan/>
             </View>
           </TouchableOpacity>
           <View>
@@ -43,8 +47,6 @@ const BillDetails = ({navigation}) => {
           </View>
         </View>
       </View>
-
-      {/* <WalletComponentScreen /> */}
 
       <View style={styles.container}>
         <View style={styles.youtube_Container}>
@@ -121,13 +123,11 @@ export default BillDetails;
 
 function useStyles() {
   const {width, height} = useWindowDimensions();
-  // console.log()
   return StyleSheet.create({
     container: {
       position: 'absolute',
       backgroundColor: 'white',
       width: '100%',
-
       marginTop: 165,
       borderTopLeftRadius: 30,
       borderTopRightRadius: 30,
@@ -135,7 +135,6 @@ function useStyles() {
 
     youtube_Container: {
       flexDirection: 'row',
-
       alignItems: 'center',
       marginTop: width > 400 ? 30 : 20,
       marginLeft: 30,

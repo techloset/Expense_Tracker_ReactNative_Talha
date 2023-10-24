@@ -6,34 +6,37 @@ import {
   Image,
   TouchableOpacity,
   useWindowDimensions,
-  Dimensions,
 } from 'react-native';
 import React from 'react';
 
 import UpIcon from '../../assets/Images/upIcon.svg';
-import Upicon from '../../assets/Images/upIcon.png';
+import UPSvg from '../../assets/Images/upSvg.svg';
 import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
-import LessThan from '../../assets/Images/lessThan.png';
+import LessThan from '../../assets/Images/left.svg';
 
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
+import IncomeData from './Income.json';
+
 const IncomeScreen = ({navigation}) => {
   const styles = useStyles();
+ 
   return (
-    <SafeAreaView style={{height: '100%',backgroundColor:'white'}}>
+    <SafeAreaView style={{height: '100%', backgroundColor: 'white'}}>
       <View>
         <View style={styles.container_inner}>
           <Rectangular />
           <Ellipse style={styles.eelispse} />
         </View>
         <View style={styles.images_conatiner}>
-        <TouchableOpacity onPress={() => navigation.push('AccountsWallet')}>
+          <TouchableOpacity onPress={() => navigation.push('AccountsWallet')}>
             <View style={styles.lessthen}>
-              <Image style={{width: 23, height: 23}} source={LessThan} />
+              <LessThan />
             </View>
           </TouchableOpacity>
+          <View>
+            <Text style={styles.billPaymet}>Transaction Details</Text>
+          </View>
           <View style={styles.notification}>
             <Notification />
           </View>
@@ -43,7 +46,7 @@ const IncomeScreen = ({navigation}) => {
       <View style={styles.container}>
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
           <View style={styles.up_container}>
-            <Image style={styles.upworkImage} source={Upicon} />
+            <UPSvg />
           </View>
           <View style={styles.income_container}>
             <Text>Income</Text>
@@ -61,65 +64,28 @@ const IncomeScreen = ({navigation}) => {
             </View>
           </View>
 
-          <View style={[styles.indivdial_contianer, styles.from_container]}>
-            <View>
-              <Text style={styles.container_text}>Status</Text>
-            </View>
-            <View>
-              <Text style={styles.container_text_other_income}>Income</Text>
-            </View>
-          </View>
-
-          <View style={[styles.indivdial_contianer, styles.other_container]}>
-            <View>
-              <Text style={styles.container_text}>From</Text>
-            </View>
-            <View>
-              <Text style={styles.container_text_other}>Upwork Escrow</Text>
-            </View>
-          </View>
-          <View style={[styles.indivdial_contianer, styles.other_container]}>
-            <View>
-              <Text style={styles.container_text}>Time</Text>
-            </View>
-            <View>
-              <Text style={styles.container_text_other}>10:00 AM</Text>
-            </View>
-          </View>
-
-          <View style={[styles.indivdial_contianer, styles.other_container]}>
-            <View>
-              <Text style={styles.container_text}>Date</Text>
-            </View>
-            <View>
-              <Text style={styles.container_text_other}>Feb 30, 2022</Text>
-            </View>
-          </View>
-          <View style={styles.line1}></View>
-          <View style={[styles.indivdial_contianer, styles.other_container]}>
-            <View>
-              <Text style={styles.container_text}>Earnings</Text>
-            </View>
-            <View>
-              <Text style={styles.container_text_other}>$ 870.00</Text>
-            </View>
-          </View>
-          <View style={[styles.indivdial_contianer, styles.other_container]}>
-            <View>
-              <Text style={styles.container_text}>Fee</Text>
-            </View>
-            <View>
-              <Text style={styles.container_text_other}>- $ 20.00</Text>
-            </View>
-          </View>
-          <View style={styles.line1}></View>
-          <View style={[styles.indivdial_contianer, styles.other_container]}>
-            <View>
-              <Text style={styles.container_text_total}>Total</Text>
-            </View>
-            <View>
-              <Text style={styles.container_text_other_total}>- $ 85.00</Text>
-            </View>
+          <View style={{marginTop:21}}>
+          {IncomeData.map((item, index) => {
+            return (
+              <View key={index}>
+                <View
+                  style={[styles.indivdial_contianer, styles.from_container]}>
+                  <View>
+                    <Text style={styles.container_text}>
+                      {item.currentStatus}
+                    </Text>
+                  </View>
+                  <View>
+                  <Text style={[styles.container_text_other_income, index === 0 ? { color: '#438883' } : {}]}>
+                      {item.result}
+                    </Text>
+                  </View>
+                </View>
+                {index === 3 && <View style={styles.line1} />}
+                {index === 5 && <View style={styles.line1} />}
+              </View>
+            );
+          })}
           </View>
         </View>
 
@@ -139,7 +105,7 @@ export default IncomeScreen;
 
 function useStyles() {
   const {width, height} = useWindowDimensions();
-  // console.log()
+
   return StyleSheet.create({
     container: {
       position: 'absolute',
@@ -154,7 +120,7 @@ function useStyles() {
       height: width > 400 ? 80 : 50,
       backgroundColor: '#fafafa',
       borderRadius: 40,
-      marginTop: 20,
+      marginTop: 25,
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
@@ -164,7 +130,7 @@ function useStyles() {
       height: width > 400 ? 40 : 30,
     },
     tarnstionContaienr: {
-      marginTop: width > 400 ? 47 : 25,
+      marginTop: width > 400 ? 37 : 25,
     },
     income_container: {
       backgroundColor: '#4388831a',
@@ -173,7 +139,7 @@ function useStyles() {
       padding: 4,
       justifyContent: 'center',
       alignItems: 'center',
-      marginTop: 12,
+      marginTop: 16,
     },
     textt: {
       color: '#438883',
@@ -203,7 +169,7 @@ function useStyles() {
       fontFamily: 'InterMedium',
     },
     from_container: {
-      marginTop: width > 400 ? 18 : 14,
+      marginTop: width > 400 ? 12 : 14,
     },
     other_container: {
       marginTop: 10,
@@ -214,7 +180,7 @@ function useStyles() {
       fontSize: width > 400 ? 16 : 12,
     },
     container_text_other_income: {
-      color: '#438883',
+      color: '#000000',
       fontFamily: 'InterSemiBold',
       fontSize: width > 400 ? 16 : 12,
     },
@@ -263,6 +229,11 @@ function useStyles() {
       justifyContent: 'space-between',
       alignItems: 'center',
       marginTop: 78,
+    },
+    billPaymet: {
+      color: '#ffffff',
+      fontSize: width > 400 ? 18 : 14,
+      fontFamily: 'InterSemiBold',
     },
 
     notification: {

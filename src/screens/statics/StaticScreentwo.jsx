@@ -5,7 +5,6 @@ import {
   Image,
   TouchableOpacity,
   useWindowDimensions,
-  Dimensions,
   TextInput,
 } from 'react-native';
 import {useState} from 'react';
@@ -14,19 +13,15 @@ import React from 'react';
 import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
-import LessThan from '../../assets/Images/lessThan.png';
-// import Calender from '../../assets/Images/calendar.png';
+import LessThan from '../../assets/Images/left.svg';
 import {Dropdown} from 'react-native-element-dropdown';
 import Netflic from 'react-native-vector-icons/Fontisto';
 import Googlee from 'react-native-vector-icons/AntDesign';
 import Facebooke from 'react-native-vector-icons/EvilIcons';
 import Yotubee from 'react-native-vector-icons/Entypo';
-
 import DatePicker from 'react-native-datepicker';
-// import PlusSign from '../../assets/Images/plusCirlce.png';
 import PlussSign from '../../assets/Images/plusCircle.png';
 
-//   sc-facebook
 const data = [
   {label: 'Netflix ', value: '1'},
   {label: 'Youtube Ads', value: '2'},
@@ -35,7 +30,7 @@ const data = [
 ];
 
 const StaticScreentwo = ({navigation}) => {
-  const [date, setDate] = useState(''); // State to hold the selected date
+  const [date, setDate] = useState('');
   const [showDatePicker, setShowDatePicker] = useState(false);
 
   const handleDateChange = newDate => {
@@ -112,7 +107,7 @@ const StaticScreentwo = ({navigation}) => {
           <TouchableOpacity
             onPress={() => navigation.navigate('StaticsScreen')}>
             <View style={styles.lessthen}>
-              <Image style={{width: 23, height: 23}} source={LessThan} />
+              <LessThan/>
             </View>
           </TouchableOpacity>
           <View>
@@ -123,7 +118,7 @@ const StaticScreentwo = ({navigation}) => {
           </View>
         </View>
       </View>
-      {/* ... Your other components ... */}
+      
       <View style={styles.container}>
         <View style={styles.innermain}>
           <Text style={[styles.stylennamee, styles.maincc]}>NAME</Text>
@@ -169,17 +164,14 @@ const StaticScreentwo = ({navigation}) => {
               onPress={toggleDatePicker}
               style={styles.datePickerContainer}>
               <Text style={styles.dateText}>{date || 'Select date'}</Text>
-              {/* <Image
-            source={Calender}
-            style={styles.calendarImage}
-          /> */}
+             
             </TouchableOpacity>
             {showDatePicker && (
               <DatePicker
                 style={styles.datePicker}
                 date={date}
                 mode="date"
-                format="MM/DD/YYYY" // You can adjust the format as needed
+                format="MM/DD/YYYY" 
                 confirmBtnText="Confirm"
                 cancelBtnText="Cancel"
                 onDateChange={handleDateChange}
@@ -201,7 +193,6 @@ export default StaticScreentwo;
 
 function useStyles() {
   const {width, height} = useWindowDimensions();
-  // console.log()
   return StyleSheet.create({
     container: {
       position: 'absolute',

@@ -10,18 +10,15 @@ import {
 import React from 'react';
 import VisaCard from '../../assets/Images/visaCard.svg';
 import DebitCard from '../../assets/Images/DebitCard.svg';
-
 import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
-import LessThan from '../../assets/Images/lessThan.png';
+import LessThan from '../../assets/Images/left.svg';
 
 const CardWalletScreen = ({navigation}) => {
   return (
     <KeyboardAvoidingView>
       <View>
-        {/* <Text>CardWalletScreen</Text> */}
-
         <View>
           <View style={styles.container_inner}>
             <Rectangular />
@@ -31,7 +28,7 @@ const CardWalletScreen = ({navigation}) => {
             <TouchableOpacity
               onPress={() => navigation.push('WalletScreen_upcomingBills')}>
               <View style={styles.lessthen}>
-                <Image style={{width: 23, height: 23}} source={LessThan} />
+               <LessThan/>
               </View>
             </TouchableOpacity>
             <View>
@@ -42,9 +39,7 @@ const CardWalletScreen = ({navigation}) => {
             </View>
           </View>
         </View>
-        {/* <WalletComponentScreen /> */}
         <View style={styles.container}>
-          {/* <UpcommingBills/> */}
           <View style={styles.butn_type_container}>
             <TouchableOpacity>
               <View style={[styles.both_btn, styles.transition_btn]}>
@@ -140,7 +135,6 @@ const styles = StyleSheet.create({
   butn_type_container: {
     flexDirection: 'row',
     backgroundColor: '#f4f6f6',
-    // backgroundColor:"brown",
     marginTop: 60,
     marginHorizontal: 20,
     color: '#f4f6f6',

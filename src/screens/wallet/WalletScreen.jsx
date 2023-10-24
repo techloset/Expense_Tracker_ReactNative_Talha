@@ -1,12 +1,11 @@
 import {StyleSheet, Text, View, SafeAreaView, Image,TouchableOpacity,useWindowDimensions,} from 'react-native';
 import React from 'react';
-// import WalletComponentScreen from '../../component/transcationComponent/WalletComponentScreen';
-import TransactionScreen from '../../component/transcationComponent/TransactionScreen';
 
+import TransactionScreen from '../../component/transcationComponent/TransactionScreen';
 import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
-import LessThan from '../../assets/Images/lessThan.png';
+import LessThan from '../../assets/Images/left.svg';
 const WalletScreen = ({navigation}) => {
   const styles = useStyles();
   return (
@@ -19,7 +18,7 @@ const WalletScreen = ({navigation}) => {
         <View style={styles.images_conatiner}>
           <TouchableOpacity >
           <View style={styles.lessthen}>
-            <Image style={{width: 23, height: 23}} source={LessThan} />
+           <LessThan/>
           </View>
           </TouchableOpacity>
           <View>
@@ -30,8 +29,6 @@ const WalletScreen = ({navigation}) => {
           </View>
         </View>
       </View>
-      {/* <WalletComponentScreen /> */}
-
       <View style={styles.container}>
         <TransactionScreen navigation={navigation} />
       </View>
@@ -43,7 +40,6 @@ export default WalletScreen;
 
 function useStyles() {
   const {width, height} = useWindowDimensions();
-  // console.log()
   return StyleSheet.create({
   container: {
     

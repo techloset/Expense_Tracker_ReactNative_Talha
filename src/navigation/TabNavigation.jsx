@@ -1,19 +1,14 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import HomeScreen from '../screens/home/HomeScreen';
-import OnBoardingScreen from '../screens/onBoarding/OnBoardingScreen';
 import ProfileScreen from '../screens/profile/ProfileScreen';
 import WalletScreen from '../screens/wallet/WalletScreen';
-
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-
 import Icon from 'react-native-vector-icons/Entypo';
 import IconHome from 'react-native-vector-icons/Foundation';
 import Wallet from 'react-native-vector-icons/Ionicons';
 import User from 'react-native-vector-icons/AntDesign';
-// import StaticScreentwo from '../screens/statics/StaticScreentwo';
 import StaticsScreen from '../screens/statics/StaticsScreen';
-
 
 const TabNavigation = () => {
   const Tab = createBottomTabNavigator();
@@ -37,7 +32,6 @@ const TabNavigation = () => {
       />
       <Tab.Screen
         name="StaticsScreen"
-        // component={StaticScreentwo}
         component={StaticsScreen}
         options={({route}) => ({
           tabBarIcon: ({focused, color, size}) => {

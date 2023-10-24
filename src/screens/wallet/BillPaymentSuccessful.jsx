@@ -6,32 +6,32 @@ import {
   Image,
   TouchableOpacity,
   useWindowDimensions,
-  Dimensions,
 } from 'react-native';
 import React from 'react';
 
 import UpIcon from '../../assets/Images/upIcon.svg';
 import PaymentTick from '../../assets/Images/paymentTick.svg';
-
 import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
-import LessThan from '../../assets/Images/lessThan.png';
+import LessThan from '../../assets/Images/left.svg';
+
+import PaymentFile from './Payment.json';
 
 const BillPaymentSuccessful = ({navigation}) => {
+
   const styles = useStyles();
   return (
-    <SafeAreaView style={{height: '100%',backgroundColor:'white'}}>
+    <SafeAreaView style={{height: '100%', backgroundColor: 'white'}}>
       <View>
         <View style={styles.container_inner}>
           <Rectangular />
           <Ellipse style={styles.eelispse} />
         </View>
         <View style={styles.images_conatiner}>
-        <TouchableOpacity
-            onPress={() => navigation.push('BillPayment')}>
+          <TouchableOpacity onPress={() => navigation.push('BillPayment')}>
             <View style={styles.lessthen}>
-              <Image style={{width: 23, height: 23}} source={LessThan} />
+              <LessThan />
             </View>
           </TouchableOpacity>
           <View>
@@ -42,7 +42,6 @@ const BillPaymentSuccessful = ({navigation}) => {
           </View>
         </View>
       </View>
-      {/* <Text>IncomeScreen</Text> */}
 
       <View style={styles.container}>
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
@@ -54,7 +53,6 @@ const BillPaymentSuccessful = ({navigation}) => {
           </View>
           <Text style={styles.value}>Youtube Premium</Text>
         </View>
-        {/* style={{marginTop:42}} */}
         <View style={styles.transtionContainer_main}>
           <View style={styles.indivdial_contianer}>
             <View>
@@ -65,75 +63,29 @@ const BillPaymentSuccessful = ({navigation}) => {
             </View>
           </View>
 
-          <View style={[styles.indivdial_contianer, styles.from_container]}>
-            <View>
-              <Text style={styles.container_text}>Payment method</Text>
-            </View>
-            <View>
-              <Text style={styles.container_text_other}>Debit Card</Text>
-            </View>
-          </View>
-
-          <View style={[styles.indivdial_contianer, styles.other_container]}>
-            <View>
-              <Text style={styles.container_text}>Status</Text>
-            </View>
-            <View>
-              <Text style={styles.container_text_other_income}>438883</Text>
-            </View>
-          </View>
-          <View style={[styles.indivdial_contianer, styles.other_container]}>
-            <View>
-              <Text style={styles.container_text}>Time</Text>
-            </View>
-            <View>
-              <Text style={styles.container_text_other}>08:15 AM</Text>
-            </View>
-          </View>
-
-          <View style={[styles.indivdial_contianer, styles.other_container]}>
-            <View>
-              <Text style={styles.container_text}>Date</Text>
-            </View>
-            <View>
-              <Text style={styles.container_text_other}>Feb 28, 2022</Text>
-            </View>
-          </View>
-
-          <View style={[styles.indivdial_contianer, styles.other_container]}>
-            <View>
-              <Text style={styles.container_text}>Transcation ID</Text>
-            </View>
-            <View>
-              <Text style={styles.container_text_other}>2092913832472..</Text>
-            </View>
-          </View>
-          <View style={styles.line1}></View>
-          <View style={styles.indivdial_contianer}>
-            <View>
-              <Text style={styles.container_text}>Price</Text>
-            </View>
-            <View>
-              <Text style={styles.container_text_other}>$ 11.99</Text>
-            </View>
-          </View>
-          <View style={[styles.indivdial_contianer, styles.other_container]}>
-            <View>
-              <Text style={styles.container_text}>Fee</Text>
-            </View>
-            <View>
-              <Text style={styles.container_text_other}>- $ 1.99</Text>
-            </View>
-          </View>
-          <View style={styles.line1}></View>
-          <View style={[styles.indivdial_contianer]}>
-            <View>
-              <Text style={styles.container_text_total}>Total</Text>
-            </View>
-            <View>
-              <Text style={styles.container_text_other_total}>$ 13.98</Text>
-            </View>
-          </View>
+          {PaymentFile.map((item, index) => {
+            return (
+              <View key={index}>
+                <View
+                  style={[styles.indivdial_contianer, styles.from_container]}>
+                  <View>
+                    <Text style={styles.container_text}>{item.name}</Text>
+                  </View>
+                  <View>
+                    <Text
+                      style={[
+                        styles.container_text_other_income,
+                        index === 1 ? {color: '#438883'} : {},
+                      ]}>
+                      {item.value}
+                    </Text>
+                  </View>
+                </View>
+                {index === 3 && <View style={styles.line1} />}
+                {index === 5 && <View style={styles.line1} />}
+              </View>
+            );
+          })}
         </View>
 
         <TouchableOpacity onPress={() => navigation.navigate('Home')}>
@@ -150,7 +102,6 @@ export default BillPaymentSuccessful;
 
 function useStyles() {
   const {width, height} = useWindowDimensions();
-  // console.log()
   return StyleSheet.create({
     container: {
       position: 'absolute',
@@ -196,7 +147,7 @@ function useStyles() {
       fontFamily: 'InterMedium',
     },
     from_container: {
-      marginTop: width > 400 ? 21 : 15,
+      marginTop: width > 400 ? 12 : 14,
     },
     other_container: {
       marginTop: 12,
@@ -207,7 +158,7 @@ function useStyles() {
       fontSize: width > 400 ? 16 : 12,
     },
     container_text_other_income: {
-      color: '#438883',
+      color: '#000000',
       fontFamily: 'InterSemiBold',
       fontSize: width > 400 ? 16 : 12,
     },
@@ -231,13 +182,13 @@ function useStyles() {
     line1: {
       borderTopWidth: 1,
       borderTopColor: '#DDDDDD',
-      marginVertical: width > 400 ? 15 : 10,
+      marginTop: width > 400 ? 20 : 12,
       marginHorizontal: 30,
+      marginBottom: width > 400 ? 8 : 0,
     },
     bttn: {
       width: width > 400 ? 358 : '85%',
       height: width > 400 ? 60 : 45,
-      backgroundColor: '#69AEA9',
       borderRadius: 40,
       paddingHorizontal: 20,
       paddingVertical: 10,
@@ -245,9 +196,12 @@ function useStyles() {
       alignItems: 'center',
       marginHorizontal: 28,
       marginTop: width > 400 ? 30 : 15,
+      borderWidth: 1,
+      borderColor: '#438883',
+      borderStyle: 'solid'
     },
     bttnText: {
-      color: '#ffffff',
+      color: '#438883',
       fontSize: width > 400 ? 18 : 14,
       fontFamily: 'InterSemiBold',
     },

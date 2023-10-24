@@ -6,7 +6,6 @@ import Notification from '../../assets/Images/notification.svg'
 import LessThan from '../../assets/Images/lessThan.png';
 import women from '../../assets/Images/Woman_1.png';
 import invite from '../../assets/Images/invite.png';
-
 import Login from '../../assets/Images/Login.svg';
 import MessageCenter from '../../assets/Images/MessageCenter.svg';
 import UserProfile from '../../assets/Images/UserProfile.svg';

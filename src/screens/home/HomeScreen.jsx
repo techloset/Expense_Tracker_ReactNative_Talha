@@ -4,29 +4,21 @@ import {
   View,
   Image,
   ImageBackground,
-  ScrollView,
   useWindowDimensions,
-  Dimensions,
 } from 'react-native';
 import React from 'react';
 import imgae from '../../assets/Images/Home_background.png';
-import Notification from '../../assets/Images/notification.svg'
-import ArrowUp from '../../assets/Images/ArrowUp.svg'
-import Arrowdown from '../../assets/Images/Arrowdown.svg'
-import Upicons from '../../assets/Images/Upicons.svg'
-import girlsImage from '../../assets/Images/image7.png';
+import Notification from '../../assets/Images/notification.svg';
+import ArrowUp from '../../assets/Images/ArrowUp.svg';
+import Arrowdown from '../../assets/Images/Arrowdown.svg';
 
-import Paypals from '../../assets/Images/Paypals.svg'
-
-import YoutubeIcon from '../../assets/Images/youtubeIcon.svg';
 import Image_71 from '../../assets/Images/image71.png';
 import Image_72 from '../../assets/Images/image72.png';
 import Image_73 from '../../assets/Images/image73.png';
 import Image_74 from '../../assets/Images/image74.png';
 import Image_75 from '../../assets/Images/image75.png';
 
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
+import HomeCompenent from '../../component/transcationComponent/HomeCompenent';
 const HomeScreen = ({navigation}) => {
   const styles = useStyles();
   return (
@@ -37,7 +29,7 @@ const HomeScreen = ({navigation}) => {
             <Image source={require('../../assets/Images/Group_ellipse.png')} />
 
             <View style={styles.bell_container}>
-              <Notification/>
+              <Notification />
             </View>
 
             <View style={styles.balnce_container}>
@@ -46,21 +38,20 @@ const HomeScreen = ({navigation}) => {
                   <Text style={styles.balnce_text}>Total Balance ^</Text>
                   <Text style={styles.rupee}>$2548.00</Text>
                 </View>
-
                 <View>
                   <Text style={styles.dot}>...</Text>
                 </View>
               </View>
 
               <View style={styles.balance_inner2}>
-                <View style={styles.income_main_container}>
+                <View>
                   <View
                     style={[
                       styles.income_expense_container,
                       styles.income_second_container,
                     ]}>
                     <View style={styles.arrow_container}>
-                      <Arrowdown/>
+                      <Arrowdown />
                     </View>
                     <Text style={styles.incomeText}>Income</Text>
                   </View>
@@ -76,8 +67,7 @@ const HomeScreen = ({navigation}) => {
                       styles.expense_second_container,
                     ]}>
                     <View style={styles.arrow_container}>
-                     
-                      <ArrowUp/>
+                      <ArrowUp />
                     </View>
                     <Text style={styles.expenseText}>Expense</Text>
                   </View>
@@ -90,127 +80,12 @@ const HomeScreen = ({navigation}) => {
           </View>
         </ImageBackground>
       </View>
-
       <View style={styles.transactionHistroy_Container}>
         <Text style={styles.transactionHistroy}>Transactions history</Text>
         <Text style={styles.seeAll}> See all</Text>
       </View>
 
-      <ScrollView style={styles.scrollConatianer}>
-        <View style={styles.up_Maincontainer}>
-          <View style={styles.up_Innercontainer}>
-            <View style={styles.imge_container}>
-              {/* <Image style={styles.upwork_image} source={UpWork} /> */}
-              <Upicons/>
-            </View>
-            <View>
-              <Text style={styles.UpWorkText}>Upwork</Text>
-              <Text style={styles.todayText}>Today</Text>
-            </View>
-          </View>
-          <View>
-            <Text style={styles.upwork_income}>+ $ 850.00</Text>
-          </View>
-        </View>
-
-        <View style={styles.girl_Maincontainer}>
-          <View style={styles.up_Innercontainer}>
-            <View style={styles.imge_container}>
-              <Image style={styles.girl_image} source={girlsImage} />
-            </View>
-            <View>
-              <Text style={styles.UpWorkText}>Transfer</Text>
-              <Text style={styles.todayText}>Yesterday</Text>
-            </View>
-          </View>
-          <View>
-            <Text style={[styles.upwork_income,styles.upworkIncomeRed]}>- $ 85.00</Text>
-          </View>
-        </View>
-
-        <View style={styles.paypal_Maincontainer}>
-          <View style={styles.up_Innercontainer}>
-            <View style={styles.imge_container}>
-              {/* <Image style={styles.paypal_image} source={PaypalIcon} /> */}
-              <Paypals/>
-            </View>
-            <View>
-              <Text style={styles.UpWorkText}>paypal</Text>
-              <Text style={styles.todayText}>Jan 30, 2022</Text>
-            </View>
-          </View>
-          <View>
-            <Text style={styles.upwork_income}>+ $ 1,406.00</Text>
-          </View>
-        </View>
-
-        <View style={styles.youtube_Maincontainer}>
-          <View style={styles.up_Innercontainer}>
-            <View style={styles.imge_container}>
-              {/* <Image style={styles.youtube_image} source={YoutubeIcon} /> */}
-              <YoutubeIcon/>
-            </View>
-            <View>
-              <Text style={styles.UpWorkText}>Youtube</Text>
-              <Text style={styles.todayText}>Jan 16, 2022</Text>
-            </View>
-          </View>
-          <View>
-            <Text style={[styles.upwork_income,styles.upworkIncomeRed]}>-$11.99</Text>
-          </View>
-        </View>
-
-        <View style={styles.paypal_Maincontainer}>
-          <View style={styles.up_Innercontainer}>
-            <View style={styles.imge_container}>
-              {/* <Image style={styles.paypal_image} source={PaypalIcon} /> */}
-              <Paypals/>
-            </View>
-            <View>
-              <Text style={styles.UpWorkText}>paypal</Text>
-              <Text style={styles.todayText}>Jan 30, 2022</Text>
-            </View>
-          </View>
-          <View>
-            <Text style={styles.upwork_income}>+ $ 1,406.00</Text>
-          </View>
-        </View>
-        
-        <View style={styles.youtube_Maincontainer}>
-          <View style={styles.up_Innercontainer}>
-            <View style={styles.imge_container}>
-              <YoutubeIcon/>
-            </View>
-            <View>
-              <Text style={styles.UpWorkText}>Youtube</Text>
-              <Text style={styles.todayText}>Jan 16, 2022</Text>
-            </View>
-          </View>
-          <View>
-            <Text style={styles.upwork_income}>-$11.99</Text>
-          </View>
-        </View>
-        <View style={styles.youtube_Maincontainer}>
-          <View style={styles.up_Innercontainer}>
-            <View style={styles.imge_container}>
-              
-              <YoutubeIcon/>
-            </View>
-            <View>
-              <Text style={styles.UpWorkText}>Youtube</Text>
-              <Text style={styles.todayText}>Jan 16, 2022</Text>
-            </View>
-          </View>
-          <View>
-            <Text style={styles.upwork_income}>-$11.99</Text>
-          </View>
-        </View>
-        
-
-       
-       
-       
-      </ScrollView>
+      <HomeCompenent />
 
       <View style={styles.SendAgain_Container}>
         <Text style={styles.transactionHistroy}>Send Again</Text>
@@ -242,7 +117,6 @@ export default HomeScreen;
 
 function useStyles() {
   const {width, height} = useWindowDimensions();
-  // console.log()
   return StyleSheet.create({
     fiveImages: {
       marginTop: 13,
@@ -256,77 +130,12 @@ function useStyles() {
       width: width > 400 ? 62 : 50,
       borderRadius: 50,
     },
-    youtube_Maincontainer: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      marginTop: 16,
-      marginHorizontal: 22,
-      alignItems: 'center',
-    },
-    paypal_Maincontainer: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      marginTop: 16,
-      marginHorizontal: 22,
-      alignItems: 'center',
-    },
-    girl_Maincontainer: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      marginTop: 16,
-      marginHorizontal: 22,
-      alignItems: 'center',
-    },
-    up_Maincontainer: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      marginTop: width > 400 ? 19 : 5,
-      marginHorizontal: 22,
-      alignItems: 'center',
-    },
-    up_Innercontainer: {
-      flexDirection: 'row',
-      gap: 10,
-    },
-    imge_container: {
-      backgroundColor: '#f0f6f5',
-      width: width > 400 ? 50 : 35,
-      height: width > 400 ? 50 : 35,
-      padding: width > 400 ? 10 : 8,
-      alignItems: 'center',
-      borderRadius: 8,
-    },
+
     upwork_image: {
       width: width > 400 ? 34 : 24,
       height: width > 400 ? 30 : 20,
     },
-    girl_image: {
-      width: width > 400 ? 30 : 24,
-      height: width > 400 ? 30 : 20,
-      borderRadius: 50,
-    },
-    
-    
-    UpWorkText: {
-      fontSize: width > 400 ? 16 : 12,
-      fontFamily: 'InterMedium',
-      color: '#000000',
-    },
-    todayText: {
-      marginTop: width > 400 ? 6 : 0,
-      fontSize: width > 400 ? 13 : 10,
-      fontFamily: 'InterRegular',
-      
-    },
-    upwork_income: {
-      fontSize: width > 400 ? 18 : 14,
-      fontFamily: 'InterSemiBold',
-      color: '#24a869',
-    },
-    upworkIncomeRed:{
-      
-      color:"red"
-    },
+
     SendAgain_Container: {
       flexDirection: 'row',
       justifyContent: 'space-between',
@@ -379,8 +188,6 @@ function useStyles() {
       height: 23,
       padding: 8.33,
     },
-    scrollConatianer: {
-    },
     balnce_container: {
       width: width > 400 ? 374 : '88%',
       backgroundColor: '#2e7e78',
@@ -429,10 +236,7 @@ function useStyles() {
       justifyContent: 'center',
       alignItems: 'center',
     },
-    arrow_icon: {
-      width: width > 400 ? 18 : 10,
-      height: width > 400 ? 18 : 14,
-    },
+
     incomeText: {
       fontSize: width > 400 ? 16 : 13,
       fontFamily: 'InterMedium',
