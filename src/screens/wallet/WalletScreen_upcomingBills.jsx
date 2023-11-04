@@ -11,6 +11,7 @@ import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
+import {COLOR} from '../../lib/styles/GlobalStyles';
 
 const WalletScreen_upcomingBills = ({navigation}) => {
   const styles = useStyles();
@@ -51,7 +52,7 @@ function useStyles() {
   return StyleSheet.create({
     container: {
       position: 'absolute',
-      backgroundColor: '#FFFFFF',
+      backgroundColor: COLOR.white,
       width: '100%',
       marginTop: 165,
       borderTopLeftRadius: 30,
@@ -71,11 +72,10 @@ function useStyles() {
       marginTop: 78,
     },
     billText: {
-      color: '#ffffff',
+      color: COLOR.white,
       fontSize: width > 400 ? 18 : 14,
       fontFamily: 'InterSemiBold',
     },
-
     notification: {
       width: 40,
       height: 40,

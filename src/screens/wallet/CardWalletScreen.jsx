@@ -13,6 +13,7 @@ import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
+import {COLOR} from '../../lib/styles/GlobalStyles';
 
 const CardWalletScreen = ({navigation}) => {
   return (
@@ -123,7 +124,7 @@ export default CardWalletScreen;
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    backgroundColor: 'white',
+    backgroundColor: COLOR.white,
     width: '100%',
     marginTop: 165,
     borderTopLeftRadius: 30,
@@ -131,10 +132,10 @@ const styles = StyleSheet.create({
   },
   butn_type_container: {
     flexDirection: 'row',
-    backgroundColor: '#f4f6f6',
+    backgroundColor: COLOR.light,
     marginTop: 60,
     marginHorizontal: 20,
-    color: '#f4f6f6',
+    color: COLOR.light,
     borderRadius: 40,
     height: 48,
     justifyContent: 'center',
@@ -142,7 +143,7 @@ const styles = StyleSheet.create({
     marginBottom: 25,
   },
   both_btn: {
-    backgroundColor: '#ffffff',
+    backgroundColor: COLOR.white,
     height: 40,
     width: 180,
 
@@ -150,7 +151,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   transition_btn: {
-    backgroundColor: '#ffffff',
+    backgroundColor: COLOR.white,
     borderRadius: 40,
   },
   upcoming_bill_btn: {
@@ -159,20 +160,18 @@ const styles = StyleSheet.create({
   },
   textt: {
     fontFamily: 'InterSemiBold',
-    color: '#666666',
+    color: COLOR.SecondaryGrey,
     fontSize: 14,
     fontWeight: '600',
   },
   Cards: {
     alignItems: 'center',
-
     height: 225,
   },
   DebitCard: {
     position: 'absolute',
     marginTop: 16,
   },
-
   eelispse: {
     position: 'absolute',
   },
@@ -199,7 +198,7 @@ const styles = StyleSheet.create({
     marginLeft: 24,
   },
   billText: {
-    color: '#ffffff',
+    color: COLOR.white,
     fontSize: 18,
     fontFamily: 'InterSemiBold',
   },
@@ -209,23 +208,22 @@ const styles = StyleSheet.create({
   },
 
   textx1: {
-    color: '#000000',
+    color: COLOR.black,
     fontSize: 16,
     fontFamily: 'InterMedium',
     marginTop: 28,
   },
   textx2: {
-    color: '#666666',
+    color: COLOR.SecondaryGrey,
     fontSize: 13,
     fontFamily: 'InterRegular',
     width: '80%',
   },
   input2: {
     height: 40,
-
     borderWidth: 1,
     padding: 10,
-    color: '#dddddd',
+    color: COLOR.borderColor,
     borderRadius: 8,
     height: 54,
     gap: 11,
@@ -237,7 +235,7 @@ const styles = StyleSheet.create({
     width: 133,
   },
   placeholder: {
-    color: '#888888',
+    color: COLOR.gray,
     fontSize: 12,
   },
   inputContiner1: {

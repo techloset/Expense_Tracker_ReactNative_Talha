@@ -7,6 +7,7 @@ import {
   Pressable,
   useWindowDimensions,
 } from 'react-native';
+import {COLOR} from '../../lib/styles/GlobalStyles';
 
 const Butoon = ({navigation}) => {
   const styles = useStyles();
@@ -28,7 +29,7 @@ export default Butoon;
 const styles = StyleSheet.create({});
 
 function useStyles() {
-  const {width, height} = useWindowDimensions();
+  const {width} = useWindowDimensions();
   return StyleSheet.create({
     button: {
       borderRadius: 40,
@@ -37,7 +38,7 @@ function useStyles() {
       height: width > 400 ? 64 : 45,
       width: width > 400 ? 'auto' : 'auto',
       marginTop: width > 400 ? 26 : 10,
-      backgroundColor: '#2F7E79',
+      backgroundColor: COLOR.greenPrimary,
     },
     gradient: {
       flex: 1,

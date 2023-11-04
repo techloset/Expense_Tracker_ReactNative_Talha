@@ -12,6 +12,7 @@ import Upicons from '../../assets/Images/Upicons.svg';
 import girlsImage from '../../assets/Images/image7.png';
 import Paypals from '../../assets/Images/Paypals.svg';
 import YoutubeIcon from '../../assets/Images/youtubeIcon.svg';
+import {COLOR} from '../../lib/styles/GlobalStyles';
 
 const HomeCompenent = () => {
   const styles = useStyles();
@@ -55,7 +56,7 @@ const HomeCompenent = () => {
             <Paypals />
           </View>
           <View>
-            <Text style={styles.UpWorkText}>paypal</Text>
+            <Text style={styles.UpWorkText}>Paypal</Text>
             <Text style={styles.todayText}>Jan 30, 2022</Text>
           </View>
         </View>
@@ -87,7 +88,7 @@ const HomeCompenent = () => {
             <Paypals />
           </View>
           <View>
-            <Text style={styles.UpWorkText}>paypal</Text>
+            <Text style={styles.UpWorkText}>Paypal</Text>
             <Text style={styles.todayText}>Jan 30, 2022</Text>
           </View>
         </View>
@@ -166,7 +167,7 @@ function useStyles() {
       gap: 10,
     },
     imge_container: {
-      backgroundColor: '#f0f6f5',
+      backgroundColor: COLOR.transImageClr,
       width: width > 400 ? 50 : 35,
       height: width > 400 ? 50 : 35,
       padding: width > 400 ? 10 : 8,
@@ -186,7 +187,8 @@ function useStyles() {
     UpWorkText: {
       fontSize: width > 400 ? 16 : 12,
       fontFamily: 'InterMedium',
-      color: '#000000',
+      color: COLOR.black,
+      fontSize: 16,
     },
     todayText: {
       marginTop: width > 400 ? 6 : 0,
@@ -196,10 +198,10 @@ function useStyles() {
     upwork_income: {
       fontSize: width > 400 ? 18 : 14,
       fontFamily: 'InterSemiBold',
-      color: '#24a869',
+      color: COLOR.parrot,
     },
     upworkIncomeRed: {
-      color: 'red',
+      color: COLOR.red,
     },
     SendAgain_Container: {
       flexDirection: 'row',

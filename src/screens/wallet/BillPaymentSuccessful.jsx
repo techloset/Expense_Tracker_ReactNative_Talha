@@ -3,7 +3,6 @@ import {
   Text,
   View,
   SafeAreaView,
-  Image,
   TouchableOpacity,
   useWindowDimensions,
 } from 'react-native';
@@ -15,13 +14,13 @@ import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
-
-import PaymentFile from './Payment.json';
+import PaymentFile from '../../lib/const/Payment.json';
+import {COLOR} from '../../lib/styles/GlobalStyles';
 
 const BillPaymentSuccessful = ({navigation}) => {
   const styles = useStyles();
   return (
-    <SafeAreaView style={{height: '100%', backgroundColor: 'white'}}>
+    <SafeAreaView style={{height: '100%', backgroundColor: COLOR.white}}>
       <View>
         <View style={styles.container_inner}>
           <Rectangular />
@@ -105,9 +104,7 @@ function useStyles() {
     container: {
       position: 'absolute',
       backgroundColor: 'white',
-
       width: '100%',
-
       marginTop: 156,
       borderTopLeftRadius: 30,
       borderTopRightRadius: 30,
@@ -115,7 +112,7 @@ function useStyles() {
     up_container: {
       width: width > 400 ? 80 : 60,
       height: width > 400 ? 80 : 60,
-      backgroundColor: '#fafafa',
+      backgroundColor: COLOR.LightWhite,
       borderRadius: 40,
       marginTop: width > 400 ? 20 : 15,
       justifyContent: 'center',
@@ -196,15 +193,14 @@ function useStyles() {
       marginHorizontal: 28,
       marginTop: width > 400 ? 30 : 15,
       borderWidth: 1,
-      borderColor: '#438883',
+      borderColor: COLOR.green,
       borderStyle: 'solid',
     },
     bttnText: {
-      color: '#438883',
+      color: COLOR.green,
       fontSize: width > 400 ? 18 : 14,
       fontFamily: 'InterSemiBold',
     },
-
     eelispse: {
       position: 'absolute',
     },
@@ -218,7 +214,7 @@ function useStyles() {
       marginTop: 78,
     },
     billPaymet: {
-      color: '#ffffff',
+      color: COLOR.white,
       fontSize: width > 400 ? 18 : 14,
       fontFamily: 'InterSemiBold',
     },

@@ -21,6 +21,7 @@ import Facebooke from 'react-native-vector-icons/EvilIcons';
 import Yotubee from 'react-native-vector-icons/Entypo';
 import DatePicker from 'react-native-datepicker';
 import PlussSign from '../../assets/Images/plusCircle.png';
+import {COLOR} from '../../lib/styles/GlobalStyles';
 
 const data = [
   {label: 'Netflix ', value: '1'},
@@ -148,7 +149,7 @@ const StaticScreentwo = ({navigation}) => {
           <Text style={[styles.stylennamee, styles.otherText]}>Amount</Text>
           <View style={styles.inpit2}>
             <TextInput
-              placeholder="useless placeholder"
+              placeholder="$48.00"
               value={inputValue}
               onChangeText={text => setInputValue(text)}
             />
@@ -159,7 +160,7 @@ const StaticScreentwo = ({navigation}) => {
           </View>
 
           <Text style={[styles.stylennamee, styles.otherText]}>Date</Text>
-          <View style={styles.calnder}>
+          <View style={styles.calender}>
             <TouchableOpacity
               onPress={toggleDatePicker}
               style={styles.datePickerContainer}>
@@ -205,7 +206,7 @@ function useStyles() {
     },
 
     billText: {
-      color: '#ffffff',
+      color: COLOR.white,
       fontSize: width > 400 ? 18 : 14,
       fontFamily: 'InterSemiBold',
     },
@@ -248,7 +249,7 @@ function useStyles() {
     },
     label: {
       position: 'absolute',
-      backgroundColor: 'white',
+      backgroundColor: COLOR.white,
       left: 22,
       top: 8,
       zIndex: 999,
@@ -271,21 +272,20 @@ function useStyles() {
     },
     inpit2: {
       marginTop: 10,
-      borderColor: 'green',
-      borderWidth: 1,
+      borderColor: COLOR.green,
+      borderWidth: 1.5,
       borderRadius: 5,
       flexDirection: 'row',
       alignItems: 'center',
       paddingHorizontal: 12,
-
       justifyContent: 'space-between',
     },
 
-    calnder: {
+    calender: {
       flexDirection: 'row',
       borderWidth: 1,
       borderStyle: 'solid',
-      borderColor: 'black',
+      borderColor: COLOR.SecondaryGrey,
       padding: 15,
     },
     dashbaordd: {
@@ -301,7 +301,7 @@ function useStyles() {
     stylennamee: {
       fontSize: 12,
       fontFamily: 'InterMedium',
-      color: '#666666',
+      color: COLOR.SecondaryGrey,
     },
     maincc: {
       marginTop: 30,
@@ -316,7 +316,7 @@ function useStyles() {
     },
     addinvoice: {
       fontSize: 14,
-      color: '#666666',
+      color: COLOR.SecondaryGrey,
       fontFamily: 'InterMedium',
     },
   });

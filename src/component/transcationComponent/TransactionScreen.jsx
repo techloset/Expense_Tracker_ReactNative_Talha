@@ -10,6 +10,7 @@ import Frame21 from '../../assets/Images/Frame21.svg';
 import Frame22 from '../../assets/Images/Frame22.svg';
 import Frame23 from '../../assets/Images/Frame23.svg';
 import SocialComponent from './SocialComponent';
+import {COLOR} from '../../lib/styles/GlobalStyles';
 
 const TransactionScreen = ({navigation}) => {
   const styles = useStyles();
@@ -61,7 +62,6 @@ function useStyles() {
       justifyContent: 'center',
       flex: 1,
     },
-
     Heading_Container: {
       marginTop: width > 400 ? 50 : 20,
       alignItems: 'center',
@@ -69,12 +69,12 @@ function useStyles() {
     Heading: {
       fontSize: width > 400 ? 16 : 12,
       fontFamily: 'InterRegular',
-      color: '#666666',
+      color: COLOR.SecondaryGrey,
     },
     valuee: {
       fontFamily: 'InterBold',
       fontSize: width > 400 ? 30 : 18,
-      color: '#222222',
+      color: COLOR.black,
       marginTop: width > 400 ? 12 : 12,
     },
     frame_container: {
@@ -87,16 +87,16 @@ function useStyles() {
     },
     fram_text: {
       marginTop: width > 400 ? 10 : 10,
-      color: '#222222',
+      color: COLOR.black,
       fontFamily: 'InterRegular',
       fontSize: width > 400 ? 16 : 12,
     },
     butn_type_container: {
       flexDirection: 'row',
-      backgroundColor: '#f4f6f6',
+      backgroundColor: COLOR.light,
       marginTop: width > 400 ? 60 : 40,
       marginHorizontal: 20,
-      color: '#f4f6f6',
+      color: COLOR.light,
       borderRadius: 40,
       height: width > 400 ? 48 : 38,
       justifyContent: 'center',
@@ -104,7 +104,7 @@ function useStyles() {
       marginBottom: 25,
     },
     both_btn: {
-      backgroundColor: '#ffffff',
+      backgroundColor: COLOR.white,
       height: width > 400 ? 40 : 30,
       width: 180,
 
@@ -112,7 +112,7 @@ function useStyles() {
       alignItems: 'center',
     },
     transition_btn: {
-      backgroundColor: '#ffffff',
+      backgroundColor: COLOR.white,
       borderRadius: 40,
     },
     upcoming_bill_btn: {
@@ -121,7 +121,7 @@ function useStyles() {
     },
     textt: {
       fontFamily: 'InterSemiBold',
-      color: '#666666',
+      color: COLOR.SecondaryGrey,
       fontSize: width > 400 ? 14 : 10,
     },
   });

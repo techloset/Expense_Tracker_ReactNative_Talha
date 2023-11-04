@@ -3,7 +3,6 @@ import {
   Text,
   View,
   SafeAreaView,
-  Image,
   TouchableOpacity,
   useWindowDimensions,
 } from 'react-native';
@@ -15,8 +14,8 @@ import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
-
-import IncomeData from './Income.json';
+import IncomeData from '../../lib/const/Income.json';
+import {COLOR} from '../../lib/styles/GlobalStyles';
 
 const IncomeScreen = ({navigation}) => {
   const styles = useStyles();
@@ -79,7 +78,7 @@ const IncomeScreen = ({navigation}) => {
                       <Text
                         style={[
                           styles.container_text_other_income,
-                          index === 0 ? {color: '#438883'} : {},
+                          index === 0 ? {color: COLOR.green} : {},
                         ]}>
                         {item.result}
                       </Text>
@@ -122,7 +121,7 @@ function useStyles() {
     up_container: {
       width: width > 400 ? 80 : 50,
       height: width > 400 ? 80 : 50,
-      backgroundColor: '#fafafa',
+      backgroundColor: COLOR.LightWhite,
       borderRadius: 40,
       marginTop: 25,
       flex: 1,
@@ -137,7 +136,7 @@ function useStyles() {
       marginTop: width > 400 ? 37 : 25,
     },
     income_container: {
-      backgroundColor: '#4388831a',
+      backgroundColor: COLOR.shadeGray,
       width: 80,
       borderRadius: 40,
       padding: 4,
@@ -146,7 +145,7 @@ function useStyles() {
       marginTop: 16,
     },
     textt: {
-      color: '#438883',
+      color: COLOR.green,
       fontFamily: 'InterMedium',
       fontSize: 14,
     },
@@ -209,7 +208,7 @@ function useStyles() {
     Next_btn: {
       width: width > 400 ? 350 : 250,
       borderWidth: 1,
-      borderColor: '#438883',
+      borderColor: COLOR.green,
       borderRadius: 40,
       paddingHorizontal: width > 400 ? 10 : 8,
       paddingVertical: width > 400 ? 20 : 12,
@@ -217,7 +216,7 @@ function useStyles() {
       alignItems: 'center',
     },
     download: {
-      color: '#438883',
+      color: COLOR.green,
       fontFamily: 'InterSemiBold',
       fontSize: width > 400 ? 18 : 12,
     },
@@ -235,11 +234,10 @@ function useStyles() {
       marginTop: 78,
     },
     billPaymet: {
-      color: '#ffffff',
+      color: COLOR.white,
       fontSize: width > 400 ? 18 : 14,
       fontFamily: 'InterSemiBold',
     },
-
     notification: {
       width: 40,
       height: 40,

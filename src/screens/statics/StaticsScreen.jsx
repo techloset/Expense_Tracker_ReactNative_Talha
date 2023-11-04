@@ -17,6 +17,7 @@ import YoutubeIcon from '../../assets/Images/youtubeIcon.svg';
 
 import React from 'react';
 import {LineChart} from 'react-native-chart-kit';
+import { COLOR } from '../../lib/styles/GlobalStyles';
 
 const data = [
   {label: 'Expense', value: '1'},
@@ -126,7 +127,7 @@ export const StaticsScreen = ({navigation}) => {
             </View>
             <View>
               <Text style={styles.bankLink}>Bank Link</Text>
-              <View style={styles.othertext_content}>
+              <View>
                 <Text style={styles.othertext_contents}>Jan 12, 2022</Text>
               </View>
             </View>
@@ -139,7 +140,6 @@ export const StaticsScreen = ({navigation}) => {
         <View style={[styles.card_container, styles.car_container_bgGreen]}>
           <View style={{flexDirection: 'row'}}>
             <View style={styles.circle_bank}>
-              {/* <Image style={{borderRadius: 50}} source={Girl} /> */}
               <Girl />
             </View>
             <View>
@@ -149,7 +149,7 @@ export const StaticsScreen = ({navigation}) => {
                   Transfer
                 </Text>
               </TouchableOpacity>
-              <View style={styles.othertext_content}>
+              <View>
                 <Text
                   style={[
                     styles.othertext_contents,
@@ -174,7 +174,7 @@ export const StaticsScreen = ({navigation}) => {
             </View>
             <View>
               <Text style={styles.bankLink}>Youtube</Text>
-              <View style={styles.othertext_content}>
+              <View>
                 <Text style={styles.othertext_contents}>Jan 16, 2022</Text>
               </View>
             </View>
@@ -183,6 +183,7 @@ export const StaticsScreen = ({navigation}) => {
             <Text style={styles.circletcktext}>- $ 11.99</Text>
           </View>
         </View>
+
       </View>
     </View>
   );
@@ -195,7 +196,7 @@ function useStyles() {
 
   return StyleSheet.create({
     text1: {
-      color: '#222222',
+      color: COLOR.black,
       fontFamily: 'InterSemiBold',
       fontSize: 18,
     },
@@ -211,9 +212,8 @@ function useStyles() {
       marginHorizontal: 22,
     },
     card_container: {
-      backgroundColor: '#fafafa',
+      backgroundColor: COLOR.LightWhite,
       flexDirection: 'row',
-
       width: width > 400 ? 374 : '90%',
       padding: width > 400 ? 10 : '1%',
       borderRadius: width > 400 ? 12 : 12,
@@ -223,18 +223,13 @@ function useStyles() {
       marginTop: 15,
     },
     car_container_bgGreen: {
-      backgroundColor: '#29756F',
+      backgroundColor: COLOR.darkerGreen,
       shadowColor: '#29756F',
-
       elevation: 24,
     },
     cahrtt: {
       marginLeft: 10,
       marginRight: 10,
-    },
-
-    car_container_bgGray: {
-      backgroundColor: '#fafafa',
     },
     circle_bank: {
       width: width > 400 ? 50 : 50,
@@ -243,14 +238,14 @@ function useStyles() {
       marginRight: width > 400 ? 9 : 9,
     },
     bankLink: {
-      color: '#000000',
+      color: COLOR.black,
       fontFamily: 'InterMedium',
       fontSize: width > 400 ? 16 : 14,
 
       marginRight: width > 400 ? 136 : 1,
     },
     othertext_contents: {
-      color: '#666666',
+      color: COLOR.SecondaryGrey,
       fontSize: 13,
       fontFamily: 'InterRegular',
 
@@ -263,9 +258,8 @@ function useStyles() {
     },
     circletcktext: {
       fontSize: width > 400 ? 18 : 12,
-
       fontFamily: 'InterSemiBold',
-      color: '#f95b51',
+      color: COLOR.red,
     },
     circletcktext_white: {
       color: 'white',

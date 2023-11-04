@@ -12,6 +12,7 @@ import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
+import {COLOR} from '../../lib/styles/GlobalStyles';
 
 const BillPayment = ({navigation}) => {
   const styles = useStyles();
@@ -89,15 +90,12 @@ function useStyles() {
       position: 'absolute',
       backgroundColor: 'white',
       width: '100%',
-
       marginTop: 165,
       borderTopLeftRadius: 30,
       borderTopRightRadius: 30,
     },
-
-    youtube_image: {},
     imge_container: {
-      backgroundColor: '#fafafa',
+      backgroundColor: COLOR.LightWhite,
       width: width > 400 ? 80 : 60,
       height: width > 400 ? 80 : 60,
       alignItems: 'center',
@@ -112,7 +110,7 @@ function useStyles() {
     youtubeText: {
       fontSize: width > 400 ? 20 : 14,
       fontFamily: 'InterRegular',
-      color: '#000000',
+      color: COLOR.black,
       marginHorizontal: 58,
       textAlign: 'center',
       width: width > 400 ? 315 : 255,
@@ -124,7 +122,7 @@ function useStyles() {
     },
     line1: {
       borderTopWidth: 1,
-      borderTopColor: '#DDDDDD',
+      borderTopColor: COLOR.borderColor,
       marginVertical: 20,
     },
     priceFeeConatiner: {
@@ -132,22 +130,22 @@ function useStyles() {
       marginHorizontal: 30,
     },
     priceFeeText: {
-      color: '#666666',
+      color: COLOR.SecondaryGrey,
       fontSize: width > 400 ? 16 : 14,
       fontFamily: 'InterMedium',
     },
     TotalText: {
-      color: '#666666',
+      color: COLOR.SecondaryGrey,
       fontSize: width > 400 ? 16 : 14,
       fontFamily: 'InterSemiBold',
     },
     priceFeeValue: {
-      color: '#000000',
+      color: COLOR.black,
       fontSize: width > 400 ? 16 : 14,
       fontFamily: 'InterMedium',
     },
     Totalvalue: {
-      color: '#000000',
+      color: COLOR.black,
       fontSize: width > 400 ? 16 : 14,
       fontFamily: 'InterSemiBold',
     },
@@ -157,7 +155,7 @@ function useStyles() {
     bttn: {
       width: width > 400 ? 358 : '85%',
       height: width > 400 ? 60 : 45,
-      backgroundColor: '#69AEA9',
+      backgroundColor: COLOR.secondary,
       borderRadius: 40,
       paddingHorizontal: 20,
       paddingVertical: 10,
@@ -168,7 +166,7 @@ function useStyles() {
       marginTop: width > 400 ? 218 : 160,
     },
     bttnText: {
-      color: '#ffffff',
+      color: COLOR.white,
       fontSize: width > 400 ? 18 : 14,
       fontFamily: 'InterSemiBold',
     },
@@ -199,7 +197,7 @@ function useStyles() {
       marginLeft: 24,
     },
     billText: {
-      color: '#ffffff',
+      color: COLOR.white,
       fontSize: width > 400 ? 18 : 14,
       fontFamily: 'InterSemiBold',
     },

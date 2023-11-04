@@ -13,6 +13,7 @@ import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
+import {COLOR} from '../../lib/styles/GlobalStyles';
 const WalletScreen = ({navigation}) => {
   const styles = useStyles();
   return (
@@ -50,7 +51,7 @@ function useStyles() {
   return StyleSheet.create({
     container: {
       position: 'absolute',
-      backgroundColor: 'white',
+      backgroundColor: COLOR.white,
       width: '100%',
       marginTop: 165,
       borderTopLeftRadius: 30,
@@ -71,7 +72,7 @@ function useStyles() {
     },
 
     billText: {
-      color: '#ffffff',
+      color: COLOR.white,
       fontSize: width > 400 ? 18 : 14,
       fontFamily: 'InterSemiBold',
     },

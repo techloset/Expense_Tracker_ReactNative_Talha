@@ -17,6 +17,7 @@ import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
+import {COLOR} from '../../lib/styles/GlobalStyles';
 
 const BillDetails = ({navigation}) => {
   const styles = useStyles();
@@ -95,7 +96,7 @@ const BillDetails = ({navigation}) => {
               <PaypalIcon />
             </View>
             <View>
-              <Text style={styles.paypalLink}>Paypal</Text>
+              <Text style={styles.paypalText}>Paypal</Text>
             </View>
           </View>
           <View style={styles.circletck}>
@@ -134,7 +135,7 @@ function useStyles() {
       marginLeft: 30,
     },
     imge_container: {
-      backgroundColor: '#fafafa',
+      backgroundColor: COLOR.LightWhite,
       width: width > 400 ? 80 : 60,
       height: width > 400 ? 80 : 60,
       alignItems: 'center',
@@ -151,17 +152,17 @@ function useStyles() {
     youtubeText: {
       fontSize: width > 400 ? 18 : 14,
       fontFamily: 'InterSemiBold',
-      color: '#000000',
+      color: COLOR.black,
     },
     billText: {
-      color: '#ffffff',
+      color: COLOR.white,
       fontSize: width > 400 ? 18 : 14,
       fontFamily: 'InterSemiBold',
     },
     youtubeText_below: {
       fontSize: width > 400 ? 14 : 12,
       fontFamily: 'InterRegular',
-      color: '#666666',
+      color: COLOR.SecondaryGrey,
     },
     below_conatent: {
       flexDirection: 'row',
@@ -177,22 +178,22 @@ function useStyles() {
       marginHorizontal: 30,
     },
     priceFeeText: {
-      color: '#666666',
+      color: COLOR.SecondaryGrey,
       fontSize: width > 400 ? 16 : 14,
       fontFamily: 'InterMedium',
     },
     TotalText: {
-      color: '#666666',
+      color: COLOR.SecondaryGrey,
       fontSize: width > 400 ? 16 : 14,
       fontFamily: 'InterSemiBold',
     },
     priceFeeValue: {
-      color: '#000000',
+      color: COLOR.black,
       fontSize: width > 400 ? 16 : 14,
       fontFamily: 'InterMedium',
     },
     Totalvalue: {
-      color: '#000000',
+      color: COLOR.black,
       fontSize: width > 400 ? 16 : 14,
       fontFamily: 'InterSemiBold',
     },
@@ -200,7 +201,7 @@ function useStyles() {
       marginBottom: 12,
     },
     card_container: {
-      backgroundColor: '#4388831a',
+      backgroundColor: COLOR.lightGreen,
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
@@ -215,23 +216,23 @@ function useStyles() {
       marginRight: 15,
       width: width > 400 ? 60 : 45,
       height: width > 400 ? 60 : 45,
-      backgroundColor: '#ffffff',
+      backgroundColor: COLOR.white,
       borderRadius: 30,
       justifyContent: 'center',
       alignItems: 'center',
     },
     bankLink: {
       fontSize: width > 400 ? 16 : 12,
-      color: '#438883',
+      color: COLOR.green,
       fontFamily: 'InterSemiBold',
     },
-    paypalLink: {
+    paypalText: {
       fontSize: width > 400 ? 16 : 12,
-      color: '#888888',
+      color: COLOR.gray,
       fontFamily: 'InterSemiBold',
     },
     othertext_contents: {
-      color: '#438883',
+      color: COLOR.green,
       fontSize: 12,
       fontFamily: 'InterMedium',
       marginRight: 50,
@@ -241,7 +242,7 @@ function useStyles() {
       marginRight: 20,
     },
     card_container_paypal: {
-      backgroundColor: '#FAFAFA',
+      backgroundColor: COLOR.LightWhite,
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
@@ -256,14 +257,14 @@ function useStyles() {
       marginLeft: 30,
     },
     selectMethodText: {
-      color: '#000000',
+      color: COLOR.black,
       fontSize: width > 400 ? 18 : 14,
       fontFamily: 'InterMedium',
     },
     bttn: {
       width: width > 400 ? 358 : '85%',
       height: width > 400 ? 60 : 45,
-      backgroundColor: '#69AEA9',
+      backgroundColor: COLOR.secondary,
       borderRadius: 40,
       paddingHorizontal: 20,
       paddingVertical: 10,
@@ -273,7 +274,7 @@ function useStyles() {
       marginTop: width > 400 ? 30 : 15,
     },
     bttnText: {
-      color: '#ffffff',
+      color: COLOR.white,
       fontSize: width > 400 ? 18 : 14,
       fontFamily: 'InterSemiBold',
     },

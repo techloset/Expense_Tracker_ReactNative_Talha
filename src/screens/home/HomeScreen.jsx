@@ -16,8 +16,9 @@ import Image_72 from '../../assets/Images/image72.png';
 import Image_73 from '../../assets/Images/image73.png';
 import Image_74 from '../../assets/Images/image74.png';
 import Image_75 from '../../assets/Images/image75.png';
-
+import {COLOR} from '../../lib/styles/GlobalStyles';
 import HomeCompenent from '../../component/transcationComponent/HomeCompenent';
+
 const HomeScreen = ({navigation}) => {
   const styles = useStyles();
   return (
@@ -150,13 +151,13 @@ function useStyles() {
     transactionHistroy: {
       fontSize: width > 400 ? 18 : 14,
       fontFamily: 'InterSemiBold',
-      color: '#000000',
+      color: COLOR.black,
     },
     seeAll: {
       fontSize: width > 400 ? 16 : 13,
       fontWeight: '400',
       fontFamily: 'InterRegular',
-      color: '#666666',
+      color: COLOR.SecondaryGrey,
     },
     parrent: {
       height: width > 400 ? 287 : 267,
@@ -175,7 +176,6 @@ function useStyles() {
     bell_container: {
       marginTop: 78,
       marginRight: 24,
-      backgroundColor: '#ffffff0f',
       width: 40,
       height: 40,
       justifyContent: 'center',
@@ -189,7 +189,7 @@ function useStyles() {
     },
     balnce_container: {
       width: width > 400 ? 374 : '88%',
-      backgroundColor: '#2e7e78',
+      backgroundColor: COLOR.greenPrimary,
       borderRadius: 20,
       position: 'absolute',
       top: width > 400 ? 155 : 170,
@@ -202,7 +202,7 @@ function useStyles() {
     },
     balnce_text: {
       fontSize: width > 400 ? 16 : 12,
-      color: '#ffffff',
+      color: COLOR.white,
       marginTop: 25,
       marginLeft: 20,
       marginBottom: 8,
@@ -211,13 +211,13 @@ function useStyles() {
     rupee: {
       marginLeft: 20,
       fontSize: width > 400 ? 30 : 15,
-      color: '#ffffff',
+      color: COLOR.white,
       fontFamily: 'InterBold',
     },
     dot: {
       marginTop: 35,
       marginRight: 20,
-      color: '#eeeeee',
+      color: COLOR.LightGrey,
       fontSize: width > 400 ? 20 : 15,
     },
     balance_inner2: {
@@ -231,7 +231,7 @@ function useStyles() {
       height: width > 400 ? 24 : 20,
       marginRight: 9,
       borderRadius: 40,
-      backgroundColor: '#ffffff26',
+      backgroundColor: COLOR.DimGrey,
       justifyContent: 'center',
       alignItems: 'center',
     },
@@ -239,16 +239,16 @@ function useStyles() {
     incomeText: {
       fontSize: width > 400 ? 16 : 13,
       fontFamily: 'InterMedium',
-      color: '#d0e5e3',
+      color: COLOR.LightGrey,
     },
     expenseText: {
       fontSize: width > 400 ? 18 : 14,
-      color: '#d0e5e3',
+      color: COLOR.LightGrey,
       fontFamily: 'InterMedium',
     },
     dollar: {
       fontSize: width > 400 ? 20 : 14,
-      color: '#ffffff',
+      color: COLOR.white,
       marginTop: 6,
       fontFamily: 'InterSemiBold',
     },

@@ -3,28 +3,25 @@ import {
   Text,
   View,
   ScrollView,
-  Image,
   TouchableOpacity,
   useWindowDimensions,
-  Dimensions,
 } from 'react-native';
 import React from 'react';
 import YoutubeIcon from '../../assets/Images/youtubeIcon.svg';
 import Vector from '../../assets/Images/Vector.svg';
 import House from '../../assets/Images/house.svg';
 import Spotify from '../../assets/Images/spotify.svg';
+import {COLOR} from '../../lib/styles/GlobalStyles';
 
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
 const SocialComponent = ({navigation}) => {
   const styles = useStyles();
   return (
-    <View style={{marginBottom:100}}>
+    <View style={{marginBottom: 100}}>
       <ScrollView style={{height: 264}}>
         <View style={styles.up_Maincontainer}>
           <View style={styles.up_Innercontainer}>
             <View style={styles.imge_container}>
-              <YoutubeIcon/>
+              <YoutubeIcon />
             </View>
             <View>
               <Text style={styles.UpWorkText}>Upwork</Text>
@@ -113,7 +110,7 @@ function useStyles() {
       gap: 10,
     },
     imge_container: {
-      backgroundColor: '#f0f6f5',
+      backgroundColor: COLOR.transImageClr,
       width: width > 400 ? 50 : 35,
       height: width > 400 ? 50 : 35,
       padding: width > 400 ? 10 : 8,
@@ -128,7 +125,7 @@ function useStyles() {
       fontSize: width > 400 ? 16 : 12,
       fontFamily: 'InterMedium',
       fontWeight: '500',
-      color: '#000000',
+      color: COLOR.black,
     },
     todayText: {
       marginTop: width > 400 ? 6 : 0,
@@ -181,12 +178,12 @@ function useStyles() {
       fontSize: width > 400 ? 18 : 14,
       fontFamily: 'InterMedium',
       fontWeight: '500',
-      color: '#438883',
+      color: COLOR.green,
     },
     pay_container: {
-      backgroundColor: '#ecf8f7',
-      padding: width > 400 ? 10: 5,
-      width: width>400 ? 100 :100 ,
+      backgroundColor: COLOR.lightParrot,
+      padding: width > 400 ? 10 : 5,
+      width: width > 400 ? 100 : 100,
       alignItems: 'center',
       borderRadius: 40,
     },

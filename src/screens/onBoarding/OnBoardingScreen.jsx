@@ -53,8 +53,6 @@ function useStyles() {
       height: '100%',
       backgroundColor: '#ffffff',
     },
-    stretchFather: {},
-    stretch: {},
     stretchImage: {
       marginTop: width > 400 ? 127 : 50,
     },

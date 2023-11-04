@@ -11,10 +11,11 @@ import MessageCenter from '../../assets/Images/MessageCenter.svg';
 import UserProfile from '../../assets/Images/UserProfile.svg';
 import DataPrivacy from '../../assets/Images/DataPrivacy.svg';
 import AccountInfo from '../../assets/Images/AccountInfo.svg';
+import {COLOR} from '../../lib/styles/GlobalStyles';
 
 const ProfileScreen = () => {
   return (
-    <View style={{width: 414, height: 896, backgroundColor: '#ffffff'}}>
+    <View style={{width: 414, height: 896, backgroundColor: COLOR.white}}>
       <ImageBackground style={styles.imageBackgrounds} source={HomeBackground}>
         <Image style={styles.CircleBackgrounds} source={circleGroup} />
         <View style={styles.profile_images_container}>
@@ -93,7 +94,7 @@ const styles = StyleSheet.create({
   },
   textProfile: {
     marginTop: 84,
-    color: '#ffffff',
+    color: COLOR.white,
     fontFamily: 'InterSemiBold',
     fontSize: 18,
     fontWeight: '600',
@@ -136,7 +137,7 @@ const styles = StyleSheet.create({
     fontFamily: 'InterSemiBold',
     fontSize: 14,
     fontWeight: '600',
-    color: '#438883',
+    color: COLOR.green,
     marginTop: 5,
   },
   parentContainer: {
@@ -153,11 +154,11 @@ const styles = StyleSheet.create({
   inviteImage: {
     width: 50,
     height: 50,
-    backgroundColor: '#f0f6f5',
+    backgroundColor: COLOR.transImageClr,
     borderRadius: 50,
   },
   alltext: {
-    color: '#000000',
+    color: COLOR.black,
     fontSize: 16,
     fontFamily: 'InterMedium',
     fontWeight: '600',

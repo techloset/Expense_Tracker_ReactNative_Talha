@@ -29,7 +29,7 @@ const AccountsWallet = ({navigation}) => {
           <TouchableOpacity
             onPress={() => navigation.push('WalletScreen_upcomingBills')}>
             <View style={styles.lessthen}>
-              <LessThan/>
+              <LessThan />
             </View>
           </TouchableOpacity>
           <View>
@@ -66,7 +66,7 @@ const AccountsWallet = ({navigation}) => {
               <Text style={[styles.bankLink, styles.HomeConataienrColortext]}>
                 Bank Link
               </Text>
-              <View style={styles.othertext_content}>
+              <View>
                 <Text
                   style={[
                     styles.othertext_contents,
@@ -93,7 +93,7 @@ const AccountsWallet = ({navigation}) => {
                 {' '}
                 Microdeposits
               </Text>
-              <View style={styles.othertext_content}>
+              <View>
                 <Text
                   style={[
                     styles.othertext_contents,

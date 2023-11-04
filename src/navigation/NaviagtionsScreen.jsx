@@ -16,23 +16,26 @@ import StaticScreentwo from '../screens/statics/StaticScreentwo';
 
 const NaviagtionsScreen = () => {
   const Stack = createNativeStackNavigator();
-  
-  return (
-  
-    <NavigationContainer >
-       <Stack.Navigator screenOptions={{ headerShown: false }}> 
-       
-        <Stack.Screen name='OnBoardingScreen' component={OnBoardingScreen}/>
-        <Stack.Screen name='TabNavigation' component={TabNavigation}/>
-        <Stack.Screen name='WalletScreen_upcomingBills' component={WalletScreen_upcomingBills}/>
-        <Stack.Screen name='CardWalletScreen' component={CardWalletScreen}/>
-        <Stack.Screen name='AccountsWallet' component={AccountsWallet}/>
-        <Stack.Screen name='IncomeScreen' component={IncomeScreen}/>
-        <Stack.Screen name='BillDetails' component={BillDetails}/>
-        <Stack.Screen name='BillPayment' component={BillPayment}/>
-        <Stack.Screen name='BillPaymentSuccessful' component={BillPaymentSuccessful}/>
-        <Stack.Screen name='StaticScreentwo' component={StaticScreentwo}/>
 
+  return (
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        {/* <Stack.Screen name="OnBoardingScreen" component={OnBoardingScreen} /> */}
+        <Stack.Screen name="TabNavigation" component={TabNavigation} />
+        <Stack.Screen
+          name="WalletScreen_upcomingBills"
+          component={WalletScreen_upcomingBills}
+        />
+        <Stack.Screen name="CardWalletScreen" component={CardWalletScreen} />
+        <Stack.Screen name="AccountsWallet" component={AccountsWallet} />
+        <Stack.Screen name="IncomeScreen" component={IncomeScreen} />
+        <Stack.Screen name="BillDetails" component={BillDetails} />
+        <Stack.Screen name="BillPayment" component={BillPayment} />
+        <Stack.Screen
+          name="BillPaymentSuccessful"
+          component={BillPaymentSuccessful}
+        />
+        <Stack.Screen name="StaticScreentwo" component={StaticScreentwo} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -40,6 +43,4 @@ const NaviagtionsScreen = () => {
 
 export default NaviagtionsScreen;
 
-const styles = StyleSheet.create({
-  
-});
+const styles = StyleSheet.create({});

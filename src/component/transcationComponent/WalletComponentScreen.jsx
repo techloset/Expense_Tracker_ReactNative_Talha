@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, ImageBackground, Image } from 'react-native';
+import {View, Text, StyleSheet, Image} from 'react-native';
 import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
@@ -14,9 +14,9 @@ const WalletComponentScreen = () => {
       </View>
       <View style={styles.images_conatiner}>
         <View style={styles.lessthen}>
-          <Image style={{width:23,height:23}} source={LessThan} />
+          <Image style={{width: 23, height: 23}} source={LessThan} />
         </View>
-      
+
         <View style={styles.notification}>
           <Notification />
         </View>
@@ -28,19 +28,17 @@ const WalletComponentScreen = () => {
 export default WalletComponentScreen;
 
 const styles = StyleSheet.create({
- 
   eelispse: {
     position: 'absolute',
-   
   },
   images_conatiner: {
-    flex:1,
-    position:'absolute',
-    width:'100%',
+    flex: 1,
+    position: 'absolute',
+    width: '100%',
     flexDirection: 'row',
-    justifyContent: 'space-between', 
-    alignItems:'center',
-    marginTop:78,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: 78,
   },
 
   notification: {
@@ -50,9 +48,9 @@ const styles = StyleSheet.create({
     padding: 8.33,
     justifyContent: 'center',
     alignItems: 'center',
-    marginRight:24,
+    marginRight: 24,
   },
-  lessthen:{
-    marginLeft:24,
+  lessthen: {
+    marginLeft: 24,
   },
 });
