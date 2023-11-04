@@ -76,7 +76,7 @@ export const StaticsScreen = ({navigation}) => {
       <View style={styles.cahrtt}>
         <LineChart
           data={{
-            labels: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July'],
+            labels: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July',],
             datasets: [
               {
                 data: [0, 25, 20, 30, 40, 25, 35],
@@ -105,6 +105,7 @@ export const StaticsScreen = ({navigation}) => {
           bezier
           style={{
             marginVertical: 8,
+            marginRight:20,
             borderRadius: 16,
           }}
         />
@@ -229,7 +230,6 @@ function useStyles() {
     },
     cahrtt: {
       marginLeft: 10,
-      marginRight: 10,
     },
     circle_bank: {
       width: width > 400 ? 50 : 50,

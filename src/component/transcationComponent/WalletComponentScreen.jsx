@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {View, StyleSheet, Image} from 'react-native';
 import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
@@ -16,7 +16,6 @@ const WalletComponentScreen = () => {
         <View style={styles.lessthen}>
           <Image style={{width: 23, height: 23}} source={LessThan} />
         </View>
-
         <View style={styles.notification}>
           <Notification />
         </View>

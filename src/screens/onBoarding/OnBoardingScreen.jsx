@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import imageBackround from '../../assets/Images/OnBoardingBackground.png';
 import Butoon from '../../component/button/Butoon.jsx';
+import { COLOR } from '../../lib/styles/GlobalStyles';
 
 const OnBoardingScreen = ({navigation}) => {
   const styles = useStyles();
@@ -51,20 +52,19 @@ function useStyles() {
   return StyleSheet.create({
     container: {
       height: '100%',
-      backgroundColor: '#ffffff',
+      backgroundColor: COLOR.white,
     },
     stretchImage: {
       marginTop: width > 400 ? 127 : 50,
     },
     container2: {
-      // flex: 3,
       alignItems: 'center',
       marginHorizontal: 56,
       marginHorizontal: width > 400 ? 56 : 88,
     },
     heading: {
       fontSize: width > 400 ? 36 : 22,
-      color: '#438883',
+      color: COLOR.green,
       fontFamily: 'InterBold',
       textAlign: 'center',
     },
@@ -76,7 +76,7 @@ function useStyles() {
       fontFamily: 'InterRegular',
     },
     logInText: {
-      color: '#438883',
+      color: COLOR.green,
       fontWeight: '500',
     },
   });
