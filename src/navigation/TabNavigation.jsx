@@ -24,7 +24,7 @@ const TabNavigation = () => {
           name={tab.name}
           component={tab.component}
           options={({route}) => ({
-            tabBarIcon: ({focused, color, size}) => {
+            tabBarIcon: ({focused}) => {
               const iconColor = focused
                 ? COLOR.darkGreen
                 : COLOR.LightShadowGrey;
