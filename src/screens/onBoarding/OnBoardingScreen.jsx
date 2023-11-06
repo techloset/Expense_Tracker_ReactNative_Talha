@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import imageBackround from '../../assets/Images/OnBoardingBackground.png';
 import Butoon from '../../component/button/Butoon.jsx';
-import { COLOR, FONT_FAMILY } from '../../lib/styles/GlobalStyles';
+import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 
 const OnBoardingScreen = ({navigation}) => {
   const styles = useStyles();

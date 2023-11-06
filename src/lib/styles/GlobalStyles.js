@@ -1,11 +1,13 @@
 /* Colors */
 export const COLOR = {
   white: '#FFFFFF',
+  offwhite: '#f2f2f2',
   black: '#000000',
   secondary: '#69AEA9',
   green: '#438883',
   lightGreen: '4388831a',
   shadeGreen:"#24a869",
+  darkGreen:"#2e7e78",
   greenPrimary: '#2F7E79',
   parrot: '#25A969',
   lightParrot: '#ecf8f7',
@@ -18,6 +20,7 @@ export const COLOR = {
   gray: '#888888',
   SecondaryGrey: '#666666',
   LightGrey: '#D0E5E4',
+  LightShadowGrey: '#AAAAAA',
   DimGrey: '#ffffff26',
   darkerGreen: '#29756F',
   LightWhite: '#fafafa',

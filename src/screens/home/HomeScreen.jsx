@@ -16,7 +16,7 @@ import Image_72 from '../../assets/Images/image72.png';
 import Image_73 from '../../assets/Images/image73.png';
 import Image_74 from '../../assets/Images/image74.png';
 import Image_75 from '../../assets/Images/image75.png';
-import {COLOR,FONT_FAMILY} from '../../lib/styles/GlobalStyles';
+import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 import HomeCompenent from '../../component/transcationComponent/HomeCompenent';
 
 const HomeScreen = ({navigation}) => {
@@ -27,11 +27,9 @@ const HomeScreen = ({navigation}) => {
         <ImageBackground style={styles.imageBackground} source={imgae}>
           <View style={styles.top_images}>
             <Image source={require('../../assets/Images/Group_ellipse.png')} />
-
             <View style={styles.bell_container}>
               <Notification />
             </View>
-
             <View style={styles.balnce_container}>
               <View style={styles.balance_inner1}>
                 <View>
@@ -59,7 +57,6 @@ const HomeScreen = ({navigation}) => {
                     $1840.00
                   </Text>
                 </View>
-
                 <View style={styles.expense_main_container}>
                   <View
                     style={[
@@ -84,14 +81,11 @@ const HomeScreen = ({navigation}) => {
         <Text style={styles.transactionHistroy}>Transactions history</Text>
         <Text style={styles.seeAll}> See all</Text>
       </View>
-
       <HomeCompenent />
-
       <View style={styles.SendAgain_Container}>
         <Text style={styles.transactionHistroy}>Send Again</Text>
         <Text style={styles.seeAll}> See all</Text>
       </View>
-
       <View style={styles.fiveImages}>
         <View>
           <Image style={styles.imageFle_image} source={Image_71} />

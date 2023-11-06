@@ -58,7 +58,7 @@ const StaticScreentwo = ({navigation}) => {
         return (
           <Googlee
             style={styles.icon}
-            color={isFocus ? COLOR.black  : COLOR.darkRed}
+            color={isFocus ? COLOR.black : COLOR.darkRed}
             name="google"
             size={20}
           />
@@ -67,7 +67,7 @@ const StaticScreentwo = ({navigation}) => {
         return (
           <Facebooke
             style={styles.icon}
-            color={isFocus ?  COLOR.black  : COLOR.darkRed}
+            color={isFocus ? COLOR.black : COLOR.darkRed}
             name="sc-facebook"
             size={25}
           />
@@ -76,7 +76,7 @@ const StaticScreentwo = ({navigation}) => {
         return (
           <Yotubee
             style={styles.icon}
-            color={isFocus ?  COLOR.black  : COLOR.darkRed}
+            color={isFocus ? COLOR.black : COLOR.darkRed}
             name="youtube"
             size={20}
           />
@@ -85,7 +85,7 @@ const StaticScreentwo = ({navigation}) => {
         return (
           <Netflic
             style={styles.icon}
-            color={isFocus ?  COLOR.black  : COLOR.darkRed}
+            color={isFocus ? COLOR.black : COLOR.darkRed}
             name="netflix"
             size={20}
           />

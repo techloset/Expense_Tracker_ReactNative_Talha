@@ -45,7 +45,7 @@ export const StaticsScreen = ({navigation}) => {
         <Text>Year</Text>
       </View>
 
-      <View style={[styles.droppdown, styles.ddddd]}>
+      <View style={[styles.droppdown, styles.dropDowwn]}>
         <Dropdown
           style={[
             styles.dropdown,
@@ -304,7 +304,7 @@ function useStyles() {
     droppdown: {
       padding: 16,
     },
-    ddddd: {
+    dropDowwn: {
       alignItems: 'flex-end',
     },
     width: {
