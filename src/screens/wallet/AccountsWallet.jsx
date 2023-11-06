@@ -6,7 +6,6 @@ import {
   useWindowDimensions,
 } from 'react-native';
 import React from 'react';
-
 import Dollar from '../../assets/Images/dollar.svg';
 import Bank from '../../assets/Images/bank-fill.svg';
 import PaypaLogo from '../../assets/Images/paypalogo.svg';
@@ -15,6 +14,7 @@ import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
+import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 
 const AccountsWallet = ({navigation}) => {
   const styles = useStyles();
@@ -146,7 +146,7 @@ function useStyles() {
   return StyleSheet.create({
     container: {
       position: 'absolute',
-      backgroundColor: 'white',
+      backgroundColor: COLOR.white,
       width: '100%',
       marginTop: 165,
       borderTopLeftRadius: 30,
@@ -154,11 +154,11 @@ function useStyles() {
     },
     butn_type_container: {
       flexDirection: 'row',
-      backgroundColor: '#f4f6f6',
+      backgroundColor: COLOR.light,
 
       marginTop: width > 400 ? 60 : 40,
       marginHorizontal: 20,
-      color: '#f4f6f6',
+      color: COLOR.light,
       borderRadius: 40,
       height: width > 400 ? 48 : 40,
       justifyContent: 'center',
@@ -166,7 +166,7 @@ function useStyles() {
       marginBottom: 25,
     },
     both_btn: {
-      backgroundColor: '#ffffff',
+      backgroundColor: COLOR.white,
       height: width > 400 ? 48 : 34,
 
       width: width > 400 ? 180 : 150,
@@ -175,25 +175,25 @@ function useStyles() {
       alignItems: 'center',
     },
     transition_btn: {
-      backgroundColor: 'transparent',
+      backgroundColor: COLOR.transparent,
       borderRadius: 40,
     },
     upcoming_bill_btn: {
-      backgroundColor: '#ffffff',
+      backgroundColor: COLOR.light,
       borderRadius: 40,
     },
     textt: {
-      fontFamily: 'InterSemiBold',
-      color: '#666666',
+      fontFamily: FONT_FAMILY.interSemiBold,
+      color: COLOR.SecondaryGrey,
       fontSize: width > 400 ? 14 : 11,
       fontWeight: '600',
     },
     HomeConataienrColor: {
-      backgroundColor: '#4388831a',
-      color: '#438883',
+      backgroundColor: COLOR.shadeGray,
+      color: COLOR.green,
     },
     HomeConataienrColortext: {
-      color: '#438883',
+      color: COLOR.green,
     },
     card_container: {
       width: width > 400 ? 344 : 320,
@@ -205,11 +205,11 @@ function useStyles() {
       marginBottom: 15,
     },
     otherTwoColorCard: {
-      backgroundColor: '#FAFAFA',
-      color: '#888888',
+      backgroundColor: COLOR.LightWhite,
+      color: COLOR.gray,
     },
     otherTwoColorCardText: {
-      color: '#888888',
+      color: COLOR.gray,
     },
     mainCard_Container: {
       justifyContent: 'center',
@@ -222,7 +222,7 @@ function useStyles() {
       marginRight: 15,
       width: width > 400 ? 60 : 50,
       height: width > 400 ? 60 : 50,
-      backgroundColor: '#ffffff',
+      backgroundColor: COLOR.white,
       borderRadius: 30,
       justifyContent: 'center',
       alignItems: 'center',
@@ -230,13 +230,13 @@ function useStyles() {
     bankLink: {
       fontSize: width > 400 ? 18 : 12,
 
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
 
       width: '70%',
     },
     othertext_contents: {
       fontSize: width > 400 ? 12 : 10,
-      fontFamily: 'InterMedium',
+      fontFamily: FONT_FAMILY.interMedium,
       marginRight: 50,
       marginTop: 4,
     },
@@ -246,7 +246,7 @@ function useStyles() {
     Next_btn: {
       width: width > 400 ? 350 : 250,
       borderWidth: 1,
-      borderColor: '#438883',
+      borderColor: COLOR.green,
       borderRadius: 40,
       paddingHorizontal: width > 400 ? 10 : 5,
       paddingVertical: width > 400 ? 20 : 5,
@@ -256,8 +256,8 @@ function useStyles() {
       marginTop: width > 400 ? 103 : 18,
     },
     download: {
-      color: '#438883',
-      fontFamily: 'InterSemiBold',
+      color: COLOR.green,
+      fontFamily: FONT_FAMILY.interSemiBold,
       fontSize: 18,
     },
 
@@ -275,9 +275,9 @@ function useStyles() {
     },
 
     billText: {
-      color: '#ffffff',
+      color: COLOR.white,
       fontSize: width > 400 ? 18 : 14,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
     },
 
     notification: {

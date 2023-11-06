@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import imageBackround from '../../assets/Images/OnBoardingBackground.png';
 import Butoon from '../../component/button/Butoon.jsx';
-import { COLOR } from '../../lib/styles/GlobalStyles';
+import { COLOR, FONT_FAMILY } from '../../lib/styles/GlobalStyles';
 
 const OnBoardingScreen = ({navigation}) => {
   const styles = useStyles();
@@ -65,7 +65,7 @@ function useStyles() {
     heading: {
       fontSize: width > 400 ? 36 : 22,
       color: COLOR.green,
-      fontFamily: 'InterBold',
+      fontFamily: FONT_FAMILY.interBold,
       textAlign: 'center',
     },
     text: {
@@ -73,7 +73,7 @@ function useStyles() {
       fontSize: 14,
       fontWeight: '400',
       marginTop: width > 400 ? 20 : 10,
-      fontFamily: 'InterRegular',
+      fontFamily: FONT_FAMILY.interRegular,
     },
     logInText: {
       color: COLOR.green,

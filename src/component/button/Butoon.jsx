@@ -34,7 +34,6 @@ function useStyles() {
     button: {
       borderRadius: 40,
       overflow: 'hidden',
-      backgroundColor: 'red',
       height: width > 400 ? 64 : 45,
       width: width > 400 ? 'auto' : 'auto',
       marginTop: width > 400 ? 26 : 10,
@@ -46,7 +45,7 @@ function useStyles() {
       alignItems: 'center',
     },
     buttonText: {
-      color: 'white',
+      color: COLOR.white,
       fontWeight: '600',
       textAlign: 'center',
       lineHeight: 38,

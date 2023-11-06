@@ -15,13 +15,13 @@ import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
 import IncomeData from '../../lib/const/Income.json';
-import {COLOR} from '../../lib/styles/GlobalStyles';
+import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 
 const IncomeScreen = ({navigation}) => {
   const styles = useStyles();
 
   return (
-    <SafeAreaView style={{height: '100%', backgroundColor: 'white'}}>
+    <SafeAreaView style={{height: '100%', backgroundColor: COLOR.white}}>
       <View>
         <View style={styles.container_inner}>
           <Rectangular />
@@ -107,12 +107,12 @@ const IncomeScreen = ({navigation}) => {
 export default IncomeScreen;
 
 function useStyles() {
-  const {width, height} = useWindowDimensions();
+  const {width} = useWindowDimensions();
 
   return StyleSheet.create({
     container: {
       position: 'absolute',
-      backgroundColor: 'white',
+      backgroundColor: COLOR.white,
       width: '100%',
       marginTop: 155,
       borderTopLeftRadius: 30,
@@ -146,19 +146,19 @@ function useStyles() {
     },
     textt: {
       color: COLOR.green,
-      fontFamily: 'InterMedium',
+      fontFamily: FONT_FAMILY.interMedium,
       fontSize: 14,
     },
     value: {
-      color: '#000000',
-      fontFamily: 'InterSemiBold',
+      color: COLOR.black,
+      fontFamily: FONT_FAMILY.interSemiBold,
       fontSize: width > 400 ? 24 : 17,
       marginTop: 8,
     },
     tansiototext: {
       fontSize: width > 400 ? 18 : 14,
-      fontFamily: 'InterMedium',
-      color: '#000000',
+      fontFamily: FONT_FAMILY.interMedium,
+      color: COLOR.black,
     },
     indivdial_contianer: {
       flexDirection: 'row',
@@ -167,9 +167,9 @@ function useStyles() {
       alignItems: 'center',
     },
     container_text: {
-      color: '#666666',
+      color: COLOR.SecondaryGrey,
       fontSize: width > 400 ? 16 : 12,
-      fontFamily: 'InterMedium',
+      fontFamily: FONT_FAMILY.interMedium,
     },
     from_container: {
       marginTop: width > 400 ? 12 : 14,
@@ -178,29 +178,29 @@ function useStyles() {
       marginTop: 10,
     },
     container_text_other: {
-      color: '#000000',
-      fontFamily: 'InterMedium',
+      color: COLOR.black,
+      fontFamily: FONT_FAMILY.interMedium,
       fontSize: width > 400 ? 16 : 12,
     },
     container_text_other_income: {
-      color: '#000000',
-      fontFamily: 'InterSemiBold',
+      color: COLOR.black,
+      fontFamily: FONT_FAMILY.interSemiBold,
       fontSize: width > 400 ? 16 : 12,
     },
     container_text_total: {
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
       fontSize: width > 400 ? 16 : 12,
-      color: '#666666',
+      color: COLOR.SecondaryGrey,
     },
     container_text_other_total: {
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
       fontSize: width > 400 ? 16 : 12,
-      color: '#000000',
+      color: COLOR.black,
       fontWeight: '600',
     },
     line1: {
       borderTopWidth: 1,
-      borderTopColor: '#DDDDDD',
+      borderTopColor: COLOR.borderColor,
       marginTop: width > 400 ? 20 : 12,
       marginHorizontal: 30,
       marginBottom: width > 400 ? 8 : 0,
@@ -217,7 +217,7 @@ function useStyles() {
     },
     download: {
       color: COLOR.green,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
       fontSize: width > 400 ? 18 : 12,
     },
 
@@ -236,7 +236,7 @@ function useStyles() {
     billPaymet: {
       color: COLOR.white,
       fontSize: width > 400 ? 18 : 14,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
     },
     notification: {
       width: 40,

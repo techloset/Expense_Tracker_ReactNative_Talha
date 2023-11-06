@@ -5,6 +5,7 @@ export const COLOR = {
   secondary: '#69AEA9',
   green: '#438883',
   lightGreen: '4388831a',
+  shadeGreen:"#24a869",
   greenPrimary: '#2F7E79',
   parrot: '#25A969',
   lightParrot: '#ecf8f7',
@@ -22,4 +23,15 @@ export const COLOR = {
   LightWhite: '#fafafa',
   borderColor: '#DDDDDD',
   shadeGray: '#4388831a',
+  darkRed:"#E50914",
+  blue:'blue',
+  transparent:'transparent',
+  pureRed:'red',
+};
+
+export const FONT_FAMILY = {
+  interSemiBold: 'Inter-SemiBold',
+  interBold: 'Inter-Bold',
+  interMedium: 'Inter-Medium',
+  interRegular: 'Inter-Regular',
 };

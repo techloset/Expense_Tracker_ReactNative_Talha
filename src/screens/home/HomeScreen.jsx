@@ -16,7 +16,7 @@ import Image_72 from '../../assets/Images/image72.png';
 import Image_73 from '../../assets/Images/image73.png';
 import Image_74 from '../../assets/Images/image74.png';
 import Image_75 from '../../assets/Images/image75.png';
-import {COLOR} from '../../lib/styles/GlobalStyles';
+import {COLOR,FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 import HomeCompenent from '../../component/transcationComponent/HomeCompenent';
 
 const HomeScreen = ({navigation}) => {
@@ -150,13 +150,13 @@ function useStyles() {
     },
     transactionHistroy: {
       fontSize: width > 400 ? 18 : 14,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
       color: COLOR.black,
     },
     seeAll: {
       fontSize: width > 400 ? 16 : 13,
       fontWeight: '400',
-      fontFamily: 'InterRegular',
+      fontFamily: FONT_FAMILY.interRegular,
       color: COLOR.SecondaryGrey,
     },
     parrent: {
@@ -206,13 +206,13 @@ function useStyles() {
       marginTop: 25,
       marginLeft: 20,
       marginBottom: 8,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
     },
     rupee: {
       marginLeft: 20,
       fontSize: width > 400 ? 30 : 15,
       color: COLOR.white,
-      fontFamily: 'InterBold',
+      fontFamily: FONT_FAMILY.interBold,
     },
     dot: {
       marginTop: 35,
@@ -238,19 +238,19 @@ function useStyles() {
 
     incomeText: {
       fontSize: width > 400 ? 16 : 13,
-      fontFamily: 'InterMedium',
+      fontFamily: FONT_FAMILY.interMedium,
       color: COLOR.LightGrey,
     },
     expenseText: {
       fontSize: width > 400 ? 18 : 14,
       color: COLOR.LightGrey,
-      fontFamily: 'InterMedium',
+      fontFamily: FONT_FAMILY.interMedium,
     },
     dollar: {
       fontSize: width > 400 ? 20 : 14,
       color: COLOR.white,
       marginTop: 6,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
     },
     income_dollar: {
       marginLeft: 20,

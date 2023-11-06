@@ -13,7 +13,7 @@ import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
-import {COLOR} from '../../lib/styles/GlobalStyles';
+import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 
 const CardWalletScreen = ({navigation}) => {
   return (
@@ -155,11 +155,11 @@ const styles = StyleSheet.create({
     borderRadius: 40,
   },
   upcoming_bill_btn: {
-    backgroundColor: 'transparent',
+    backgroundColor: COLOR.transparent,
     borderRadius: 40,
   },
   textt: {
-    fontFamily: 'InterSemiBold',
+    fontFamily: FONT_FAMILY.interSemiBold,
     color: COLOR.SecondaryGrey,
     fontSize: 14,
     fontWeight: '600',
@@ -200,7 +200,7 @@ const styles = StyleSheet.create({
   billText: {
     color: COLOR.white,
     fontSize: 18,
-    fontFamily: 'InterSemiBold',
+    fontFamily: FONT_FAMILY.interSemiBold,
   },
 
   containertText: {
@@ -210,13 +210,13 @@ const styles = StyleSheet.create({
   textx1: {
     color: COLOR.black,
     fontSize: 16,
-    fontFamily: 'InterMedium',
+    fontFamily: FONT_FAMILY.interMedium,
     marginTop: 28,
   },
   textx2: {
     color: COLOR.SecondaryGrey,
     fontSize: 13,
-    fontFamily: 'InterRegular',
+    fontFamily: FONT_FAMILY.interRegular,
     width: '80%',
   },
   input2: {

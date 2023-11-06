@@ -11,6 +11,7 @@ import Upicons from '../../assets/Images/Upicons.svg';
 import girlsImage from '../../assets/Images/image7.png';
 import Paypals from '../../assets/Images/Paypals.svg';
 import YoutubeIcon from '../../assets/Images/youtubeIcon.svg';
+import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 
 const SocialComponent = () => {
   const styles = useStyles();
@@ -100,7 +101,7 @@ function useStyles() {
     },
 
     imge_container: {
-      backgroundColor: '#f0f6f5',
+      backgroundColor: COLOR.transImageClr,
       width: width > 400 ? 50 : 35,
       height: width > 400 ? 50 : 35,
       padding: width > 400 ? 10 : 8,
@@ -114,22 +115,22 @@ function useStyles() {
 
     UpWorkText: {
       fontSize: width > 400 ? 16 : 12,
-      fontFamily: 'InterMedium',
+      fontFamily: FONT_FAMILY.interMedium,
       fontWeight: '500',
-      color: '#000000',
+      color: COLOR.black,
     },
     todayText: {
       marginTop: width > 400 ? 6 : 0,
       fontSize: width > 400 ? 13 : 10,
-      fontFamily: 'InterRegular',
+      fontFamily: FONT_FAMILY.interRegular,
     },
     upwork_income: {
       fontSize: width > 400 ? 18 : 14,
-      fontFamily: 'InterSemiBold',
-      color: '#24a869',
+      fontFamily: FONT_FAMILY.interSemiBold,
+      color: COLOR.shadeGreen,
     },
     morered: {
-      color: '#f95b51',
+      color: COLOR.red,
     },
 
     girl_Maincontainer: {

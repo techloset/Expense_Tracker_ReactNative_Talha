@@ -11,7 +11,7 @@ import YoutubeIcon from '../../assets/Images/youtubeIcon.svg';
 import Vector from '../../assets/Images/Vector.svg';
 import House from '../../assets/Images/house.svg';
 import Spotify from '../../assets/Images/spotify.svg';
-import {COLOR} from '../../lib/styles/GlobalStyles';
+import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 
 const SocialComponent = ({navigation}) => {
   const styles = useStyles();
@@ -123,14 +123,14 @@ function useStyles() {
     },
     UpWorkText: {
       fontSize: width > 400 ? 16 : 12,
-      fontFamily: 'InterMedium',
+      fontFamily: FONT_FAMILY.interMedium,
       fontWeight: '500',
       color: COLOR.black,
     },
     todayText: {
       marginTop: width > 400 ? 6 : 0,
       fontSize: width > 400 ? 13 : 10,
-      fontFamily: 'InterRegular',
+      fontFamily: FONT_FAMILY.interRegular,
     },
 
     girl_Maincontainer: {
@@ -176,7 +176,7 @@ function useStyles() {
 
     upwork_income: {
       fontSize: width > 400 ? 18 : 14,
-      fontFamily: 'InterMedium',
+      fontFamily: FONT_FAMILY.interMedium,
       fontWeight: '500',
       color: COLOR.green,
     },

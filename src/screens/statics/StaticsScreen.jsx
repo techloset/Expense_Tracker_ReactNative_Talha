@@ -14,10 +14,8 @@ import Sort from '../../assets/Images/sort.svg';
 import Starbucks from '../../assets/Images/starbucks.svg';
 import Girl from '../../assets/Images/Girlsimages.svg';
 import YoutubeIcon from '../../assets/Images/youtubeIcon.svg';
-
-import React from 'react';
 import {LineChart} from 'react-native-chart-kit';
-import { COLOR } from '../../lib/styles/GlobalStyles';
+import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 
 const data = [
   {label: 'Expense', value: '1'},
@@ -51,7 +49,7 @@ export const StaticsScreen = ({navigation}) => {
         <Dropdown
           style={[
             styles.dropdown,
-            isFocus && {borderColor: 'blue'},
+            isFocus && {borderColor: COLOR.blue},
             styles.width,
           ]}
           placeholderStyle={styles.placeholderStyle}
@@ -76,7 +74,7 @@ export const StaticsScreen = ({navigation}) => {
       <View style={styles.cahrtt}>
         <LineChart
           data={{
-            labels: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July',],
+            labels: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July'],
             datasets: [
               {
                 data: [0, 25, 20, 30, 40, 25, 35],
@@ -88,9 +86,9 @@ export const StaticsScreen = ({navigation}) => {
           yAxisLabel=""
           yAxisSuffix=""
           chartConfig={{
-            backgroundColor: '#ffffff',
-            backgroundGradientFrom: '#ffffff',
-            backgroundGradientTo: '#ffffff',
+            backgroundColor: COLOR.white,
+            backgroundGradientFrom: COLOR.white,
+            backgroundGradientTo: COLOR.white,
             decimalPlaces: 2,
 
             color: (opacity = 1) => `rgba(67, 136, 131, ${opacity})`,
@@ -105,7 +103,7 @@ export const StaticsScreen = ({navigation}) => {
           bezier
           style={{
             marginVertical: 8,
-            marginRight:20,
+            marginRight: 20,
             borderRadius: 16,
           }}
         />
@@ -184,7 +182,6 @@ export const StaticsScreen = ({navigation}) => {
             <Text style={styles.circletcktext}>- $ 11.99</Text>
           </View>
         </View>
-
       </View>
     </View>
   );
@@ -198,7 +195,7 @@ function useStyles() {
   return StyleSheet.create({
     text1: {
       color: COLOR.black,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
       fontSize: 18,
     },
     staticContainer: {
@@ -225,7 +222,7 @@ function useStyles() {
     },
     car_container_bgGreen: {
       backgroundColor: COLOR.darkerGreen,
-      shadowColor: '#29756F',
+      shadowColor: COLOR.darkerGreen,
       elevation: 24,
     },
     cahrtt: {
@@ -239,7 +236,7 @@ function useStyles() {
     },
     bankLink: {
       color: COLOR.black,
-      fontFamily: 'InterMedium',
+      fontFamily: FONT_FAMILY.interMedium,
       fontSize: width > 400 ? 16 : 14,
 
       marginRight: width > 400 ? 136 : 1,
@@ -247,7 +244,7 @@ function useStyles() {
     othertext_contents: {
       color: COLOR.SecondaryGrey,
       fontSize: 13,
-      fontFamily: 'InterRegular',
+      fontFamily: FONT_FAMILY.interRegular,
 
       marginTop: 4,
       fontSize: width > 400 ? 13 : 8,
@@ -258,11 +255,11 @@ function useStyles() {
     },
     circletcktext: {
       fontSize: width > 400 ? 18 : 12,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
       color: COLOR.red,
     },
     circletcktext_white: {
-      color: 'white',
+      color: COLOR.white,
     },
     daysConatiner: {
       flexDirection: 'row',
@@ -273,7 +270,7 @@ function useStyles() {
 
     dropdown: {
       height: 50,
-      borderColor: 'gray',
+      borderColor: COLOR.gray,
       borderWidth: 0.5,
       borderRadius: 8,
       paddingHorizontal: 8,
@@ -283,7 +280,7 @@ function useStyles() {
     },
     label: {
       position: 'absolute',
-      backgroundColor: 'white',
+      backgroundColor: COLOR.white,
       left: 22,
       top: 8,
       zIndex: 999,

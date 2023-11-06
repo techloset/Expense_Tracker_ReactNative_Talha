@@ -15,7 +15,7 @@ import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
 import PaymentFile from '../../lib/const/Payment.json';
-import {COLOR} from '../../lib/styles/GlobalStyles';
+import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 
 const BillPaymentSuccessful = ({navigation}) => {
   const styles = useStyles();
@@ -73,7 +73,7 @@ const BillPaymentSuccessful = ({navigation}) => {
                     <Text
                       style={[
                         styles.container_text_other_income,
-                        index === 1 ? {color: '#438883'} : {},
+                        index === 1 ? {color: COLOR.green} : {},
                       ]}>
                       {item.value}
                     </Text>
@@ -103,7 +103,7 @@ function useStyles() {
   return StyleSheet.create({
     container: {
       position: 'absolute',
-      backgroundColor: 'white',
+      backgroundColor: COLOR.white,
       width: '100%',
       marginTop: 156,
       borderTopLeftRadius: 30,
@@ -122,13 +122,13 @@ function useStyles() {
       marginTop: width > 400 ? 10 : 8,
     },
     textt: {
-      color: '#438883',
-      fontFamily: 'InterSemiBold',
+      color: COLOR.green,
+      fontFamily: FONT_FAMILY.interSemiBold,
       fontSize: width > 400 ? 22 : 16,
     },
     value: {
-      color: '#666666',
-      fontFamily: 'InterMedium',
+      color: COLOR.SecondaryGrey,
+      fontFamily: FONT_FAMILY.interMedium,
       fontSize: width > 400 ? 16 : 12,
     },
     indivdial_contianer: {
@@ -138,9 +138,9 @@ function useStyles() {
       alignItems: 'center',
     },
     container_text: {
-      color: '#666666',
+      color: COLOR.SecondaryGrey,
       fontSize: width > 400 ? 16 : 12,
-      fontFamily: 'InterMedium',
+      fontFamily: FONT_FAMILY.interMedium,
     },
     from_container: {
       marginTop: width > 400 ? 12 : 14,
@@ -149,35 +149,37 @@ function useStyles() {
       marginTop: 12,
     },
     container_text_other: {
-      color: '#000000',
-      fontFamily: 'InterMedium',
+      color: COLOR.black,
+      fontFamily: FONT_FAMILY.interMedium,
       fontSize: width > 400 ? 16 : 12,
     },
     container_text_other_income: {
-      color: '#000000',
-      fontFamily: 'InterSemiBold',
+      color: COLOR.black,
+      fontFamily: FONT_FAMILY.interSemiBold,
       fontSize: width > 400 ? 16 : 12,
     },
     container_text_total: {
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
       fontSize: width > 400 ? 16 : 12,
-      color: '#666666',
+      color: COLOR.SecondaryGrey,
     },
     transtionText: {
       fontSize: width > 400 ? 18 : 14,
-      fontFamily: 'InterMedium',
-      color: '#000000',
+      fontFamily: FONT_FAMILY.interMedium,
+      color: COLOR.black,
     },
-    transtionContainer_main: {marginTop: width > 400 ? 32 : 24},
+    transtionContainer_main: {
+      marginTop: width > 400 ? 32 : 24,
+    },
     container_text_other_total: {
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
       fontSize: width > 400 ? 16 : 12,
-      color: '#000000',
+      color: COLOR.black,
       fontWeight: '600',
     },
     line1: {
       borderTopWidth: 1,
-      borderTopColor: '#DDDDDD',
+      borderTopColor: COLOR.borderColor,
       marginTop: width > 400 ? 20 : 12,
       marginHorizontal: 30,
       marginBottom: width > 400 ? 8 : 0,
@@ -199,7 +201,7 @@ function useStyles() {
     bttnText: {
       color: COLOR.green,
       fontSize: width > 400 ? 18 : 14,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
     },
     eelispse: {
       position: 'absolute',
@@ -216,7 +218,7 @@ function useStyles() {
     billPaymet: {
       color: COLOR.white,
       fontSize: width > 400 ? 18 : 14,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
     },
     notification: {
       width: 40,

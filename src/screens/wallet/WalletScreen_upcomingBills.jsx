@@ -5,13 +5,12 @@ import {
   TouchableOpacity,
   useWindowDimensions,
 } from 'react-native';
-import React from 'react';
 import UpcommingBills from '../../component/transcationComponent/UpcomingScreen';
 import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
-import {COLOR} from '../../lib/styles/GlobalStyles';
+import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 
 const WalletScreen_upcomingBills = ({navigation}) => {
   const styles = useStyles();
@@ -74,7 +73,7 @@ function useStyles() {
     billText: {
       color: COLOR.white,
       fontSize: width > 400 ? 18 : 14,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
     },
     notification: {
       width: 40,

@@ -10,7 +10,7 @@ import Frame21 from '../../assets/Images/Frame21.svg';
 import Frame22 from '../../assets/Images/Frame22.svg';
 import Frame23 from '../../assets/Images/Frame23.svg';
 import SocialComponentTwo from './SocialComponenttwo';
-import {COLOR} from '../../lib/styles/GlobalStyles';
+import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 
 const TransactionScreen = ({navigation}) => {
   const styles = useStyles();
@@ -56,7 +56,7 @@ const TransactionScreen = ({navigation}) => {
 export default TransactionScreen;
 
 function useStyles() {
-  const {width, height} = useWindowDimensions();
+  const {width} = useWindowDimensions();
   return StyleSheet.create({
     container: {
       justifyContent: 'center',
@@ -68,11 +68,11 @@ function useStyles() {
     },
     Heading: {
       fontSize: width > 400 ? 16 : 12,
-      fontFamily: 'InterRegular',
+      fontFamily: FONT_FAMILY.interRegular,
       color: COLOR.SecondaryGrey,
     },
     valuee: {
-      fontFamily: 'InterBold',
+      fontFamily: FONT_FAMILY.interBold,
       fontSize: width > 400 ? 30 : 18,
       color: COLOR.black,
       marginTop: width > 400 ? 12 : 12,
@@ -88,7 +88,7 @@ function useStyles() {
     fram_text: {
       marginTop: width > 400 ? 10 : 10,
       color: COLOR.black,
-      fontFamily: 'InterRegular',
+      fontFamily: FONT_FAMILY.interRegular,
       fontSize: width > 400 ? 16 : 12,
     },
     butn_type_container: {
@@ -111,7 +111,7 @@ function useStyles() {
       alignItems: 'center',
     },
     transition_btn: {
-      backgroundColor: 'transparent',
+      backgroundColor: COLOR.transparent,
       borderRadius: 40,
     },
     upcoming_bill_btn: {
@@ -119,7 +119,7 @@ function useStyles() {
       borderRadius: 40,
     },
     textt: {
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
       color: COLOR.SecondaryGrey,
       fontSize: width > 400 ? 14 : 10,
     },

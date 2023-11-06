@@ -21,7 +21,7 @@ import Facebooke from 'react-native-vector-icons/EvilIcons';
 import Yotubee from 'react-native-vector-icons/Entypo';
 import DatePicker from 'react-native-datepicker';
 import PlussSign from '../../assets/Images/plusCircle.png';
-import {COLOR} from '../../lib/styles/GlobalStyles';
+import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 
 const data = [
   {label: 'Netflix ', value: '1'},
@@ -58,7 +58,7 @@ const StaticScreentwo = ({navigation}) => {
         return (
           <Googlee
             style={styles.icon}
-            color={isFocus ? '#E50914' : 'black'}
+            color={isFocus ? COLOR.black  : COLOR.darkRed}
             name="google"
             size={20}
           />
@@ -67,7 +67,7 @@ const StaticScreentwo = ({navigation}) => {
         return (
           <Facebooke
             style={styles.icon}
-            color={isFocus ? '#E50914' : 'black'}
+            color={isFocus ?  COLOR.black  : COLOR.darkRed}
             name="sc-facebook"
             size={25}
           />
@@ -76,7 +76,7 @@ const StaticScreentwo = ({navigation}) => {
         return (
           <Yotubee
             style={styles.icon}
-            color={isFocus ? '#E50914' : 'black'}
+            color={isFocus ?  COLOR.black  : COLOR.darkRed}
             name="youtube"
             size={20}
           />
@@ -85,7 +85,7 @@ const StaticScreentwo = ({navigation}) => {
         return (
           <Netflic
             style={styles.icon}
-            color={isFocus ? '#E50914' : 'black'}
+            color={isFocus ?  COLOR.black  : COLOR.darkRed}
             name="netflix"
             size={20}
           />
@@ -124,7 +124,7 @@ const StaticScreentwo = ({navigation}) => {
         <View style={styles.innermain}>
           <Text style={[styles.stylennamee, styles.maincc]}>NAME</Text>
           <Dropdown
-            style={[styles.dropdown, isFocus && {borderColor: 'blue'}]}
+            style={[styles.dropdown, isFocus && {borderColor: COLOR.blue}]}
             placeholderStyle={styles.placeholderStyle}
             selectedTextStyle={styles.selectedTextStyle}
             inputSearchStyle={styles.inputSearchStyle}
@@ -196,7 +196,7 @@ function useStyles() {
   return StyleSheet.create({
     container: {
       position: 'absolute',
-      backgroundColor: 'white',
+      backgroundColor: COLOR.white,
       width: '85%',
       marginTop: 165,
       borderTopLeftRadius: 30,
@@ -208,7 +208,7 @@ function useStyles() {
     billText: {
       color: COLOR.white,
       fontSize: width > 400 ? 18 : 14,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
     },
 
     eelispse: {
@@ -238,10 +238,9 @@ function useStyles() {
     },
 
     dropdown: {
-      borderColor: 'gray',
+      borderColor: COLOR.gray,
       borderWidth: 0.5,
       borderRadius: 8,
-
       padding: 15,
     },
     icon: {
@@ -291,7 +290,7 @@ function useStyles() {
     dashbaordd: {
       borderWidth: 1,
       borderStyle: 'dashed',
-      borderColor: 'black',
+      borderColor: COLOR.black,
       flexDirection: 'row',
       padding: 15,
       alignItems: 'center',
@@ -300,7 +299,7 @@ function useStyles() {
     },
     stylennamee: {
       fontSize: 12,
-      fontFamily: 'InterMedium',
+      fontFamily: FONT_FAMILY.interMedium,
       color: COLOR.SecondaryGrey,
     },
     maincc: {
@@ -317,7 +316,7 @@ function useStyles() {
     addinvoice: {
       fontSize: 14,
       color: COLOR.SecondaryGrey,
-      fontFamily: 'InterMedium',
+      fontFamily: FONT_FAMILY.interMedium,
     },
   });
 }

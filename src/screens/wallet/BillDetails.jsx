@@ -7,7 +7,6 @@ import {
   useWindowDimensions,
 } from 'react-native';
 import React from 'react';
-
 import youtubeCardBills from '../../assets/Images/youtubeCardBills.png';
 import CreditCard from '../../assets/Images/creditcard.svg';
 import Dot from '../../assets/Images/dot.svg';
@@ -17,12 +16,12 @@ import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
-import {COLOR} from '../../lib/styles/GlobalStyles';
+import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 
 const BillDetails = ({navigation}) => {
   const styles = useStyles();
   return (
-    <View style={{height: '100%', backgroundColor: 'white'}}>
+    <View style={{height: '100%', backgroundColor: COLOR.white}}>
       <View>
         <View style={styles.container_inner}>
           <Rectangular />
@@ -117,11 +116,11 @@ const BillDetails = ({navigation}) => {
 export default BillDetails;
 
 function useStyles() {
-  const {width, height} = useWindowDimensions();
+  const {width} = useWindowDimensions();
   return StyleSheet.create({
     container: {
       position: 'absolute',
-      backgroundColor: 'white',
+      backgroundColor: COLOR.white,
       width: '100%',
       marginTop: 165,
       borderTopLeftRadius: 30,
@@ -151,17 +150,17 @@ function useStyles() {
 
     youtubeText: {
       fontSize: width > 400 ? 18 : 14,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
       color: COLOR.black,
     },
     billText: {
       color: COLOR.white,
       fontSize: width > 400 ? 18 : 14,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
     },
     youtubeText_below: {
       fontSize: width > 400 ? 14 : 12,
-      fontFamily: 'InterRegular',
+      fontFamily: FONT_FAMILY.interRegular,
       color: COLOR.SecondaryGrey,
     },
     below_conatent: {
@@ -170,7 +169,7 @@ function useStyles() {
     },
     line1: {
       borderTopWidth: 1,
-      borderTopColor: '#DDDDDD',
+      borderTopColor: COLOR.borderColor,
       marginVertical: width > 400 ? 20 : 15,
     },
     priceFeeConatiner: {
@@ -180,22 +179,22 @@ function useStyles() {
     priceFeeText: {
       color: COLOR.SecondaryGrey,
       fontSize: width > 400 ? 16 : 14,
-      fontFamily: 'InterMedium',
+      fontFamily: FONT_FAMILY.interMedium,
     },
     TotalText: {
       color: COLOR.SecondaryGrey,
       fontSize: width > 400 ? 16 : 14,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interBold,
     },
     priceFeeValue: {
       color: COLOR.black,
       fontSize: width > 400 ? 16 : 14,
-      fontFamily: 'InterMedium',
+      fontFamily: FONT_FAMILY.interMedium,
     },
     Totalvalue: {
       color: COLOR.black,
       fontSize: width > 400 ? 16 : 14,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
     },
     priceText: {
       marginBottom: 12,
@@ -224,17 +223,17 @@ function useStyles() {
     bankLink: {
       fontSize: width > 400 ? 16 : 12,
       color: COLOR.green,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
     },
     paypalText: {
       fontSize: width > 400 ? 16 : 12,
       color: COLOR.gray,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
     },
     othertext_contents: {
       color: COLOR.green,
       fontSize: 12,
-      fontFamily: 'InterMedium',
+      fontFamily: FONT_FAMILY.interMedium,
       marginRight: 50,
       marginTop: 4,
     },
@@ -259,7 +258,7 @@ function useStyles() {
     selectMethodText: {
       color: COLOR.black,
       fontSize: width > 400 ? 18 : 14,
-      fontFamily: 'InterMedium',
+      fontFamily: FONT_FAMILY.interMedium,
     },
     bttn: {
       width: width > 400 ? 358 : '85%',
@@ -276,7 +275,7 @@ function useStyles() {
     bttnText: {
       color: COLOR.white,
       fontSize: width > 400 ? 18 : 14,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
     },
 
     eelispse: {

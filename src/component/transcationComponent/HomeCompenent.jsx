@@ -6,13 +6,11 @@ import {
   Image,
   useWindowDimensions,
 } from 'react-native';
-import React from 'react';
-
 import Upicons from '../../assets/Images/Upicons.svg';
 import girlsImage from '../../assets/Images/image7.png';
 import Paypals from '../../assets/Images/Paypals.svg';
 import YoutubeIcon from '../../assets/Images/youtubeIcon.svg';
-import {COLOR} from '../../lib/styles/GlobalStyles';
+import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 
 const HomeCompenent = () => {
   const styles = useStyles();
@@ -186,18 +184,18 @@ function useStyles() {
 
     UpWorkText: {
       fontSize: width > 400 ? 16 : 12,
-      fontFamily: 'InterMedium',
+      fontFamily: FONT_FAMILY.interMedium,
       color: COLOR.black,
       fontSize: 16,
     },
     todayText: {
       marginTop: width > 400 ? 6 : 0,
       fontSize: width > 400 ? 13 : 10,
-      fontFamily: 'InterRegular',
+      fontFamily: FONT_FAMILY.interRegular,
     },
     upwork_income: {
       fontSize: width > 400 ? 18 : 14,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
       color: COLOR.parrot,
     },
     upworkIncomeRed: {

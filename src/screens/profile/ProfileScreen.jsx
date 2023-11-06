@@ -11,7 +11,7 @@ import MessageCenter from '../../assets/Images/MessageCenter.svg';
 import UserProfile from '../../assets/Images/UserProfile.svg';
 import DataPrivacy from '../../assets/Images/DataPrivacy.svg';
 import AccountInfo from '../../assets/Images/AccountInfo.svg';
-import {COLOR} from '../../lib/styles/GlobalStyles';
+import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 
 const ProfileScreen = () => {
   return (
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
   textProfile: {
     marginTop: 84,
     color: COLOR.white,
-    fontFamily: 'InterSemiBold',
+    fontFamily: FONT_FAMILY.interSemiBold,
     fontSize: 18,
     fontWeight: '600',
     marginRight: 114,
@@ -120,21 +120,21 @@ const styles = StyleSheet.create({
   avtar: {
     height: 120,
     width: 120,
-    backgroundColor: 'white',
+    backgroundColor: COLOR.white,
     borderRadius: 65,
 
     marginHorizontal: 147,
     overflow: 'hidden',
   },
   user_Name: {
-    fontFamily: 'InterSemiBold',
-    color: '#222222',
+    fontFamily: FONT_FAMILY.interSemiBold,
+    color: COLOR.black,
     fontSize: 20,
     fontWeight: '600',
     marginTop: 20,
   },
   email_address: {
-    fontFamily: 'InterSemiBold',
+    fontFamily: FONT_FAMILY.interSemiBold,
     fontSize: 14,
     fontWeight: '600',
     color: COLOR.green,
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
   alltext: {
     color: COLOR.black,
     fontSize: 16,
-    fontFamily: 'InterMedium',
+    fontFamily: FONT_FAMILY.interMedium,
     fontWeight: '600',
   },
   mainContainer: {
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
   borderView: {
     borderBottomWidth: 2,
     width: '88%',
-    borderColor: '#EEEEEE',
+    borderColor: COLOR.shadeGray,
   },
   otherInfo: {
     marginTop: 30,

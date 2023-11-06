@@ -12,12 +12,12 @@ import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
-import {COLOR} from '../../lib/styles/GlobalStyles';
+import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 
 const BillPayment = ({navigation}) => {
   const styles = useStyles();
   return (
-    <View style={{height: '100%', backgroundColor: 'white'}}>
+    <View style={{height: '100%', backgroundColor: COLOR.white}}>
       <View>
         <View style={styles.container_inner}>
           <Rectangular />
@@ -47,7 +47,7 @@ const BillPayment = ({navigation}) => {
           <View>
             <Text style={styles.youtubeText}>
               You will pay{' '}
-              <Text style={{color: '#438883'}}>Youtube Premium</Text> for one
+              <Text style={{color: COLOR.green}}>Youtube Premium</Text> for one
               month with BCA OneKlik
             </Text>
           </View>
@@ -88,7 +88,7 @@ function useStyles() {
   return StyleSheet.create({
     container: {
       position: 'absolute',
-      backgroundColor: 'white',
+      backgroundColor: COLOR.white,
       width: '100%',
       marginTop: 165,
       borderTopLeftRadius: 30,
@@ -109,7 +109,7 @@ function useStyles() {
     },
     youtubeText: {
       fontSize: width > 400 ? 20 : 14,
-      fontFamily: 'InterRegular',
+      fontFamily: FONT_FAMILY.interRegular,
       color: COLOR.black,
       marginHorizontal: 58,
       textAlign: 'center',
@@ -132,22 +132,22 @@ function useStyles() {
     priceFeeText: {
       color: COLOR.SecondaryGrey,
       fontSize: width > 400 ? 16 : 14,
-      fontFamily: 'InterMedium',
+      fontFamily: FONT_FAMILY.interMedium,
     },
     TotalText: {
       color: COLOR.SecondaryGrey,
       fontSize: width > 400 ? 16 : 14,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
     },
     priceFeeValue: {
       color: COLOR.black,
       fontSize: width > 400 ? 16 : 14,
-      fontFamily: 'InterMedium',
+      fontFamily: FONT_FAMILY.interMedium,
     },
     Totalvalue: {
       color: COLOR.black,
       fontSize: width > 400 ? 16 : 14,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
     },
     priceText: {
       marginBottom: 12,
@@ -168,7 +168,7 @@ function useStyles() {
     bttnText: {
       color: COLOR.white,
       fontSize: width > 400 ? 18 : 14,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
     },
 
     eelispse: {
@@ -199,7 +199,7 @@ function useStyles() {
     billText: {
       color: COLOR.white,
       fontSize: width > 400 ? 18 : 14,
-      fontFamily: 'InterSemiBold',
+      fontFamily: FONT_FAMILY.interSemiBold,
     },
   });
 }
