@@ -5,42 +5,55 @@ import {
   SafeAreaView,
   TouchableOpacity,
   useWindowDimensions,
+  ImageBackground,
 } from 'react-native';
 import React from 'react';
 
 import UpIcon from '../../assets/Images/upIcon.svg';
 import UPSvg from '../../assets/Images/upSvg.svg';
-import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
 import IncomeData from '../../lib/const/Income.json';
 import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
+import Home_background from '../../assets/Images/Home_background.png';
 
 const IncomeScreen = ({navigation}) => {
   const styles = useStyles();
 
   return (
     <SafeAreaView style={{height: '100%', backgroundColor: COLOR.white}}>
-      <View>
-        <View style={styles.container_inner}>
-          <Rectangular />
-          <Ellipse style={styles.eelispse} />
+      <ImageBackground style={styles.imageBackground} source={Home_background}>
+        <View style={{position: 'absolute'}}>
+          <Ellipse />
         </View>
-        <View style={styles.images_conatiner}>
-          <TouchableOpacity onPress={() => navigation.push('AccountsWallet')}>
-            <View style={styles.lessthen}>
-              <LessThan />
-            </View>
-          </TouchableOpacity>
-          <View>
-            <Text style={styles.billPaymet}>Transaction Details</Text>
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            marginTop: 78,
+            marginHorizontal: 24,
+          }}>
+          <View style={{}}>
+            <TouchableOpacity onPress={() => navigation.push('AccountsWallet')}>
+              <View>
+                <LessThan />
+              </View>
+            </TouchableOpacity>
           </View>
-          <View style={styles.notification}>
-            <Notification />
-          </View>
+          <Text
+            style={{
+              fontSize: 18,
+              fontWeight: '600',
+              fontFamily: FONT_FAMILY.interSemiBold,
+              color: COLOR.white,
+            }}>
+            Transaction Details
+          </Text>
+          <Notification />
         </View>
-      </View>
+      </ImageBackground>
 
       <View style={styles.container}>
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
@@ -110,6 +123,9 @@ function useStyles() {
   const {width} = useWindowDimensions();
 
   return StyleSheet.create({
+    imageBackground: {
+      height: width > 400 ? 287 : 287,
+    },
     container: {
       position: 'absolute',
       backgroundColor: COLOR.white,

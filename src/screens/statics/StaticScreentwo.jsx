@@ -6,11 +6,10 @@ import {
   TouchableOpacity,
   useWindowDimensions,
   TextInput,
+  ImageBackground,
 } from 'react-native';
 import {useState} from 'react';
 import React from 'react';
-
-import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
@@ -22,6 +21,7 @@ import Yotubee from 'react-native-vector-icons/Entypo';
 import DatePicker from 'react-native-datepicker';
 import PlussSign from '../../assets/Images/plusCircle.png';
 import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
+import Home_background from '../../assets/Images/Home_background.png';
 
 const data = [
   {label: 'Netflix ', value: '1'},
@@ -99,26 +99,38 @@ const StaticScreentwo = ({navigation}) => {
   const styles = useStyles();
   return (
     <View>
-      <View>
-        <View style={styles.container_inner}>
-          <Rectangular />
-          <Ellipse style={styles.eelispse} />
+      <ImageBackground style={styles.imageBackground} source={Home_background}>
+        <View style={{position: 'absolute'}}>
+          <Ellipse />
         </View>
-        <View style={styles.images_conatiner}>
-          <TouchableOpacity
-            onPress={() => navigation.navigate('StaticsScreen')}>
-            <View style={styles.lessthen}>
-              <LessThan />
-            </View>
-          </TouchableOpacity>
-          <View>
-            <Text style={styles.billText}>Bill Details</Text>
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            marginTop: 78,
+            marginHorizontal: 24,
+          }}>
+          <View style={{}}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('StaticsScreen')}>
+              <View>
+                <LessThan />
+              </View>
+            </TouchableOpacity>
           </View>
-          <View style={styles.notification}>
-            <Notification />
-          </View>
+          <Text
+            style={{
+              fontSize: 18,
+              fontWeight: '600',
+              fontFamily: FONT_FAMILY.interSemiBold,
+              color: COLOR.white,
+            }}>
+            Bill Payment
+          </Text>
+          <Notification />
         </View>
-      </View>
+      </ImageBackground>
 
       <View style={styles.container}>
         <View style={styles.innermain}>
@@ -194,6 +206,9 @@ export default StaticScreentwo;
 function useStyles() {
   const {width, height} = useWindowDimensions();
   return StyleSheet.create({
+    imageBackground: {
+      height: width > 400 ? 287 : 287,
+    },
     container: {
       position: 'absolute',
       backgroundColor: COLOR.white,

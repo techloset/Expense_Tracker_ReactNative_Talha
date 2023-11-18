@@ -4,47 +4,62 @@ import {
   View,
   TouchableOpacity,
   useWindowDimensions,
+  ImageBackground,
 } from 'react-native';
 import React from 'react';
 import Dollar from '../../assets/Images/dollar.svg';
 import Bank from '../../assets/Images/bank-fill.svg';
 import PaypaLogo from '../../assets/Images/paypalogo.svg';
 import CheckCircle from '../../assets/Images/CheckCircle.svg';
-import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
 import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
+import Home_background from '../../assets/Images/Home_background.png';
 
 const AccountsWallet = ({navigation}) => {
   const styles = useStyles();
   return (
     <View style={{height: '100%', backgroundColor: 'white'}}>
-      <View>
-        <View style={styles.container_inner}>
-          <Rectangular />
-          <Ellipse style={styles.eelispse} />
-        </View>
-        <View style={styles.images_conatiner}>
-          <TouchableOpacity
-            onPress={() => navigation.push('WalletScreen_upcomingBills')}>
-            <View style={styles.lessthen}>
-              <LessThan />
-            </View>
-          </TouchableOpacity>
-          <View>
-            <Text style={styles.billText}>Connect Wallet</Text>
+      <ImageBackground
+          style={styles.imageBackground}
+          source={Home_background}>
+          <View style={{position: 'absolute'}}>
+            <Ellipse />
           </View>
-          <View style={styles.notification}>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              marginTop: 78,
+              marginHorizontal: 24,
+            }}>
+            <View style={{}}>
+              <TouchableOpacity
+                onPress={() => navigation.push('WalletScreen')}>
+                <View>
+                  <LessThan />
+                </View>
+              </TouchableOpacity>
+            </View>
+            <Text
+              style={{
+                fontSize: 18,
+                fontWeight: '600',
+                fontFamily: FONT_FAMILY.interSemiBold,
+                color: COLOR.white,
+              }}>
+              Connect Wallet
+            </Text>
             <Notification />
           </View>
-        </View>
-      </View>
+        </ImageBackground>
 
       <View style={styles.container}>
         <View style={styles.butn_type_container}>
           <TouchableOpacity
-            onPress={() => navigation.navigate('CardWalletScreen')}>
+             onPress={() => navigation.push('WalletScreen_upcomingBills')}>
             <View style={[styles.both_btn, styles.transition_btn]}>
               <Text style={styles.textt}>Cards</Text>
             </View>
@@ -146,6 +161,9 @@ export default AccountsWallet;
 function useStyles() {
   const {width, height} = useWindowDimensions();
   return StyleSheet.create({
+    imageBackground: {
+      height: width > 400 ? 287 : 287,
+    },
     container: {
       position: 'absolute',
       backgroundColor: COLOR.white,

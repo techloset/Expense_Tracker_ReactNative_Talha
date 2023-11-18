@@ -6,41 +6,58 @@ import {
   TextInput,
   KeyboardAvoidingView,
   useWindowDimensions,
+  ImageBackground,
 } from 'react-native';
 import React from 'react';
 import VisaCard from '../../assets/Images/visaCard.svg';
 import DebitCard from '../../assets/Images/DebitCard.svg';
-import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
 import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
+
+import Home_background from '../../assets/Images/Home_background.png';
 
 const CardWalletScreen = ({navigation}) => {
   const styles = useStyles();
   return (
     <KeyboardAvoidingView>
       <View>
-        <View>
-          <View style={styles.container_inner}>
-            <Rectangular />
-            <Ellipse style={styles.eelispse} />
+        <ImageBackground
+          style={styles.imageBackground}
+          source={Home_background}>
+          <View style={{position: 'absolute'}}>
+            <Ellipse />
           </View>
-          <View style={styles.images_conatiner}>
-            <TouchableOpacity
-              onPress={() => navigation.push('WalletScreen_upcomingBills')}>
-              <View style={styles.lessthen}>
-                <LessThan />
-              </View>
-            </TouchableOpacity>
-            <View>
-              <Text style={styles.billText}>Connect Wallet</Text>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              marginTop: 78,
+              marginHorizontal: 24,
+            }}>
+            <View style={{}}>
+              <TouchableOpacity
+                onPress={() => navigation.push('WalletScreen_upcomingBills')}>
+                <View>
+                  <LessThan />
+                </View>
+              </TouchableOpacity>
             </View>
-            <View style={styles.notification}>
-              <Notification />
-            </View>
+            <Text
+              style={{
+                fontSize: 18,
+                fontWeight: '600',
+                fontFamily: FONT_FAMILY.interSemiBold,
+                color: COLOR.white,
+              }}>
+              Connect Wallet
+            </Text>
+            <Notification />
           </View>
-        </View>
+        </ImageBackground>
+
         <View style={styles.container}>
           <View style={styles.butn_type_container}>
             <TouchableOpacity>
@@ -126,6 +143,9 @@ export default CardWalletScreen;
 function useStyles() {
   const {width} = useWindowDimensions();
   return StyleSheet.create({
+    imageBackground: {
+      height: width > 400 ? 287 : 287,
+    },
     container: {
       position: 'absolute',
       backgroundColor: COLOR.white,

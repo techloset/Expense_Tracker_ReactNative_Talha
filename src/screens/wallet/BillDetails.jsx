@@ -5,6 +5,7 @@ import {
   Image,
   TouchableOpacity,
   useWindowDimensions,
+  ImageBackground,
 } from 'react-native';
 import React from 'react';
 import youtubeCardBills from '../../assets/Images/youtubeCardBills.png';
@@ -12,35 +13,50 @@ import CreditCard from '../../assets/Images/creditcard.svg';
 import Dot from '../../assets/Images/dot.svg';
 import PaypalIcon from '../../assets/Images/paypalogo.svg';
 import EmptyDot from '../../assets/Images/emptyDot.svg';
-import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
 import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
+import Home_background from '../../assets/Images/Home_background.png';
 
 const BillDetails = ({navigation}) => {
   const styles = useStyles();
   return (
     <View style={{height: '100%', backgroundColor: COLOR.white}}>
-      <View>
-        <View style={styles.container_inner}>
-          <Rectangular />
-          <Ellipse style={styles.eelispse} />
-        </View>
-        <View style={styles.images_conatiner}>
-          <TouchableOpacity onPress={() => navigation.push('IncomeScreen')}>
-            <View style={styles.lessthen}>
-              <LessThan />
-            </View>
-          </TouchableOpacity>
-          <View>
-            <Text style={styles.billText}>Bill Details</Text>
+      <ImageBackground
+          style={styles.imageBackground}
+          source={Home_background}>
+          <View style={{position: 'absolute'}}>
+            <Ellipse />
           </View>
-          <View style={styles.notification}>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              marginTop: 78,
+              marginHorizontal: 24,
+            }}>
+            <View style={{}}>
+              <TouchableOpacity
+                onPress={() => navigation.push('IncomeScreen')}>
+                <View>
+                  <LessThan />
+                </View>
+              </TouchableOpacity>
+            </View>
+            <Text
+              style={{
+                fontSize: 18,
+                fontWeight: '600',
+                fontFamily: FONT_FAMILY.interSemiBold,
+                color: COLOR.white,
+              }}>
+              Bill Details
+            </Text>
             <Notification />
           </View>
-        </View>
-      </View>
+        </ImageBackground>
 
       <View style={styles.container}>
         <View style={styles.youtube_Container}>
@@ -118,6 +134,9 @@ export default BillDetails;
 function useStyles() {
   const {width} = useWindowDimensions();
   return StyleSheet.create({
+    imageBackground: {
+      height: width > 400 ? 287 : 287,
+    },
     container: {
       position: 'absolute',
       backgroundColor: COLOR.white,
@@ -205,7 +224,7 @@ function useStyles() {
       justifyContent: 'space-between',
       alignItems: 'center',
       marginHorizontal: 35,
-      borderRadius:20
+      borderRadius: 20,
     },
     circle_bank: {
       marginTop: 15,
@@ -270,6 +289,7 @@ function useStyles() {
       alignItems: 'center',
       marginHorizontal: 28,
       marginTop: width > 400 ? 30 : 25,
+      elevation: 10, 
     },
     bttnText: {
       color: COLOR.white,

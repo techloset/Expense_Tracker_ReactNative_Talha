@@ -193,6 +193,8 @@ function useStyles() {
       marginTop: width > 400 ? 6 : 0,
       fontSize: width > 400 ? 13 : 10,
       fontFamily: FONT_FAMILY.interRegular,
+      fontWeight:"400",
+      color:COLOR.SecondaryGrey
     },
     upwork_income: {
       fontSize: width > 400 ? 18 : 14,

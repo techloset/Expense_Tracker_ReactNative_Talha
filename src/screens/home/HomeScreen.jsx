@@ -16,6 +16,8 @@ import Image_72 from '../../assets/Images/image72.png';
 import Image_73 from '../../assets/Images/image73.png';
 import Image_74 from '../../assets/Images/image74.png';
 import Image_75 from '../../assets/Images/image75.png';
+import HomeGreen from '../../assets/Images/HomeGreen.png';
+import circle_group from '../../assets/Images/circle_group.png';
 import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 import HomeCompenent from '../../component/transcationComponent/HomeCompenent';
 
@@ -24,12 +26,23 @@ const HomeScreen = ({navigation}) => {
   return (
     <View style={{backgroundColor: 'white', height: '100%'}}>
       <View style={styles.parrent}>
-        <ImageBackground style={styles.imageBackground} source={imgae}>
+        <ImageBackground style={styles.imageBackground} source={HomeGreen}>
           <View style={styles.top_images}>
-            <Image source={require('../../assets/Images/Group_ellipse.png')} />
+            <Image source={circle_group} />
+            <View
+              style={{
+                flexDirection: 'column',
+                position: 'absolute',
+                top: 74,
+                left: 24,
+              }}>
+              <Text style={styles.afterNoonText}>Good afternoon,</Text>
+              <Text style={styles.MorgenText}>Enjelin Morgeana</Text>
+            </View>
             <View style={styles.bell_container}>
               <Notification />
             </View>
+
             <View style={styles.balnce_container}>
               <View style={styles.balance_inner1}>
                 <View>
@@ -49,7 +62,7 @@ const HomeScreen = ({navigation}) => {
                       styles.income_second_container,
                     ]}>
                     <View style={styles.arrow_container}>
-                      <Arrowdown />
+                      <ArrowUp />
                     </View>
                     <Text style={styles.incomeText}>Income</Text>
                   </View>
@@ -64,12 +77,12 @@ const HomeScreen = ({navigation}) => {
                       styles.expense_second_container,
                     ]}>
                     <View style={styles.arrow_container}>
-                      <ArrowUp />
+                      <Arrowdown />
                     </View>
                     <Text style={styles.expenseText}>Expense</Text>
                   </View>
                   <Text style={[styles.dollar, styles.expense_dollar]}>
-                    $240.00
+                    $284.00
                   </Text>
                 </View>
               </View>
@@ -113,7 +126,8 @@ function useStyles() {
   const {width, height} = useWindowDimensions();
   return StyleSheet.create({
     fiveImages: {
-      marginTop: 13,
+      marginTop: 10,
+      marginBottom: 10,
       flexDirection: 'row',
       marginLeft: 22,
       marginRight: 18,
@@ -134,7 +148,7 @@ function useStyles() {
       flexDirection: 'row',
       justifyContent: 'space-between',
       marginHorizontal: 22,
-      marginTop: width > 400 ? 30 : 0,
+      marginTop: width > 400 ? 40 : 0,
     },
     transactionHistroy_Container: {
       flexDirection: 'row',
@@ -146,7 +160,7 @@ function useStyles() {
       fontSize: width > 400 ? 18 : 14,
       fontFamily: FONT_FAMILY.interSemiBold,
       color: COLOR.black,
-      fontWeight:"600"
+      fontWeight: '600',
     },
     seeAll: {
       fontSize: width > 400 ? 16 : 13,
@@ -167,6 +181,18 @@ function useStyles() {
       flex: 1,
       flexDirection: 'row',
       justifyContent: 'space-between',
+    },
+    afterNoonText: {
+      fontFamily: FONT_FAMILY.interSemiBold,
+      fontSize: 14,
+      fontWeight: '600',
+      color: COLOR.white,
+    },
+    MorgenText: {
+      fontFamily: FONT_FAMILY.interSemiBold,
+      fontSize: 20,
+      fontWeight: '600',
+      color: COLOR.white,
     },
     bell_container: {
       marginTop: 78,
@@ -189,6 +215,7 @@ function useStyles() {
       position: 'absolute',
       top: width > 400 ? 155 : 170,
       left: 20,
+      elevation: 30,
     },
     balance_inner1: {
       flex: 1,
@@ -202,20 +229,19 @@ function useStyles() {
       marginLeft: 20,
       marginBottom: 8,
       fontFamily: FONT_FAMILY.interSemiBold,
-      fontWeight:"600"
+      fontWeight: '600',
     },
     rupee: {
       marginLeft: 20,
       fontSize: width > 400 ? 30 : 15,
       color: COLOR.white,
       fontFamily: FONT_FAMILY.interBold,
-      fontWeight:"700"
+      fontWeight: '700',
     },
     dot: {
-      marginTop: 35,
       marginRight: 20,
       color: COLOR.LightGrey,
-      fontSize: width > 400 ? 20 : 15,
+      fontSize: width > 400 ? 40 : 15,
     },
     balance_inner2: {
       flex: 1,
@@ -248,7 +274,7 @@ function useStyles() {
       color: COLOR.white,
       marginTop: 6,
       fontFamily: FONT_FAMILY.interSemiBold,
-      fontWeight:"600"
+      fontWeight: '600',
     },
     income_dollar: {
       marginLeft: 20,

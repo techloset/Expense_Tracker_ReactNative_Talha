@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   useWindowDimensions,
 } from 'react-native';
-import imageBackround from '../../assets/Images/OnBoardingBackground.png';
+import imageBackround from '../../assets/Images/OnBoardingBackground1.png';
 import Butoon from '../../component/button/Butoon.jsx';
 import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 
@@ -17,11 +17,11 @@ const OnBoardingScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.stretchFather}>
-        <ImageBackground style={styles.stretch} source={imageBackround}>
+        <ImageBackground source={imageBackround}>
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Image
               style={styles.stretchImage}
-              source={require('../../assets/Images/specular_1.png')}
+              source={require('../../assets/Images/man.png')}
             />
           </View>
         </ImageBackground>
@@ -29,12 +29,11 @@ const OnBoardingScreen = ({navigation}) => {
 
       <View>
         <View style={styles.container2}>
-          <Text style={styles.heading}>spend smarter save more</Text>
+          <Text style={styles.heading}>Spend Smarter Save More</Text>
         </View>
         <View
           style={{
             marginHorizontal: 20,
-            backgroundColor: 'rgba(255, 255, 255, 1)',
           }}>
           <Butoon navigation={navigation} />
         </View>
@@ -83,10 +82,13 @@ function useStyles() {
       fontSize: 14,
       fontWeight: '400',
       color: COLOR.shahdedGray,
+      fontFamily: FONT_FAMILY.interRegular,
     },
     logInText: {
       color: COLOR.green,
-      fontWeight: '500',
+      fontSize: 14,
+      fontWeight: '400',
+      fontFamily: FONT_FAMILY.interRegular,
     },
   });
 }

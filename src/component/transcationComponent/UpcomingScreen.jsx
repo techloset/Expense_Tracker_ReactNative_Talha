@@ -108,7 +108,7 @@ function useStyles() {
     both_btn: {
       backgroundColor: COLOR.white,
       height: width > 400 ? 40 : 30,
-      width:  width > 400 ? 180 : 150,
+      width: width > 400 ? 180 : 150,
       justifyContent: 'center',
       alignItems: 'center',
     },

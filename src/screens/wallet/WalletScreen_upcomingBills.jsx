@@ -4,37 +4,51 @@ import {
   View,
   TouchableOpacity,
   useWindowDimensions,
+  ImageBackground,
 } from 'react-native';
 import UpcommingBills from '../../component/transcationComponent/UpcomingScreen';
-import Rectangular from '../../assets/Images/Rectangle.svg';
 import Ellipse from '../../assets/Images/Ellipse.svg';
 import Notification from '../../assets/Images/notification.svg';
 import LessThan from '../../assets/Images/left.svg';
 import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
+import Home_background from '../../assets/Images/Home_background.png';
 
 const WalletScreen_upcomingBills = ({navigation}) => {
   const styles = useStyles();
   return (
     <View>
-      <View>
-        <View style={styles.container_inner}>
-          <Rectangular />
-          <Ellipse style={styles.eelispse} />
+      <ImageBackground style={styles.imageBackground} source={Home_background}>
+        <View style={{position: 'absolute'}}>
+          <Ellipse />
         </View>
-        <View style={styles.images_conatiner}>
-          <TouchableOpacity onPress={() => navigation.navigate('WalletScreen')}>
-            <View style={styles.lessthen}>
-              <LessThan />
-            </View>
-          </TouchableOpacity>
-          <View>
-            <Text style={styles.billText}>Wallet</Text>
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            marginTop: 78,
+            marginHorizontal: 24,
+          }}>
+          <View style={{}}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('WalletScreen')}>
+              <View>
+                <LessThan />
+              </View>
+            </TouchableOpacity>
           </View>
-          <View style={styles.notification}>
-            <Notification />
-          </View>
+          <Text
+            style={{
+              fontSize: 18,
+              fontWeight: '600',
+              fontFamily: FONT_FAMILY.interSemiBold,
+              color: COLOR.white,
+            }}>
+            Wallet
+          </Text>
+          <Notification />
         </View>
-      </View>
+      </ImageBackground>
 
       <View style={styles.container}>
         <UpcommingBills navigation={navigation} />
@@ -57,36 +71,8 @@ function useStyles() {
       borderTopLeftRadius: 30,
       borderTopRightRadius: 30,
     },
-
-    eelispse: {
-      position: 'absolute',
-    },
-    images_conatiner: {
-      flex: 1,
-      position: 'absolute',
-      width: '100%',
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      marginTop: 78,
-    },
-    billText: {
-      color: COLOR.white,
-      fontSize: width > 400 ? 18 : 18,
-      fontFamily: FONT_FAMILY.interSemiBold,
-      fontWeight: '600',
-    },
-    notification: {
-      width: 40,
-      height: 40,
-      borderRadius: 6.67,
-      padding: 8.33,
-      justifyContent: 'center',
-      alignItems: 'center',
-      marginRight: 24,
-    },
-    lessthen: {
-      marginLeft: 24,
+    imageBackground: {
+      height: width > 400 ? 287 : 287,
     },
   });
 }

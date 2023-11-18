@@ -1,55 +1,38 @@
 import React from 'react';
-import {
-  TouchableOpacity,
-  View,
-  Text,
-  StyleSheet,
-  Pressable,
-  useWindowDimensions,
-} from 'react-native';
-import {COLOR} from '../../lib/styles/GlobalStyles';
+import {View, Text, TouchableOpacity, Platform} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
+import {FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 
-const Butoon = ({navigation}) => {
-  const styles = useStyles();
+const GradientButton = ({navigation}) => {
+  const buttonStyle = {
+    marginTop: 26,
+    padding: 20,
+    alignItems: 'center',
+    borderRadius: 5,
+    backgroundColor: '#69AEA9', 
+    ...Platform.select({
+      android: {
+        elevation: 12, 
+      },
+    }),
+    borderRadius: 40,
+  };
+
   return (
-    <TouchableOpacity
-      style={styles.button}
-      onPress={() => navigation.navigate('TabNavigation')}>
-      <View style={styles.gradient}>
-        <Pressable>
-          <Text style={styles.buttonText}>Get Started</Text>
-        </Pressable>
-      </View>
+    <TouchableOpacity onPress={() => navigation.navigate('TabNavigation')}>
+      <LinearGradient colors={['#69AEA9', '#3F8782']} style={buttonStyle}>
+        <Text
+          style={{
+            color: '#fff',
+            fontSize: 18,
+            fontWeight: '600',
+            fontFamily: FONT_FAMILY.interSemiBold,
+          }}>
+          Get Started
+        </Text>
+      </LinearGradient>
     </TouchableOpacity>
   );
 };
 
-export default Butoon;
-
-const styles = StyleSheet.create({});
-
-function useStyles() {
-  const {width} = useWindowDimensions();
-  return StyleSheet.create({
-    button: {
-      borderRadius: 40,
-      overflow: 'hidden',
-      height: width > 400 ? 64 : 45,
-      width: width > 400 ? 'auto' : 'auto',
-      marginTop: width > 400 ? 26 : 10,
-      backgroundColor: COLOR.greenPrimary,
-    },
-    gradient: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    buttonText: {
-      color: COLOR.white,
-      fontWeight: '600',
-      textAlign: 'center',
-      lineHeight: 38,
-      fontSize: width > 400 ? 18 : 14,
-    },
-  });
-}
+export default GradientButton;

@@ -15,14 +15,11 @@ import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 
 const ProfileScreen = () => {
   return (
-    <View style={{width: 414, height: 896, backgroundColor: COLOR.white}}>
+    <View style={{height: 896, backgroundColor: COLOR.white}}>
       <ImageBackground style={styles.imageBackgrounds} source={HomeBackground}>
         <Image style={styles.CircleBackgrounds} source={circleGroup} />
         <View style={styles.profile_images_container}>
-          <Image
-            style={{marginTop: 81, marginLeft: 24, marginRight: 127}}
-            source={LessThan}
-          />
+          <Image style={{}} source={LessThan} />
           <Text style={styles.textProfile}>Profile</Text>
           <View style={styles.image_container}>
             <Notification />
@@ -86,14 +83,12 @@ export default ProfileScreen;
 
 const styles = StyleSheet.create({
   imageBackgrounds: {
-    width: 414,
     height: 287,
   },
   CircleBackgrounds: {
     position: 'absolute',
   },
   textProfile: {
-    marginTop: 84,
     color: COLOR.white,
     fontFamily: FONT_FAMILY.interSemiBold,
     fontSize: 18,
@@ -102,15 +97,10 @@ const styles = StyleSheet.create({
   },
   profile_images_container: {
     flexDirection: 'row',
-  },
-  image_container: {
-    width: 40,
-    height: 40,
-    padding: 8.33,
-    borderRadius: 6.67,
-    gap: 8.33,
+    alignItems: 'center',
+    justifyContent: 'space-between',
     marginTop: 78,
-    marginRight: 24,
+    marginHorizontal: 24,
   },
   avtar_container: {
     justifyContent: 'center',

@@ -60,7 +60,6 @@ function useStyles() {
   return StyleSheet.create({
     container: {
       justifyContent: 'center',
-      flex: 1,
     },
     Heading_Container: {
       marginTop: width > 400 ? 50 : 20,
@@ -70,13 +69,13 @@ function useStyles() {
       fontSize: width > 400 ? 16 : 12,
       fontFamily: FONT_FAMILY.interRegular,
       color: COLOR.SecondaryGrey,
-      fontWeight:"400"
+      fontWeight: '400',
     },
     valuee: {
       fontSize: width > 400 ? 30 : 18,
       color: COLOR.black,
       marginTop: width > 400 ? 12 : 12,
-      fontWeight:"700",
+      fontWeight: '700',
       fontFamily: FONT_FAMILY.interBold,
     },
     frame_container: {
