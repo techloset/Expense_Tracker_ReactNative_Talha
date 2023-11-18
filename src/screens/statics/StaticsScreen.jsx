@@ -273,7 +273,7 @@ function useStyles() {
       alignItems: 'center',
     },
     staticsText: {
-      fontSize: width > 400 ? 13 : 8,
+      fontSize: width > 400 ? 13 : 13,
       fontWeight: '400',
       fontFamily: FONT_FAMILY.interRegular,
       color: COLOR.SecondaryGrey,
@@ -286,7 +286,7 @@ function useStyles() {
       borderRadius: 10,
     },
     dayText: {
-      fontSize: width > 400 ? 13 : 8,
+      fontSize: width > 400 ? 13 : 13,
       fontWeight: '400',
       fontFamily: FONT_FAMILY.interRegular,
       color: COLOR.white,

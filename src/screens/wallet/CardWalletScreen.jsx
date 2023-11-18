@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   TextInput,
   KeyboardAvoidingView,
+  useWindowDimensions,
 } from 'react-native';
 import React from 'react';
 import VisaCard from '../../assets/Images/visaCard.svg';
@@ -16,6 +17,7 @@ import LessThan from '../../assets/Images/left.svg';
 import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 
 const CardWalletScreen = ({navigation}) => {
+  const styles = useStyles();
   return (
     <KeyboardAvoidingView>
       <View>
@@ -121,134 +123,138 @@ const CardWalletScreen = ({navigation}) => {
 
 export default CardWalletScreen;
 
-const styles = StyleSheet.create({
-  container: {
-    position: 'absolute',
-    backgroundColor: COLOR.white,
-    width: '100%',
-    marginTop: 165,
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
-  },
-  butn_type_container: {
-    flexDirection: 'row',
-    backgroundColor: COLOR.light,
-    marginTop: 60,
-    marginHorizontal: 20,
-    color: COLOR.light,
-    borderRadius: 40,
-    height: 48,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 25,
-  },
-  both_btn: {
-    backgroundColor: COLOR.white,
-    height: 40,
-    width: 180,
+function useStyles() {
+  const {width} = useWindowDimensions();
+  return StyleSheet.create({
+    container: {
+      position: 'absolute',
+      backgroundColor: COLOR.white,
+      width: '100%',
+      marginTop: 165,
+      borderTopLeftRadius: 30,
+      borderTopRightRadius: 30,
+    },
+    butn_type_container: {
+      flexDirection: 'row',
+      backgroundColor: COLOR.light,
+      marginTop: 60,
+      marginHorizontal: 20,
+      color: COLOR.light,
+      borderRadius: 40,
+      height: 48,
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginBottom: 25,
+    },
+    both_btn: {
+      backgroundColor: COLOR.white,
+      height: 40,
+      width: 180,
+      height: width > 400 ? 40 : 35,
+      width: width > 400 ? 180 : 150,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    transition_btn: {
+      backgroundColor: COLOR.white,
+      borderRadius: 40,
+    },
+    upcoming_bill_btn: {
+      backgroundColor: COLOR.transparent,
+      borderRadius: 40,
+    },
+    textt: {
+      fontFamily: FONT_FAMILY.interSemiBold,
+      color: COLOR.SecondaryGrey,
+      fontSize: 14,
+      fontWeight: '600',
+    },
+    Cards: {
+      alignItems: 'center',
+      height: 225,
+    },
+    DebitCard: {
+      position: 'absolute',
+      marginTop: 16,
+    },
+    eelispse: {
+      position: 'absolute',
+    },
+    images_conatiner: {
+      flex: 1,
+      position: 'absolute',
+      width: '100%',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      marginTop: 78,
+    },
 
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  transition_btn: {
-    backgroundColor: COLOR.white,
-    borderRadius: 40,
-  },
-  upcoming_bill_btn: {
-    backgroundColor: COLOR.transparent,
-    borderRadius: 40,
-  },
-  textt: {
-    fontFamily: FONT_FAMILY.interSemiBold,
-    color: COLOR.SecondaryGrey,
-    fontSize: 14,
-    fontWeight: '600',
-  },
-  Cards: {
-    alignItems: 'center',
-    height: 225,
-  },
-  DebitCard: {
-    position: 'absolute',
-    marginTop: 16,
-  },
-  eelispse: {
-    position: 'absolute',
-  },
-  images_conatiner: {
-    flex: 1,
-    position: 'absolute',
-    width: '100%',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginTop: 78,
-  },
+    notification: {
+      width: 40,
+      height: 40,
+      borderRadius: 6.67,
+      padding: 8.33,
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginRight: 24,
+    },
+    lessthen: {
+      marginLeft: 24,
+    },
+    billText: {
+      color: COLOR.white,
+      fontSize: 18,
+      fontFamily: FONT_FAMILY.interSemiBold,
+      fontWeight: '600',
+    },
 
-  notification: {
-    width: 40,
-    height: 40,
-    borderRadius: 6.67,
-    padding: 8.33,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginRight: 24,
-  },
-  lessthen: {
-    marginLeft: 24,
-  },
-  billText: {
-    color: COLOR.white,
-    fontSize: 18,
-    fontFamily: FONT_FAMILY.interSemiBold,
-    fontWeight:"600"
-  },
+    containertText: {
+      marginLeft: 25,
+    },
 
-  containertText: {
-    marginLeft: 25,
-  },
-
-  textx1: {
-    color: COLOR.black,
-    fontSize: 16,
-    fontFamily: FONT_FAMILY.interMedium,
-    marginTop: 28,
-    fontWeight:"500"
-  },
-  textx2: {
-    color: COLOR.SecondaryGrey,
-    fontSize: 13,
-    fontFamily: FONT_FAMILY.interRegular,
-    width: '80%',
-    fontWeight:"400"
-  },
-  input2: {
-    height: 40,
-    borderWidth: 1,
-    padding: 10,
-    color: COLOR.borderColor,
-    borderRadius: 8,
-    height: 54,
-    gap: 11,
-  },
-  input22: {
-    width: 220,
-  },
-  input32: {
-    width: 133,
-  },
-  placeholder: {
-    color: COLOR.gray,
-    fontSize: 12,
-  },
-  inputContiner1: {
-    flexDirection: 'row',
-    marginHorizontal: 25,
-    marginTop: 12,
-    gap: 11,
-  },
-  inpputcontainer: {
-    marginHorizontal: 25,
-    marginTop: 30,
-  },
-});
+    textx1: {
+      color: COLOR.black,
+      fontSize: 16,
+      fontFamily: FONT_FAMILY.interMedium,
+      marginTop: 28,
+      fontWeight: '500',
+    },
+    textx2: {
+      color: COLOR.SecondaryGrey,
+      fontSize: 13,
+      fontFamily: FONT_FAMILY.interRegular,
+      width: '80%',
+      fontWeight: '400',
+    },
+    input2: {
+      height: 40,
+      borderWidth: 1,
+      padding: 10,
+      color: COLOR.borderColor,
+      borderRadius: 8,
+      height: 54,
+      gap: 11,
+    },
+    input22: {
+      width: 220,
+    },
+    input32: {
+      width: 133,
+    },
+    placeholder: {
+      color: COLOR.gray,
+      fontSize: 12,
+    },
+    inputContiner1: {
+      flexDirection: 'row',
+      marginHorizontal: 25,
+      marginTop: 12,
+      gap: 11,
+    },
+    inpputcontainer: {
+      marginHorizontal: 25,
+      marginTop: 30,
+    },
+  });
+}

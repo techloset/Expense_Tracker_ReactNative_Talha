@@ -5,8 +5,10 @@ import {
   SafeAreaView,
   TouchableOpacity,
   useWindowDimensions,
+  Image,
 } from 'react-native';
 import React from 'react';
+import Copy from '../../assets/Images/copy.png';
 
 import UpIcon from '../../assets/Images/upIcon.svg';
 import PaymentTick from '../../assets/Images/paymentTick.svg';
@@ -75,12 +77,20 @@ const BillPaymentSuccessful = ({navigation}) => {
                         styles.container_text_other_income,
                         index === 1 ? {color: COLOR.green} : {},
                       ]}>
-                      {item.value}
+                      {item.name === 'Transcation ID' ? (
+                        <View
+                          style={{flexDirection: 'row', alignItems: 'center'}}>
+                          <Text>{item.value}</Text>
+                          <Image source={Copy} />
+                        </View>
+                      ) : (
+                        item.value
+                      )}
                     </Text>
                   </View>
                 </View>
-                {index === 3 && <View style={styles.line1} />}
-                {index === 5 && <View style={styles.line1} />}
+                {index === 4 && <View style={styles.line1} />}
+                {index === 6 && <View style={styles.line1} />}
               </View>
             );
           })}
@@ -124,12 +134,12 @@ function useStyles() {
     textt: {
       color: COLOR.green,
       fontFamily: FONT_FAMILY.interSemiBold,
-      fontSize: width > 400 ? 22 : 16,
+      fontSize: width > 400 ? 22 : 20,
     },
     value: {
       color: COLOR.SecondaryGrey,
       fontFamily: FONT_FAMILY.interMedium,
-      fontSize: width > 400 ? 16 : 12,
+      fontSize: width > 400 ? 16 : 14,
     },
     indivdial_contianer: {
       flexDirection: 'row',
@@ -139,7 +149,7 @@ function useStyles() {
     },
     container_text: {
       color: COLOR.SecondaryGrey,
-      fontSize: width > 400 ? 16 : 12,
+      fontSize: width > 400 ? 16 : 14,
       fontFamily: FONT_FAMILY.interMedium,
     },
     from_container: {
@@ -151,25 +161,25 @@ function useStyles() {
     container_text_other: {
       color: COLOR.black,
       fontFamily: FONT_FAMILY.interMedium,
-      fontSize: width > 400 ? 16 : 12,
+      fontSize: width > 400 ? 16 : 14,
     },
     container_text_other_income: {
       color: COLOR.black,
       fontFamily: FONT_FAMILY.interSemiBold,
-      fontSize: width > 400 ? 16 : 12,
+      fontSize: width > 400 ? 16 : 14,
     },
     container_text_total: {
       fontFamily: FONT_FAMILY.interSemiBold,
-      fontSize: width > 400 ? 16 : 12,
+      fontSize: width > 400 ? 16 : 14,
       color: COLOR.SecondaryGrey,
     },
     transtionText: {
-      fontSize: width > 400 ? 18 : 14,
+      fontSize: width > 400 ? 18 : 16,
       fontFamily: FONT_FAMILY.interMedium,
       color: COLOR.black,
     },
     transtionContainer_main: {
-      marginTop: width > 400 ? 32 : 24,
+      marginTop: width > 400 ? 32 : 28,
     },
     container_text_other_total: {
       fontFamily: FONT_FAMILY.interSemiBold,
@@ -186,21 +196,21 @@ function useStyles() {
     },
     bttn: {
       width: width > 400 ? 358 : '85%',
-      height: width > 400 ? 60 : 45,
+      height: width > 400 ? 60 : 50,
       borderRadius: 40,
       paddingHorizontal: 20,
       paddingVertical: 10,
       justifyContent: 'center',
       alignItems: 'center',
       marginHorizontal: 28,
-      marginTop: width > 400 ? 30 : 15,
+      marginTop: width > 400 ? 30 : 25,
       borderWidth: 1,
       borderColor: COLOR.green,
       borderStyle: 'solid',
     },
     bttnText: {
       color: COLOR.green,
-      fontSize: width > 400 ? 18 : 14,
+      fontSize: width > 400 ? 18 : 16,
       fontFamily: FONT_FAMILY.interSemiBold,
     },
     eelispse: {
@@ -217,8 +227,9 @@ function useStyles() {
     },
     billPaymet: {
       color: COLOR.white,
-      fontSize: width > 400 ? 18 : 14,
+      fontSize: width > 400 ? 18 : 18,
       fontFamily: FONT_FAMILY.interSemiBold,
+      fontWeight: '600',
     },
     notification: {
       width: 40,

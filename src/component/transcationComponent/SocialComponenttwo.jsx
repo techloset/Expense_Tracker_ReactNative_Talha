@@ -111,8 +111,8 @@ function useStyles() {
     },
     imge_container: {
       backgroundColor: COLOR.transImageClr,
-      width: width > 400 ? 50 : 35,
-      height: width > 400 ? 50 : 35,
+      width: width > 400 ? 50 : 50,
+      height: width > 400 ? 50 : 50,
       // padding: width > 400 ? 10 : 8,
       alignItems: 'center',
       justifyContent: 'center',
@@ -123,14 +123,14 @@ function useStyles() {
       height: width > 400 ? 30 : 20,
     },
     UpWorkText: {
-      fontSize: width > 400 ? 16 : 12,
+      fontSize: width > 400 ? 16 : 14,
       fontFamily: FONT_FAMILY.interMedium,
       fontWeight: '500',
       color: COLOR.black,
     },
     todayText: {
       marginTop: width > 400 ? 6 : 0,
-      fontSize: width > 400 ? 13 : 10,
+      fontSize: width > 400 ? 13 : 11,
       fontFamily: FONT_FAMILY.interRegular,
       fontWeight: '400',
     },

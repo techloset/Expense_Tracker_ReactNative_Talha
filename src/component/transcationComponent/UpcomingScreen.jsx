@@ -67,14 +67,14 @@ function useStyles() {
       alignItems: 'center',
     },
     Heading: {
-      fontSize: width > 400 ? 16 : 12,
+      fontSize: width > 400 ? 16 : 16,
       fontFamily: FONT_FAMILY.interRegular,
       color: COLOR.SecondaryGrey,
       fontWeight: '400',
     },
     valuee: {
       fontFamily: FONT_FAMILY.interBold,
-      fontSize: width > 400 ? 30 : 18,
+      fontSize: width > 400 ? 30 : 20,
       color: COLOR.black,
       marginTop: width > 400 ? 12 : 12,
       fontWeight: '700',
@@ -100,7 +100,7 @@ function useStyles() {
       marginHorizontal: 20,
       color: COLOR.light,
       borderRadius: 40,
-      height: width > 400 ? 48 : 38,
+      height: width > 400 ? 48 : 42,
       justifyContent: 'center',
       alignItems: 'center',
       marginBottom: 25,
@@ -123,7 +123,7 @@ function useStyles() {
     textt: {
       fontFamily: FONT_FAMILY.interSemiBold,
       color: COLOR.SecondaryGrey,
-      fontSize: width > 400 ? 14 : 10,
+      fontSize: width > 400 ? 14 : 12,
       fontWeight: '600',
     },
   });

@@ -74,7 +74,11 @@ const AccountsWallet = ({navigation}) => {
                   ]}>
                   Connect your bank{' '}
                 </Text>
-                <Text style={[styles.othertext_contents,styles.HomeConataienrColortext]}>
+                <Text
+                  style={[
+                    styles.othertext_contents,
+                    styles.HomeConataienrColortext,
+                  ]}>
                   account to deposit & fund{' '}
                 </Text>
               </View>
@@ -158,17 +162,15 @@ function useStyles() {
       marginHorizontal: 20,
       color: COLOR.light,
       borderRadius: 40,
-      height: width > 400 ? 48 : 40,
+      height: width > 400 ? 48 : 48,
       justifyContent: 'center',
       alignItems: 'center',
       marginBottom: 25,
     },
     both_btn: {
       backgroundColor: COLOR.white,
-      height: width > 400 ? 48 : 34,
-
+      height: width > 400 ? 48 : 38,
       width: width > 400 ? 180 : 150,
-
       justifyContent: 'center',
       alignItems: 'center',
     },
@@ -177,13 +179,12 @@ function useStyles() {
       borderRadius: 40,
     },
     upcoming_bill_btn: {
-      // backgroundColor: COLOR.light,
       borderRadius: 40,
     },
     textt: {
       fontFamily: FONT_FAMILY.interSemiBold,
       color: COLOR.SecondaryGrey,
-      fontSize: width > 400 ? 14 : 11,
+      fontSize: width > 400 ? 14 : 14,
       fontWeight: '600',
     },
     HomeConataienrColor: {
@@ -197,7 +198,6 @@ function useStyles() {
       width: width > 400 ? 344 : 320,
       height: width > 400 ? 100 : 80,
       flexDirection: 'row',
-      // justifyContent: 'center',
       alignItems: 'center',
       borderRadius: 30,
       marginBottom: 15,
@@ -214,9 +214,8 @@ function useStyles() {
       alignItems: 'center',
     },
     dollarbank: {
-      // marginTop:31
-      marginLeft: 32,
-      marginRight: 25,
+      marginRight: width > 400 ? 25 : 20,
+      marginLeft: width > 400 ? 32 : 28,
     },
     circle_bank: {
       marginTop: 20,
@@ -231,28 +230,28 @@ function useStyles() {
       alignItems: 'center',
     },
     bankLink: {
-      fontSize: width > 400 ? 18 : 12,
+      fontSize: width > 400 ? 18 : 16,
       fontFamily: FONT_FAMILY.interSemiBold,
       width: '70%',
-      fontWeight:"600"
+      fontWeight: '600',
     },
     othertext_contents: {
       fontSize: width > 400 ? 12 : 10,
       fontFamily: FONT_FAMILY.interMedium,
       marginRight: 50,
       marginTop: 4,
-      fontWeight:"500"
+      fontWeight: '500',
     },
     circletck: {
       marginRight: 20,
     },
     Next_btn: {
-      width: width > 400 ? 350 : 250,
+      width: width > 400 ? 350 : 280,
       borderWidth: 1,
       borderColor: COLOR.green,
       borderRadius: 40,
       paddingHorizontal: width > 400 ? 10 : 5,
-      paddingVertical: width > 400 ? 20 : 5,
+      paddingVertical: width > 400 ? 20 : 15,
 
       justifyContent: 'center',
       alignItems: 'center',
@@ -279,7 +278,7 @@ function useStyles() {
 
     billText: {
       color: COLOR.white,
-      fontSize: width > 400 ? 18 : 14,
+      fontSize: width > 400 ? 18 : 18,
       fontFamily: FONT_FAMILY.interSemiBold,
     },
 

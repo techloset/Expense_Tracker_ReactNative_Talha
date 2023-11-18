@@ -48,7 +48,7 @@ const IncomeScreen = ({navigation}) => {
             <UPSvg />
           </View>
           <View style={styles.income_container}>
-            <Text>Income</Text>
+            <Text style={styles.incomeText}>Income</Text>
           </View>
           <Text style={styles.value}>$ 850.00</Text>
         </View>
@@ -119,12 +119,11 @@ function useStyles() {
       borderTopRightRadius: 30,
     },
     up_container: {
-      width: width > 400 ? 80 : 50,
-      height: width > 400 ? 80 : 50,
+      width: width > 400 ? 80 : 70,
+      height: width > 400 ? 80 : 70,
       backgroundColor: COLOR.LightWhite,
       borderRadius: 40,
       marginTop: 25,
-      flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
     },
@@ -149,16 +148,24 @@ function useStyles() {
       fontFamily: FONT_FAMILY.interMedium,
       fontSize: 14,
     },
+    incomeText: {
+      color: COLOR.green,
+      fontFamily: FONT_FAMILY.interMedium,
+      fontSize: width > 400 ? 14 : 12,
+      fontWeight: '500',
+    },
     value: {
       color: COLOR.black,
       fontFamily: FONT_FAMILY.interSemiBold,
-      fontSize: width > 400 ? 24 : 17,
+      fontSize: width > 400 ? 24 : 20,
       marginTop: 8,
+      fontWeight: '600',
     },
     tansiototext: {
-      fontSize: width > 400 ? 18 : 14,
+      fontSize: width > 400 ? 18 : 16,
       fontFamily: FONT_FAMILY.interMedium,
       color: COLOR.black,
+      fontWeight: '500',
     },
     indivdial_contianer: {
       flexDirection: 'row',
@@ -168,8 +175,9 @@ function useStyles() {
     },
     container_text: {
       color: COLOR.SecondaryGrey,
-      fontSize: width > 400 ? 16 : 12,
+      fontSize: width > 400 ? 16 : 14,
       fontFamily: FONT_FAMILY.interMedium,
+      fontWeight: '500',
     },
     from_container: {
       marginTop: width > 400 ? 12 : 14,
@@ -185,7 +193,8 @@ function useStyles() {
     container_text_other_income: {
       color: COLOR.black,
       fontFamily: FONT_FAMILY.interSemiBold,
-      fontSize: width > 400 ? 16 : 12,
+      fontSize: width > 400 ? 16 : 14,
+      fontWeight: '500',
     },
     container_text_total: {
       fontFamily: FONT_FAMILY.interSemiBold,
@@ -206,12 +215,12 @@ function useStyles() {
       marginBottom: width > 400 ? 8 : 0,
     },
     Next_btn: {
-      width: width > 400 ? 350 : 250,
+      width: width > 400 ? 350 : 280,
       borderWidth: 1,
       borderColor: COLOR.green,
       borderRadius: 40,
       paddingHorizontal: width > 400 ? 10 : 8,
-      paddingVertical: width > 400 ? 20 : 12,
+      paddingVertical: width > 400 ? 20 : 15,
       marginTop: width > 400 ? 40 : 30,
       alignItems: 'center',
     },
@@ -235,7 +244,7 @@ function useStyles() {
     },
     billPaymet: {
       color: COLOR.white,
-      fontSize: width > 400 ? 18 : 14,
+      fontSize: width > 400 ? 18 : 16,
       fontFamily: FONT_FAMILY.interSemiBold,
     },
     notification: {

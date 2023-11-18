@@ -72,7 +72,7 @@ function useStyles() {
 
     billText: {
       color: COLOR.white,
-      fontSize: width > 400 ? 18 : 14,
+      fontSize: width > 400 ? 18 : 18,
       fontFamily: FONT_FAMILY.interSemiBold,
       fontWeight:"600"
     },

@@ -108,12 +108,13 @@ function useStyles() {
       marginTop: width > 400 ? 30 : 20,
     },
     youtubeText: {
-      fontSize: width > 400 ? 20 : 14,
+      fontSize: width > 400 ? 20 : 16,
       fontFamily: FONT_FAMILY.interRegular,
       color: COLOR.black,
       marginHorizontal: 58,
       textAlign: 'center',
       width: width > 400 ? 315 : 255,
+      fontWeight:"400"
     },
 
     below_conatent: {
@@ -133,28 +134,31 @@ function useStyles() {
       color: COLOR.SecondaryGrey,
       fontSize: width > 400 ? 16 : 14,
       fontFamily: FONT_FAMILY.interMedium,
+      fontWeight:"500"
     },
     TotalText: {
       color: COLOR.SecondaryGrey,
       fontSize: width > 400 ? 16 : 14,
       fontFamily: FONT_FAMILY.interSemiBold,
+      fontWeight:"600"
     },
     priceFeeValue: {
       color: COLOR.black,
       fontSize: width > 400 ? 16 : 14,
       fontFamily: FONT_FAMILY.interMedium,
+      fontWeight:"500"
     },
     Totalvalue: {
       color: COLOR.black,
       fontSize: width > 400 ? 16 : 14,
-      fontFamily: FONT_FAMILY.interSemiBold,
+      fontFamily: FONT_FAMILY.interBold,
     },
     priceText: {
       marginBottom: 12,
     },
     bttn: {
       width: width > 400 ? 358 : '85%',
-      height: width > 400 ? 60 : 45,
+      height: width > 400 ? 60 : 50,
       backgroundColor: COLOR.secondary,
       borderRadius: 40,
       paddingHorizontal: 20,
@@ -167,7 +171,7 @@ function useStyles() {
     },
     bttnText: {
       color: COLOR.white,
-      fontSize: width > 400 ? 18 : 14,
+      fontSize: width > 400 ? 18 : 16,
       fontFamily: FONT_FAMILY.interSemiBold,
     },
 
@@ -198,7 +202,7 @@ function useStyles() {
     },
     billText: {
       color: COLOR.white,
-      fontSize: width > 400 ? 18 : 14,
+      fontSize: width > 400 ? 18 : 18,
       fontFamily: FONT_FAMILY.interSemiBold,
     },
   });

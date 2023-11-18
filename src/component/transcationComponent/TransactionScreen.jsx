@@ -123,7 +123,7 @@ function useStyles() {
     textt: {
       fontFamily: FONT_FAMILY.interSemiBold,
       color: COLOR.SecondaryGrey,
-      fontSize: width > 400 ? 14 : 10,
+      fontSize: width > 400 ? 14 : 12,
       fontWeight: '600',
     },
   });

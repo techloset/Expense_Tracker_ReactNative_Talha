@@ -149,17 +149,17 @@ function useStyles() {
     },
 
     youtubeText: {
-      fontSize: width > 400 ? 18 : 14,
+      fontSize: width > 400 ? 18 : 16,
       fontFamily: FONT_FAMILY.interSemiBold,
       color: COLOR.black,
     },
     billText: {
       color: COLOR.white,
-      fontSize: width > 400 ? 18 : 14,
+      fontSize: width > 400 ? 18 : 18,
       fontFamily: FONT_FAMILY.interSemiBold,
     },
     youtubeText_below: {
-      fontSize: width > 400 ? 14 : 12,
+      fontSize: width > 400 ? 14 : 14,
       fontFamily: FONT_FAMILY.interRegular,
       color: COLOR.SecondaryGrey,
     },
@@ -173,12 +173,12 @@ function useStyles() {
       marginVertical: width > 400 ? 20 : 15,
     },
     priceFeeConatiner: {
-      marginTop: width > 400 ? 43 : 20,
+      marginTop: width > 400 ? 43 : 43,
       marginHorizontal: 30,
     },
     priceFeeText: {
       color: COLOR.SecondaryGrey,
-      fontSize: width > 400 ? 16 : 14,
+      fontSize: width > 400 ? 16 : 16,
       fontFamily: FONT_FAMILY.interMedium,
     },
     TotalText: {
@@ -200,13 +200,12 @@ function useStyles() {
       marginBottom: 12,
     },
     card_container: {
-      backgroundColor: COLOR.lightGreen,
+      backgroundColor: COLOR.shadeGray,
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
-      borderRadius: 20,
-
       marginHorizontal: 35,
+      borderRadius:20
     },
     circle_bank: {
       marginTop: 15,
@@ -221,12 +220,12 @@ function useStyles() {
       alignItems: 'center',
     },
     bankLink: {
-      fontSize: width > 400 ? 16 : 12,
+      fontSize: width > 400 ? 16 : 14,
       color: COLOR.green,
       fontFamily: FONT_FAMILY.interSemiBold,
     },
     paypalText: {
-      fontSize: width > 400 ? 16 : 12,
+      fontSize: width > 400 ? 16 : 14,
       color: COLOR.gray,
       fontFamily: FONT_FAMILY.interSemiBold,
     },
@@ -251,7 +250,7 @@ function useStyles() {
       marginTop: 15,
     },
     selectMethod: {
-      marginTop: width > 400 ? 42 : 25,
+      marginTop: width > 400 ? 42 : 35,
       marginBottom: 20,
       marginLeft: 30,
     },
@@ -262,7 +261,7 @@ function useStyles() {
     },
     bttn: {
       width: width > 400 ? 358 : '85%',
-      height: width > 400 ? 60 : 45,
+      height: width > 400 ? 60 : 50,
       backgroundColor: COLOR.secondary,
       borderRadius: 40,
       paddingHorizontal: 20,
@@ -270,11 +269,11 @@ function useStyles() {
       justifyContent: 'center',
       alignItems: 'center',
       marginHorizontal: 28,
-      marginTop: width > 400 ? 30 : 15,
+      marginTop: width > 400 ? 30 : 25,
     },
     bttnText: {
       color: COLOR.white,
-      fontSize: width > 400 ? 18 : 14,
+      fontSize: width > 400 ? 18 : 16,
       fontFamily: FONT_FAMILY.interSemiBold,
     },
 

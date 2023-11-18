@@ -114,14 +114,14 @@ function useStyles() {
     },
 
     UpWorkText: {
-      fontSize: width > 400 ? 16 : 12,
+      fontSize: width > 400 ? 16 : 14,
       fontFamily: FONT_FAMILY.interMedium,
       fontWeight: '500',
       color: COLOR.black,
     },
     todayText: {
       marginTop: width > 400 ? 6 : 0,
-      fontSize: width > 400 ? 13 : 10,
+      fontSize: width > 400 ? 13 : 11,
       fontFamily: FONT_FAMILY.interRegular,
       fontWeight: '400',
     },
