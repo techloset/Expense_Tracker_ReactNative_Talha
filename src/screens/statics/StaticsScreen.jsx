@@ -27,7 +27,7 @@ export const StaticsScreen = ({navigation}) => {
   const [isFocus, setIsFocus] = useState(false);
   const styles = useStyles();
   return (
-    <View style={{}}>
+    <View style={{backgroundColor: COLOR.white, height: '100%'}}>
       <View style={styles.staticContainer}>
         <View style={{height: 28, width: 28}}>
           <LessThanBlack />
@@ -39,17 +39,21 @@ export const StaticsScreen = ({navigation}) => {
       </View>
 
       <View style={styles.daysConatiner}>
-        <Text>Day</Text>
-        <Text>Week</Text>
-        <Text>Month</Text>
-        <Text>Year</Text>
+        <TouchableOpacity>
+          <View style={styles.dayContainer}>
+            <Text style={styles.dayText}>Day</Text>
+          </View>
+        </TouchableOpacity>
+        <Text style={styles.staticsText}>Week</Text>
+        <Text style={styles.staticsText}>Month</Text>
+        <Text style={styles.staticsText}>Year</Text>
       </View>
 
       <View style={[styles.droppdown, styles.dropDowwn]}>
         <Dropdown
           style={[
             styles.dropdown,
-            isFocus && {borderColor: COLOR.blue},
+            isFocus && {borderColor: COLOR.black},
             styles.width,
           ]}
           placeholderStyle={styles.placeholderStyle}
@@ -119,7 +123,7 @@ export const StaticsScreen = ({navigation}) => {
           </View>
         </View>
 
-        <View style={[styles.card_container, styles.car_container_bgGray]}>
+        <View style={[styles.card_container]}>
           <View style={{flexDirection: 'row'}}>
             <View style={styles.circle_bank}>
               <Starbucks />
@@ -196,7 +200,8 @@ function useStyles() {
     text1: {
       color: COLOR.black,
       fontFamily: FONT_FAMILY.interSemiBold,
-      fontSize: 18,
+      fontSize: width > 400 ? 18 : 14,
+      fontWeight: '600',
     },
     staticContainer: {
       flexDirection: 'row',
@@ -222,8 +227,7 @@ function useStyles() {
     },
     car_container_bgGreen: {
       backgroundColor: COLOR.darkerGreen,
-      shadowColor: COLOR.darkerGreen,
-      elevation: 24,
+      elevation: 5,
     },
     cahrtt: {
       marginLeft: 10,
@@ -238,14 +242,13 @@ function useStyles() {
       color: COLOR.black,
       fontFamily: FONT_FAMILY.interMedium,
       fontSize: width > 400 ? 16 : 14,
-
       marginRight: width > 400 ? 136 : 1,
+      fontWeight: '500',
     },
     othertext_contents: {
       color: COLOR.SecondaryGrey,
-      fontSize: 13,
       fontFamily: FONT_FAMILY.interRegular,
-
+      fontWeight: '500',
       marginTop: 4,
       fontSize: width > 400 ? 13 : 8,
       marginRight: width > 400 ? 50 : 1,
@@ -257,6 +260,7 @@ function useStyles() {
       fontSize: width > 400 ? 18 : 12,
       fontFamily: FONT_FAMILY.interSemiBold,
       color: COLOR.red,
+      fontWeight:"600"
     },
     circletcktext_white: {
       color: COLOR.white,
@@ -266,11 +270,32 @@ function useStyles() {
       marginHorizontal: 32,
       justifyContent: 'space-between',
       marginTop: 40,
+      alignItems: 'center',
+    },
+    staticsText: {
+      fontSize: width > 400 ? 13 : 8,
+      fontWeight: '400',
+      fontFamily: FONT_FAMILY.interRegular,
+      color: COLOR.SecondaryGrey,
+    },
+    dayContainer: {
+      backgroundColor: COLOR.green,
+      width: 90,
+      height: 40,
+      justifyContent: 'center',
+      borderRadius: 10,
+    },
+    dayText: {
+      fontSize: width > 400 ? 13 : 8,
+      fontWeight: '400',
+      fontFamily: FONT_FAMILY.interRegular,
+      color: COLOR.white,
+      textAlign: 'center',
     },
 
     dropdown: {
       height: 50,
-      borderColor: COLOR.gray,
+      borderColor: COLOR.black,
       borderWidth: 0.5,
       borderRadius: 8,
       paddingHorizontal: 8,
@@ -289,9 +314,11 @@ function useStyles() {
     },
     placeholderStyle: {
       fontSize: 16,
+      color: COLOR.black,
     },
     selectedTextStyle: {
       fontSize: 16,
+      color: COLOR.black,
     },
     iconStyle: {
       width: 20,

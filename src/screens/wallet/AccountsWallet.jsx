@@ -74,7 +74,7 @@ const AccountsWallet = ({navigation}) => {
                   ]}>
                   Connect your bank{' '}
                 </Text>
-                <Text style={styles.othertext_contents}>
+                <Text style={[styles.othertext_contents,styles.HomeConataienrColortext]}>
                   account to deposit & fund{' '}
                 </Text>
               </View>
@@ -85,7 +85,7 @@ const AccountsWallet = ({navigation}) => {
           </View>
 
           <View style={[styles.card_container, styles.otherTwoColorCard]}>
-            <View style={styles.circle_bank}>
+            <View style={styles.dollarbank}>
               <Dollar />
             </View>
             <View>
@@ -103,28 +103,26 @@ const AccountsWallet = ({navigation}) => {
                 </Text>
               </View>
             </View>
-            <View style={styles.circletck}>
-              <CheckCircle />
-            </View>
           </View>
 
           <View style={[styles.card_container, styles.otherTwoColorCard]}>
-            <View style={styles.circle_bank}>
+            <View style={styles.dollarbank}>
               <PaypaLogo />
             </View>
             <View>
-              <Text style={[styles.bankLink, styles.otherTwoColorCard]}>
+              <Text style={[styles.bankLink, styles.otherTwoColorCardText]}>
+                {' '}
                 Paypal
               </Text>
-              <View style={styles.othertext_content}>
+              <View>
                 <Text
-                  style={[styles.othertext_contents, styles.otherTwoColorCard]}>
-                  Connect you paypal account{' '}
+                  style={[
+                    styles.othertext_contents,
+                    styles.otherTwoColorCardText,
+                  ]}>
+                  Connect you paypal account
                 </Text>
               </View>
-            </View>
-            <View style={styles.circletck}>
-              <CheckCircle />
             </View>
           </View>
 
@@ -179,7 +177,7 @@ function useStyles() {
       borderRadius: 40,
     },
     upcoming_bill_btn: {
-      backgroundColor: COLOR.light,
+      // backgroundColor: COLOR.light,
       borderRadius: 40,
     },
     textt: {
@@ -197,9 +195,9 @@ function useStyles() {
     },
     card_container: {
       width: width > 400 ? 344 : 320,
-
+      height: width > 400 ? 100 : 80,
       flexDirection: 'row',
-      justifyContent: 'center',
+      // justifyContent: 'center',
       alignItems: 'center',
       borderRadius: 30,
       marginBottom: 15,
@@ -215,6 +213,11 @@ function useStyles() {
       justifyContent: 'center',
       alignItems: 'center',
     },
+    dollarbank: {
+      // marginTop:31
+      marginLeft: 32,
+      marginRight: 25,
+    },
     circle_bank: {
       marginTop: 20,
       marginBottom: 20,
@@ -229,16 +232,16 @@ function useStyles() {
     },
     bankLink: {
       fontSize: width > 400 ? 18 : 12,
-
       fontFamily: FONT_FAMILY.interSemiBold,
-
       width: '70%',
+      fontWeight:"600"
     },
     othertext_contents: {
       fontSize: width > 400 ? 12 : 10,
       fontFamily: FONT_FAMILY.interMedium,
       marginRight: 50,
       marginTop: 4,
+      fontWeight:"500"
     },
     circletck: {
       marginRight: 20,

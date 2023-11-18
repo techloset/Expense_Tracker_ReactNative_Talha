@@ -17,7 +17,7 @@ const SocialComponent = () => {
   const styles = useStyles();
   return (
     <View>
-      <ScrollView style={{height: 264}}>
+      <ScrollView style={{height: 284}}>
         <View style={styles.up_Maincontainer}>
           <View style={styles.up_Innercontainer}>
             <View style={styles.imge_container}>
@@ -102,8 +102,8 @@ function useStyles() {
 
     imge_container: {
       backgroundColor: COLOR.transImageClr,
-      width: width > 400 ? 50 : 35,
-      height: width > 400 ? 50 : 35,
+      // width: width > 400 ? 50 : 35,
+      // height: width > 400 ? 50 : 35,
       padding: width > 400 ? 10 : 8,
       alignItems: 'center',
       borderRadius: 8,
@@ -123,11 +123,13 @@ function useStyles() {
       marginTop: width > 400 ? 6 : 0,
       fontSize: width > 400 ? 13 : 10,
       fontFamily: FONT_FAMILY.interRegular,
+      fontWeight: '400',
     },
     upwork_income: {
       fontSize: width > 400 ? 18 : 14,
       fontFamily: FONT_FAMILY.interSemiBold,
       color: COLOR.shadeGreen,
+      fontWeight: '600',
     },
     morered: {
       color: COLOR.red,

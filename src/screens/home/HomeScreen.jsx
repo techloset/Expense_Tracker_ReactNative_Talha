@@ -146,6 +146,7 @@ function useStyles() {
       fontSize: width > 400 ? 18 : 14,
       fontFamily: FONT_FAMILY.interSemiBold,
       color: COLOR.black,
+      fontWeight:"600"
     },
     seeAll: {
       fontSize: width > 400 ? 16 : 13,
@@ -201,12 +202,14 @@ function useStyles() {
       marginLeft: 20,
       marginBottom: 8,
       fontFamily: FONT_FAMILY.interSemiBold,
+      fontWeight:"600"
     },
     rupee: {
       marginLeft: 20,
       fontSize: width > 400 ? 30 : 15,
       color: COLOR.white,
       fontFamily: FONT_FAMILY.interBold,
+      fontWeight:"700"
     },
     dot: {
       marginTop: 35,
@@ -245,6 +248,7 @@ function useStyles() {
       color: COLOR.white,
       marginTop: 6,
       fontFamily: FONT_FAMILY.interSemiBold,
+      fontWeight:"600"
     },
     income_dollar: {
       marginLeft: 20,

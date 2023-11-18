@@ -54,6 +54,7 @@ function useStyles() {
       marginTop: 165,
       borderTopLeftRadius: 30,
       borderTopRightRadius: 30,
+      // height:"full"
     },
 
     eelispse: {
@@ -73,6 +74,7 @@ function useStyles() {
       color: COLOR.white,
       fontSize: width > 400 ? 18 : 14,
       fontFamily: FONT_FAMILY.interSemiBold,
+      fontWeight:"600"
     },
 
     notification: {

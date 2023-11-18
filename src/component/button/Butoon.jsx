@@ -17,7 +17,7 @@ const Butoon = ({navigation}) => {
       onPress={() => navigation.navigate('TabNavigation')}>
       <View style={styles.gradient}>
         <Pressable>
-          <Text style={styles.buttonText}>Click Me</Text>
+          <Text style={styles.buttonText}>Get Started</Text>
         </Pressable>
       </View>
     </TouchableOpacity>

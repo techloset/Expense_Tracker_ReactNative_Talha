@@ -31,13 +31,17 @@ const OnBoardingScreen = ({navigation}) => {
         <View style={styles.container2}>
           <Text style={styles.heading}>spend smarter save more</Text>
         </View>
-        <View style={{marginHorizontal: 20}}>
+        <View
+          style={{
+            marginHorizontal: 20,
+            backgroundColor: 'rgba(255, 255, 255, 1)',
+          }}>
           <Butoon navigation={navigation} />
         </View>
       </View>
       <View style={{alignItems: 'center'}}>
         <TouchableOpacity style={styles.text}>
-          <Text>Already have an account?</Text>
+          <Text style={styles.textAccount}>Already have an account? </Text>
           <Text style={styles.logInText}>Log In</Text>
         </TouchableOpacity>
       </View>
@@ -67,13 +71,18 @@ function useStyles() {
       color: COLOR.green,
       fontFamily: FONT_FAMILY.interBold,
       textAlign: 'center',
+      fontWeight: '700',
     },
     text: {
       flexDirection: 'row',
-      fontSize: 14,
-      fontWeight: '400',
+
       marginTop: width > 400 ? 20 : 10,
       fontFamily: FONT_FAMILY.interRegular,
+    },
+    textAccount: {
+      fontSize: 14,
+      fontWeight: '400',
+      color: COLOR.shahdedGray,
     },
     logInText: {
       color: COLOR.green,

@@ -74,6 +74,7 @@ function useStyles() {
       color: COLOR.white,
       fontSize: width > 400 ? 18 : 14,
       fontFamily: FONT_FAMILY.interSemiBold,
+      fontWeight: '600',
     },
     notification: {
       width: 40,

@@ -23,6 +23,7 @@ export const COLOR = {
   LightShadowGrey: '#AAAAAA',
   DimGrey: '#ffffff26',
   darkerGreen: '#29756F',
+  shahdedGray: '#444444',
   LightWhite: '#fafafa',
   borderColor: '#DDDDDD',
   shadeGray: '#4388831a',
@@ -33,8 +34,8 @@ export const COLOR = {
 };
 
 export const FONT_FAMILY = {
-  interSemiBold: 'Inter-SemiBold',
-  interBold: 'Inter-Bold',
-  interMedium: 'Inter-Medium',
-  interRegular: 'Inter-Regular',
+  interSemiBold: 'InterSemiBold',
+  interBold: 'InterBold',
+  interMedium: 'InterMedium',
+  interRegular: 'InterRegular',
 };

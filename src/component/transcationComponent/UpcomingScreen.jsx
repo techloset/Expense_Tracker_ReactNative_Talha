@@ -70,12 +70,14 @@ function useStyles() {
       fontSize: width > 400 ? 16 : 12,
       fontFamily: FONT_FAMILY.interRegular,
       color: COLOR.SecondaryGrey,
+      fontWeight: '400',
     },
     valuee: {
       fontFamily: FONT_FAMILY.interBold,
       fontSize: width > 400 ? 30 : 18,
       color: COLOR.black,
       marginTop: width > 400 ? 12 : 12,
+      fontWeight: '700',
     },
     frame_container: {
       flexDirection: 'row',
@@ -106,7 +108,7 @@ function useStyles() {
     both_btn: {
       backgroundColor: COLOR.white,
       height: width > 400 ? 40 : 30,
-      width: 180,
+      width:  width > 400 ? 180 : 150,
       justifyContent: 'center',
       alignItems: 'center',
     },
@@ -122,6 +124,7 @@ function useStyles() {
       fontFamily: FONT_FAMILY.interSemiBold,
       color: COLOR.SecondaryGrey,
       fontSize: width > 400 ? 14 : 10,
+      fontWeight: '600',
     },
   });
 }

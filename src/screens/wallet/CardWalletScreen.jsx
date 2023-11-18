@@ -201,6 +201,7 @@ const styles = StyleSheet.create({
     color: COLOR.white,
     fontSize: 18,
     fontFamily: FONT_FAMILY.interSemiBold,
+    fontWeight:"600"
   },
 
   containertText: {
@@ -212,12 +213,14 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: FONT_FAMILY.interMedium,
     marginTop: 28,
+    fontWeight:"500"
   },
   textx2: {
     color: COLOR.SecondaryGrey,
     fontSize: 13,
     fontFamily: FONT_FAMILY.interRegular,
     width: '80%',
+    fontWeight:"400"
   },
   input2: {
     height: 40,

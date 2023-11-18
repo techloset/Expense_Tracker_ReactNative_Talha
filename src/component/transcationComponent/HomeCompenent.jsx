@@ -187,6 +187,7 @@ function useStyles() {
       fontFamily: FONT_FAMILY.interMedium,
       color: COLOR.black,
       fontSize: 16,
+      fontWeight:"500"
     },
     todayText: {
       marginTop: width > 400 ? 6 : 0,
@@ -197,6 +198,7 @@ function useStyles() {
       fontSize: width > 400 ? 18 : 14,
       fontFamily: FONT_FAMILY.interSemiBold,
       color: COLOR.parrot,
+      fontWeight:"600"
     },
     upworkIncomeRed: {
       color: COLOR.red,

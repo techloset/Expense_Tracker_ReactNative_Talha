@@ -113,8 +113,9 @@ function useStyles() {
       backgroundColor: COLOR.transImageClr,
       width: width > 400 ? 50 : 35,
       height: width > 400 ? 50 : 35,
-      padding: width > 400 ? 10 : 8,
+      // padding: width > 400 ? 10 : 8,
       alignItems: 'center',
+      justifyContent: 'center',
       borderRadius: 8,
     },
     upwork_image: {
@@ -131,6 +132,7 @@ function useStyles() {
       marginTop: width > 400 ? 6 : 0,
       fontSize: width > 400 ? 13 : 10,
       fontFamily: FONT_FAMILY.interRegular,
+      fontWeight: '400',
     },
 
     girl_Maincontainer: {
@@ -141,9 +143,9 @@ function useStyles() {
       alignItems: 'center',
     },
     girl_image: {
-      height: width > 400 ? 30 : 20,
-      justifyContent: 'center',
-      alignItems: 'center',
+      // height: width > 400 ? 30 : 20,
+      // justifyContent: 'center',
+      // alignItems: 'center',
     },
 
     paypal_Maincontainer: {
@@ -154,12 +156,6 @@ function useStyles() {
       alignItems: 'center',
     },
 
-    paypal_image: {
-      width: 26,
-      height: width > 400 ? 31 : 20,
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
     youtube_Maincontainer: {
       flexDirection: 'row',
       justifyContent: 'space-between',
@@ -167,15 +163,21 @@ function useStyles() {
       marginHorizontal: 22,
       alignItems: 'center',
     },
+    paypal_image: {
+      // width: 26,
+      // height: width > 400 ? 31 : 20,
+      // justifyContent: 'center',
+      // alignItems: 'center',
+    },
     youtube_image: {
-      width: width > 400 ? 35 : 24,
-      height: width > 400 ? 35 : 20,
-      justifyContent: 'center',
-      alignItems: 'center',
+      // width: width > 400 ? 35 : 24,
+      // height: width > 400 ? 35 : 20,
+      // justifyContent: 'center',
+      // alignItems: 'center',
     },
 
     upwork_income: {
-      fontSize: width > 400 ? 18 : 14,
+      fontSize: width > 400 ? 16 : 14,
       fontFamily: FONT_FAMILY.interMedium,
       fontWeight: '500',
       color: COLOR.green,
