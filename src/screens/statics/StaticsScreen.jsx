@@ -5,6 +5,7 @@ import {
   View,
   useWindowDimensions,
   TouchableOpacity,
+  ScrollView
 } from 'react-native';
 import {useState} from 'react';
 import {Dropdown} from 'react-native-element-dropdown';
@@ -113,7 +114,8 @@ export const StaticsScreen = ({navigation}) => {
         />
       </View>
 
-      <View style={styles.papacontainer}>
+      <ScrollView>
+        <View style={styles.papacontainer}>
         <View style={styles.topspenddContainer}>
           <View>
             <Text style={styles.text1}>Top Spending</Text>
@@ -187,6 +189,7 @@ export const StaticsScreen = ({navigation}) => {
           </View>
         </View>
       </View>
+      </ScrollView>
     </View>
   );
 };
@@ -206,7 +209,7 @@ function useStyles() {
     staticContainer: {
       flexDirection: 'row',
       justifyContent: 'space-between',
-      marginTop: 81,
+      marginTop:  width > 400 ? 81 : 60,
       marginHorizontal: 24,
     },
     topspenddContainer: {

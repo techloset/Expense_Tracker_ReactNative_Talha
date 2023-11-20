@@ -16,8 +16,8 @@ import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 const SocialComponent = ({navigation}) => {
   const styles = useStyles();
   return (
-    <View style={{marginBottom: 100}}>
-      <ScrollView style={{height: 264}}>
+    <ScrollView style={{height: 314}}>
+      <View style={{marginBottom: 100}}>
         <View style={styles.up_Maincontainer}>
           <View style={styles.up_Innercontainer}>
             <View style={styles.imge_container}>
@@ -89,8 +89,8 @@ const SocialComponent = ({navigation}) => {
             <Text style={styles.upwork_income}>Pay</Text>
           </View>
         </View>
-      </ScrollView>
-    </View>
+      </View>
+    </ScrollView>
   );
 };
 

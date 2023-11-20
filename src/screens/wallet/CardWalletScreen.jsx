@@ -7,6 +7,7 @@ import {
   KeyboardAvoidingView,
   useWindowDimensions,
   ImageBackground,
+  ScrollView,
 } from 'react-native';
 import React from 'react';
 import VisaCard from '../../assets/Images/visaCard.svg';

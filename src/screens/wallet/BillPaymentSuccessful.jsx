@@ -140,22 +140,22 @@ function useStyles() {
       height: width > 400 ? 80 : 60,
       backgroundColor: COLOR.LightWhite,
       borderRadius: 40,
-      marginTop: width > 400 ? 20 : 15,
+      marginTop: width > 400 ? 20 : 10,
       justifyContent: 'center',
       alignItems: 'center',
     },
     income_container: {
-      marginTop: width > 400 ? 10 : 8,
+      marginTop: width > 400 ? 10 : 5,
     },
     textt: {
       color: COLOR.green,
       fontFamily: FONT_FAMILY.interSemiBold,
-      fontSize: width > 400 ? 22 : 20,
+      fontSize: width > 400 ? 22 : 18,
     },
     value: {
       color: COLOR.SecondaryGrey,
       fontFamily: FONT_FAMILY.interMedium,
-      fontSize: width > 400 ? 16 : 14,
+      fontSize: width > 400 ? 16 : 12,
     },
     indivdial_contianer: {
       flexDirection: 'row',
@@ -165,44 +165,27 @@ function useStyles() {
     },
     container_text: {
       color: COLOR.SecondaryGrey,
-      fontSize: width > 400 ? 16 : 14,
+      fontSize: width > 400 ? 16 : 12,
       fontFamily: FONT_FAMILY.interMedium,
     },
     from_container: {
-      marginTop: width > 400 ? 12 : 14,
-    },
-    other_container: {
-      marginTop: 12,
-    },
-    container_text_other: {
-      color: COLOR.black,
-      fontFamily: FONT_FAMILY.interMedium,
-      fontSize: width > 400 ? 16 : 14,
+      marginTop: width > 400 ? 12 : 12,
     },
     container_text_other_income: {
       color: COLOR.black,
       fontFamily: FONT_FAMILY.interSemiBold,
-      fontSize: width > 400 ? 16 : 14,
+      fontSize: width > 400 ? 16 : 12,
     },
-    container_text_total: {
-      fontFamily: FONT_FAMILY.interSemiBold,
-      fontSize: width > 400 ? 16 : 14,
-      color: COLOR.SecondaryGrey,
-    },
+    
     transtionText: {
-      fontSize: width > 400 ? 18 : 16,
+      fontSize: width > 400 ? 18 : 14,
       fontFamily: FONT_FAMILY.interMedium,
       color: COLOR.black,
     },
     transtionContainer_main: {
-      marginTop: width > 400 ? 32 : 28,
+      marginTop: width > 400 ? 32 : 25,
     },
-    container_text_other_total: {
-      fontFamily: FONT_FAMILY.interSemiBold,
-      fontSize: width > 400 ? 16 : 12,
-      color: COLOR.black,
-      fontWeight: '600',
-    },
+    
     line1: {
       borderTopWidth: 1,
       borderTopColor: COLOR.borderColor,

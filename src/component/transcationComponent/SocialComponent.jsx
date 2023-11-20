@@ -16,8 +16,8 @@ import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 const SocialComponent = () => {
   const styles = useStyles();
   return (
-    <View>
-      <ScrollView style={{height: 284}}>
+    <ScrollView style={{height: 284}}>
+      <View>
         <View style={styles.up_Maincontainer}>
           <View style={styles.up_Innercontainer}>
             <View style={styles.imge_container}>
@@ -79,8 +79,8 @@ const SocialComponent = () => {
             <Text style={[styles.upwork_income, styles.morered]}>-$11.99</Text>
           </View>
         </View>
-      </ScrollView>
-    </View>
+      </View>
+    </ScrollView>
   );
 };
 

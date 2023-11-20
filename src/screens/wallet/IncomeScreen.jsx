@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   useWindowDimensions,
   ImageBackground,
+  ScrollView,
 } from 'react-native';
 import React from 'react';
 
@@ -17,6 +18,7 @@ import LessThan from '../../assets/Images/left.svg';
 import IncomeData from '../../lib/const/Income.json';
 import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 import Home_background from '../../assets/Images/Home_background.png';
+// import {ScrollView} from 'react-native-gesture-handler';
 
 const IncomeScreen = ({navigation}) => {
   const styles = useStyles();
@@ -27,15 +29,8 @@ const IncomeScreen = ({navigation}) => {
         <View style={{position: 'absolute'}}>
           <Ellipse />
         </View>
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            marginTop: 78,
-            marginHorizontal: 24,
-          }}>
-          <View style={{}}>
+        <View style={styles.greenContainer}>
+          <View>
             <TouchableOpacity onPress={() => navigation.push('AccountsWallet')}>
               <View>
                 <LessThan />
@@ -123,6 +118,13 @@ function useStyles() {
   const {width} = useWindowDimensions();
 
   return StyleSheet.create({
+    greenContainer: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      marginTop:  width > 400 ? 78 : 48,
+      marginHorizontal: 24,
+    },
     imageBackground: {
       height: width > 400 ? 287 : 287,
     },
@@ -130,7 +132,7 @@ function useStyles() {
       position: 'absolute',
       backgroundColor: COLOR.white,
       width: '100%',
-      marginTop: 155,
+      marginTop: width > 400 ? 155 : 110,
       borderTopLeftRadius: 30,
       borderTopRightRadius: 30,
     },
@@ -139,7 +141,7 @@ function useStyles() {
       height: width > 400 ? 80 : 70,
       backgroundColor: COLOR.LightWhite,
       borderRadius: 40,
-      marginTop: 25,
+      marginTop: width > 400 ? 25 : 15,
       justifyContent: 'center',
       alignItems: 'center',
     },
@@ -148,7 +150,7 @@ function useStyles() {
       height: width > 400 ? 40 : 30,
     },
     tarnstionContaienr: {
-      marginTop: width > 400 ? 37 : 25,
+      marginTop: width > 400 ? 37 : 20,
     },
     income_container: {
       backgroundColor: COLOR.shadeGray,
@@ -157,7 +159,7 @@ function useStyles() {
       padding: 4,
       justifyContent: 'center',
       alignItems: 'center',
-      marginTop: 16,
+      marginTop: width > 400 ? 16 : 10,
     },
     textt: {
       color: COLOR.green,
@@ -173,12 +175,12 @@ function useStyles() {
     value: {
       color: COLOR.black,
       fontFamily: FONT_FAMILY.interSemiBold,
-      fontSize: width > 400 ? 24 : 20,
+      fontSize: width > 400 ? 24 : 18,
       marginTop: 8,
       fontWeight: '600',
     },
     tansiototext: {
-      fontSize: width > 400 ? 18 : 16,
+      fontSize: width > 400 ? 18 : 14,
       fontFamily: FONT_FAMILY.interMedium,
       color: COLOR.black,
       fontWeight: '500',
@@ -191,12 +193,12 @@ function useStyles() {
     },
     container_text: {
       color: COLOR.SecondaryGrey,
-      fontSize: width > 400 ? 16 : 14,
+      fontSize: width > 400 ? 16 : 12,
       fontFamily: FONT_FAMILY.interMedium,
       fontWeight: '500',
     },
     from_container: {
-      marginTop: width > 400 ? 12 : 14,
+      marginTop: width > 400 ? 12 : 10,
     },
     other_container: {
       marginTop: 10,
@@ -209,20 +211,10 @@ function useStyles() {
     container_text_other_income: {
       color: COLOR.black,
       fontFamily: FONT_FAMILY.interSemiBold,
-      fontSize: width > 400 ? 16 : 14,
+      fontSize: width > 400 ? 16 : 12,
       fontWeight: '500',
     },
-    container_text_total: {
-      fontFamily: FONT_FAMILY.interSemiBold,
-      fontSize: width > 400 ? 16 : 12,
-      color: COLOR.SecondaryGrey,
-    },
-    container_text_other_total: {
-      fontFamily: FONT_FAMILY.interSemiBold,
-      fontSize: width > 400 ? 16 : 12,
-      color: COLOR.black,
-      fontWeight: '600',
-    },
+
     line1: {
       borderTopWidth: 1,
       borderTopColor: COLOR.borderColor,
@@ -237,43 +229,13 @@ function useStyles() {
       borderRadius: 40,
       paddingHorizontal: width > 400 ? 10 : 8,
       paddingVertical: width > 400 ? 20 : 15,
-      marginTop: width > 400 ? 40 : 30,
+      marginTop: width > 400 ? 40 : 20,
       alignItems: 'center',
     },
     download: {
       color: COLOR.green,
       fontFamily: FONT_FAMILY.interSemiBold,
       fontSize: width > 400 ? 18 : 12,
-    },
-
-    eelispse: {
-      position: 'absolute',
-    },
-    images_conatiner: {
-      flex: 1,
-      position: 'absolute',
-      width: '100%',
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      marginTop: 78,
-    },
-    billPaymet: {
-      color: COLOR.white,
-      fontSize: width > 400 ? 18 : 16,
-      fontFamily: FONT_FAMILY.interSemiBold,
-    },
-    notification: {
-      width: 40,
-      height: 40,
-      borderRadius: 6.67,
-      padding: 8.33,
-      justifyContent: 'center',
-      alignItems: 'center',
-      marginRight: 24,
-    },
-    lessthen: {
-      marginLeft: 24,
     },
   });
 }

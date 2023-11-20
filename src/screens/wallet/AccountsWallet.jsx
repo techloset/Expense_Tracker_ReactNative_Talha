@@ -270,7 +270,6 @@ function useStyles() {
       borderRadius: 40,
       paddingHorizontal: width > 400 ? 10 : 5,
       paddingVertical: width > 400 ? 20 : 15,
-
       justifyContent: 'center',
       alignItems: 'center',
       marginTop: width > 400 ? 103 : 18,

@@ -4,6 +4,7 @@ import {
   View,
   TouchableOpacity,
   useWindowDimensions,
+  ScrollView
 } from 'react-native';
 import React from 'react';
 import Frame21 from '../../assets/Images/Frame21.svg';
@@ -48,7 +49,10 @@ const TransactionScreen = ({navigation}) => {
           </View>
         </TouchableOpacity>
       </View>
+      <ScrollView>
       <SocialComponent />
+      
+      </ScrollView>
     </View>
   );
 };

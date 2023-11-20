@@ -1,17 +1,17 @@
 import {
+  ImageBackground,
+  SafeAreaView,
   StyleSheet,
   Text,
   View,
-  SafeAreaView,
   useWindowDimensions,
-  ImageBackground,
 } from 'react-native';
-import TransactionScreen from '../../component/transcationComponent/TransactionScreen';
 import Ellipse from '../../assets/Images/Ellipse.svg';
-import Notification from '../../assets/Images/notification.svg';
-import LessThan from '../../assets/Images/left.svg';
-import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 import Home_background from '../../assets/Images/Home_background.png';
+import LessThan from '../../assets/Images/left.svg';
+import Notification from '../../assets/Images/notification.svg';
+import TransactionScreen from '../../component/transcationComponent/TransactionScreen';
+import { COLOR, FONT_FAMILY } from '../../lib/styles/GlobalStyles';
 
 const WalletScreen = ({navigation}) => {
   const styles = useStyles();
@@ -29,7 +29,7 @@ const WalletScreen = ({navigation}) => {
             marginTop: 78,
             marginHorizontal: 24,
           }}>
-          <View style={{}}>
+          <View >
             <LessThan />
           </View>
           <Text

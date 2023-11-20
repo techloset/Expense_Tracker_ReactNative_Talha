@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, ImageBackground, Image} from 'react-native';
+import {StyleSheet, Text, View, ImageBackground, Image,ScrollView} from 'react-native';
 import React from 'react';
 import HomeBackground from '../../assets/Images/Home_background.png';
 import circleGroup from '../../assets/Images/circle_group.png';
@@ -16,15 +16,18 @@ import {COLOR, FONT_FAMILY} from '../../lib/styles/GlobalStyles';
 const ProfileScreen = () => {
   return (
     <View style={{height: 896, backgroundColor: COLOR.white}}>
+      <ScrollView>
       <ImageBackground style={styles.imageBackgrounds} source={HomeBackground}>
         <Image style={styles.CircleBackgrounds} source={circleGroup} />
+
         <View style={styles.profile_images_container}>
-          <Image style={{}} source={LessThan} />
+          <Image source={LessThan} />
           <Text style={styles.textProfile}>Profile</Text>
-          <View style={styles.image_container}>
+          <View>
             <Notification />
           </View>
         </View>
+
         <View style={styles.avtar_container}>
           <View style={styles.avtar}>
             <Image style={styles.woman} source={women} />
@@ -75,6 +78,8 @@ const ProfileScreen = () => {
           <Text style={styles.alltext}>Data and Privacy</Text>
         </View>
       </View>
+
+        </ScrollView>
     </View>
   );
 };
@@ -93,7 +98,6 @@ const styles = StyleSheet.create({
     fontFamily: FONT_FAMILY.interSemiBold,
     fontSize: 18,
     fontWeight: '600',
-    marginRight: 114,
   },
   profile_images_container: {
     flexDirection: 'row',

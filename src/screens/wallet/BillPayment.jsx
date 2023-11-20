@@ -127,12 +127,12 @@ function useStyles() {
       marginTop: width > 400 ? 30 : 20,
     },
     youtubeText: {
-      fontSize: width > 400 ? 20 : 16,
+      fontSize: width > 400 ? 20 : 14,
       fontFamily: FONT_FAMILY.interRegular,
       color: COLOR.black,
       marginHorizontal: 58,
       textAlign: 'center',
-      width: width > 400 ? 315 : 255,
+      width: width > 400 ? 315 : 285,
       fontWeight: '400',
     },
 
