@@ -16,6 +16,7 @@ const HomeCompenent = () => {
   const styles = useStyles();
   return (
     <ScrollView style={styles.scrollConatianer}>
+      
       <View style={styles.up_Maincontainer}>
         <View style={styles.up_Innercontainer}>
           <View style={styles.imge_container}>
