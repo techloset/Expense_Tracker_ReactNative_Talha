@@ -36,7 +36,7 @@ const ProfileScreen = () => {
           <Text style={styles.email_address}>@enjelin_morgeana</Text>
         </View>
       </ImageBackground>
-
+      
       <View style={styles.mainContainer}>
         <View style={styles.parentContainer}>
           <View style={[styles.allImage, styles.inviteImage]}>

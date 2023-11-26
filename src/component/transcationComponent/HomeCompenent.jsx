@@ -16,7 +16,6 @@ const HomeCompenent = () => {
   const styles = useStyles();
   return (
     <ScrollView style={styles.scrollConatianer}>
-      
       <View style={styles.up_Maincontainer}>
         <View style={styles.up_Innercontainer}>
           <View style={styles.imge_container}>
@@ -167,19 +166,19 @@ function useStyles() {
     },
     imge_container: {
       backgroundColor: COLOR.transImageClr,
-      width: width > 400 ? 50 : 35,
-      height: width > 400 ? 50 : 35,
-      padding: width > 400 ? 10 : 8,
-      alignItems: 'center',
+      // width: width > 400 ? 50 : 35,
+      // height: width > 400 ? 50 : 35,
+      padding: width > 400 ? 10 : 10,
+      // alignItems: 'center',
       borderRadius: 8,
     },
     upwork_image: {
-      width: width > 400 ? 34 : 24,
-      height: width > 400 ? 30 : 20,
+      // width: width > 400 ? 34 : 24,
+      // height: width > 400 ? 30 : 20,
     },
     girl_image: {
-      width: width > 400 ? 30 : 24,
-      height: width > 400 ? 30 : 20,
+      // width: width > 400 ? 30 : 24,
+      // height: width > 400 ? 30 : 20,
       borderRadius: 50,
     },
 
@@ -188,20 +187,20 @@ function useStyles() {
       fontFamily: FONT_FAMILY.interMedium,
       color: COLOR.black,
       fontSize: 16,
-      fontWeight:"500"
+      fontWeight: '500',
     },
     todayText: {
       marginTop: width > 400 ? 6 : 0,
       fontSize: width > 400 ? 13 : 10,
       fontFamily: FONT_FAMILY.interRegular,
-      fontWeight:"400",
-      color:COLOR.SecondaryGrey
+      fontWeight: '400',
+      color: COLOR.SecondaryGrey,
     },
     upwork_income: {
       fontSize: width > 400 ? 18 : 14,
       fontFamily: FONT_FAMILY.interSemiBold,
       color: COLOR.parrot,
-      fontWeight:"600"
+      fontWeight: '600',
     },
     upworkIncomeRed: {
       color: COLOR.red,

@@ -22,6 +22,7 @@ import Home_background from '../../assets/Images/Home_background.png';
 const CardWalletScreen = ({navigation}) => {
   const styles = useStyles();
   return (
+    // <ScrollView>
     <KeyboardAvoidingView>
       <View>
         <ImageBackground
@@ -60,39 +61,39 @@ const CardWalletScreen = ({navigation}) => {
         </ImageBackground>
 
         <View style={styles.container}>
-          <View style={styles.butn_type_container}>
-            <TouchableOpacity>
-              <View style={[styles.both_btn, styles.transition_btn]}>
-                <Text style={styles.textt}>Cards</Text>
-              </View>
-            </TouchableOpacity>
+          <ScrollView>
+            <View style={styles.butn_type_container}>
+              <TouchableOpacity>
+                <View style={[styles.both_btn, styles.transition_btn]}>
+                  <Text style={styles.textt}>Cards</Text>
+                </View>
+              </TouchableOpacity>
 
-            <TouchableOpacity
-              onPress={() => navigation.navigate('AccountsWallet')}>
-              <View style={[styles.both_btn, styles.upcoming_bill_btn]}>
-                <Text style={styles.textt}>Accounts</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-
-          <View style={styles.Cards}>
-            <View style={styles.visaCard}>
-              <VisaCard />
+              <TouchableOpacity
+                onPress={() => navigation.navigate('AccountsWallet')}>
+                <View style={[styles.both_btn, styles.upcoming_bill_btn]}>
+                  <Text style={styles.textt}>Accounts</Text>
+                </View>
+              </TouchableOpacity>
             </View>
 
-            <View style={styles.DebitCard}>
-              <DebitCard />
+            <View style={styles.Cards}>
+              <View style={styles.visaCard}>
+                <VisaCard />
+              </View>
+
+              <View style={styles.DebitCard}>
+                <DebitCard />
+              </View>
             </View>
-          </View>
 
-          <View style={styles.containertText}>
-            <Text style={styles.textx1}>Add your debit Card</Text>
-            <Text style={styles.textx2}>
-              This card must be connected to a bank account under your name{' '}
-            </Text>
-          </View>
+            <View style={styles.containertText}>
+              <Text style={styles.textx1}>Add your debit Card</Text>
+              <Text style={styles.textx2}>
+                This card must be connected to a bank account under your name{' '}
+              </Text>
+            </View>
 
-          <View>
             <View style={styles.inpputcontainer}>
               <TextInput
                 style={[styles.input2, styles.input20]}
@@ -120,22 +121,23 @@ const CardWalletScreen = ({navigation}) => {
               <View>
                 <TextInput
                   style={[styles.input2, styles.input22]}
-                  placeholder="EXPIRATION MM/YY"
+                  placeholder="DEBIT CARD NUMBER"
                   keyboardType="numeric"
                 />
               </View>
               <View>
                 <TextInput
                   style={[styles.input2, styles.input32]}
-                  placeholder="ZIP"
+                  placeholder="CVC"
                   keyboardType="numeric"
                 />
               </View>
             </View>
-          </View>
+          </ScrollView>
         </View>
       </View>
     </KeyboardAvoidingView>
+    // </ScrollView>
   );
 };
 
@@ -154,11 +156,12 @@ function useStyles() {
       marginTop: 165,
       borderTopLeftRadius: 30,
       borderTopRightRadius: 30,
+      // height: '250%',
     },
     butn_type_container: {
       flexDirection: 'row',
       backgroundColor: COLOR.light,
-      marginTop: 60,
+      marginTop: width > 400 ? 60 : 40,
       marginHorizontal: 20,
       color: COLOR.light,
       borderRadius: 40,
@@ -169,9 +172,7 @@ function useStyles() {
     },
     both_btn: {
       backgroundColor: COLOR.white,
-      height: 40,
-      width: 180,
-      height: width > 400 ? 40 : 35,
+      height: width > 400 ? 40 : 30,
       width: width > 400 ? 180 : 150,
       justifyContent: 'center',
       alignItems: 'center',
@@ -201,15 +202,6 @@ function useStyles() {
     eelispse: {
       position: 'absolute',
     },
-    images_conatiner: {
-      flex: 1,
-      position: 'absolute',
-      width: '100%',
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      marginTop: 78,
-    },
 
     notification: {
       width: 40,
@@ -236,26 +228,26 @@ function useStyles() {
 
     textx1: {
       color: COLOR.black,
-      fontSize: 16,
+      fontSize: width > 400 ? 16 : 13,
       fontFamily: FONT_FAMILY.interMedium,
-      marginTop: 28,
+      marginTop: width > 400 ? 28 : 20,
       fontWeight: '500',
     },
     textx2: {
       color: COLOR.SecondaryGrey,
-      fontSize: 13,
+      fontSize: width > 400 ? 13 : 11,
       fontFamily: FONT_FAMILY.interRegular,
-      width: '80%',
+      width: width > 400 ? '80%' : '85%',
       fontWeight: '400',
     },
     input2: {
-      height: 40,
+      // height: 40,
       borderWidth: 1,
       padding: 10,
       color: COLOR.borderColor,
       borderRadius: 8,
       height: 54,
-      gap: 11,
+      // gap: 11,
     },
     input22: {
       width: 220,
@@ -265,7 +257,7 @@ function useStyles() {
     },
     placeholder: {
       color: COLOR.gray,
-      fontSize: 12,
+      // fontSize:  width > 400 ? 23 : 11,
     },
     inputContiner1: {
       flexDirection: 'row',
